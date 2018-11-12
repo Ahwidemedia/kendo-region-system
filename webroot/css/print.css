@@ -1,0 +1,55 @@
+
+
+#articleprincipal h1 {font-size:1.3em !important; margin:0; padding:0; }
+#articleprincipal h2 {font-size:1.1em !important; margin:10px; padding:10px; }
+#articleprincipal p, #articleprincipal li, #articleprincipal a  {font-size:0.8em !important; margin:0; padding:0; }
+
+#tousarticles, nav, #upmenu, .login, footer, nav, .recherchee, .retour, #titre-associe,
+ #navigation-articles, #publicite, .suggestion, .titre, .reseau, #articles-lies, #commentaires
+{display:none !important; 
+width:1px; 
+height:1px;
+padding:0; 
+margin:0; 
+float:none; 
+overflow:hidden;}
+
+
+
+#wraptitle {box-shadow:none; height:1px; overflow:visible; width:1px; float:right; }
+#head {float:right;}
+#head img { position:fixed; top: 0px; right:25px; z-index:10000; opacity:0.5; width:10%; height:auto;}
+#articleprincipal {width:100%; padding:0; margin:0; }
+
+#articleprincipal .sources {margin:0; padding:0;}
+
+.illustration-article {width:30% !important; float:left !important;}
+
+#vote {display:none;}
+
+#articleprincipal #tdm {float:right !important; width:60% !important; margin-left:auto !important;}
+#articleprincipal #tdm #tdm-corps span {line-height:1em !important;}
+.menu ul li:last-child {-moz-box-shadow: none !important;
+-webkit-box-shadow: none !important;
+-o-box-shadow: none !important;
+box-shadow: none !important; }
+
+#articleprincipal .informations {float:right !important; width:60% !important; margin-left:auto !important;}
+
+.sources {margin-bottom: 30px !important;}
+
+#articleprincipal .article .float-right .cinzel {float:right !important;}
+#articleprincipal .article .float-right p {float:right !important;}
+
+
+/* Recette */
+.menu-presentation ul li:last-child  {-moz-box-shadow: none !important;
+-webkit-box-shadow: none !important;
+-o-box-shadow: none !important;
+box-shadow: none !important;
+}
+
+section .menu-presentation ul li:first-child{margin-bottom:20px;}
+section .menu-presentation ul li {clear:both;text-align:left; font-size:0.9em; overflow:visible !important; width:95%; padding:0; margin:5px 0;}
+
+section .menu-presentation ul li img{float:left; height:1em; margin-bottom:10px; margin-top:5px;}
