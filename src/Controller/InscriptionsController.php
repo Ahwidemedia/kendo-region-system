@@ -43,7 +43,7 @@ class InscriptionsController extends AppController
 						   'view']);
 
                             $title = 'Inscriptions Interregions 2019';
-        $description = 'Inscriptions Interregions 2019';
+                            $description = 'Inscriptions Interregions 2019';
  
         $this->set('title', $title);
         $this->set('description', $description);

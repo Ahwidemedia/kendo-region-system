@@ -25694,3 +25694,352 @@ Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 60
 
 2018-11-16 12:00:12 Warning: Headers already sent in /Users/hiltamandine/Desktop/sites_php/www/jkcf/vendor/cakephp/cakephp/src/basics.php:98
 2018-11-16 12:00:46 Warning: Headers already sent in /Users/hiltamandine/Desktop/sites_php/www/jkcf/vendor/cakephp/cakephp/src/basics.php:98
+2018-11-29 08:39:44 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /kendo-region-system/js/smoothscroll.js
+Referer URL: http://localhost/kendo-region-system/
+Stack Trace:
+#0 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(63): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(49): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\DispatcherFilter.php(144): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#4 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(426): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#6 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#7 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(81): Cake\Http\ActionDispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#8 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 D:\03-SOURCES\WorkspacePerso\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2018-11-29 08:52:28 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /kendo-region-system/js/smoothscroll.js
+Referer URL: http://localhost/kendo-region-system/
+Stack Trace:
+#0 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(63): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(49): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\DispatcherFilter.php(144): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#4 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(426): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#6 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#7 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(81): Cake\Http\ActionDispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#8 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 D:\03-SOURCES\WorkspacePerso\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2018-11-29 08:53:01 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /kendo-region-system/js/smoothscroll.js
+Referer URL: http://localhost/kendo-region-system/
+Stack Trace:
+#0 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(63): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(49): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\DispatcherFilter.php(144): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#4 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(426): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#6 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#7 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(81): Cake\Http\ActionDispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#8 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 D:\03-SOURCES\WorkspacePerso\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2018-11-29 08:54:05 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /kendo-region-system/js/smoothscroll.js
+Referer URL: http://localhost/kendo-region-system/
+Stack Trace:
+#0 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(63): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(49): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\DispatcherFilter.php(144): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#4 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(426): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#6 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#7 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(81): Cake\Http\ActionDispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#8 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 D:\03-SOURCES\WorkspacePerso\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2018-11-29 08:55:19 Error: [PDOException] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+Request URL: /kendo-region-system/inscriptions/inscriptions
+Referer URL: http://localhost/kendo-region-system/
+Stack Trace:
+#0 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php(47): PDO->__construct('mysql:host=loca...', 'root', 'root', Array)
+#1 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(104): Cake\Database\Driver\Mysql->_connect('mysql:host=loca...', Array)
+#2 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(42): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(322): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(439): Cake\Database\Connection->schemaCollection()
+#8 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Query.php(212): Cake\ORM\Table->schema()
+#9 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\ClubsTable))
+#10 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1336): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\ClubsTable))
+#11 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(964): Cake\ORM\Table->query()
+#12 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Association.php(690): Cake\ORM\Table->find('list', Array)
+#13 D:\03-SOURCES\WorkspacePerso\kendo-region-system\src\Controller\InscriptionsController.php(70): Cake\ORM\Association->find('list')
+#14 [internal function]: App\Controller\InscriptionsController->inscriptions()
+#15 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#16 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#17 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionsController))
+#18 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#19 D:\03-SOURCES\WorkspacePerso\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 {main}
+
+
+2018-11-29 11:49:05 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'jkcf.inscriptions' doesn't exist
+Request URL: /kendo-region-system/inscriptions/inscriptions
+Stack Trace:
+#0 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'inscriptions', Array, Object(Cake\Database\Schema\Table))
+#1 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('inscriptions', Array)
+#2 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(440): Cake\Database\Schema\CachedCollection->describe('inscriptions')
+#3 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(518): Cake\ORM\Table->schema()
+#4 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\View\Form\EntityContext.php(174): Cake\ORM\Table->primaryKey()
+#5 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(1198): Cake\View\Form\EntityContext->isPrimaryKey('club_id')
+#6 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(1177): Cake\View\Helper\FormHelper->_inputType('club_id', Array)
+#7 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(1026): Cake\View\Helper\FormHelper->_parseOptions('club_id', Array)
+#8 D:\03-SOURCES\WorkspacePerso\kendo-region-system\src\Template\Inscriptions\inscriptions.ctp(9): Cake\View\Helper\FormHelper->input('club_id', Array)
+#9 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\View\View.php(1008): include('D:\\03-SOURCES\\W...')
+#10 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\View\View.php(967): Cake\View\View->_evaluate('D:\\03-SOURCES\\W...', Array)
+#11 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\View\View.php(591): Cake\View\View->_render('D:\\03-SOURCES\\W...')
+#12 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(617): Cake\View\View->render(NULL, NULL)
+#13 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(128): Cake\Controller\Controller->render()
+#14 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionsController))
+#15 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 D:\03-SOURCES\WorkspacePerso\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2018-11-29 11:49:05 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /kendo-region-system/js/smoothscroll.js
+Referer URL: http://localhost/kendo-region-system/inscriptions/inscriptions
+Stack Trace:
+#0 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(63): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(49): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\DispatcherFilter.php(144): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#4 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(426): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#6 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#7 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(81): Cake\Http\ActionDispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#8 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 D:\03-SOURCES\WorkspacePerso\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2018-11-29 11:49:11 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'jkcf.inscriptions' doesn't exist
+Request URL: /kendo-region-system/inscriptions/inscriptions
+Referer URL: http://localhost/kendo-region-system/
+Stack Trace:
+#0 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'inscriptions', Array, Object(Cake\Database\Schema\Table))
+#1 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('inscriptions', Array)
+#2 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(440): Cake\Database\Schema\CachedCollection->describe('inscriptions')
+#3 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(518): Cake\ORM\Table->schema()
+#4 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\View\Form\EntityContext.php(174): Cake\ORM\Table->primaryKey()
+#5 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(1198): Cake\View\Form\EntityContext->isPrimaryKey('club_id')
+#6 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(1177): Cake\View\Helper\FormHelper->_inputType('club_id', Array)
+#7 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(1026): Cake\View\Helper\FormHelper->_parseOptions('club_id', Array)
+#8 D:\03-SOURCES\WorkspacePerso\kendo-region-system\src\Template\Inscriptions\inscriptions.ctp(9): Cake\View\Helper\FormHelper->input('club_id', Array)
+#9 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\View\View.php(1008): include('D:\\03-SOURCES\\W...')
+#10 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\View\View.php(967): Cake\View\View->_evaluate('D:\\03-SOURCES\\W...', Array)
+#11 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\View\View.php(591): Cake\View\View->_render('D:\\03-SOURCES\\W...')
+#12 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(617): Cake\View\View->render(NULL, NULL)
+#13 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(128): Cake\Controller\Controller->render()
+#14 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionsController))
+#15 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 D:\03-SOURCES\WorkspacePerso\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2018-11-29 11:49:11 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /kendo-region-system/js/smoothscroll.js
+Referer URL: http://localhost/kendo-region-system/inscriptions/inscriptions
+Stack Trace:
+#0 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(63): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(49): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\DispatcherFilter.php(144): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#4 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(426): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#6 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#7 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(81): Cake\Http\ActionDispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#8 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 D:\03-SOURCES\WorkspacePerso\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2018-11-29 11:49:17 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Pages could not be found.
+Exception Attributes: array (
+  'class' => 'Pages',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /kendo-region-system/pages/home
+Referer URL: http://localhost/kendo-region-system/inscriptions/inscriptions
+Stack Trace:
+#0 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(63): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(49): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\DispatcherFilter.php(144): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#4 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(426): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#6 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#7 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(81): Cake\Http\ActionDispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#8 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 D:\03-SOURCES\WorkspacePerso\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2018-11-29 11:49:20 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /kendo-region-system/js/smoothscroll.js
+Referer URL: http://localhost/kendo-region-system/
+Stack Trace:
+#0 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(63): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(49): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\DispatcherFilter.php(144): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#4 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(426): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#6 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#7 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(81): Cake\Http\ActionDispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#8 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 D:\03-SOURCES\WorkspacePerso\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2018-11-29 12:13:10 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'jkcf.inscriptions' doesn't exist
+Request URL: /kendo-region-system/inscriptions/organisateur
+Referer URL: http://localhost/kendo-region-system/
+Stack Trace:
+#0 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'inscriptions', Array, Object(Cake\Database\Schema\Table))
+#1 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('inscriptions', Array)
+#2 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(440): Cake\Database\Schema\CachedCollection->describe('inscriptions')
+#3 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Query.php(212): Cake\ORM\Table->schema()
+#4 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\InscriptionsTable))
+#5 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1336): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\InscriptionsTable))
+#6 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(964): Cake\ORM\Table->query()
+#7 D:\03-SOURCES\WorkspacePerso\kendo-region-system\src\Controller\InscriptionsController.php(257): Cake\ORM\Table->find('all')
+#8 [internal function]: App\Controller\InscriptionsController->organisateur()
+#9 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#10 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#11 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionsController))
+#12 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 D:\03-SOURCES\WorkspacePerso\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 {main}
+
+
+2018-11-29 12:13:10 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /kendo-region-system/js/smoothscroll.js
+Referer URL: http://localhost/kendo-region-system/inscriptions/organisateur
+Stack Trace:
+#0 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(63): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(49): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\DispatcherFilter.php(144): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#4 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(426): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#6 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#7 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(81): Cake\Http\ActionDispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#8 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 D:\03-SOURCES\WorkspacePerso\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2018-11-29 12:13:16 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'jkcf.inscriptions' doesn't exist
+Request URL: /kendo-region-system/inscriptions/inscriptions
+Referer URL: http://localhost/kendo-region-system/
+Stack Trace:
+#0 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'inscriptions', Array, Object(Cake\Database\Schema\Table))
+#1 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('inscriptions', Array)
+#2 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(440): Cake\Database\Schema\CachedCollection->describe('inscriptions')
+#3 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(518): Cake\ORM\Table->schema()
+#4 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\View\Form\EntityContext.php(174): Cake\ORM\Table->primaryKey()
+#5 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(1198): Cake\View\Form\EntityContext->isPrimaryKey('club_id')
+#6 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(1177): Cake\View\Helper\FormHelper->_inputType('club_id', Array)
+#7 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(1026): Cake\View\Helper\FormHelper->_parseOptions('club_id', Array)
+#8 D:\03-SOURCES\WorkspacePerso\kendo-region-system\src\Template\Inscriptions\inscriptions.ctp(9): Cake\View\Helper\FormHelper->input('club_id', Array)
+#9 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\View\View.php(1008): include('D:\\03-SOURCES\\W...')
+#10 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\View\View.php(967): Cake\View\View->_evaluate('D:\\03-SOURCES\\W...', Array)
+#11 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\View\View.php(591): Cake\View\View->_render('D:\\03-SOURCES\\W...')
+#12 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(617): Cake\View\View->render(NULL, NULL)
+#13 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(128): Cake\Controller\Controller->render()
+#14 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionsController))
+#15 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 D:\03-SOURCES\WorkspacePerso\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2018-11-29 12:13:16 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /kendo-region-system/js/smoothscroll.js
+Referer URL: http://localhost/kendo-region-system/inscriptions/inscriptions
+Stack Trace:
+#0 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(63): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(49): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\DispatcherFilter.php(144): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#4 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(426): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#6 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#7 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(81): Cake\Http\ActionDispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#8 D:\03-SOURCES\WorkspacePerso\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 D:\03-SOURCES\WorkspacePerso\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
