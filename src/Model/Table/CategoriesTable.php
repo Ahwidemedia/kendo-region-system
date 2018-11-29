@@ -21,7 +21,7 @@ class CategoriesTable extends Table
 
  public function initialize(array $config)
     {
-           $this->hasMany('Inscrits');
+           $this->belongsToMany('Inscrits');
            
        	 
     }

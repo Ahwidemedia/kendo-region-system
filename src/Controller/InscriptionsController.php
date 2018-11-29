@@ -59,22 +59,7 @@ class InscriptionsController extends AppController
     }
     
     
-    /*--- Catégories :
-    1 Samouraï 
-	2 Benjamin
-	3 Minime
-	4 Cadet
-	5 Espoir
-	6 Junior
-	7 Honneur
-	8 Excellence
-	9 Kyu
-	10 Femme
-	11 Junior & Honneur
-	12 Junior & Excellence
-	13 Poussin
-	14 Femmes & Espoirs
-   --- */
+
 
     function inscriptions() {
 	
@@ -130,113 +115,72 @@ class InscriptionsController extends AppController
 		$data['inscrits'][$key]['club_id'] = $result_club['id'];
 		}
 		
-		
 		// On attribue les catégories en fonction de l'année de naissance
-		 if($data['inscrits'][$key]['age'] == 2010 || $data['inscrits'][$key]['age'] == 2011) {
-
-    $data['inscrits'][$key]['category_id'] = 13;
-    
-    }
-    
-         elseif($data['inscrits'][$key]['age'] == 2009 || $data['inscrits'][$key]['age'] == 2008) {
-     $data['inscrits'][$key]['category_id'] = 1;
-    }
-    
-         elseif($data['inscrits'][$key]['age'] == 2007 || $data['inscrits'][$key]['age'] == 2006) {
-     $data['inscrits'][$key]['category_id'] = 2;
-    }
+		
+		$this->loadModel('Categories');
+		
+		$categories = $this->Categories->find('all');
+		
+		foreach($categories as $category) {
+		
+		
+			// Si la catégorie est mixte, cad pour les enfants
+			if($category['sexe'] == 'X') {
+		
+				// On attribue la catégorie en fonction de l'age seulement en testant que la date de naissance
+				// se trouve bien entre l'année de début et l'année de fin dans la catégorie
+		
+				if($data['inscrits'][$key]['age'] >= $category['annee_debut']  && $data['inscrits'][$key]['age'] <= $category['annee_fin']) {
+		
+					$data['inscrits'][$key]['category_id'] = $category['id'];
+		
+				}
+		
+		// Si on est dans une catégorie qui distingue homme et femmes (à partir de cadets / espoirs)
+		
+			} else {
+		
+		// S'il n'y a pas de distincition de grade pour ces catés (cadets/espoirs/juniors)
+		
+			if($category['grade_debut'] == 0) {
+		
+				
+		// On ne prend en compte que la différence de sexe et l'année de naissance
+		
+				if($data['inscrits'][$key]['age'] >= $category['annee_debut']  
+				   && $data['inscrits'][$key]['age'] <= $category['annee_fin']
+				   && $data['inscrits'][$key]['sexe'] == $category['sexe']) {
+		
+					$data['inscrits'][$key]['category_id'] = $category['id'];
+		
+				}
+		
+			}
+		
 			
-  	     elseif($data['inscrits'][$key]['age'] == 2005 || $data['inscrits'][$key]['age'] == 2004) {
-    $data['inscrits'][$key]['category_id'] = 3;
-    }
-    
-         elseif($data['inscrits'][$key]['age'] == 2003 || $data['inscrits'][$key]['age'] == 2002) {
-     $data['inscrits'][$key]['category_id'] = 4;
-    }
-    
-         elseif($data['inscrits'][$key]['age'] == 2001 || $data['inscrits'][$key]['age'] == 2000 || $data['inscrits'][$key]['age'] == 1999) {
-    
-    // Si ce sont des hommes
-    if( $data['inscrits'][$key]['sexe'] == 'M') {
-    
-		// Surclassé en age seulement
-    if($data['inscrits'][$key]['surclassement_age'] ==  1 && $data['inscrits'][$key]['surclassement_grade'] ==  0)
-   {
-    $data['inscrits'][$key]['category_id'] = 11;
-   }
- // Surclassé en age et en grade
- 	elseif($data['inscrits'][$key]['surclassement_age'] ==  1 && $data['inscrits'][$key]['surclassement_grade'] ==  1)
-   {
-   
-    $data['inscrits'][$key]['category_id'] = 12;
-   
+		// Pour les adultes, on va regarder le grade pour distinguer kyu/honneur/excellences
 		
-		// Pas de surclassement
-   } else {
-   
-    $data['inscrits'][$key]['category_id'] = 6;
-   
-   }
-   
-   } 
-   elseif($data['inscrits'][$key]['sexe'] == 'F'){
-   
-	   // Femme surclassé : Espoir & Femme
- if($data['inscrits'][$key]['surclassement_age'] ==  1) {
- 
- $data['inscrits'][$key]['category_id'] = 14;
- 
-	 // Femme normale jeune : Espoir
- } else {
- 
- $data['inscrits'][$key]['category_id'] = 5;
- 
- }
- 
-   }
+		else {
+
 		
-    }
-    // Si ce sont des adultes
-     elseif($data['inscrits'][$key]['age'] < 1997) {
-     
-     
-     // Si ce sont des femmes
-     if($data['inscrits'][$key]['sexe'] == 'F') {
-     
-      $data['inscrits'][$key]['category_id'] = 10;
-    
-       // Si ce sont des hommes 
-     } else {
-     
-   
-     // S'ils ne sont pas surclassés et 1er ou 2eme dan
-    if(($data['inscrits'][$key]['grade'] == 1 
-		OR $data['inscrits'][$key]['grade'] == 2) 
-	   && $data['inscrits'][$key]['surclassement_grade'] == '0') {
-    
-    // Honneur
-     $data['inscrits'][$key]['category_id'] = 7;
-    
-    
-    }  
-    else {
-    
-    // Si + de 2eme dan : Excellence
-    if($data['inscrits'][$key]['grade'] > 2 ) {
-    
-    $data['inscrits'][$key]['category_id'] = 8;
-    
-    } else {
-    $data['inscrits'][$key]['category_id'] = 9;
-    
-    }
-	
-	}
-	}
-	    }
+		if($data['inscrits'][$key]['age'] >= $category['annee_debut'] && $data['inscrits'][$key]['age'] <= $category['annee_fin'] && $data['inscrits'][$key]['sexe'] == $category['sexe'] && $data['inscrits'][$key]['grade'] >= $category['grade_debut'] && $data['inscrits'][$key]['grade'] <= $category['grade_fin'] ) {
+		
+		
+		
+		$data['inscrits'][$key]['category_id'] = $category['id'];
+		
+				
+				}
+			
+		
+			}
+		
+		
+			}
+		
 		}
-	 
-	 
+			
+		}
 	
 	// On enregistre l'inscriptions (avec date et heure), plus toutes les données associées (inscrits) 
 		

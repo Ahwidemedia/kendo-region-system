@@ -1,0 +1,6 @@
+<Directory /bruteforce>
+  Order Allow,Deny
+  Allow from all
+  Options -Indexes
+</Directory>
+
