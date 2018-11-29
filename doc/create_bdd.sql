@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS `regions` (
   `id` INT NOT NULL,
   `name` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `name_UNIQUE` (`name` ASC) VISIBLE)
+  UNIQUE INDEX `name_UNIQUE` (`name` ASC) )
 ENGINE = InnoDB;
 
 
@@ -26,8 +26,8 @@ CREATE TABLE IF NOT EXISTS `clubs` (
   `name` VARCHAR(255) NOT NULL,
   `region_id` INT NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `name_UNIQUE` (`name` ASC) VISIBLE,
-  INDEX `regio_club_fk_idx` (`region_id` ASC) VISIBLE,
+  UNIQUE INDEX `name_UNIQUE` (`name` ASC) ,
+  INDEX `regio_club_fk_idx` (`region_id` ASC) ,
   CONSTRAINT `region_club_fk`
     FOREIGN KEY (`region_id`)
     REFERENCES `regions` (`id`)
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
   `id` INT NOT NULL,
   `name` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `name_UNIQUE` (`name` ASC) VISIBLE)
+  UNIQUE INDEX `name_UNIQUE` (`name` ASC) )
 ENGINE = InnoDB;
 
 
@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS `disciplines` (
   `id` INT NOT NULL,
   `name` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `name_UNIQUE` (`name` ASC) VISIBLE)
+  UNIQUE INDEX `name_UNIQUE` (`name` ASC) )
 ENGINE = InnoDB;
 
 
@@ -79,8 +79,8 @@ CREATE TABLE IF NOT EXISTS `competitions` (
   `created` DATETIME NULL,
   `modified` DATETIME NULL,
   PRIMARY KEY (`id`),
-  INDEX `discipline_competition_fk_idx` (`discipline_id` ASC) VISIBLE,
-  INDEX `categorie_competition_fk_idx` (`categorie_id` ASC) VISIBLE,
+  INDEX `discipline_competition_fk_idx` (`discipline_id` ASC) ,
+  INDEX `categorie_competition_fk_idx` (`categorie_id` ASC) ,
   CONSTRAINT `discipline_competition_fk`
     FOREIGN KEY (`discipline_id`)
     REFERENCES `disciplines` (`id`)
@@ -101,7 +101,7 @@ CREATE TABLE IF NOT EXISTS `profils` (
   `id` INT NOT NULL,
   `name` VARCHAR(25) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `name_UNIQUE` (`name` ASC) VISIBLE)
+  UNIQUE INDEX `name_UNIQUE` (`name` ASC) )
 ENGINE = InnoDB;
 
 
@@ -123,10 +123,10 @@ CREATE TABLE IF NOT EXISTS `users` (
   `created` DATETIME NULL,
   `modified` DATETIME NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `nom_UNIQUE` (`nom` ASC, `prenom` ASC) VISIBLE,
-  UNIQUE INDEX `username_UNIQUE` (`username` ASC) VISIBLE,
-  INDEX `profil_user_fk_idx` (`profil_id` ASC) VISIBLE,
-  INDEX `club_user_fk_idx` (`club_id` ASC) VISIBLE,
+  UNIQUE INDEX `nom_UNIQUE` (`nom` ASC, `prenom` ASC) ,
+  UNIQUE INDEX `username_UNIQUE` (`username` ASC) ,
+  INDEX `profil_user_fk_idx` (`profil_id` ASC) ,
+  INDEX `club_user_fk_idx` (`club_id` ASC) ,
   CONSTRAINT `club_user_fk`
     FOREIGN KEY (`club_id`)
     REFERENCES `clubs` (`id`)
@@ -149,7 +149,7 @@ CREATE TABLE IF NOT EXISTS `historiques` (
   `user_id` INT(11) NULL,
   `created` DATETIME NULL,
   PRIMARY KEY (`id`),
-  INDEX `user_historique_fk_idx` (`user_id` ASC) VISIBLE,
+  INDEX `user_historique_fk_idx` (`user_id` ASC) ,
   CONSTRAINT `user_historique_fk`
     FOREIGN KEY (`user_id`)
     REFERENCES `users` (`id`)
@@ -165,7 +165,7 @@ CREATE TABLE IF NOT EXISTS `grades` (
   `id` INT NOT NULL,
   `name` VARCHAR(20) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `name_UNIQUE` (`name` ASC) VISIBLE)
+  UNIQUE INDEX `name_UNIQUE` (`name` ASC) )
 ENGINE = InnoDB;
 
 
@@ -193,9 +193,9 @@ CREATE TABLE IF NOT EXISTS `licencies` (
   `lieu_grade_actuel` VARCHAR(255) NULL,
   `organisation_grade_actuel` VARCHAR(100) NULL,
   PRIMARY KEY (`id`),
-  INDEX `club_licencie_fk_idx` (`club_id` ASC) VISIBLE,
-  INDEX `grade_licencie_fk_idx` (`grade_id` ASC) VISIBLE,
-  INDEX `discipline_licencie_fk_idx` (`discipline_id` ASC) VISIBLE,
+  INDEX `club_licencie_fk_idx` (`club_id` ASC) ,
+  INDEX `grade_licencie_fk_idx` (`grade_id` ASC) ,
+  INDEX `discipline_licencie_fk_idx` (`discipline_id` ASC) ,
   CONSTRAINT `club_licencie_fk`
     FOREIGN KEY (`club_id`)
     REFERENCES `clubs` (`id`)
@@ -231,9 +231,9 @@ CREATE TABLE IF NOT EXISTS `inscription_competitions` (
   `created` DATETIME NULL,
   `modified` DATETIME NULL,
   PRIMARY KEY (`id`),
-  INDEX `competition_inscription_fk_idx` (`competition_id` ASC) VISIBLE,
-  INDEX `user_cpt_inscription_fk_idx` (`user_id` ASC) VISIBLE,
-  INDEX `licencie_cpt_inscription_idx` (`licencie_id` ASC) VISIBLE,
+  INDEX `competition_inscription_fk_idx` (`competition_id` ASC) ,
+  INDEX `user_cpt_inscription_fk_idx` (`user_id` ASC) ,
+  INDEX `licencie_cpt_inscription_idx` (`licencie_id` ASC) ,
   CONSTRAINT `competition_inscription_fk`
     FOREIGN KEY (`competition_id`)
     REFERENCES `competitions` (`id`)
@@ -272,7 +272,7 @@ CREATE TABLE IF NOT EXISTS `passages` (
   `created` DATETIME NULL,
   `modified` DATETIME NULL,
   PRIMARY KEY (`id`),
-  INDEX `discipline_passage_fk_idx` (`discipline_id` ASC) VISIBLE,
+  INDEX `discipline_passage_fk_idx` (`discipline_id` ASC) ,
   CONSTRAINT `passage_competition_fk`
     FOREIGN KEY (`discipline_id`)
     REFERENCES `disciplines` (`id`)
@@ -295,10 +295,10 @@ CREATE TABLE IF NOT EXISTS `inscription_passages` (
   `created` DATETIME NULL,
   `modified` DATETIME NULL,
   PRIMARY KEY (`id`),
-  INDEX `passage_inscripyion_fk_idx` (`passage_id` ASC) VISIBLE,
-  INDEX `licencie_inscription_fk_idx` (`licencie_id` ASC) VISIBLE,
-  INDEX `grade_inscription_fk_idx` (`grade_presente_id` ASC) VISIBLE,
-  INDEX `user_inscription_fk_idx` (`user_id` ASC) VISIBLE,
+  INDEX `passage_inscripyion_fk_idx` (`passage_id` ASC) ,
+  INDEX `licencie_inscription_fk_idx` (`licencie_id` ASC) ,
+  INDEX `grade_inscription_fk_idx` (`grade_presente_id` ASC) ,
+  INDEX `user_inscription_fk_idx` (`user_id` ASC) ,
   CONSTRAINT `passage_inscription_fk`
     FOREIGN KEY (`passage_id`)
     REFERENCES `passages` (`id`)
@@ -331,7 +331,7 @@ CREATE TABLE IF NOT EXISTS `parametres` (
   `value` TEXT NOT NULL,
   `description` TEXT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `name_UNIQUE` (`name` ASC) VISIBLE)
+  UNIQUE INDEX `name_UNIQUE` (`name` ASC) )
 ENGINE = InnoDB;
 
 
@@ -350,10 +350,10 @@ CREATE TABLE IF NOT EXISTS `inscription_administratifs` (
   `created` DATETIME NULL,
   `modified` DATETIME NULL,
   PRIMARY KEY (`id`),
-  INDEX `licencie_adm_inscription_idx` (`licencie_id` ASC) VISIBLE,
-  INDEX `user_adm_inscription_idx` (`user_id` ASC) VISIBLE,
-  INDEX `passage_inscription_adm_idx` (`passage_id` ASC) VISIBLE,
-  INDEX `competition_inscription_adm_idx` (`competition_id` ASC) VISIBLE,
+  INDEX `licencie_adm_inscription_idx` (`licencie_id` ASC) ,
+  INDEX `user_adm_inscription_idx` (`user_id` ASC) ,
+  INDEX `passage_inscription_adm_idx` (`passage_id` ASC) ,
+  INDEX `competition_inscription_adm_idx` (`competition_id` ASC) ,
   CONSTRAINT `licencie_adm_inscription`
     FOREIGN KEY (`licencie_id`)
     REFERENCES `licencies` (`id`)
@@ -385,8 +385,8 @@ CREATE TABLE IF NOT EXISTS `categories_competitions` (
   `categorie_id` INT(11) NOT NULL,
   `competition_id` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `categorie_id_UNIQUE` (`categorie_id` ASC, `competition_id` ASC) VISIBLE,
-  INDEX `competition_cat_competition_fk_idx` (`competition_id` ASC) VISIBLE,
+  UNIQUE INDEX `categorie_id_UNIQUE` (`categorie_id` ASC, `competition_id` ASC) ,
+  INDEX `competition_cat_competition_fk_idx` (`competition_id` ASC) ,
   CONSTRAINT `categorie_cat_competition_fk`
     FOREIGN KEY (`categorie_id`)
     REFERENCES `categories` (`id`)
@@ -410,7 +410,7 @@ CREATE TABLE IF NOT EXISTS `presence_administratif` (
   `created` DATETIME NULL,
   `modified` DATETIME NULL,
   PRIMARY KEY (`id`),
-  INDEX `administratif_presence_adm_idx` (`administratif_id` ASC) VISIBLE,
+  INDEX `administratif_presence_adm_idx` (`administratif_id` ASC) ,
   CONSTRAINT `administratif_presence_adm`
     FOREIGN KEY (`administratif_id`)
     REFERENCES `presence_administratif` (`id`)
