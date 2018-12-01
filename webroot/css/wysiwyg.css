@@ -1,0 +1,195 @@
+.alignLeft {float:left;margin:10px;}
+.alignRight {float:right;margin:10px;}
+.alignCenter {margin-top:10px; margin-left:10px;display:block; margin-left:auto; margin-right:auto;}
+
+#tinymce {font-size:0.8em;
+background-color: rgba(0,0,0,0);
+}
+
+h2 {  
+  font-size: 1.5em;
+  color: #931010;  
+  font-family: cinzel, Times, Times new Roman; 
+  margin-top:20px; 
+  margin-bottom:0px;
+  background-color:white;
+  padding:10px;
+  width:98%;
+  clear:both;
+}
+
+h3 { 
+ font-size: 1.2em;
+padding: 10px;
+padding-left:3%;
+font-weight:bold;
+text-decoration:underline;
+  font-family: bertoltbrecht,Times, Times new Roman;
+    background-color:white;
+      width:98%;
+ }
+
+
+
+
+p, ul, li, td {  
+  color: black;
+  font-size: 1.2em;
+}
+
+p {  
+  font-family: cambria, times, times new roman;
+  background-color:white;
+  padding: 10px;
+  text-align:justify;
+  width:98%;
+  display:block;
+  margin:0;
+  line-height : 1.2;
+
+}
+
+
+#tinymce ul {background-color:white; margin:0; padding:15px;}
+#tinymce ul li { line-height : 1.1;  
+background-color:white;
+margin:0 10px;
+font-family: cambria, times, times new roman;
+list-style-type: none;
+}
+
+li:before {
+    content: "• ";
+    color: #931010;}
+
+a:link, a:visited {  
+color:#ccc;
+cursor:pointer;
+  text-decoration: none;
+  cursor:pointer;
+}
+
+.centre{display:table;
+margin-left:auto;
+margin-right:auto;}
+
+a:hover {  
+  color: #931010;  
+  text-decoration: none;
+}
+
+a:active, a:focus {  
+  color: #931010;  
+  text-decoration: none;
+}
+
+.dernier:after {content:'';clear:both;  display: block;}
+
+.vingt {width:20%}
+.cinquante {width:50%;}
+.cent {width:100%}
+
+
+.tableau-saisons { margin-top:30px; 
+margin-bottom:30px;
+font-size:0.8em;
+width: 100%; 
+margin-left:auto;
+margin-right:auto;
+text-align:center;	
+	background-color:transparent;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+
+hyphens: auto}
+	
+.tableau-saisons td, .tableau-saisons th {
+border-left:1px solid #bfbfbf;
+border-right:1px solid #bfbfbf;
+border-top:3px solid #bfbfbf;
+ }
+
+.tableau-saisons th {font-family:'bertoltbrecht'; 
+border:3px solid #bfbfbf;
+font-size:1.2em;
+background:white; 
+padding : 10px;}
+
+.tableau-saisons tr:nth-child(2) td{background:white;
+color:black;
+border:3px solid #bfbfbf;
+font-size:1em;
+font-family:'bertoltbrecht'; }
+
+.tableau-saisons td:first-child {background:white;
+color:black;
+border:3px solid #bfbfbf;
+font-family:'bertoltbrecht';
+width:8% !important;}
+
+.tableau-saisons td {width:3%; padding:10px 0px;}
+
+.tableau-saisons tr:last-child {
+border-bottom:3px solid #bfbfbf !important;
+
+}
+
+.tableau-saisons td:nth-child(4), 
+.tableau-saisons td:nth-child(7),
+.tableau-saisons td:nth-child(10),
+.tableau-saisons td:nth-child(13)
+{border-right:3px solid #bfbfbf !important;}
+
+.vert {background-color: #00993d;
+border-left:1px solid green !important;
+border-right:1px solid green !important;
+border-top:3px solid green !important;
+border-bottom:3px solid green !important;}
+
+.jaune {background-color: #ffd000;
+border-left:1px solid #e6bb00 !important;
+border-right:1px solid #e6bb00 !important;
+border-top:3px solid #e6bb00 !important;
+border-bottom:3px solid #e6bb00 !important;}
+
+
+.bleu {background-color: #4279bd;
+border-left:1px solid #305788 !important;
+border-right:1px solid #305788 !important;
+border-top:3px solid #305788 !important;
+border-bottom:3px solid #305788 !important;}
+
+.rouge {background-color: #961d1d;
+border-left:1px solid #631313 !important;
+border-right:1px solid #631313 !important;
+border-top:3px solid #631313 !important;
+border-bottom:3px solid #631313 !important;}
+
+
+/*Polices-------------------------------------------*/
+
+
+
+@font-face {
+    font-family: 'bertoltbrecht';
+    src: url('../fonts/bertoltbrecht-webfont.eot');
+    src: url('../fonts/bertoltbrecht-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bertoltbrecht-webfont.woff') format('woff'),
+         url('../fonts/bertoltbrecht-webfont.ttf') format('truetype'),
+         url('../fonts/bertoltbrecht-webfont.svg#dream_orphansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'cinzel';
+    src: url('../fonts/cinzel-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/cinzel-regular-webfont.woff') format('woff'),
+         url('../fonts/cinzel-regular-webfont.ttf') format('truetype'),
+         url('../fonts/cinzel-regular-webfont.svg#cinzelregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+

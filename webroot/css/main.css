@@ -204,13 +204,16 @@ h1:before {
 }
 
 h2 {
-    ont-family: arial;
+    font-family: arial;
     text-align: center;
     font-size: 1.5em;
     margin: 3% auto;
 }
 
-h3 {}
+h3 {font-family: arial;
+    text-align: center;
+    font-size: 1.2em;
+    margin: 3% auto;}
 
 tr td {
     top: 0px;
@@ -927,6 +930,16 @@ a:focus {
 }
 
 
+.showSingle{margin:3%; 
+    padding:1%;
+    border:solid darkred 1px;
+cursor:pointer;
+display:inline-block; 
+font-size:1.1em;}
+
+.selected {color:darkred; font-weight:bold}
+
+
 .normalButton,
 .button a,
 .admin-button a {
@@ -1526,6 +1539,11 @@ footer .float-right {
     text-align: center;
     font-size: 0.7em;
     font-style: italic;
+}
+
+
+.event-menu .font-2 {
+    font-size: 1em;
 }
 
 .border-red {
