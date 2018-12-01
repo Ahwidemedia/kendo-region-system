@@ -1,28 +1,30 @@
-
-<?php 
+<?php
     $here = $this->request->here();
     $canonical = $this->Url->build($here, true);
 ?>
 
 <!doctype html>
 <html lang="fr">
+
 <head>
 
-<?php $controller = strtolower($this->name); ?>
+    <?php $controller = strtolower($this->name); ?>
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> <?php echo $title; ?></title>
-<meta property="og:title" content="<?php echo $title; ?>" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="<?php echo $canonical; ?>" />
-<meta property="og:description" content="<?php echo $description; ?>" />
-<meta name="description" content="<?php echo $description;?>">
-<?php  
-echo $this->Html->css('jquery-ui'); 
-	echo $this->Html->css('jquery-ui.structure'); 
-	
-echo $this->fetch('css'); 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <?php echo $title; ?>
+    </title>
+    <meta property="og:title" content="<?php echo $title; ?>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<?php echo $canonical; ?>" />
+    <meta property="og:description" content="<?php echo $description; ?>" />
+    <meta name="description" content="<?php echo $description;?>">
+    <?php
+    echo $this->Html->css('jquery-ui');
+    echo $this->Html->css('jquery-ui.structure');
+
+    echo $this->fetch('css');
 	
 	echo $this->Html->css('main'); 
 	echo $this->Html->meta('favicon.ico', '/favicon.ico', ['type' => 'icon']); ?>
@@ -31,32 +33,80 @@ echo $this->fetch('css');
 
 
 <body>
-<section>
 
-<h1 class="center padding-3">Interrégions de Kendo 2019 - Fontenay le Comte</h1>
+    <header>
 
-<?php	echo $this->Flash->render();
+        <div class="header-right">
+            <?php if ($conn = $this->request->session()->read('Auth.User')){ 
+    
+
+  echo $conn['nom'].' - '.$conn['prenom'].' - '.$conn['club']['nom'];
+    
+    
+    
+ }
+ 
+ else {
+ 
+
+echo $this->Html->link(
+    'Connexion',
+    ['controller' => 'Users', 'action' => 'login']
+ );
+ 
+ }
+    ?>
+
+        </div>
+    </header>
+
+    <?php echo $this->Html->image('logo.png', ['url'=>['controller'=>'Pages','action'=>'index','prefix'=>false],'class'=>'logo']);?>
+
+
+    <section>
+
+        <?php echo $this->Html->image($headimg,['class'=>'width-100']);?>
+
+        <div class="content">
+            <?php	echo $this->Flash->render();
  echo $this->Flash->render('auth');
      echo $this->fetch('content'); 
 
 ?>
 
+        </div>
 
-</section>
+    </section>
+
+    <footer>
+        <div class="center">
+            <?php echo $this->html->image('logo-footer.png', ['url'=>['controller'=>'Pages','action'=>'index','prefix'=>false],'class'=>'center logo-foot']);?>
+            <p class="center">
+                <?php echo $this->html->link('Connexion', ['controller'=>'Users', 'action'=>'login']); ?>
+            </p>
+
+            <p class="float-left">
+                <?php echo $this->html->link('Mentions légales', ['controller'=>'Pages', 'action'=>'mentions']); ?>
+            </p>
+
+            <p class="float-right">
+                <?php echo $this->html->link('Contact', ['controller'=>'Pages', 'action'=>'contact']); ?>
+            </p>
+        </div>
+
+    </footer>
 
 
-      
-    	<?php echo $this->Html->script('jquery-2.2.4.min.js');?>
+    <?php echo $this->Html->script('jquery-2.2.4.min.js');?>
 
-   	 	<?php echo $this->Html->script('smoothscroll.js');?>
-   	 	<?php echo $this->Html->script('jquery.easy-confirm-dialog.min.js');?>
-	   	<?php echo $this->Html->script('jquery-ui.js');?>
-	   	 
-	   	 	 <?php echo $this->Html->script('underscore-min.js');?>
-       	<?php echo $this->Html->script('add-element-table.js');?>
-       	
- 		<?php echo $this->fetch('script'); ?>
-  </body>
-  
+
+    <?php echo $this->Html->script('jquery.easy-confirm-dialog.min.js');?>
+    <?php echo $this->Html->script('jquery-ui.js');?>
+
+    <?php echo $this->Html->script('underscore-min.js');?>
+    <?php echo $this->Html->script('add-element-table.js');?>
+
+    <?php echo $this->fetch('script'); ?>
+</body>
+
 </html>
-	    
