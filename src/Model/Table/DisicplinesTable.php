@@ -13,7 +13,7 @@ use Cake\Core\Configure;
 
 
 $validator = new Validator();
-class CategoriesTable extends Table
+class DisciplinesTable extends Table
 {
 
 
@@ -21,8 +21,8 @@ class CategoriesTable extends Table
 
  public function initialize(array $config)
     {
-           $this->belongsTo('InscriptionCompetitions');
-           $this->belongsToMany('Competitions');
+           $this->belongsTo('Licencies');
+           $this->hasMany('Competitions');
            
        	 
     }

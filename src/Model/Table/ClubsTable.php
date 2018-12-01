@@ -17,8 +17,7 @@ class ClubsTable extends Table
      parent::initialize($config);
      
         
-        $this->hasMany('Inscrits');
-        $this->hasMany('Inscriptions');
+         $this->belongsTo('Regions');
           
         
     }
