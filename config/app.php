@@ -221,7 +221,7 @@ return [
           
       //'port' => 'non_standard_port_number',
             'username' => 'root',
-            'password' => '',
+            'password' => 'root',
             'database' => 'jkcf',
             'encoding' => 'utf8',
             'timezone' => 'UTC',
@@ -230,6 +230,18 @@ return [
             'log' => false,
           
             // VERSION EN LIGNE
+            
+  /*          
+     //'port' => 'non_standard_port_number',
+            'username' => 'planhnmj_jkcf',
+            'password' => 'orka1987jkcf',
+            'database' => 'planhnmj_jkcf',
+            'encoding' => 'utf8',
+            'timezone' => 'UTC',
+            'flags' => [],
+            'cacheMetadata' => true,
+            'log' => false,
+ 
 
             /**
              * Set identifier quoting to true if you are using reserved words or
