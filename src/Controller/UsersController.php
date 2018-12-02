@@ -9,7 +9,7 @@ use Cake\Mailer\Email;
 class UsersController extends AppController {
 
 
-  public $components = ['RBruteForce.RBruteForce'];
+  // public $components = ['RBruteForce.RBruteForce'];
   
   
   	public function beforeFilter(Event $event) {
@@ -162,7 +162,7 @@ $this->set('description', 'Connectez vous à votre interface pour écrire de nou
                    fputs($fichier_tentatives, $tentatives + 1);
                }
    	 // Message d'erreur
-   	 	$this->RBruteForce->check();
+   	 //	$this->RBruteForce->check();
    	 	$this->Flash->error(__("Nom d'utilisateur ou mot de passe incorrect, essayez à nouveau.")); }
    	 	}
    	 	}
