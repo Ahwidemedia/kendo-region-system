@@ -13,13 +13,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        <?php echo $title; ?>
+       Erreur sur la page
     </title>
-    <meta property="og:title" content="<?php echo $title; ?>" />
+    <meta property="og:title" content="Erreur sur la page />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="<?php echo $canonical; ?>" />
-    <meta property="og:description" content="<?php echo $description; ?>" />
-    <meta name="description" content="<?php echo $description;?>">
+    <meta property="og:description" content="Erreur sur la page" />
+    <meta name="description" content="Erreur">
     <?php
     echo $this->Html->css('jquery-ui');
     echo $this->Html->css('jquery-ui.structure');

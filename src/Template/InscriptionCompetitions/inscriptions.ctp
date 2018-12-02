@@ -96,7 +96,7 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                      <?php
      
      echo $this->Form->input("inscription_competitions.$articli->id.licencie.ddn", ['value'=>$articli['licency']['ddn'],'class'=>'age-input ddn-ind', 'onchange'=>"categorie(this)",'type'=>'year','minYear' => date('Y') - 60,
-    'maxYear' => date('Y') - 7,'label'=>false]); ?>
+    'maxYear' => date('Y') - 9,'label'=>false]); ?>
     </td>
                
                  <td>
@@ -108,8 +108,18 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                  <td>
                   <?php
      
-     echo $this->Form->input("inscription_competitions.$articli->id.certificat", ['value'=>$articli['certificat'],'class'=>'certif-input certif-ind', 'onchange'=>"certif(this)",'type'=>'year','minYear' => date('Y') - 5,
-    'maxYear' => date('Y'),'label'=>false]); ?> </td>
+     echo $this->Form->input("inscription_competitions.$articli->id.certificat", ['value'=>$articli['certificat'],'class'=>'certif-input certif-ind', 'onchange'=>"certif(this)",'type'=>'year','minYear' => date('Y') - 9,
+    'maxYear' => date('Y'),'label'=>false]); ?> 
+                     
+              <span class="certif <?php if($articli['certificat'] == date("Y")) { echo 'display-none'; } ?>"><br />Certificat QS sur l'honneur
+   <?php if($articli['certificat_qs'] == 1) {$checkedqs = 'checked';} else {$checkedqs = '';}
+                    
+                   
+                                           
+        echo $this->Form->checkbox("inscription_competitions.$articli->id.certificat_qs", ['checked'=>$checkedqs,'class'=>'certifqs-ind']); ?>
+    </span>      
+                    
+                    </td>
                  <td>
                 </td></tr>
               
@@ -177,7 +187,7 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
      <?php
      
      echo $this->Form->input("inscription_competitions.{$key}.licencie.ddn", ['class'=>'age-input ddn-ind', 'onchange'=>"categorie(this)",'type'=>'year','minYear' => date('Y') - 60,
-    'maxYear' => date('Y') - 7,'label'=>false]); ?>
+    'maxYear' => date('Y') - 9,'label'=>false]); ?>
     </td>
     
     <td>
@@ -200,13 +210,13 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
        <td class="certif">
      <?php
      
-     echo $this->Form->input("inscription_competitions.{$key}.certificat", ['class'=>'certif-input certif-ind', 'onchange'=>"certif(this)",'type'=>'year','minYear' => date('Y') - 5,
+     echo $this->Form->input("inscription_competitions.{$key}.certificat", ['class'=>'certif-input certif-ind', 'onchange'=>"certif(this)",'type'=>'year','minYear' => date('Y') - 9,
     'maxYear' => date('Y'),'label'=>false]); ?>
     
     
     
 	<span class="certif display-none"><br />Certificat QS sur l'honneur
-   <?php echo $this->Form->checkbox("inscription_competitions.{$key}.certificat_qs", ['class'=>'certif-ind']); ?>
+   <?php echo $this->Form->checkbox("inscription_competitions.{$key}.certificat_qs", ['class'=>'certifqs-ind']); ?>
     </span>
     </td>
 
@@ -269,7 +279,8 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                   'ddn'=>$articli['licency']['ddn'],
                   'grade_id'=>$articli['licency']['grade_id'],
                   'certificat'=>$articli['certificat'],
-                 'surclassement'=>$articli['surclassement'],
+                 'certificat_qs'=>$articli['certificat_qs'],
+                 'surclassement_age'=>$articli['surclassement_age'],
                  
                  
                 ];
@@ -289,14 +300,14 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
         
   <p class="padding-1 center">
             
-            <?php echo $this->Form->checkbox("equipes.cf_equipe".$a, ['label'=>false,'id'=>'equipe'.$a,'style']); ?>Equipe <?php echo $a;?> </p>
+            <?php echo $this->Form->checkbox("equipes.cf_equipe".$a, ['class'=>'checkequipe','label'=>false,'id'=>'equipe'.$a,'checked'=>'checked']); ?>Equipe <?php echo $a;?> </p>
 
-        <div id="equipe<?php echo $a; ?>block">
+        <div id="equipe<?php echo $a; ?>block" class="equipeblock"  style="display:none">
 
-            <p class="padding-1 center">Nom de l'équipe : <br />
+            <p class="padding-1 font-2 center">Nom de l'équipe : <br />
                   
                 <?php echo $this->Form->hidden("equipes.$a.equipe.id", ['value'=>$names[0]['equipe_id'],'label'=>false]); ?>
-                <?php echo $this->Form->input("equipes.$a.equipe.name", ['value'=>$names[0]['nom_equipe'],'label'=>false]); ?>
+                <?php echo $this->Form->input("equipes.$a.equipe.name", ['class'=>'nom-equipe','value'=>$names[0]['nom_equipe'],'label'=>false]); ?>
             </p>
 
            <table class="tableau-gris margin-top-3" id="addelement-table">
@@ -349,7 +360,7 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                     </td>
                     <td>
                         <?php echo $this->Form->input("equipes.$a.licencie.$b.ddn", ['value'=>$name['ddn'],'class'=>'age-input next-ddn', 'onchange'=>"categorie(this)",'type'=>'year','minYear' => date('Y') - 60,
-                        'maxYear' => date('Y') - 7,'label'=>false]); ?>
+                        'maxYear' => date('Y') - 9,'label'=>false]); ?>
                     </td>
                      <td class="grade">
        <?php echo $this->Form->input("equipes.$a.licencie.$b.grade_id", ['value'=>$name['grade_id'],'onchange'=>"categorie(this)",'class'=>'next-grade grade-input','label'=>false,  [
@@ -359,9 +370,25 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                     <td>
                     <?php
      
-     echo $this->Form->input("equipes.$a.$b.certificat", ['value'=>$name['certificat'],'class'=>' next-certif', 'onchange'=>"certif(this)",'type'=>'year','minYear' => date('Y') - 5, 'maxYear' => date('Y'),'label'=>false]); ?></td>
+     echo $this->Form->input("equipes.$a.licencie.$b.certificat", ['value'=>$name['certificat'],'class'=>' next-certif', 'onchange'=>"certif(this)",'type'=>'year','minYear' => date('Y') - 9, 'maxYear' => date('Y'),'label'=>false]); ?>
+                        
+                    <span class="certif <?php 
+                    
+                    if($name['certificat_qs']== 1) {$checked2 = 'checked';} else {$checked2 = '';}
+                    
+                    if(!($name['certificat'] < date("Y"))) { echo 'display-none';}?>"><br />Certificat QS sur l'honneur
+   <?php echo $this->Form->checkbox("equipes.$a.licencie.$b.certificat_qs", ['checked'=>$checked2, 'class'=>'next-certifqs']); ?>
+    </span>
+                    
+                    </td>
+                    
+                    
+                    
                     <td>
-                        <?php echo $this->Form->checkbox("equipes.$a.licencie.$b.surclassement", ['value'=>$name['surclassement'],'class'=>'next-surage','label'=>false]); ?>
+                        <?php
+                    if($name['surclassement_age']== 1) {$checked = 'checked';} else {$checked = '';}
+                    
+                    echo $this->Form->checkbox("equipes.$a.licencie.$b.surclassement", ['checked'=>$checked,'class'=>'next-surage','label'=>false]); ?>
                     </td>
 
                 </tr>
@@ -397,7 +424,7 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                     </td>
                     <td>
                         <?php echo $this->Form->input("equipes.$a.licencie.$i.ddn", ['class'=>'age-input next-ddn', 'onchange'=>"categorie(this)",'type'=>'year','minYear' => date('Y') - 60,
-                        'maxYear' => date('Y') - 7,'label'=>false]); ?>
+                        'maxYear' => date('Y') - 9,'label'=>false]); ?>
                     </td>
                      <td class="grade">
        <?php echo $this->Form->input("equipes.$a.licencie.$i.grade_id", ['onchange'=>"categorie(this)",'class'=>'next-grade grade-input','label'=>false,  [
@@ -409,8 +436,11 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                         
                         <?php
      
-     echo $this->Form->input("equipes.$a.$i.certificat", ['class'=>' next-certif', 'onchange'=>"certif(this)",'type'=>'year','minYear' => date('Y') - 5,
+     echo $this->Form->input("equipes.$a.licencie.$i.certificat", ['class'=>' next-certif', 'onchange'=>"certif(this)",'type'=>'year','minYear' => date('Y') - 9,
     'maxYear' => date('Y'),'label'=>false]); ?>
+                        <span class="certif display-none"><br />Certificat QS sur l'honneur
+   <?php echo $this->Form->checkbox("equipes.$a.licencie.$i.certificat_qs", ['class'=>'next-certifqs']); ?>
+    </span>
                     <td>
                         <?php echo $this->Form->checkbox("equipes.$a.licencie.$i.surclassement", ['class'=>'next-surage','label'=>false]); ?>
                     </td>
@@ -441,14 +471,14 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                       
   <p class="padding-1 center">
             
-            <?php echo $this->Form->checkbox("equipes.cf_equipe".$a, ['label'=>false,'id'=>'equipe'.$a,'style']); ?>Equipe <?php echo $a;?> </p>
+            <?php echo $this->Form->checkbox("equipes.cf_equipe".$a, ['class'=>'checkequipe','label'=>false,'id'=>'equipe'.$a,'style']); ?>Equipe <?php echo $a;?> </p>
 
-        <div id="equipe<?php echo $a; ?>block">
+        <div id="equipe<?php echo $a; ?>block" class='equipeblock' style="display:none">
 
-            <p class="padding-1 center">Nom de l'équipe : <br />
+            <p class="padding-1 font-2 center">Nom de l'équipe : <br />
                   
                 <?php echo $this->Form->hidden("equipes.$a.equipe.id", ['label'=>false]); ?>
-                <?php echo $this->Form->input("equipes.$a.equipe.name", ['label'=>false]); ?>
+                <?php echo $this->Form->input("equipes.$a.equipe.name", ['class'=>'nom-equipe','label'=>false]); ?>
             </p>
 
            <table class="tableau-gris margin-top-3" id="addelement-table">
@@ -490,7 +520,7 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                     </td>
                     <td>
                         <?php echo $this->Form->input("equipes.$a.licencie.$i.ddn", ['class'=>'age-input next-ddn', 'onchange'=>"categorie(this)",'type'=>'year','minYear' => date('Y') - 60,
-                        'maxYear' => date('Y') - 7,'label'=>false]); ?>
+                        'maxYear' => date('Y') - 9,'label'=>false]); ?>
                     </td>
                      <td class="grade">
        <?php echo $this->Form->input("equipes.$a.licencie.$i.grade_id", ['onchange'=>"categorie(this)",'class'=>'next-grade grade-input','label'=>false,  [
@@ -502,8 +532,11 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                         
                         <?php
      
-     echo $this->Form->input("equipes.$a.$i.certificat", ['class'=>' next-certif', 'onchange'=>"certif(this)",'type'=>'year','minYear' => date('Y') - 5,
+     echo $this->Form->input("equipes.$a.licencie.$i.certificat", ['class'=>' next-certif', 'onchange'=>"certif(this)",'type'=>'year','minYear' => date('Y') - 9,
     'maxYear' => date('Y'),'label'=>false]); ?>
+                        <span class="certif display-none"><br />Certificat QS sur l'honneur
+   <?php echo $this->Form->checkbox("equipes.$a.licencie.$i.certificat_qs", ['class'=>'next-certifqs']); ?>
+    </span>
                     <td>
                         <?php echo $this->Form->checkbox("equipes.$a.licencie.$i.surclassement", ['class'=>'next-surage','label'=>false]); ?>
                     </td>
@@ -532,37 +565,11 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
         <h2 class="center black margin-top-50-px ">
             Inscriptions arbitres et commissaires
         </h2>
-        
-       <a class="showSingle" data-target="Commissaires">Commissaires</a>
-
-        
-     <a class="showSingle" data-target="Arbitres">Arbitres</a>
-
-        <?php
-        
-          $count1 = 1;
-          $count2 = 1;                         
-               
-        // Si g est égal à 1, on est dans le tableau des commissaires, à 2, dans le tableau des arbitres
-        
-            
-            for($g=1;$g <= 2; $g++) { 
-        
-        ?>
+     
         
         
-        <?php
+    
                 
-                // On définit titre et repaire pour le targetDiv
-                if($g == 1) {
-            $role= "Commissaires";
-            } else {
-            $role= "Arbitres";
-            
-} ?>
-        
-        <div id="div<?php echo $role;?>" class="targetDiv">
-        <h3><?php echo $role;?></h3>
         
         <table class="tableau-gris" style="margin-top:5px" id="addelement-table">
 
@@ -570,12 +577,16 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                 <th>Numéro de licence</th>
                 <th>Nom</th>
                 <th>Prénom</th>
+                <th>Arbitre</th>
+                <th>Commissaire</th>
                 <th>Samedi</th>
                 <th>Dimanche</th>
             </tr>
             
             
             <?php 
+            
+            $count1 = 0;
                                 // Si on a déjà des inscriptions       
               
                          if(isset($admins)) {   
@@ -584,7 +595,7 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                 foreach($admins as $admin) {
                     
             // Si on est dans le tableau des commissaires
-                    if($g == 1 && $admin['commissaire'] == 1) {
+                   
                         
             $count1++;
             
@@ -596,8 +607,7 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
             <td>
                         <?php echo $this->Form->hidden("administratif.$admin->id.id", ['value'=>$admin['id'],'label'=>false]); ?>
 
-                        <?php echo $this->Form->hidden("administratif.$admin->id.$role", ['class'=>'licencie-equipe','label'=>false]); ?>
-
+                        
                         
                         <?php echo $this->Form->input("administratif.$admin->id.licencie.numero_licence", ['value'=>$admin['licency']['numero_licence'],'class'=>'licencie-equipe','label'=>false]); ?>
                     </td>
@@ -607,7 +617,20 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                     <td>
                         <?php echo $this->Form->input("administratif.$admin->id.licencie.prenom", ['value'=>$admin['licency']['prenom'],'class'=>'next-prenom','label'=>false]); ?>
                     </td>
+                    <td>
+                 <?php 
                     
+                     if($admin['arbitre'] == 1) {$checkarb = 'checked';} else {$checkarb = '';}
+                    
+                    echo $this->Form->checkbox("administratif.$admin->id.arbitre", ['checked'=>$checkarb, 'label'=>false]); ?>
+                        </td>
+               <td>
+                 <?php 
+                     if($admin['commissaire'] == 1) {$checkcomm = 'checked';} else {$checkcomm = '';}
+                    
+                    echo $this->Form->checkbox("administratif.$admin->id.commissaire", ['checked'=>$checkcomm, 'label'=>false]); ?>
+                      
+            </td>
                     <td>
                     <?php echo $this->Form->checkbox("administratif.$admin->id.samedi",['checked'=>$checked1]); ?>
                 </td>
@@ -623,48 +646,8 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                    
                     // Si on est dans le tableau des arbitres
                     
-                    elseif($g == 2 && $admin['arbitre'] == 1) {
-                      
-           $count2++;
-            
-            if(strpos($admin['presence'], '1') !== false) { $checked1 = 'checked'; } else {$checked1 = ''; }
-            if(strpos($admin['presence'], '2') !== false) { $checked2 = 'checked'; } else {$checked2 = ''; } 
-            ?>
+                         }
         
-             <tr class="line">
-            <td>
-                        <?php echo $this->Form->hidden("administratif.$admin->id.id", ['value'=>$admin['id'],'label'=>false]); ?>
-
-                        <?php echo $this->Form->hidden("administratif.$admin->id.$role", ['class'=>'licencie-equipe','label'=>false]); ?>
-
-                        
-                        <?php echo $this->Form->input("administratif.$admin->id.licencie.numero_licence", ['value'=>$admin['licency']['numero_licence'],'class'=>'licencie-equipe','label'=>false]); ?>
-                    </td>
-                    <td>
-                        <?php echo $this->Form->input("administratif.$admin->id.licencie.nom", ['value'=>$admin['licency']['nom'],'class'=>'next-nom','label'=>false]); ?>
-                    </td>
-                    <td>
-                        <?php echo $this->Form->input("administratif.$admin->id.licencie.prenom", ['value'=>$admin['licency']['prenom'],'class'=>'next-prenom','label'=>false]); ?>
-                    </td>
-                    
-                    <td>
-                    <?php echo $this->Form->checkbox("administratif.$admin->id.samedi",['checked'=>$checked1]); ?>
-                </td>
-                
-              <td>
-                    <?php echo $this->Form->checkbox("administratif.$admin->id.dimanche",['checked'=>$checked2]); ?>
-
-                </td>
-            </tr>
-            
-            
-          <?php  }
-            
-               
-            }
-            
-                        }
-                
                 ?>
             
             
@@ -676,26 +659,19 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
               <?php 
                 
                 // On va compter le nombre de lignes remplies pour pouvoir compléter jusqu'à 10 par des lignes vides
-                                       
-              if($g == 1) {
+            
               
-              $e = 1;
-              $f = 10 - $count1;
+              $e = $count1 + 1;
+             
               
-              } else {
               
-              $e = 11;
-              $f = 20 - $count2;
-              
-              } 
-               for($o=$e;$o <= $f; $o++) { ?>
+               for($o=$e;$o <= 10; $o++) { ?>
                    
               
               <td>
                         <?php echo $this->Form->hidden("administratif.$o.id", ['label'=>false]); ?>
 
-                        <?php echo $this->Form->hidden("administratif.$o.$role", ['class'=>'licencie-equipe','label'=>false]); ?>
-
+                     
                         
                         <?php echo $this->Form->input("administratif.$o.licencie.numero_licence", ['class'=>'licencie-equipe','label'=>false]); ?>
                     </td>
@@ -706,6 +682,14 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                         <?php echo $this->Form->input("administratif.$o.licencie.prenom", ['class'=>'next-prenom','label'=>false]); ?>
                     </td>
                     
+                    <td>
+                 <?php echo $this->Form->checkbox("administratif.$o.arbitre", ['label'=>false]); ?>
+                        </td>
+               <td>
+                 <?php echo $this->Form->checkbox("administratif.$o.commissaire", ['label'=>false]); ?>
+                      
+            </td>
+              
                     <td>
                     <?php echo $this->Form->checkbox("administratif.$o.samedi"); ?>
                 </td>
@@ -721,9 +705,9 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
               ?>
         </table>
 
-</div>
+
         
-        <?php } ?>
+       
         
        
             
@@ -740,12 +724,6 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
 
 
         <?php echo $this->Form->end();?>
-
-
-
-    </div>
-</div>
-
 
 <p class="center padding-3"></p>
 
@@ -876,7 +854,15 @@ if((age >= <?php echo $category['annee_debut']; ?> && age <= <?php echo $categor
 <?php  $this->Html->scriptStart(['block' => true]); ?>
 
             
-            function surclassement(x) { if($(x).is(':checked')) { if($(x).parent().prev(".surclassement-age").hasClass("display-block")) { $(x).parent().prev(".surclassement-age").children().prop('checked', true); } } }
+            function surclassement(x) { 
+                
+    
+        if($(x).is(':checked')) { 
+        if($(x).parent().prev(".surclassement-age").hasClass("display-block")) {
+            $(x).parent().prev(".surclassement-age").children().prop('checked', true); 
+                                                             }
+                                                         } 
+                                                    }
             
             function certif(x) { if(x.value < '2018' ) { $(x).parent().next(".certif").addClass("display-block"); } }
             
@@ -954,31 +940,30 @@ nextsurage.prop('checked', true);
                     }});
                     <?php $this->Html->scriptEnd(); ?>
 
-
-                    <?php echo $this->Html->scriptStart(['block' => true]);?>
-                    $('#equipe1').click(function() {
-                    $("#equipe1block").toggle(this.checked);
-
-                    });
-
-                    $('#equipe2').click(function() {
-                    $("#equipe2block").toggle(this.checked);
-
-                    });
-
-                    $('#equipe3').click(function() {
-                    $("#equipe3block").toggle(this.checked);
-
-                    });
-
-                    $('#equipe4').click(function() {
-                    $("#equipe4block").toggle(this.checked);
-
-                    });
-
-
-                    <?php $this->Html->scriptEnd(); ?>
-
+           <?php echo $this->Html->scriptStart(['block' => true]);?>
+        $(document).ready(function() {
+        
+        $('input[type="checkbox"][checked="checked"]').parent().next().show();
+        } );
+        
+        
+          $('.checkequipe').click(function() {
+         $(this).parent().next().toggle(this.checked);
+         if (this.checked) {
+        $(this).parent().next().children().eq(1).children().eq(0).prop('required',true);
+        } else {
+         $(this).parent().next().children().eq(1).children().eq(0).prop('required',false);
+        
+        }
+        });
+        
+        
+    
+        
+        
+       <?php $this->Html->scriptEnd(); ?>
+        
+      
 
  <?php echo $this->Html->scriptStart(['block' => true]);?>
 $(document).ready(function() {
