@@ -44,6 +44,8 @@ class InscriptionCompetitionsController extends AppController
 						   'view']);
 
        
+        
+        
  
     }
     
@@ -368,15 +370,13 @@ class InscriptionCompetitionsController extends AppController
         
         
             foreach($datai['equipes'] as $datae) {
-                
-                
-              
-              
+    
                 // Si on a une inscription par équipe (en testant sur le nom d'équipe)
                 
                 if(!empty($datae['equipe']['name'])) {
                 
                     
+      
                    
                      
                     // Si ce n'est pas une nouvelle equipe (j'ai un id)
@@ -743,77 +743,77 @@ class InscriptionCompetitionsController extends AppController
     
     
 	// la variable category détermine si on est sur une catégorie spé ou sur le général
-	public function organisateur($category=null)
+	public function organisateur($id,$category=null)
     {
 		
+        $this->loadModel('Evenements');
+        
+        $event = $this->Evenements->find()
+	->contain(['Competitions'=> function(\Cake\ORM\Query $q) use ($id) {
+        return $q->where(['Competitions.id' => $id])->contain(['Categories']);
+    }])
+
+	->matching('Competitions', function(\Cake\ORM\Query $q) use($id) {
+        return $q->where(['Competitions.id' => $id])->contain(['Categories'=> function($q) {
+        return $q->order(['annee_debut'=>'DESC','grade_debut'=>'DESC']);}]);
+    })->first();
+        
+        $this->set('id',$id);
+      
+         
+         $title = $event['name'];
+         $description = $event['name'];
+        
+     
+        
+        $this->set('title', $title);
+        $this->set('description', $description);
+        
+          
+         if(!empty($event['image'])) { $headimg = 'headers/evenements/g-'.$event['image']; }else { $headimg =  'header_main.png';}
+         
+         
+          $this->set('headimg',$headimg);
+          $this->set('event',$event);
+        
+        
+       
 		$this->set('category',$category);
 		
-		
-		
-		// Junior + Junior & Honneurs + Junior & Excellence
-		if($category == 6) {
-			
-			$category = array('11','6','12');
-		}
-		
-		
-		// Junior + Junior & Honneurs 
-		if($category == 7) {
-			
-			$category = array('11','7');
-		}
-		
-		
-		// Excellence + Junior & Excellence 
-		if($category == 8) {
-			
-			$category = array('12','8');
-		}
-		
-		
-		// Espoir + Espoir & Femme 
-		if($category == 5) {
-			
-			$category = array('14','5');
-		}
-		
-		
-		// Femmes + Espoir & Femme 
-		if($category == 10) {
-			
-			$category = array('14','10');
-		}
+        
 		
 		
  	// Si on n'a pas de catégorie spécifiée, on prend tout
 		if($category == null) {
-		$articles = $this->Inscriptions->find('all')
-			->contain(['Inscrits'=> function($q) {
-        return $q->contain(['Categories','Clubs']);
+		
+            $articles = $this->InscriptionCompetitions->find('all')
+         ->where(['competition_id'=>$event['competition']['id'],'participation_indiv'=>'1'])
+			->contain(['Categories','Licencies'=> function($q) {
+        return $q->contain(['Clubs','Grades']);
     }]);
-		}
 		
 		
-		// Si on a plus d'une catégorie (gamin surclassé), on prend les 2 catégories dans lesquelles il apparait
-		elseif(isset($category[1])) {
+       // Sinon, on prend que les inscros de la caté qui nous intéresse
+        
+        }
+        
+       else {
 			
-			$articles = $this->Inscriptions->find('all')
-			->contain(['Inscrits'=> function(\Cake\ORM\Query $q) use ($category)  {
-        return $q->contain('Clubs','Categories')
-			->where(['Inscrits.category_id IN'=>$category]);		
-		}]);
+		    $articles = $this->InscriptionCompetitions->find('all')
+         ->where(['category_id'=>$category, 'competition_id'=>$event['competition']['id'],'participation_indiv'=>'1'])
+			->contain(['Categories','Licencies'=> function($q) {
+        return $q->contain(['Clubs','Grades']);
+			 }]);
 			
-		}
-		else {
-			
-			// Sinon, on prend la catégorie correspondante
-		$articles = $this->Inscriptions->find('all')
-			->contain(['Inscrits'=> function(\Cake\ORM\Query $q) use ($category)  {
-        return $q->contain('Clubs','Categories')->where(['Inscrits.category_id'=>$category]);
-    }]);	
-			
-			
-		}
+           // On prend également les données de la catégorie présente
+           
+          $category_info = $this->InscriptionCompetitions->Categories->find('all')
+               ->where(['id'=>$category])
+               ->first();
+		
+           $this->set('category_info',$category_info);
+                       
+                       }
 		
 			
 		$this->set('articles',$articles);
@@ -996,19 +996,46 @@ class InscriptionCompetitionsController extends AppController
 	
 	
 	// Fonction pour contrôler les inscriptions
-	public function gestion() {
+	public function gestion($id) {
+        
+        
+          
+        $this->loadModel('Evenements');
+        
+        $event = $this->Evenements->find()
+	->contain(['Competitions'=> function(\Cake\ORM\Query $q) use ($id) {
+        return $q->where(['Competitions.id' => $id]);
+    }])
+
+	->matching('Competitions', function(\Cake\ORM\Query $q) use($id) {
+        return $q->where(['Competitions.id' => $id]);
+    })->first();
+        
+        $this->set('id',$id);
+      
+         
+         $title = $event['name'];
+         $description = $event['name'];
+        
+     
+        
+        $this->set('title', $title);
+        $this->set('description', $description);
+        
+          
+         if(!empty($event['image'])) { $headimg = 'headers/evenements/g-'.$event['image']; }else { $headimg =  'header_main.png';}
+         
+         
+          $this->set('headimg',$headimg);
+          $this->set('event',$event);
+        
+        
+        
+      $user_id =  $this->Auth->User('id');
 	
-	$articles =	$this->Inscriptions->find('all')
-	->contain(['Clubs', 'Inscrits' => function($q) {
-    $q->select([
-         'Inscrits.id',
-		 'Inscrits.inscription_id',
-         'count' => $q->func()->count('*')])
-		 ->group(['inscription_id']);
+	$articles =	$this->InscriptionCompetitions->find('all')
+	->where(['competition_id'=>$id, 'user_id'=>$user_id]);
 
-
-    return $q;
-}]);
 	
 	$this->set('articles',$articles);
 	
