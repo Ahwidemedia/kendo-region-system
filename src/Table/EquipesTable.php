@@ -13,7 +13,7 @@ use Cake\Core\Configure;
 
 
 $validator = new Validator();
-class EvenementsTable extends Table
+class EquipesTable extends Table
 {
 
 
@@ -21,14 +21,11 @@ class EvenementsTable extends Table
 
  public function initialize(array $config)
     {
-
-            $this->hasOne('Competitions');
-      		$this->hasOne('Passages');
+           
+           $this->hasMany('InscriptionCompetitions');
          
            $this->addBehavior('Timestamp');
-           $this->addBehavior('Image');
-           $this->addBehavior('Sluggable');
-      
+        
       
     
       	 
@@ -38,7 +35,7 @@ class EvenementsTable extends Table
 public function validationDefault(Validator $validator)
     {
     $validator
-	->notEmpty('name', 'Entrer le nom de votre événement');
+	->notEmpty('nom', 'Entrer un titre d\'article');
 	 
    return $validator;
         

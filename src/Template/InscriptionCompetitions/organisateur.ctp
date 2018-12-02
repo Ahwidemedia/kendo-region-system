@@ -1,52 +1,23 @@
-<?php echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'],[ 'class'=>'absolute top-right']);?>
+<?php echo $this->Html->link("Retour", ['controller'=>'Pages','action'=>'index'],[ 'class'=>'absolute top-right']);?>
 
 <div class="width-70 center">
+    <div class="onglets">
+        <?php echo $this->Html->link("Tous", ['controller'=>'InscriptionCompetitions','action'=>'organisateur',$event['competition']['id']],[ 'class'=>'']);?>
+<?php
+    
+    foreach($event['competition']['categories'] as $categories) {
+   echo $this->Html->link($categories['name'], ['controller'=>'InscriptionCompetitions','action'=>'organisateur',$event['competition']['id'],$categories['id']]);
+}?>
+	
 
-	<div class="onglets">
-		<?php echo $this->Html->link("Tous", ['controller'=>'inscriptions','action'=>'organisateur'],[ 'class'=>'']);?>
-
-		<?php echo $this->Html->link("Poussins", ['controller'=>'inscriptions','action'=>'organisateur','13'],[ 'class'=>'']);?>
-
-		<?php echo $this->Html->link("Samourais", ['controller'=>'inscriptions','action'=>'organisateur','1'],[ 'class'=>'']);?>
-
-		<?php echo $this->Html->link("Benjamins", ['controller'=>'inscriptions','action'=>'organisateur','2'],[ 'class'=>'']);?>
-
-		<?php echo $this->Html->link("Minimes", ['controller'=>'inscriptions','action'=>'organisateur','3'],[ 'class'=>'']);?>
-
-		<?php echo $this->Html->link("Cadets", ['controller'=>'inscriptions','action'=>'organisateur','4'],[ 'class'=>'']);?>
-
-		<?php echo $this->Html->link("Juniors", ['controller'=>'inscriptions','action'=>'organisateur','6'],[ 'class'=>'']);?>
-
-		<?php echo $this->Html->link("Espoirs", ['controller'=>'inscriptions','action'=>'organisateur','5'],[ 'class'=>'']);?>
-
-		<?php echo $this->Html->link("Honneurs", ['controller'=>'inscriptions','action'=>'organisateur','7'],[ 'class'=>'']);?>
-
-		<?php echo $this->Html->link("Excellence", ['controller'=>'inscriptions','action'=>'organisateur','8'],[ 'class'=>'']);?>
-
-		<?php echo $this->Html->link("Kyusha", ['controller'=>'inscriptions','action'=>'organisateur','9'],[ 'class'=>'']);?>
-
-		<?php echo $this->Html->link("Femmes", ['controller'=>'inscriptions','action'=>'organisateur','10'],[ 'class'=>'']);?>
-
-		<?php echo $this->Html->link("Les inscriptions", ['controller'=>'inscriptions','action'=>'gestion'],[ 'class'=>'']);?>
+		<?php echo $this->Html->link("EQUIPES", ['controller'=>'inscriptions','action'=>'organisation_equipe'],[ 'class'=>'']);?>
 
 	</div>
 	<p class="padding-3">&nbsp;</p>
 
 	<?php if($category !== null) {
-	$category_id = $category;
-	if($category == 13) {$category = 'Poussins';}
-	if($category == 1) {$category = 'Samourais';}
-	if($category == 2) {$category = 'Benjamins';}
-	if($category == 3) {$category = 'Minimes';}
-	if($category == 4) {$category = 'Cadets';}
-	if($category == 5) {$category = 'Juniors';}
-	if($category == 6) {$category = 'Espoirs';}
-	if($category == 7) {$category = 'Honneurs';}
-	if($category == 8) {$category = 'Excellences';}
-	if($category == 9) {$category = 'Kyusha';}
-	if($category == 10) {$category = 'Femmes';}
 	
-	echo '<h2 class="center">Categorie '.$category.'</h2>';
+	echo '<h2 class="center">Categorie '.$category_info['name'].'</h2>';
 }
 else {
 
@@ -74,51 +45,32 @@ $category_id = null;
 	</thead>
 
 	<tbody>
-		<?php foreach($articles as $articli){
-		foreach($articli['inscrits'] as $article) {
-			
-			if($article['grade'] == -10) {$grade = '10ème Kyu';}
-			elseif($article['grade'] == -10) {$grade = '10ème Kyu';}
-			elseif($article['grade'] == -9) {$grade = '9ème Kyu';}
-			elseif($article['grade'] == -8) {$grade = '8ème Kyu';}
-			elseif($article['grade'] == -7) {$grade = '7ème Kyu';}
-			elseif($article['grade'] == -6) {$grade = '6ème Kyu';}
-			elseif($article['grade'] == -5) {$grade = '5ème Kyu';}
-			elseif($article['grade'] == -4) {$grade = '4ème Kyu';}
-			elseif($article['grade'] == -3) {$grade = '3ème Kyu';}
-			elseif($article['grade'] == -2) {$grade = '2ème Kyu';}
-			elseif($article['grade'] == -1) {$grade = '1er Kyu';}
-			elseif($article['grade'] == 1) {$grade = '1er Dan';}
-			elseif($article['grade'] == 2) {$grade = '2ème Dan';}
-			elseif($article['grade'] == 3) {$grade = '3ème Dan';}
-			elseif($article['grade'] == 4) {$grade = '4ème Dan';}
-			elseif($article['grade'] == 5) {$grade = '5ème Dan';}
-			elseif($article['grade'] == 6) {$grade = '6ème Dan';}
-			elseif($article['grade'] == 7) {$grade = '7ème Dan';}
+		<?php foreach($articles as $article){
+		
 		?>
 
 	<tr>
 		<td></td>
 		
 		<td>
-			<?php echo $article['nom'];  ?>
+			<?php echo $article['licency']['nom'];  ?>
 		</td>
 
 		<td>
-			<?php echo $article['prenom'];  ?>
+			<?php echo $article['licency']['prenom'];  ?>
 		</td>
 
 
 		<td>
-			<?php echo $article['sexe'];  ?>
+			<?php echo $article['licency']['sexe'];  ?>
 		</td>
 
 		<td>
-			<?php echo $grade;  ?>
+			<?php echo $article['licency']['grade']['name'];  ?>
 		</td>
 
 		<td>
-			<?php echo $article['age'];  ?>
+			<?php echo $article['licency']['ddn'];  ?>
 
 				<?php if($category == null) { ?>
 		<td>
@@ -136,8 +88,8 @@ $category_id = null;
 		</td>
 			<td>
 			<?php 
-			 echo $article['certif_medical'];
-			if($article['certif_qs'] == 1) {
+			 echo $article['certificat'];
+			if($article['certificat_qs'] == 1) {
 			
 			echo " / Certificat QS";
 			
@@ -147,7 +99,7 @@ $category_id = null;
 
 		<td>
 			<?php 
-			 echo $article['club']['name'];
+			 echo $article['licency']['club']['name'];
 			
 		   ?>
 		</td>
@@ -157,13 +109,13 @@ $category_id = null;
 	</tr>
 
 	<?php	}
-		} ?>
+		 ?>
 
 	</tbody>
 	</table>
 	<p class="center padding-3">
-	<?php echo $this->Html->link("Exporter la catégorie en excel", ['action'=>'export',$category_id, '_ext' => 'csv'],[ 'class'=>'center normalButton margin-3']);?>
-	<?php echo $this->Html->link("Exporter la catégorie en pdf", ['action'=>'view',$category_id, '_ext' => 'pdf'],[ 'class'=>'center normalButton margin-3']);?>
+	<?php echo $this->Html->link("Exporter la catégorie en excel", ['action'=>'export',$category_info['id'], '_ext' => 'csv'],[ 'class'=>'center normalButton margin-3']);?>
+	<?php echo $this->Html->link("Exporter la catégorie en pdf", ['action'=>'view',$category_info['id'], '_ext' => 'pdf'],[ 'class'=>'center normalButton margin-3']);?>
 </p>
 	
 </div>

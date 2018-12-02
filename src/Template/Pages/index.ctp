@@ -24,7 +24,7 @@ foreach ($articles as $article) { ?>
                 <?php echo $article['lieux'];?>
             </p>
             <p>Discipline :
-                <?php echo $article['competition']['discipline_id'];?>
+                <?php echo $article['competition']['discipline']['name'];?>
             </p>
         </div>
     </div>
@@ -41,7 +41,7 @@ foreach ($articles as $article) { ?>
 
         <div class="button">
             <?php echo $this->html->link('Inscriptions Shiais',['controller'=>'InscriptionCompetitions','action'=>'inscriptions',$article['competition']['id']]); ?>
-            <p class="red">Vous avez actuellement 5 inscrits</p>
+          <?php if($conn['id'] == $article['user_id']) { ?>  <p class="red">Vous avez actuellement <?php echo $number_compete;?> inscrits</p> <?php } ?>
         </div>
 
         <?php 

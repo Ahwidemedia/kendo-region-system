@@ -13,7 +13,7 @@ use Cake\Core\Configure;
 
 
 $validator = new Validator();
-class LicenciesTable extends Table
+class InscriptionAdministratifsTable extends Table
 {
 
 
@@ -21,25 +21,16 @@ class LicenciesTable extends Table
 
  public function initialize(array $config)
     {
-           $this->belongsTo('Clubs');
-           $this->hasMany('InscriptionCompetitions');
-           $this->belongsTo('Categories');
-            $this->belongsTo('Grades');
-           
+           $this->belongsTo('Licencies',['foreignKey' => 'licencie_id']);
+           $this->belongsTo('Competitions');
+		   $this->belongsTo('Users');
+         
+           $this->addBehavior('Timestamp');
         
-       	  $this->belongsTo('Users');
-         
-         $this->addBehavior('Timestamp');
-         
       
     
       	 
     }
-
-
-
-  
-
 
 
 

@@ -52,7 +52,25 @@ class AppController extends Controller
             ],
             'authError' => 'Vous devez être identifié pour pouvoir accéder à cette section.',
         ]);
-    }
+   
+   
+     
+  if($this->Auth->User('id') !== null) {
+  $this->loadModel('Users');
+  
+  $user_id = $this->Auth->User('id');
+  
+ $user = $this->Users->find('all')
+ ->where(['Users.id'=>$user_id])
+ ->contain('Clubs')
+ ->first();
+ 
+ $this->set('user',$user);
+ 
+  }
+   
+   
+   }
     
 
     

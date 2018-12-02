@@ -24,7 +24,6 @@ class LicenciesTable extends Table
            $this->belongsTo('Clubs');
            $this->hasMany('InscriptionCompetitions');
            $this->belongsTo('Categories');
-            $this->belongsTo('Grades');
            
         
        	  $this->belongsTo('Users');

@@ -59,11 +59,28 @@ class PagesController extends AppController
  
         $this->loadModel('Evenements');
         $articles = $this->Evenements->find('all')
-            ->contain('Competitions','Passages');
+            ->contain(['Passages','Competitions'=> function($q) {
+        return $q->contain(['Disciplines']);
+    }]);
         
         $this->set('articles',$articles);
         
         
+        // Si l'utilisateur est connecté
+        if($this->Auth->User('id') !== null){
+            
+            $user_id = $this->Auth->User('id');
+            
+            $this->loadModel('InscriptionCompetitions');
+            
+            $inscriptions = $this->InscriptionCompetitions->find('all')
+                ->where(['user_id'=>$user_id]);
+    
+             $number_compete = $inscriptions->count();
+            
+            $this->set('number_compete', $number_compete);
+          
+        }
      
         
         

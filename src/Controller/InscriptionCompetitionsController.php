@@ -43,12 +43,10 @@ class InscriptionCompetitionsController extends AppController
 						   'gestion',
 						   'view']);
 
-                            $title = 'Inscriptions Interregions 2019';
-        $description = 'Inscriptions Interregions 2019';
+       
+        
+        
  
-        $this->set('title', $title);
-        $this->set('description', $description);
-
     }
     
  
@@ -59,13 +57,28 @@ class InscriptionCompetitionsController extends AppController
         
         // On prend les données de l'événement
         
-        
         $this->loadModel('Evenements');
         
-        $event = $this->Evenements->find('all')
-            ->contain('Competitions')
-            ->matching('Competitions')
-            ->first();
+        $event = $this->Evenements->find()
+	->contain(['Competitions'=> function(\Cake\ORM\Query $q) use ($id) {
+        return $q->where(['Competitions.id' => $id]);
+    }])
+
+	->matching('Competitions', function(\Cake\ORM\Query $q) use($id) {
+        return $q->where(['Competitions.id' => $id]);
+    })->first();
+        
+        $this->set('id',$id);
+      
+         
+         $title = $event['name'];
+         $description = $event['name'];
+        
+     
+        
+        $this->set('title', $title);
+        $this->set('description', $description);
+        
         
             debug($event);die();
             
@@ -141,10 +154,12 @@ class InscriptionCompetitionsController extends AppController
 		
 	if($this->request->is(['patch','post','put'])){
 	
-
+    
+        
+      
 	$datai = $this->request->data;	
        
-        
+    
         // Si c'est un nouveau club, on le rentre dans la base
         if($datai['new_club'] == 1) {
 	
@@ -172,8 +187,9 @@ class InscriptionCompetitionsController extends AppController
             foreach($datai['inscription_competitions'] as $data) {
         
        
-              
-       // Je vais mettre toutes les variables communes
+                
+              if(isset($data['id'])) {
+       // Je vais définir toutes les variables communes à tous les licenciés
                 
     $data['new_club'] = $datai['new_club'];
     $data['licencie']['club_id'] = $datai['club_id'];
@@ -182,6 +198,8 @@ class InscriptionCompetitionsController extends AppController
     $data['user_id'] = $user_id;
         
 	
+              
+                
 	// Je remets les années de cakephp au carré
 		$data['certificat'] = $data['certificat']['year'];
 		$data['licencie']['ddn'] = $data['licencie']['ddn']['year'];
@@ -215,7 +233,7 @@ class InscriptionCompetitionsController extends AppController
 		
 				if($data['licencie']['ddn'] >= $category['annee_debut']  && $data['licencie']['ddn'] <= $category['annee_fin']) {
 		
-					$data['licencie']['category_id'] = $category['id'];
+					$data['category_id'] = $category['id'];
 		
 				}
 		
@@ -234,7 +252,7 @@ class InscriptionCompetitionsController extends AppController
 				   && $data['licencie']['ddn'] <= $category['annee_fin']
 				   && $data['licencie']['sexe'] == $category['sexe']) {
 		
-					$data['licencie']['category_id'] = $category['id'];
+					$data['category_id'] = $category['id'];
 		
 				}
 		
@@ -250,7 +268,7 @@ class InscriptionCompetitionsController extends AppController
 		
 		
 		
-		$data['licencie']['category_id'] = $category['id'];
+		$data['category_id'] = $category['id'];
 		
 				
 				        }
@@ -263,7 +281,7 @@ class InscriptionCompetitionsController extends AppController
          }
 		
     
-        // Si ce n'est pas un nouveau licencié      
+        // Si ce n'est pas un nouveau licencié (on reprend l'id à partir de l'inscription)    
         
         if($data['licencie']['id'] !== '') {
         
@@ -280,10 +298,24 @@ class InscriptionCompetitionsController extends AppController
       
         else {
             
+            // Sinon, je vérifie qu'il existe pas dans la base à partir du numéro de licence
+            
+             $licencie = $this->InscriptionCompetitions->Licencies->find('all')
+           ->Where(['numero_licence'=>$data['licencie']['numero_licence']])
+           ->first();
+            
+            if($licencie !== null) {
+                
+            $newlicencie = $licencie;
+        
+                $data['licencie']['id'] = $newlicencie['id'];
+            
+            } else {
+            
             // Sinon, j'en créé un nouveau
           
             $newlicencie = $this->InscriptionCompetitions->Licencies->newEntity();
-           
+           }
            
         }
             
@@ -330,7 +362,7 @@ class InscriptionCompetitionsController extends AppController
 
     }
         
-            
+      }      
         }
         
         
@@ -339,14 +371,13 @@ class InscriptionCompetitionsController extends AppController
         
         
             foreach($datai['equipes'] as $datae) {
-                
-                
-              
-              
+    
                 // Si on a une inscription par équipe (en testant sur le nom d'équipe)
                 
                 if(!empty($datae['equipe']['name'])) {
                 
+                    
+      
                    
                      
                     // Si ce n'est pas une nouvelle equipe (j'ai un id)
@@ -382,7 +413,10 @@ class InscriptionCompetitionsController extends AppController
                         
                     if($datao['nom'] !== '') {
                       
-                        // Je vérifie si c'est une mise à jour ou une nouvelle
+                        // Dans tous les cas, on remet la date de naissance au carré
+                        $datao['ddn'] = $datao['ddn']['year'];
+                        
+                        // Si c'est une mise à jour (on a déjà un id)
                        
                          if($datao['id'] !== '') {
                         
@@ -395,16 +429,41 @@ class InscriptionCompetitionsController extends AppController
                         
                          } else {
                         
-                          // S'il n'existe pas, je le créé
-                      
+                          // Sinon je vérifie s'il n'existe pas à partir de la licence
+                             
+                             
+                      $licencio = $this->InscriptionCompetitions->Licencies->find('all')
+                        ->Where(['numero_licence'=>$datao['numero_licence']])
+                        ->first();
+                             
+                          
                         
+                        if($licencio !== null) {     
+                             
+                        $inscri = $licencio;
+                                
+                            // Si on a un licencié, on va lui indiqué l'id à mettre à jour dans le data
+                            $datao['id'] = $licencio['id'];
+                             
+                        }
+                             else {
+                             
+                        // Sinon, je le créé
                         $inscri = $this->InscriptionCompetitions->Licencies->newEntity();   
-                      
+                            
+                             }
                          
                              
                        }
-                             
+                        
+                       
+                       $datae['certificat'] = $datao['certificat']['year'];
+                       $datae['surclassement_age'] = $datao['surclassement'];
+                        $datae['certificat_qs'] = $datao['certificat_qs'];
+                
                         $entity_inscro = $this->InscriptionCompetitions->Licencies->patchEntity($inscri,$datao);
+                        
+                      
                         
                         $entity_inscro->discipline_id = $event['competition']['discipline_id'];
                         $entity_inscro->club_id = $datai['club_id'];
@@ -413,6 +472,7 @@ class InscriptionCompetitionsController extends AppController
                         
                         $result_inscro = $this->InscriptionCompetitions->Licencies->save($entity_inscro);
                         
+                       
                         
                         // Je vérifie ensuite s'il est déjà inscrit à la compète ou pas
                         
@@ -422,19 +482,16 @@ class InscriptionCompetitionsController extends AppController
                             
                         
                         
-                        
                         // Si c'est le cas, je vais le prendre pour le mettre à jour
                       
                         if($inscro !== null) {
                             
-                            $inscru = $inscro;
-                            
-                           
+                            $inscru = $inscro;     
+                     
                        
-                        // Sinon, je créé l'inscription en mettant à 1 la participation
                         } else {
                             
-                            // Sinon je cree l'inscription
+                            // Sinon je cree l'inscription à la compete
                             
                         $inscru = $this->InscriptionCompetitions->newEntity();
                      
@@ -478,8 +535,10 @@ class InscriptionCompetitionsController extends AppController
         
         // Pour chaque inscrit administratif
         
+       
+        
         foreach($datai['administratif'] as $dataa) {
-            
+              
            
             // Si on a le nom de rempli
             
@@ -493,7 +552,7 @@ class InscriptionCompetitionsController extends AppController
                         
                         $result_inscro = $licencio;
                         
-                     
+                    
                         
                           // S'il n'existe pas, je le créé
                         if(empty($licencio)) {
@@ -522,6 +581,7 @@ class InscriptionCompetitionsController extends AppController
                            ->where(['id'=>$dataa['id']])
                            ->first();
                             
+                           
                         } else {
                             
                             
@@ -529,7 +589,29 @@ class InscriptionCompetitionsController extends AppController
                             
                         }
                 
+                                        
+                        // 1 va représenter la présence le 1er jour
+                        // 2 va représenter la présence le 2ème jour
+                        // 12 la présence les 2 jours
+                
+                        if($dataa['samedi'] == 1 && $dataa['dimanche'] == 0 ) {
                         
+                            $dataa['presence'] = 1;
+                       
+                        }elseif ($dataa['samedi'] == 0 && $dataa['dimanche'] == 1 ) {
+                            
+                            $dataa['presence'] = 2;
+                        } elseif ($dataa['samedi'] == 1 && $dataa['dimanche'] == 1 ){
+                           
+                            $dataa['presence'] = 12;
+                            
+                        } else 
+                            
+                        { $dataa['presence'] = 0;}
+                
+                                
+                
+                
                         
                         $entity_inscru = $this->InscriptionAdministratifs->patchEntity($inscru,$dataa);
                             
@@ -537,41 +619,7 @@ class InscriptionCompetitionsController extends AppController
                         $entity_inscru->competition_id = $id;
                         $entity_inscru->user_id = $user_id;
                        
-                        
-                        
-                        if(isset($dataa['Commissaires'])) {
-                            
-                         $entity_inscru->commissaire = 1;
-                            
-                        }
-                
-                        if(isset($dataa['Arbitres'])) {
-                        
-                            $entity_inscru->arbitre = 1;
-                        }
-                
-                
-                        // 1 va représenter la présence le 1er jour
-                        // 2 va représenter la présence le 2ème jour
-                        // 12 la présence les 2 jours
-                
-                        if($dataa['samedi'] == 1 && $dataa['dimanche'] == 0 ) {
-                        
-                            $entity_inscru->presence = 1;
-                       
-                        }elseif ($dataa['samedi'] == 0 && $dataa['dimanche'] == 1 ) {
-                            
-                            $entity_inscru->presence = 2;
-                        } elseif ($dataa['samedi'] == 1 && $dataa['dimanche'] == 1 ){
-                           
-                            $entity_inscru->presence = 12;
-                            
-                        }
-                
-                        
-                        
-                        
-                       
+                      
                     
                         $result_inscru = $this->InscriptionAdministratifs->save($entity_inscru);
                      
@@ -607,7 +655,88 @@ class InscriptionCompetitionsController extends AppController
 }
 
     
+    function deleteindiv($id,$compete){
+
+	$this->request->allowMethod(['post', 'deleteindiv']);
+	
     
+        // On prend l'inscription
+    $inscription = $this->InscriptionCompetitions->get($id);
+        
+        // Si le competiteur est inscrit en individuel ET en équipe
+        if($inscription['participation_indiv'] == 1 && $inscription['participation_equipe'] == 1) {
+            
+            // on enlève juste sa participation en individuel
+            
+	$upd_inscro = TableRegistry::get('InscriptionCompetitions');
+			$query = $upd_inscro->query();
+			$query->update()
+   			 ->set(['participation_indiv' => 0])
+   		 	->where(['id' => $id])
+    		->execute();        
+        }
+        
+        // Sinon, on supprime totalement l'inscription
+        
+        elseif($inscription['participation_indiv'] == 1 && $inscription['participation_equipe'] == 0) {
+        
+        
+    if ($supprime = $this->InscriptionCompetitions->delete($inscription)) {
+    
+	$this->Flash->success('L\'inscription a été supprimée');
+		
+        return $this->redirect(['action'=>'inscriptions',$compete]);
+	}
+				else {
+
+		$this->Flash->error('L\'inscription n\'a pu être supprimée');
+		return $this->redirect(['action'=>'inscriptions',$compete]);
+		  }
+	   }
+	
+    }
+    
+    
+     function deleteequipe($id,$compete){
+
+	$this->request->allowMethod(['post', 'deleteequipe']);
+	
+    
+        // On prend l'inscription
+    $inscription = $this->InscriptionCompetitions->get($id);
+        
+        // Si le competiteur est inscrit en individuel ET en équipe
+        if($inscription['participation_indiv'] == 1 && $inscription['participation_equipe'] == 1) {
+            
+            // on enlève juste sa participation en individuel
+            
+	$upd_inscro = TableRegistry::get('InscriptionCompetitions');
+			$query = $upd_inscro->query();
+			$query->update()
+   			 ->set(['participation_equipe' => 0])
+   		 	->where(['id' => $id])
+    		->execute();        
+        }
+        
+        // Sinon, on supprime totalement l'inscription
+        
+        elseif($inscription['participation_indiv'] == 0 && $inscription['participation_equipe'] == 1) {
+        
+        
+    if ($supprime = $this->InscriptionCompetitions->delete($inscription)) {
+    
+	$this->Flash->success('L\'inscription a été supprimée');
+		
+        return $this->redirect(['action'=>'inscriptions',$compete]);
+	}
+				else {
+
+		$this->Flash->error('L\'inscription n\'a pu être supprimée');
+		return $this->redirect(['action'=>'inscriptions',$compete]);
+		  }
+	   }
+	
+    }
     
     
     
@@ -615,77 +744,77 @@ class InscriptionCompetitionsController extends AppController
     
     
 	// la variable category détermine si on est sur une catégorie spé ou sur le général
-	public function organisateur($category=null)
+	public function organisateur($id,$category=null)
     {
 		
+        $this->loadModel('Evenements');
+        
+        $event = $this->Evenements->find()
+	->contain(['Competitions'=> function(\Cake\ORM\Query $q) use ($id) {
+        return $q->where(['Competitions.id' => $id])->contain(['Categories']);
+    }])
+
+	->matching('Competitions', function(\Cake\ORM\Query $q) use($id) {
+        return $q->where(['Competitions.id' => $id])->contain(['Categories'=> function($q) {
+        return $q->order(['annee_debut'=>'DESC','grade_debut'=>'DESC']);}]);
+    })->first();
+        
+        $this->set('id',$id);
+      
+         
+         $title = $event['name'];
+         $description = $event['name'];
+        
+     
+        
+        $this->set('title', $title);
+        $this->set('description', $description);
+        
+          
+         if(!empty($event['image'])) { $headimg = 'headers/evenements/g-'.$event['image']; }else { $headimg =  'header_main.png';}
+         
+         
+          $this->set('headimg',$headimg);
+          $this->set('event',$event);
+        
+        
+       
 		$this->set('category',$category);
 		
-		
-		
-		// Junior + Junior & Honneurs + Junior & Excellence
-		if($category == 6) {
-			
-			$category = array('11','6','12');
-		}
-		
-		
-		// Junior + Junior & Honneurs 
-		if($category == 7) {
-			
-			$category = array('11','7');
-		}
-		
-		
-		// Excellence + Junior & Excellence 
-		if($category == 8) {
-			
-			$category = array('12','8');
-		}
-		
-		
-		// Espoir + Espoir & Femme 
-		if($category == 5) {
-			
-			$category = array('14','5');
-		}
-		
-		
-		// Femmes + Espoir & Femme 
-		if($category == 10) {
-			
-			$category = array('14','10');
-		}
+        
 		
 		
  	// Si on n'a pas de catégorie spécifiée, on prend tout
 		if($category == null) {
-		$articles = $this->Inscriptions->find('all')
-			->contain(['Inscrits'=> function($q) {
-        return $q->contain(['Categories','Clubs']);
+		
+            $articles = $this->InscriptionCompetitions->find('all')
+         ->where(['competition_id'=>$event['competition']['id'],'participation_indiv'=>'1'])
+			->contain(['Categories','Licencies'=> function($q) {
+        return $q->contain(['Clubs','Grades']);
     }]);
-		}
 		
 		
-		// Si on a plus d'une catégorie (gamin surclassé), on prend les 2 catégories dans lesquelles il apparait
-		elseif(isset($category[1])) {
+       // Sinon, on prend que les inscros de la caté qui nous intéresse
+        
+        }
+        
+       else {
 			
-			$articles = $this->Inscriptions->find('all')
-			->contain(['Inscrits'=> function(\Cake\ORM\Query $q) use ($category)  {
-        return $q->contain('Clubs','Categories')
-			->where(['Inscrits.category_id IN'=>$category]);		
-		}]);
+		    $articles = $this->InscriptionCompetitions->find('all')
+         ->where(['category_id'=>$category, 'competition_id'=>$event['competition']['id'],'participation_indiv'=>'1'])
+			->contain(['Categories','Licencies'=> function($q) {
+        return $q->contain(['Clubs','Grades']);
+			 }]);
 			
-		}
-		else {
-			
-			// Sinon, on prend la catégorie correspondante
-		$articles = $this->Inscriptions->find('all')
-			->contain(['Inscrits'=> function(\Cake\ORM\Query $q) use ($category)  {
-        return $q->contain('Clubs','Categories')->where(['Inscrits.category_id'=>$category]);
-    }]);	
-			
-			
-		}
+           // On prend également les données de la catégorie présente
+           
+          $category_info = $this->InscriptionCompetitions->Categories->find('all')
+               ->where(['id'=>$category])
+               ->first();
+		
+           $this->set('category_info',$category_info);
+                       
+                       }
 		
 			
 		$this->set('articles',$articles);
@@ -868,19 +997,46 @@ class InscriptionCompetitionsController extends AppController
 	
 	
 	// Fonction pour contrôler les inscriptions
-	public function gestion() {
+	public function gestion($id) {
+        
+        
+          
+        $this->loadModel('Evenements');
+        
+        $event = $this->Evenements->find()
+	->contain(['Competitions'=> function(\Cake\ORM\Query $q) use ($id) {
+        return $q->where(['Competitions.id' => $id]);
+    }])
+
+	->matching('Competitions', function(\Cake\ORM\Query $q) use($id) {
+        return $q->where(['Competitions.id' => $id]);
+    })->first();
+        
+        $this->set('id',$id);
+      
+         
+         $title = $event['name'];
+         $description = $event['name'];
+        
+     
+        
+        $this->set('title', $title);
+        $this->set('description', $description);
+        
+          
+         if(!empty($event['image'])) { $headimg = 'headers/evenements/g-'.$event['image']; }else { $headimg =  'header_main.png';}
+         
+         
+          $this->set('headimg',$headimg);
+          $this->set('event',$event);
+        
+        
+        
+      $user_id =  $this->Auth->User('id');
 	
-	$articles =	$this->Inscriptions->find('all')
-	->contain(['Clubs', 'Inscrits' => function($q) {
-    $q->select([
-         'Inscrits.id',
-		 'Inscrits.inscription_id',
-         'count' => $q->func()->count('*')])
-		 ->group(['inscription_id']);
+	$articles =	$this->InscriptionCompetitions->find('all')
+	->where(['competition_id'=>$id, 'user_id'=>$user_id]);
 
-
-    return $q;
-}]);
 	
 	$this->set('articles',$articles);
 	
