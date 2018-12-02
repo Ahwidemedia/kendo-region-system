@@ -62,7 +62,6 @@ class InscriptionsController extends AppController
 
 
     function inscriptions() {
-	
 	$article = $this->Inscriptions->newEntity();
 	$this->set('article',$article);
 

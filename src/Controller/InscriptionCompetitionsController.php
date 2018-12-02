@@ -35,7 +35,7 @@ class InscriptionCompetitionsController extends AppController
     {
     
         $this->Security->config('unlockedFields', ['licencies','inscription_competitions']);
- 
+ debug("ok");die;
         $this->Auth->allow(['index',
                             'inscriptions',
 						    'organisateur',
@@ -67,7 +67,8 @@ class InscriptionCompetitionsController extends AppController
             ->matching('Competitions')
             ->first();
         
-        
+            debug($event);die();
+            
         // On envoie article pour que le Form soit lié à la table InscriptionCompetition
     
         $article = $this->InscriptionCompetitions->newEntity();

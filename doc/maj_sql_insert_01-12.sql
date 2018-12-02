@@ -37,6 +37,27 @@ INSERT INTO `categories` (`id`, `name`, `annee_debut`, `annee_fin`, `sexe`, `gra
 (11, 'EXELLENCES HOMMES', 1950, 1999, 'M', 13, 18, 0),
 (13, 'SAMOURAI', 2009, 2009, 'X', 0, 0, 1);
 
+
+--
+-- Contenu de la table `regions`
+--
+
+INSERT INTO `regions` (`id`, `name`) VALUES
+(14, 'DOM TOM'),
+(13, 'ILE DE FRANCE'),
+(3, 'NORD EST - Bourgogne Franche Comté'),
+(2, 'NORD EST - Grand Est'),
+(1, 'NORD EST - Hauts de France'),
+(5, 'NORD OUEST - Bretagne'),
+(7, 'NORD OUEST - Centre Val de Loire'),
+(4, 'NORD OUEST - Normandie'),
+(6, 'NORD OUEST - Pays de la Loire'),
+(8, 'SUD EST - Auvergne Rhone Alpes'),
+(10, 'SUD EST - Corse'),
+(9, 'SUD EST - PACA'),
+(11, 'SUD OUEST - Nouvelle Aquitaine'),
+(12, 'SUD OUEST - Occitanie');
+
 --
 -- Contenu de la table `clubs`
 --
@@ -145,26 +166,6 @@ INSERT INTO `profils` (`id`, `name`) VALUES
 (1, 'Administrateur'),
 (2, 'Gestionnaire'),
 (3, 'Utilisateur');
-
---
--- Contenu de la table `regions`
---
-
-INSERT INTO `regions` (`id`, `name`) VALUES
-(14, 'DOM TOM'),
-(13, 'ILE DE FRANCE'),
-(3, 'NORD EST - Bourgogne Franche Comté'),
-(2, 'NORD EST - Grand Est'),
-(1, 'NORD EST - Hauts de France'),
-(5, 'NORD OUEST - Bretagne'),
-(7, 'NORD OUEST - Centre Val de Loire'),
-(4, 'NORD OUEST - Normandie'),
-(6, 'NORD OUEST - Pays de la Loire'),
-(8, 'SUD EST - Auvergne Rhone Alpes'),
-(10, 'SUD EST - Corse'),
-(9, 'SUD EST - PACA'),
-(11, 'SUD OUEST - Nouvelle Aquitaine'),
-(12, 'SUD OUEST - Occitanie');
 
 --
 -- Contenu de la table `users`
