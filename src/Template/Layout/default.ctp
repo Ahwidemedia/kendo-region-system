@@ -38,10 +38,13 @@
 
         <div class="header-right">
             <?php if ($conn = $this->request->session()->read('Auth.User')){ 
+   
     
-
-  echo $conn['nom'].' - '.$conn['prenom'].' - '.$conn['club']['nom'];
-    
+  
+  echo $conn['nom'].' - '.$conn['prenom'].' - '.$user['club']['name'];
+  echo $this->Html->image('logout.png',['url'=>['controller'=>'Users','action'=>'logout']]);
+ 
+    echo '</div>';
     
     
  }
@@ -54,10 +57,11 @@ echo $this->Html->link(
     ['controller' => 'Users', 'action' => 'login']
  );
  
+     echo '</div>';
  }
     ?>
 
-        </div>
+       
     </header>
 
     <?php echo $this->Html->image('logo.png', ['url'=>['controller'=>'Pages','action'=>'index','prefix'=>false],'class'=>'logo']);?>

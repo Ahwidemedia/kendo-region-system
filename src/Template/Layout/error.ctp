@@ -40,7 +40,7 @@
             <?php if ($conn = $this->request->session()->read('Auth.User')){ 
     
 
-  echo $conn['nom'].' - '.$conn['prenom'].' - '.$conn['club']['nom'];
+  echo $conn['nom'].' - '.$conn['prenom'];
     
     
     
