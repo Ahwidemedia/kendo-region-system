@@ -120,7 +120,7 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
     </span>      
                     
                     </td>
-                 <td>
+                 <td><?php echo $this->Form->postLink(  '-',  ['action' => 'deleteindiv', $articli->id,$id],  [ 'class'=>'font-2', 'block' => true]);  ?>
                 </td></tr>
               
                 <?php } 
@@ -321,7 +321,7 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                     <th>grade</th>
                     <th>Certificat médical</th>
                     <th>Surclassement Age</th>
-
+                    <th></th>
 
                 </tr>
                
@@ -390,7 +390,8 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                     
                     echo $this->Form->checkbox("equipes.$a.licencie.$b.surclassement", ['checked'=>$checked,'class'=>'next-surage','label'=>false]); ?>
                     </td>
-
+                    <td><?php echo $this->Form->postLink(  '-',  ['action' => 'deleteequipe', $name['id'],$id],  [ 'class'=>'font-2', 'block' => true]);  ?>
+                </td>
                 </tr>
                 
                <?php
@@ -444,7 +445,9 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                     <td>
                         <?php echo $this->Form->checkbox("equipes.$a.licencie.$i.surclassement", ['class'=>'next-surage','label'=>false]); ?>
                     </td>
-
+                    <td></td>
+                    
+                 
                 </tr>
 <?php }
                 
@@ -540,7 +543,7 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                     <td>
                         <?php echo $this->Form->checkbox("equipes.$a.licencie.$i.surclassement", ['class'=>'next-surage','label'=>false]); ?>
                     </td>
-
+                
                 </tr>
                
                <?php } ?>
@@ -724,6 +727,9 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
 
 
         <?php echo $this->Form->end();?>
+               
+               
+               <?php echo $this->fetch('postLink');?>
 
 <p class="center padding-3"></p>
 
