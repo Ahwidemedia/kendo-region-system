@@ -260,7 +260,8 @@ CREATE TABLE `passages` (
   `document` text COLLATE utf8_bin,
   `discipline_id` int(11) NOT NULL,
   `created` datetime DEFAULT NULL,
-  `modified` datetime DEFAULT NULL
+  `modified` datetime DEFAULT NULL,
+  `evenement_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------

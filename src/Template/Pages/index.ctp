@@ -37,10 +37,14 @@ foreach ($articles as $article) { ?>
 
         <?php 
                              
-                            if(!empty($article['competition'])){ ?>
+        if(!empty($article['competition'])){ ?>
 
         <div class="button">
             <?php echo $this->html->link('Inscriptions Shiais',['controller'=>'InscriptionCompetitions','action'=>'inscriptions',$article['competition']['id']]); ?>
+          <?php if($conn['id'] == $article['user_id']) { ?>  <p class="red">Vous avez actuellement <?php echo $number_compete;?> inscrits</p> <?php } ?>
+        </div>
+        <div class="button">
+            <?php echo $this->html->link('Inscriptions Passage de grades',['controller'=>'InscriptionPassages','action'=>'inscriptions',$article['competition']['id']]); ?>
           <?php if($conn['id'] == $article['user_id']) { ?>  <p class="red">Vous avez actuellement <?php echo $number_compete;?> inscrits</p> <?php } ?>
         </div>
 
