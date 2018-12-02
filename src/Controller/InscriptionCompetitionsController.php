@@ -43,12 +43,8 @@ class InscriptionCompetitionsController extends AppController
 						   'gestion',
 						   'view']);
 
-                            $title = 'Inscriptions Interregions 2019';
-        $description = 'Inscriptions Interregions 2019';
+       
  
-        $this->set('title', $title);
-        $this->set('description', $description);
-
     }
     
  
@@ -59,13 +55,28 @@ class InscriptionCompetitionsController extends AppController
         
         // On prend les données de l'événement
         
-        
         $this->loadModel('Evenements');
         
-        $event = $this->Evenements->find('all')
-            ->contain('Competitions')
-            ->matching('Competitions')
-            ->first();
+        $event = $this->Evenements->find()
+	->contain(['Competitions'=> function(\Cake\ORM\Query $q) use ($id) {
+        return $q->where(['Competitions.id' => $id]);
+    }])
+
+	->matching('Competitions', function(\Cake\ORM\Query $q) use($id) {
+        return $q->where(['Competitions.id' => $id]);
+    })->first();
+        
+        $this->set('id',$id);
+      
+         
+         $title = $event['name'];
+         $description = $event['name'];
+        
+     
+        
+        $this->set('title', $title);
+        $this->set('description', $description);
+        
         
         
         // On envoie article pour que le Form soit lié à la table InscriptionCompetition
@@ -267,7 +278,7 @@ class InscriptionCompetitionsController extends AppController
          }
 		
     
-        // Si ce n'est pas un nouveau licencié      
+        // Si ce n'est pas un nouveau licencié (on reprend l'id à partir de l'inscription)    
         
         if($data['licencie']['id'] !== '') {
         
@@ -284,10 +295,24 @@ class InscriptionCompetitionsController extends AppController
       
         else {
             
+            // Sinon, je vérifie qu'il existe pas dans la base à partir du numéro de licence
+            
+             $licencie = $this->InscriptionCompetitions->Licencies->find('all')
+           ->Where(['numero_licence'=>$data['licencie']['numero_licence']])
+           ->first();
+            
+            if($licencie !== null) {
+                
+            $newlicencie = $licencie;
+        
+                $data['licencie']['id'] = $newlicencie['id'];
+            
+            } else {
+            
             // Sinon, j'en créé un nouveau
           
             $newlicencie = $this->InscriptionCompetitions->Licencies->newEntity();
-           
+           }
            
         }
             
@@ -629,7 +654,88 @@ class InscriptionCompetitionsController extends AppController
 }
 
     
+    function deleteindiv($id,$compete){
+
+	$this->request->allowMethod(['post', 'deleteindiv']);
+	
     
+        // On prend l'inscription
+    $inscription = $this->InscriptionCompetitions->get($id);
+        
+        // Si le competiteur est inscrit en individuel ET en équipe
+        if($inscription['participation_indiv'] == 1 && $inscription['participation_equipe'] == 1) {
+            
+            // on enlève juste sa participation en individuel
+            
+	$upd_inscro = TableRegistry::get('InscriptionCompetitions');
+			$query = $upd_inscro->query();
+			$query->update()
+   			 ->set(['participation_indiv' => 0])
+   		 	->where(['id' => $id])
+    		->execute();        
+        }
+        
+        // Sinon, on supprime totalement l'inscription
+        
+        elseif($inscription['participation_indiv'] == 1 && $inscription['participation_equipe'] == 0) {
+        
+        
+    if ($supprime = $this->InscriptionCompetitions->delete($inscription)) {
+    
+	$this->Flash->success('L\'inscription a été supprimée');
+		
+        return $this->redirect(['action'=>'inscriptions',$compete]);
+	}
+				else {
+
+		$this->Flash->error('L\'inscription n\'a pu être supprimée');
+		return $this->redirect(['action'=>'inscriptions',$compete]);
+		  }
+	   }
+	
+    }
+    
+    
+     function deleteequipe($id,$compete){
+
+	$this->request->allowMethod(['post', 'deleteequipe']);
+	
+    
+        // On prend l'inscription
+    $inscription = $this->InscriptionCompetitions->get($id);
+        
+        // Si le competiteur est inscrit en individuel ET en équipe
+        if($inscription['participation_indiv'] == 1 && $inscription['participation_equipe'] == 1) {
+            
+            // on enlève juste sa participation en individuel
+            
+	$upd_inscro = TableRegistry::get('InscriptionCompetitions');
+			$query = $upd_inscro->query();
+			$query->update()
+   			 ->set(['participation_equipe' => 0])
+   		 	->where(['id' => $id])
+    		->execute();        
+        }
+        
+        // Sinon, on supprime totalement l'inscription
+        
+        elseif($inscription['participation_indiv'] == 0 && $inscription['participation_equipe'] == 1) {
+        
+        
+    if ($supprime = $this->InscriptionCompetitions->delete($inscription)) {
+    
+	$this->Flash->success('L\'inscription a été supprimée');
+		
+        return $this->redirect(['action'=>'inscriptions',$compete]);
+	}
+				else {
+
+		$this->Flash->error('L\'inscription n\'a pu être supprimée');
+		return $this->redirect(['action'=>'inscriptions',$compete]);
+		  }
+	   }
+	
+    }
     
     
     
