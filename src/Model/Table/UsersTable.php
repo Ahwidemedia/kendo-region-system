@@ -15,7 +15,7 @@ class UsersTable extends Table
 
  public function initialize(array $config)
     {
-        
+        $this->belongsTo('Clubs');
         $this->addBehavior('Timestamp');
           
     }

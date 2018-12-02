@@ -23,7 +23,7 @@ class EvenementsTable extends Table
     {
 
             $this->hasOne('Competitions');
-      		 $this->hasOne('Passages');
+      		$this->hasOne('Passages');
          
            $this->addBehavior('Timestamp');
            $this->addBehavior('Image');

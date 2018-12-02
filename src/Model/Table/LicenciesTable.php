@@ -24,6 +24,7 @@ class LicenciesTable extends Table
            $this->belongsTo('Clubs');
            $this->hasMany('InscriptionCompetitions');
            $this->belongsTo('Categories');
+            $this->belongsTo('Grades');
            
         
        	  $this->belongsTo('Users');
@@ -36,16 +37,7 @@ class LicenciesTable extends Table
     }
 
 
-public function validationDefault(Validator $validator)
-    {
-    $validator
-	->notEmpty('name', 'Entrer un titre d\'article');
-	
-   return $validator;
-        
-        }
-        
-        
+
   
 
 
