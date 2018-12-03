@@ -989,6 +989,11 @@ font-size:1.1em;}
 
 
 
+button:disabled,
+button[disabled]{
+ opacity: 0.4; 
+  cursor: not-allowed;
+}
 
 .associated {
     margin-top: 30px
@@ -1385,12 +1390,15 @@ header {
     width: 100%;
     position: fixed;
     height: 30px;
+    line-height: 30px;
     z-index: 1000;
+    display:table;
+    vertical-align:middle;
 }
 
 /* Style the header links */
 header a {
-    float: left;
+  
     color: white;
     text-align: center;
 
@@ -1412,10 +1420,13 @@ section {
 }
 
 
+
 header a:hover {
 
     color: white;
 }
+
+header img {height:25px; margin:2px 20px; }
 
 
 header a.active {
@@ -1424,9 +1435,11 @@ header a.active {
 }
 
 .header-right {
-    float: right;
-    margin-right: 15px;
+   float:right;
+    margin-right:20px;
+ 
 }
+
 
 
 
