@@ -104,6 +104,29 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                      <span class="categorie"><?php echo $articli['category']['name']; ?>
                 </span>
                      
+                      <span class="surclassement-age display-none"><br />
+   <?php if($articli->surclassement_age == '1') {$checked_s = 'checked';} else {$checked_s = '';}
+                    
+                    
+        echo $this->Form->checkbox("inscription_competitions.$articli->id.surclassement_age", ['checked'=>$checked_s,'class'=>'surage-ind']); ?> Surclassement en Sénior ?
+    </span>
+    
+    <span class="surclassement-grade display-none"><br />
+   <?php
+         if($articli->surclassement_grade == '1') {$checked_g = 'checked';} else {$checked_g = '';}     
+                    
+        echo $this->Form->checkbox("inscription_competitions.$articli->id.surclassement_grade",['class'=>'surgrade-ind','checked'=>$checked_g,'onchange'=>"surclassement(this)"]); ?> Surclassement en excellence ?
+    </span>
+    
+    
+    <span class="autorisation display-none"><br />
+   <?php if($articli->autorisation == '1') {$checked_a = 'checked';} else {$checked_a = '';}
+                    
+                    echo $this->Form->checkbox("inscription_competitions.$articli->id.autorisation", ['checked'=>$checked_a,'class'=>'autorisation-ind']); ?> Autorisation parentale
+    </span>
+    
+                     
+                     
                 </td>
                  <td>
                   <?php
@@ -835,7 +858,7 @@ if((age >= <?php echo $category['annee_debut']; ?> && age <= <?php echo $categor
                                          
                                          
                                          
-        if($category['name'] == "JUNIORS") {  ?>
+        if($category['name'] == "JUNIORS" || $category['name'] == "ESPOIRS") {  ?>
         
         $(row).find(".surclassement-age").addClass('display-block');
         $(row).find(".surclassement-age").removeClass('display-none');
@@ -971,8 +994,9 @@ nextsurage.prop('checked', true);
                
                $(document).ready(function() {
         
-        $('input[type="checkbox"][checked="checked"]').parent().next().show();
-        
+        $('.surage-ind:checkbox:checked').parent().show();
+        $('.surgrade-ind:checkbox:checked').parent().show();
+        $('.autorisation-ind:checkbox:checked').parent().show();       
                
                } );
         
