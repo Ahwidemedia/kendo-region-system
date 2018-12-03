@@ -538,12 +538,13 @@ class InscriptionCompetitionsController extends AppController
        
         
         foreach($datai['administratif'] as $dataa) {
-              
-           
+         
+            
             // Si on a le nom de rempli
             
             if(!empty($dataa['licencie']['nom'])){
                
+             
               
                  // Je vérifie s'il existe ou pas
                         $licencio = $this->InscriptionCompetitions->Licencies->find('all')
@@ -561,16 +562,22 @@ class InscriptionCompetitionsController extends AppController
                             
                         $inscri = $this->InscriptionCompetitions->Licencies->newEntity();
                         
-                            $entity_inscro = $this->InscriptionCompetitions->Licencies->patchEntity($inscri,$dataa['licencie']);
+                
+                               
+                        }   else {
+                            
+                             $inscri = $licencio;
+                            
+                            
+                        }       
+                        
+                         $entity_inscro = $this->InscriptionCompetitions->Licencies->patchEntity($inscri,$dataa['licencie']);
                         
                             $entity_inscro->discipline_id = $event['competition']['discipline_id'];
                             $entity_inscro->club_id = $datai['club_id'];
                             
                             $result_inscro = $this->InscriptionCompetitions->Licencies->save($entity_inscro);
                 
-                               
-                        }          
-                        
                        // Je créé ensuite l'inscription administrative
                         
                         $this->loadModel('InscriptionAdministratifs');
@@ -619,6 +626,7 @@ class InscriptionCompetitionsController extends AppController
                         $entity_inscru->competition_id = $id;
                         $entity_inscru->user_id = $user_id;
                        
+               
                       
                     
                         $result_inscru = $this->InscriptionAdministratifs->save($entity_inscru);
