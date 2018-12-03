@@ -58,15 +58,11 @@ $this->set('description', 'Connectez vous à votre interface pour écrire de nou
             
 	$entity = $this->Users->patchEntity($user, $data);
             
-	$user->role = 'Membre';
-	$token = md5(time('-' .uniqid()));
-	$user->token = $token;
-	
 	
 	$username = $data['username'];
 	$email = $data['email'];
-	
-            debug($entity);
+	$entity->active = 1;
+         
 		if($result = $this->Users->save($entity))
 	{
 
@@ -79,10 +75,8 @@ $this->set('description', 'Connectez vous à votre interface pour écrire de nou
 	
 	$CakeEmail = new Email('default');
 	$CakeEmail->to($email);
-	$CakeEmail->subject('Inscription sur Inscriptions Kendo');
-	$CakeEmail->viewVars(['token' => $token,
-	'id' => $id,
-	'username' => $username]);
+	$CakeEmail->subject('Inscription sur le site des Inscriptions aux compétitions');
+	$CakeEmail->viewVars([	'username' => $username]);
 	$CakeEmail->emailFormat('html');
 	$CakeEmail->template('inscription');
 	$CakeEmail->send();
