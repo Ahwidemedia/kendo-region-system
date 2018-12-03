@@ -11,6 +11,7 @@ use Cake\View\Exception\MissingTemplateException;
 use Cake\Event\Event;
 use Cake\ORM\TableRegistry;
 use Cake\Http\Response;
+use Cake\Mailer\Email;
 
 class InscriptionCompetitionsController extends AppController
 {
@@ -35,6 +36,7 @@ class InscriptionCompetitionsController extends AppController
     {
     
         $this->Security->config('unlockedFields', ['licencies','inscription_competitions']);
+ 
         $this->Auth->allow(['index',
                             'inscriptions',
 						    'organisateur',
@@ -79,7 +81,7 @@ class InscriptionCompetitionsController extends AppController
         $this->set('description', $description);
         
         
-            
+        
         // On envoie article pour que le Form soit lié à la table InscriptionCompetition
     
         $article = $this->InscriptionCompetitions->newEntity();
@@ -636,7 +638,34 @@ class InscriptionCompetitionsController extends AppController
     
          if (isset($result) OR isset($result_inscru)) {
              
-	$this->Flash->success('Les inscriptions ont bien été envoyées');
+             $recap_compete = $this->InscriptionCompetitions->find('all')
+                 ->where(['user_id'=>$user_id, 'InscriptionCompetitions.competition_id'=>$id])
+                 ->order(['equipe_id'=>'ASC'])
+                 ->contain(['Categories','Equipes','Licencies'=> function($q) {
+        return $q->contain(['Clubs','Grades'])
+                 ;}]);
+             
+             
+             $recap_admin= $this->InscriptionAdministratifs->find('all')
+                 ->where(['user_id'=>$user_id, 'InscriptionAdministratifs.competition_id'=>$id])
+                 ->contain('Licencies');
+             
+             
+    $CakeEmail = new Email('default');
+	$CakeEmail->to('jkcf@jkcf.com'); //$result['email']
+	$CakeEmail->subject('Récapitulatif de vos inscriptions à : '.$event['name']);
+	$CakeEmail->viewVars(['recap_compete' => $recap_compete,
+	'recap_admin' => $recap_admin,
+    'event'=>$event
+	]);
+	
+	$CakeEmail->emailFormat('html');
+	$CakeEmail->template('confirmcompete');
+	// $CakeEmail->send();	
+             
+             
+             
+	$this->Flash->success('Les inscriptions ont bien été envoyées. Vous devriez recevoir un mail récapitulatif dans les minutes à venir');
 		return $this->redirect($this->referer());
 	}
 				else {
@@ -736,6 +765,31 @@ class InscriptionCompetitionsController extends AppController
 	
     }
     
+    
+    
+      function deleteadmin($id,$compete){
+
+	$this->request->allowMethod(['post', 'deleteadmin']);
+	
+    $this->loadModel('InscriptionAdministratifs');
+        // On prend l'inscription
+    $inscription = $this->InscriptionAdministratifs->get($id);
+        
+        // On la supprime
+        
+    if ($supprime = $this->InscriptionAdministratifs->delete($inscription)) {
+    
+	$this->Flash->success('L\'inscription a été supprimée');
+		
+        return $this->redirect(['action'=>'inscriptions',$compete]);
+	}
+				else {
+
+		$this->Flash->error('L\'inscription n\'a pu être supprimée');
+		return $this->redirect(['action'=>'inscriptions',$compete]);
+		  }
+	   }
+	
     
     
     
