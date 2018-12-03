@@ -120,7 +120,7 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
     </span>      
                     
                     </td>
-                 <td><?php echo $this->Form->postLink(  '-',  ['action' => 'deleteindiv', $articli->id,$id],  [ 'class'=>'font-2', 'block' => true]);  ?>
+                 <td><?php echo $this->Form->postLink(  '-',  ['action' => 'deleteindiv', $articli->id,$id],  [ 'class'=>'font-2 delete', 'block' => true]);  ?>
                 </td></tr>
               
                 <?php } 
@@ -390,7 +390,7 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                     
                     echo $this->Form->checkbox("equipes.$a.licencie.$b.surclassement", ['checked'=>$checked,'class'=>'next-surage','label'=>false]); ?>
                     </td>
-                    <td><?php echo $this->Form->postLink(  '-',  ['action' => 'deleteequipe', $name['id'],$id],  [ 'class'=>'font-2', 'block' => true]);  ?>
+                    <td><?php echo $this->Form->postLink(  '-',  ['action' => 'deleteequipe', $name['id'],$id],  [ 'class'=>'delete font-2', 'block' => true]);  ?>
                 </td>
                 </tr>
                 
@@ -584,6 +584,7 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                 <th>Commissaire</th>
                 <th>Samedi</th>
                 <th>Dimanche</th>
+                <th></th>
             </tr>
             
             
@@ -640,6 +641,11 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                 
               <td>
                     <?php echo $this->Form->checkbox("administratif.$admin->id.dimanche",['checked'=>$checked2]); ?>
+
+                </td>
+                 
+                   <td>
+                   <?php echo $this->Form->postLink(  '-',  ['action' => 'deleteadmin', $admin->id,$id],  [ 'class'=>'font-2 delete', 'block' => true]); ?>
 
                 </td>
             </tr>
@@ -701,6 +707,7 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                     <?php echo $this->Form->checkbox("administratif.$o.dimanche"); ?>
 
                 </td>
+              <td></td>
             </tr>
 
             <?php }
@@ -720,8 +727,15 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
             <?php echo $this->Form->input("commentaire", ['type'=>'textarea','class'=>'width-80 center','label'=>false]); ?>
 
         </p>
-        <div class="margin-top-3 center">
-            <?php echo '<p class="center">'.$this->Form->button('Envoyer', ['type' => 'submit', 'name'=>'envoyer', 'class' => 'soumettre normalButton']);?>
+              <p class="margin-top-3 center width-50">  
+                <?php echo $this->Form->checkbox("consent", ['class'=>'consent','label'=>false]); ?>
+                  En soumettant ce formulaire, j'accepte que les informations saisies soient exploitées dans
+                  le cadre de l'orgaisation de la compétition.
+               </p>
+               
+               
+        <div class="margin-top-3 center ">
+            <?php echo '<p class="center">'.$this->Form->button('Envoyer', ['disabled'=>'disabled', 'type' => 'submit', 'name'=>'envoyer', 'class' => 'soumettre normalButton']);?>
 
         </div>
 
@@ -937,20 +951,30 @@ nextsurage.prop('checked', true);
 <?php $this->Html->scriptEnd();  ?>
 
 
-                    <?php echo $this->Html->scriptStart(['block' => true]);?>
-                    $(".soumettre").easyconfirm({locale: {
+             <?php echo $this->Html->scriptStart(['block' => true]);?>
+            
+               $(".soumettre").easyconfirm({locale: {
                     title: 'Etes-vous sûr(e)?',
                     text: "Voulez-vous envoyer vos inscriptions ?<br /><br /> Assurez vous d'avoir bien rempli toutes les colonnes avant l'envoi.",
                     button: ['Annuler',' Confirmer'],
                     closeText: 'fermer'
                     }});
+             
                     <?php $this->Html->scriptEnd(); ?>
+               
+               
+               
+    
 
            <?php echo $this->Html->scriptStart(['block' => true]);?>
-        $(document).ready(function() {
+       
+               
+               $(document).ready(function() {
         
         $('input[type="checkbox"][checked="checked"]').parent().next().show();
-        } );
+        
+               
+               } );
         
         
           $('.checkequipe').click(function() {
@@ -960,6 +984,19 @@ nextsurage.prop('checked', true);
         } else {
          $(this).parent().next().children().eq(1).children().eq(0).prop('required',false);
         
+        }
+        });
+               
+               
+                $('.consent').click(function() {
+    
+         if (this.checked) {
+        $(this).parent().next().children().eq(0).children().eq(0).prop('disabled', false);
+       
+        } else {
+        
+        $(this).parent().next().children().eq(0).children().eq(0).prop('disabled', true);
+               
         }
         });
         
@@ -972,7 +1009,8 @@ nextsurage.prop('checked', true);
       
 
  <?php echo $this->Html->scriptStart(['block' => true]);?>
-$(document).ready(function() {
+
+               $(document).ready(function() {
 $('.showSingle').on('click', function () {
     $(this).addClass('selected').siblings().removeClass('selected');
     $('.targetDiv').hide();
