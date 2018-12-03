@@ -1,4 +1,4 @@
-<?php echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'],[ 'class'=>'absolute top-right']);?>
+<?php echo $this->Html->link("Retour", ['controller'=>'Pages','action'=>'index'],[ 'class'=>'absolute top-right']);?>
 <?php echo $this->Form->create($article, ['type' => 'file']);?>
 <div class="padding-50 width-40 center normal-form">
 
@@ -62,11 +62,17 @@
     </p>
 
     <div class="padding-3">
-        <?php echo $this->Form->checkbox("cfcompetitions",['id'=>'cfcompetition']); ?>Compétition
-        <?php echo $this->Form->checkbox("cfpassage",['label'=>'Passage de grade']); ?>Passage de grade
+        <?php if($article['competition'] !== null) { $checked_compete = 'checked';} else {$checked_compete = '';}
+        
+        echo $this->Form->checkbox("cfcompetitions",["checked"=>$checked_compete,'id'=>'cfcompetition']); ?>Compétition
+        
+        <?php if($article['passage'] !== null) { $checked_passage = 'checked';} else {$checked_passage = '';}
+        echo $this->Form->checkbox("cfpassage",["checked"=>$checked_passage,'label'=>'Passage de grade']); ?>Passage de grade
+   
     </div>
+    
 
-    <div id="competitionblock" style="display:none;">
+    <div id="competitionblock" <?php if($article['competition'] == null) { echo 'style="display:none;"';}?>>
 
 
         <p class="center padding-3">Discipline :
@@ -94,20 +100,20 @@
             </p>
 
             <p class="center padding-3">Competitions en équipe ?
-
-                <?php echo $this->Form->radio("cf_equipe",['1'=>'Oui','2'=>'Non'],['default'=>'2']); ?>
+                <?php if($article['competition']['equipe'] > 0){$default = '1';} else {$default = 2;}?>
+                <?php echo $this->Form->radio("cf_equipe",['1'=>'Oui','2'=>'Non'],['default'=>$default]); ?>
 
             </p>
 
 
-            <div id="nombreequipe" class="center padding-3" style="display:none">
+            <div id="nombreequipe" class="center padding-3" <?php if($article['equipe'] > 0) { echo 'style="display:none;"';}?>>
                 <p class="center"> Nombre de participants par équipes (pensez aux éventuels remplaçants):<br /><br />
                     <?php echo $this->Form->input("competition.equipe", ['type'=>'number','label'=>false]); ?>
                 </p>
             </div>
 
             <p class="center padding-3">Date limite des inscriptions
-                <?php echo $this->Form->input("competition.date_desactivation", ['type'=>'text','id'=>'datelimite','label'=>false]); ?>
+                <?php echo $this->Form->input("date_desactivation", ['type'=>'text','id'=>'datelimite','label'=>false]); ?>
             </p>
 
             <?php echo $this->Html->scriptStart(['block' => true]);?>
@@ -164,7 +170,7 @@ width:"500px"
 
 
 $('input[type=radio][name=cf_equipe]').change(function() {
-console.log(this.value);
+
 if (this.value == '2') {
 $('#nombreequipe').hide();
 }
