@@ -1,5 +1,7 @@
 <?php echo $this->Html->link("Retour", ['controller'=>'Pages','action'=>'index'],[ 'class'=>'absolute top-right']);?>
+<?php echo $this->Html->link("Modifier les données de l'évenement", ['controller'=>'Evenements','action'=>'creation',$event['id']],[ 'class'=>'float-right']);?>
 
+<p class="clear padding-3">&nbsp;</p>
 <div class="width-70 center">
     <div class="onglets">
         <?php echo $this->Html->link("Tous", ['controller'=>'InscriptionCompetitions','action'=>'organisateur',$event['competition']['id']],[ 'class'=>'']);?>
@@ -10,7 +12,7 @@
 }?>
 	
 
-		<?php echo $this->Html->link("EQUIPES", ['controller'=>'inscriptions','action'=>'organisation_equipe'],[ 'class'=>'']);?>
+		<?php echo $this->Html->link("EQUIPES", ['controller'=>'InscriptionCompetitions','action'=>'equipes',$id],[ 'class'=>'']);?>
 
 	</div>
 	<p class="padding-3">&nbsp;</p>
@@ -21,7 +23,7 @@
 }
 else {
 
-$category_id = null;
+$category_info = null;
 }
 	?>
 	
@@ -114,8 +116,8 @@ $category_id = null;
 	</tbody>
 	</table>
 	<p class="center padding-3">
-	<?php echo $this->Html->link("Exporter la catégorie en excel", ['action'=>'export',$category_info['id'], '_ext' => 'csv'],[ 'class'=>'center normalButton margin-3']);?>
-	<?php echo $this->Html->link("Exporter la catégorie en pdf", ['action'=>'view',$category_info['id'], '_ext' => 'pdf'],[ 'class'=>'center normalButton margin-3']);?>
+	<?php echo $this->Html->link("Exporter la catégorie en excel", ['action'=>'export',$id,$category_info['id'], '_ext' => 'csv'],[ 'class'=>'center normalButton margin-3']);?>
+	<?php echo $this->Html->link("Exporter la catégorie en pdf", ['action'=>'view',$id,$category_info['id'], '_ext' => 'pdf'],[ 'class'=>'center normalButton margin-3']);?>
 </p>
 	
 </div>
