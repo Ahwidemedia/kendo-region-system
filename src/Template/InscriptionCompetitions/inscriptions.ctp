@@ -609,38 +609,38 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
         
              <tr class="line">
             <td>
-                        <?php echo $this->Form->hidden("administratif.$admin->id.id", ['value'=>$admin['id'],'label'=>false]); ?>
+                        <?php echo $this->Form->hidden("administratif.$count1.id", ['value'=>$admin['id'],'label'=>false]); ?>
 
                         
                         
-                        <?php echo $this->Form->input("administratif.$admin->id.licencie.numero_licence", ['value'=>$admin['licency']['numero_licence'],'class'=>'licencie-equipe','label'=>false]); ?>
+                        <?php echo $this->Form->input("administratif.$count1.licencie.numero_licence", ['value'=>$admin['licency']['numero_licence'],'class'=>'licencie-equipe','label'=>false]); ?>
                     </td>
                     <td>
-                        <?php echo $this->Form->input("administratif.$admin->id.licencie.nom", ['value'=>$admin['licency']['nom'],'class'=>'next-nom','label'=>false]); ?>
+                        <?php echo $this->Form->input("administratif.$count1.licencie.nom", ['value'=>$admin['licency']['nom'],'class'=>'next-nom','label'=>false]); ?>
                     </td>
                     <td>
-                        <?php echo $this->Form->input("administratif.$admin->id.licencie.prenom", ['value'=>$admin['licency']['prenom'],'class'=>'next-prenom','label'=>false]); ?>
+                        <?php echo $this->Form->input("administratif.$count1.licencie.prenom", ['value'=>$admin['licency']['prenom'],'class'=>'next-prenom','label'=>false]); ?>
                     </td>
                     <td>
                  <?php 
                     
                      if($admin['arbitre'] == 1) {$checkarb = 'checked';} else {$checkarb = '';}
                     
-                    echo $this->Form->checkbox("administratif.$admin->id.arbitre", ['checked'=>$checkarb, 'label'=>false]); ?>
+                    echo $this->Form->checkbox("administratif.$count1.arbitre", ['checked'=>$checkarb, 'label'=>false]); ?>
                         </td>
                <td>
                  <?php 
                      if($admin['commissaire'] == 1) {$checkcomm = 'checked';} else {$checkcomm = '';}
                     
-                    echo $this->Form->checkbox("administratif.$admin->id.commissaire", ['checked'=>$checkcomm, 'label'=>false]); ?>
+                    echo $this->Form->checkbox("administratif.$count1.commissaire", ['checked'=>$checkcomm, 'label'=>false]); ?>
                       
             </td>
                     <td>
-                    <?php echo $this->Form->checkbox("administratif.$admin->id.samedi",['checked'=>$checked1]); ?>
+                    <?php echo $this->Form->checkbox("administratif.$count1.samedi",['checked'=>$checked1]); ?>
                 </td>
                 
               <td>
-                    <?php echo $this->Form->checkbox("administratif.$admin->id.dimanche",['checked'=>$checked2]); ?>
+                    <?php echo $this->Form->checkbox("administratif.$count1.dimanche",['checked'=>$checked2]); ?>
 
                 </td>
                  
