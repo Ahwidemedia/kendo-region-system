@@ -58,9 +58,9 @@ class EvenementsController extends AppController
     if(isset($id)) {
     
     $article = $this->Evenements->find('all')
-    ->where(['id'=>$id])
+    ->where(['Evenements.id'=>$id])
     ->contain(['Competitions'=> function($q) {return $q
-                            ->contain('Disciplines');}])
+                            ->contain(['Disciplines','Categories']);}])
     ->first();
   
     } else {
@@ -89,10 +89,10 @@ if($data['cfcompetitions'] == 0) {
 
 $data['competition'] = array();
 }
-
+        $data['competition']['name'] = $data['name'];
       	
     $entity = $this->Evenements->patchEntity($article, $data,['associated'=>['Competitions','Competitions.Categories']]);
- 
+    
      $result =  $this->Evenements->save($entity,['associated'=>['Competitions','Competitions.Categories']]);
 
     

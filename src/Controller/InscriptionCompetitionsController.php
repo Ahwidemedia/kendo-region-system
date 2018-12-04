@@ -657,6 +657,7 @@ class InscriptionCompetitionsController extends AppController
                  ->where(['user_id'=>$user_id, 'InscriptionAdministratifs.competition_id'=>$id])
                  ->contain('Licencies');
              
+            
              
     $CakeEmail = new Email('default');
 	$CakeEmail->to('jkcf@jkcf.com'); //$result['email']
@@ -668,12 +669,12 @@ class InscriptionCompetitionsController extends AppController
 	
 	$CakeEmail->emailFormat('html');
 	$CakeEmail->template('confirmcompete');
-	// $CakeEmail->send();	
+	 $CakeEmail->send();	
              
              
              
 	$this->Flash->success('Les inscriptions ont bien été envoyées. Vous devriez recevoir un mail récapitulatif dans les minutes à venir');
-		return $this->redirect($this->referer());
+		return $this->redirect(['action'=>'retour',$id]);
 	}
 				else {
 	
@@ -687,6 +688,44 @@ class InscriptionCompetitionsController extends AppController
 	
 
 }
+    
+     function retour($id) {
+	
+        
+        // On prend les données de l'événement
+        
+        $this->loadModel('Evenements');
+        
+        $event = $this->Evenements->find()
+	->contain(['Competitions'=> function(\Cake\ORM\Query $q) use ($id) {
+        return $q->where(['Competitions.id' => $id]);
+    }])
+
+	->matching('Competitions', function(\Cake\ORM\Query $q) use($id) {
+        return $q->where(['Competitions.id' => $id]);
+    })->first();
+        
+        $this->set('id',$id);
+      
+         
+         $title = $event['name'];
+         $description = $event['name'];
+        
+     
+        
+        $this->set('title', $title);
+        $this->set('description', $description);
+         
+         
+          if(!empty($event['image'])) { $headimg = 'headers/evenements/g-'.$event['image']; }else { $headimg =  'header_main.png';}
+         
+         
+          $this->set('headimg',$headimg);
+          $this->set('event',$event);
+      
+         
+     }
+    
 
     
     function deleteindiv($id,$compete){
@@ -1169,6 +1208,8 @@ class InscriptionCompetitionsController extends AppController
     
     
     
+    
+    
     	// Fonction csv à partir du plug in
 	public function exportequipe($id) {
 		
@@ -1241,85 +1282,157 @@ class InscriptionCompetitionsController extends AppController
 	
 	// Fonction pdf, marche comme la csv
 	
-	public function view($category=null){
+	public function view($id,$category=null){
 	
 	
-		$category_id = $category;
-		
+			
+        $this->loadModel('Evenements');
+        
+        $event = $this->Evenements->find()
+	->contain(['Competitions'=> function(\Cake\ORM\Query $q) use ($id) {
+        return $q->where(['Competitions.id' => $id])->contain(['Categories']);
+    }])
+
+	->matching('Competitions', function(\Cake\ORM\Query $q) use($id) {
+        return $q->where(['Competitions.id' => $id])->contain(['Categories'=> function($q) {
+        return $q->order(['annee_debut'=>'DESC','grade_debut'=>'DESC']);}]);
+    })->first();
+        
+        $this->set('id',$id);
+      
+        $user_id =  $this->Auth->User('id');
+        
+         $title = $event['name'];
+         $description = $event['name'];
+        
+     
+        
+        $this->set('title', $title);
+        $this->set('description', $description);
+        
+          
+         if(!empty($event['image'])) { $headimg = 'headers/evenements/g-'.$event['image']; }else { $headimg =  'header_main.png';}
+         
+         
+          $this->set('headimg',$headimg);
+          $this->set('event',$event);
+        
+        
+       
 		$this->set('category',$category);
 		
-		
-		// Junior + Junior & Honneurs + Junior & Excellence
-		if($category == 6) {	$category = array('11','6','12');}
+        
 		
 		
-		// Junior + Junior & Honneurs 
-		if($category == 7) {	$category = array('11','7');}
-		
-		
-		// Excellence + Junior & Excellence 
-		if($category == 8) {			$category = array('12','8');	}
-		
-		
-		// Espoir + Espoir & Femme 
-		if($category == 5) {		$category = array('14','5');}
-		
-		
-		// Femmes + Espoir & Femme 
-		if($category == 10) {	$category = array('14','10');	}
-		
-		
- 	
+ 	// Si on n'a pas de catégorie spécifiée, on prend tout
 		if($category == null) {
-		$articles = $this->Inscriptions->find('all')
-			->contain(['Inscrits'=> function($q) {
-        return $q->contain(['Categories','Clubs']);
+		
+            $articles = $this->InscriptionCompetitions->find('all')
+         ->where(['competition_id'=>$event['competition']['id'],'participation_indiv'=>'1'])
+			->contain(['Categories','Licencies'=> function($q) {
+        return $q->contain(['Clubs','Grades']);
     }]);
-		}
 		
-		elseif(isset($category[1])) {
-			
-			$articles = $this->Inscriptions->find('all')
-			->contain(['Inscrits'=> function(\Cake\ORM\Query $q) use ($category)  {
-        return $q->contain('Clubs','Categories')
-			->where(['Inscrits.category_id IN'=>$category]);		
-		}]);
-			
-		}
-		else {
-			
-		$articles = $this->Inscriptions->find('all')
-			->contain(['Inscrits'=> function(\Cake\ORM\Query $q) use ($category)  {
-        return $q->contain('Clubs','Categories')->where(['Inscrits.category_id'=>$category]);
-    }]);	
-			
-			
-		}
+            
+            
+            $name = 'Tous';
+            
 		
+       // Sinon, on prend que les inscros de la caté qui nous intéresse
+        
+        }
+        
+       else {
+           
+           
+         
+              
+                //Si on est dans les excellences femmes
+		if($category == 7) {
 			
-		$this->set('articles',$articles);
+            // On prend les espoirs (id = 3) en plus des femmes excellence(id =7)
+             
+              $articles = $this->InscriptionCompetitions->find('all')
+        ->where(['category_id'=>$category, 'competition_id'=>$event['competition']['id'],'participation_indiv'=>'1'])
+        ->orWhere(['competition_id'=>$event['competition']['id'],'category_id'=>'3','surclassement_age'=>'1','participation_indiv'=>'1'])
+        ->contain(['Categories','Licencies'=> function($q) {
+        return $q->contain(['Clubs','Grades']);
+			 }]);
+            
+      
+			
+        }
+		
+
+           
+           //Si on est dans les honneurs hommes
+		elseif($category == 10) {
+			
+            // On prend les juniors non surclassés en grade (id=5) et les honneurs hommes (id = 10)
+            
+			  
+              $articles = $this->InscriptionCompetitions->find('all')
+         ->where(['category_id'=>$category,'surclassement_grade'=>'0', 'competition_id'=>$event['competition']['id'],'participation_indiv'=>'1'])
+        ->orWhere(['category_id'=>'5','surclassement_age'=>'1','surclassement_grade'=>'0','participation_indiv'=>1])
+        ->contain(['Categories','Licencies'=> function($q) {
+        return $q->contain(['Clubs','Grades']);
+			 }]);
+            
+           
+            
+		}
+           
+        
+		
+		// Si on est dans les excellences hommes
+		elseif($category == 11) {
+			
+             
+            // On prend les juniors surclassés en grade et age (id=5), les honneurs hommes surclassés (id=10) et les excellences hommes (id=11)
+    
+            	  
+              $articles = $this->InscriptionCompetitions->find('all')
+         ->where(['category_id'=>$category, 'competition_id'=>$event['competition']['id'],'participation_indiv'=>'1'])
+        ->orWhere([ 'competition_id'=>$event['competition']['id'],'surclassement_grade'=>'1','participation_indiv'=>'1'])
+        
+        ->contain(['Categories','Licencies'=> function($q) {
+        return $q->contain(['Clubs','Grades']);
+			 }]);
+          
+            
+		}
+           
+           // Si c'est une caté sans surclassement possible
+
+           else {
+           
+           
+		    $articles = $this->InscriptionCompetitions->find('all')
+         ->where(['category_id'=>$category, 'competition_id'=>$event['competition']['id'],'participation_indiv'=>'1'])
+			->contain(['Categories','Licencies'=> function($q) {
+        return $q->contain(['Clubs','Grades']);
+			 }]);
+				$this->set('articles',$articles);
+               }
+               
+               
+           // On prend également les données de la catégorie présente
+           
+          $category_info = $this->InscriptionCompetitions->Categories->find('all')
+               ->where(['id'=>$category])
+               ->first();
+		
+           $this->set('category_info',$category_info);
+                       
+           
+             $name = $category_info['name'];
+        	
+                      
+       }
+		
+			$this->set('articles',$articles);   
 	
-		
-		
-		 if($category !== null) {
-	
-	if($category_id == 13) {$name = 'Catégorie - Poussins';}
-	if($category_id == 1) {$name = 'Catégorie - Samourais';}
-	if($category_id == 2) {$name = 'Catégorie - Benjamins';}
-	if($category_id == 3) {$name = 'Catégorie - Minimes';}
-	if($category_id == 4) {$name = 'Catégorie - Cadets';}
-	if($category_id == 5) {$name = 'Catégorie - Juniors';}
-	if($category_id == 6) {$name = 'Catégorie - Espoirs';}
-	if($category_id == 7) {$name = 'Catégorie - Honneurs';}
-	if($category_id == 8) {$name = 'Catégorie - Excellences';}
-	if($category_id == 9) {$name = 'Catégorie - Kyusha';}
-	if($category_id == 10) {$name = 'Catégorie - Femmes';}
-		
-		} else {
-		
-		$name = 'Toutes les catégories';
-		
-		}
+    
 		
 	
 	$this->set('filename',$name);
@@ -1328,5 +1441,63 @@ class InscriptionCompetitionsController extends AppController
 	
 	
 }
+    
+    
+    
+    	public function viewequipes($id){
+            
+              $this->loadModel('Evenements');
+        
+        $event = $this->Evenements->find()
+	->contain(['Competitions'=> function(\Cake\ORM\Query $q) use ($id) {
+        return $q->where(['Competitions.id' => $id])->contain(['Categories']);
+    }])
+
+	->matching('Competitions', function(\Cake\ORM\Query $q) use($id) {
+        return $q->where(['Competitions.id' => $id])->contain(['Categories'=> function($q) {
+        return $q->order(['annee_debut'=>'DESC','grade_debut'=>'DESC']);}]);
+    })->first();
+        
+        $this->set('id',$id);
+      
+        $user_id =  $this->Auth->User('id');
+        
+         $title = $event['name'];
+         $description = $event['name'];
+        
+     
+        
+        $this->set('title', $title);
+        $this->set('description', $description);
+        
+          
+         if(!empty($event['image'])) { $headimg = 'headers/evenements/g-'.$event['image']; }else { $headimg =  'header_main.png';}
+         
+         
+          $this->set('headimg',$headimg);
+          $this->set('event',$event);
+        
+        
+       
+
+		
+            $articles = $this->InscriptionCompetitions->find('all')
+         ->where(['InscriptionCompetitions.competition_id'=>$id,'participation_equipe'=>'1'])
+                ->order(['equipe_id'=>'ASC'])
+			->contain(['Equipes','Licencies'=> function($q) {
+        return $q->contain(['Clubs','Grades']);
+    }]);
+		
+            
+            
+	$this->set('articles',$articles);
+            
+              $name = 'Equipes';
+    
+    $this->set('filename',$name);
+    
+        }
+    
+  
 }
 ?>
