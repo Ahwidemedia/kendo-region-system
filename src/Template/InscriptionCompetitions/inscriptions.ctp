@@ -777,7 +777,7 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                <p class="margin-top-3 center width-50">  
                 <?php echo $this->Form->checkbox("consent", ['class'=>'consent','label'=>false]); ?>
                   En soumettant ce formulaire, j'accepte que les informations saisies soient exploitées dans
-                  le cadre de l'orgaisation de la compétition.
+                  le cadre de l'organisation de la compétition.
                </p>
                
                

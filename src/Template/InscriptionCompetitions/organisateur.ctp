@@ -13,6 +13,8 @@
 	
 
 		<?php echo $this->Html->link("EQUIPES", ['controller'=>'InscriptionCompetitions','action'=>'equipes',$id],[ 'class'=>'']);?>
+        
+        <?php echo $this->Html->link("ADMINISTRATIFS", ['controller'=>'InscriptionAdministratifs','action'=>'organisateur',$id],[ 'class'=>'']);?>
 
 	</div>
 	<p class="padding-3">&nbsp;</p>
