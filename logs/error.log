@@ -34834,3 +34834,95 @@ Stack Trace:
 #7 {main}
 
 
+2018-12-04 10:45:16 Warning: Warning (2): include(D:\03-SOURCES\workspacePhp\kendo-region-system/vendor/rrd/rbruteforce/config\routes.php): failed to open stream: No such file or directory in [D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Core\Plugin.php, line 399]
+Request URL: /kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - CORE\src\Core\Plugin.php, line 399
+Cake\Core\Plugin::_includeFile() - CORE\src\Core\Plugin.php, line 399
+Cake\Core\Plugin::routes() - CORE\src\Core\Plugin.php, line 348
+Cake\Core\Plugin::routes() - CORE\src\Core\Plugin.php, line 336
+include - ROOT\config\routes.php, line 95
+Cake\Routing\Router::_loadRoutes() - CORE\src\Routing\Router.php, line 996
+Cake\Routing\Router::parse() - CORE\src\Routing\Router.php, line 343
+Cake\Routing\Filter\RoutingFilter::beforeDispatch() - CORE\src\Routing\Filter\RoutingFilter.php, line 57
+Cake\Routing\DispatcherFilter::handle() - CORE\src\Routing\DispatcherFilter.php, line 144
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 426
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 391
+Cake\Http\ActionDispatcher::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 81
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 10:45:16 Warning: Warning (2): include() [<a href='http://php.net/function.include'>function.include</a>]: Failed opening 'D:\03-SOURCES\workspacePhp\kendo-region-system/vendor/rrd/rbruteforce/config\routes.php' for inclusion (include_path='.;D:/01-APPLI/laragon/etc/php/pear') in [D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Core\Plugin.php, line 399]
+Request URL: /kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - CORE\src\Core\Plugin.php, line 399
+Cake\Core\Plugin::_includeFile() - CORE\src\Core\Plugin.php, line 399
+Cake\Core\Plugin::routes() - CORE\src\Core\Plugin.php, line 348
+Cake\Core\Plugin::routes() - CORE\src\Core\Plugin.php, line 336
+include - ROOT\config\routes.php, line 95
+Cake\Routing\Router::_loadRoutes() - CORE\src\Routing\Router.php, line 996
+Cake\Routing\Router::parse() - CORE\src\Routing\Router.php, line 343
+Cake\Routing\Filter\RoutingFilter::beforeDispatch() - CORE\src\Routing\Filter\RoutingFilter.php, line 57
+Cake\Routing\DispatcherFilter::handle() - CORE\src\Routing\DispatcherFilter.php, line 144
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 426
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 391
+Cake\Http\ActionDispatcher::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 81
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 10:45:16 Warning: Headers already sent in D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Error\Debugger.php:753
+2018-12-04 10:45:19 Warning: Warning (2): include(D:\03-SOURCES\workspacePhp\kendo-region-system/vendor/rrd/rbruteforce/config\routes.php): failed to open stream: No such file or directory in [D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Core\Plugin.php, line 399]
+Request URL: /kendo-region-system/
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - CORE\src\Core\Plugin.php, line 399
+Cake\Core\Plugin::_includeFile() - CORE\src\Core\Plugin.php, line 399
+Cake\Core\Plugin::routes() - CORE\src\Core\Plugin.php, line 348
+Cake\Core\Plugin::routes() - CORE\src\Core\Plugin.php, line 336
+include - ROOT\config\routes.php, line 95
+Cake\Routing\Router::_loadRoutes() - CORE\src\Routing\Router.php, line 996
+Cake\Routing\Router::parse() - CORE\src\Routing\Router.php, line 343
+Cake\Routing\Filter\RoutingFilter::beforeDispatch() - CORE\src\Routing\Filter\RoutingFilter.php, line 57
+Cake\Routing\DispatcherFilter::handle() - CORE\src\Routing\DispatcherFilter.php, line 144
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 426
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 391
+Cake\Http\ActionDispatcher::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 81
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 10:45:19 Warning: Warning (2): include() [<a href='http://php.net/function.include'>function.include</a>]: Failed opening 'D:\03-SOURCES\workspacePhp\kendo-region-system/vendor/rrd/rbruteforce/config\routes.php' for inclusion (include_path='.;D:/01-APPLI/laragon/etc/php/pear') in [D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Core\Plugin.php, line 399]
+Request URL: /kendo-region-system/
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - CORE\src\Core\Plugin.php, line 399
+Cake\Core\Plugin::_includeFile() - CORE\src\Core\Plugin.php, line 399
+Cake\Core\Plugin::routes() - CORE\src\Core\Plugin.php, line 348
+Cake\Core\Plugin::routes() - CORE\src\Core\Plugin.php, line 336
+include - ROOT\config\routes.php, line 95
+Cake\Routing\Router::_loadRoutes() - CORE\src\Routing\Router.php, line 996
+Cake\Routing\Router::parse() - CORE\src\Routing\Router.php, line 343
+Cake\Routing\Filter\RoutingFilter::beforeDispatch() - CORE\src\Routing\Filter\RoutingFilter.php, line 57
+Cake\Routing\DispatcherFilter::handle() - CORE\src\Routing\DispatcherFilter.php, line 144
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 426
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 391
+Cake\Http\ActionDispatcher::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 81
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 10:45:20 Warning: Headers already sent in D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Error\Debugger.php:753
