@@ -55,10 +55,15 @@
 
     <p class="center padding-3">Image :
         <?php echo $this->Form->input('imagef', ['label' => false, 'class'=>'center','type' => 'file']); ?>
+       
     </p>
-
+    
+    <p class="padding-1">
+        <?php if(!empty($article['image'])) {echo $this->Html->image('headers/evenements/g-'.$article['image'],['class'=>'width-100 border-red']);} ?></p>
+</div>
+<div class="width-70 center normal-form">
     <p class="center padding-3">Description :
-        <?php echo $this->Form->input("description", ['type'=>'textarea','class'=>'width-100','label'=>false]); ?>
+        <?php echo $this->Form->input("description", ['type'=>'textarea','style'=>'min-height:500px','class'=>'width-100','label'=>false]); ?>
     </p>
 
     <div class="padding-3">
@@ -74,7 +79,9 @@
 
     <div id="competitionblock" <?php if($article['competition'] == null) { echo 'style="display:none;"';}?>>
 
-
+            <h2>Informations Compétition</h2>
+        
+        
         <p class="center padding-3">Discipline :
 
 
@@ -86,15 +93,15 @@
 
 
 
-        <p class="center padding-3">Description :
-            <?php echo $this->Form->input("competition.description", ['type'=>'textarea','class'=>'width-100','label'=>false]); ?>
-        </p>
+        <div class="center padding-3 width-100"><p class="center padding-1">Description :</p>
+            <?php echo $this->Form->input("competition.description", ['style'=>'min-height:500px; width:100%;','type'=>'textarea','class'=>'width-100 center','label'=>false]); ?>
+        </div>
+        
+        
 
-        <p class="center padding-3">Catégories :
+        <p class="center padding-3">Catégories :</p>
 
-            <p class="clear"></p>
-
-            <p class="center padding-1">
+            <p class="center">
                 <?php echo $this->Form->input('competition.categories._ids', ['label' => false,'multiple'=>'true', 'class'=>'associated width-100 center',  [
         'options' => $categories]]);?>
             </p>
@@ -104,14 +111,15 @@
                 <?php echo $this->Form->radio("cf_equipe",['1'=>'Oui','2'=>'Non'],['default'=>$default]); ?>
 
             </p>
-
+    <div class="width-30 normal-form center">
 
             <div id="nombreequipe" class="center padding-3" <?php if($article['equipe'] > 0) { echo 'style="display:none;"';}?>>
                 <p class="center"> Nombre de participants par équipes (pensez aux éventuels remplaçants):<br /><br />
                     <?php echo $this->Form->input("competition.equipe", ['type'=>'number','label'=>false]); ?>
                 </p>
             </div>
-
+    </div>
+    <div class="width-40 normal-form center">
             <p class="center padding-3">Date limite des inscriptions
                 <?php echo $this->Form->input("date_desactivation", ['type'=>'text','id'=>'datelimite','label'=>false]); ?>
             </p>
@@ -127,9 +135,16 @@
             <p class="center padding-3">Réglement de la compétition :
                 <?php echo $this->Form->input("competition.documentf", ['type'=>'file','label'=>false]); ?>
             </p>
-
+        
+            <?php if(!empty($article['competition']['document'])){
+    
+    
+     echo $this->Html->image('pdf.jpg',['class'=>'center width-10','url'=>'/files/competitions/'.$article['competition']['document']]);
+    
+} ?><br />
+<span class="italic center"><?php echo $article['competition']['document'];?></span>
     </div>
-
+</div>
     <div class="center">
         <?php echo '<p class="center padding-3">'.$this->Form->button('Envoyer', ['type' => 'submit', 'name'=>'envoyer', 'class' => 'soumettre normalButton']);?>
 
@@ -169,15 +184,6 @@ width:"500px"
 })(jQuery);
 
 
-$('input[type=radio][name=cf_equipe]').change(function() {
-
-if (this.value == '2') {
-$('#nombreequipe').hide();
-}
-else if (this.value == '1') {
-$('#nombreequipe').show();
-}
-});
 
 
 $('#cfcompetition').click(function() {

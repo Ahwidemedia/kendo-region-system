@@ -25,12 +25,12 @@
     <p class="padding-3 clear"></p>
 
     <p class="float-left center  width-50">
-        <?php echo $this->html->image('pdf.jpg',['class'=>'center width-10','url'=>[$article['document']]]); ?><br />
+        <?php echo $this->Html->image('pdf.jpg',['class'=>'center width-10','url'=>['/files/competitions/'.$article['document']]]); ?><br />
         Informations compétition
     </p>
 
     <p class="float-right center width-50">
-        <?php echo $this->html->image('pdf.jpg',['class'=>'center width-10','url'=>[$article['document']]]); ?><br />
+        <?php echo $this->Html->image('pdf.jpg',['class'=>'center width-10','url'=>[$article['document']]]); ?><br />
         Informations passage de grade
     </p>
 
@@ -40,32 +40,58 @@
     </p>
 
 
-    <?php if (!$conn = $this->request->session()->read('Auth.User')){ ?>
-    <div class="button">
-        <p class="padding-3 float-left center">
-            <?php echo $this->html->link('Inscriptions Shiais',['controller'=>'InscriptionCompetitions', 'action'=>'inscriptions',$article['id']]); ?>
-        </p>
-    </div>
-    <div class="button">
-        <p class="padding-3 float-right center">
-            <?php echo $this->html->link('Inscriptions Passages de grade',['controller'=>'InscriptionPassages', 'action'=>'inscriptions']); ?>
-        </p>
-    </div>
+    <?php
+    
+    if (!$conn = $this->request->session()->read('Auth.User')){ ?>
+   
+        <div class="button">
+            <?php echo $this->Html->link('Inscriptions Shiais',['controller'=>'InscriptionCompetitions','action'=>'inscriptions',$article['competition']['id']]); ?>
+          <?php if($conn['id'] == $article['user_id']) { ?>  <p class="red">Vous avez actuellement <?php echo $number_compete;?> inscrits</p> <?php } ?>
+        </div>
+
+        <?php 
+                                                  
+                                                  
+        if(!empty($article['passage'])){ ?>
+
+        <div class="button">
+            <?php echo $this->Html->link('Inscriptions passages de grades',['controller'=>'InscriptionPassages','action'=>'inscriptions',$article['passage']['id']]); ?>
+           <?php if($conn['id'] == $article['user_id']) { ?>  <p class="red">Vous avez actuellement <?php echo $number_passage;?> inscrits</p> <?php } ?>
+        </div>
+
+        <?php } ?>
+    
     <?php } else { ?>
     <div class="button">
         <p class="padding-3 float-left center">
-            <?php echo $this->html->link('Modifier les inscriptions Shiais',['controller'=>'InscriptionCompetitions', 'action'=>'inscriptions']); ?>
+            <?php 
+        $date = $article['date_desactivation'];
+                  $date_desactivation = $date->i18nFormat('YYY-MM-dd');
+        
+  if($date_desactivation < date('Y-m-d')){
+                                
+                             echo '<span class=" red width-90 center">Inscriptions Shiais fermées</span>';
+                            
+                            } else{ 
+        
+        echo $this->Html->link('Modifier les inscriptions Shiais',['controller'=>'InscriptionCompetitions', 'action'=>'inscriptions',$article['competition']['id']]); } ?>
         </p>
     </div>
     <div class="button">
         <p class="padding-3 float-right center">
-            <?php echo $this->html->link('Modifier les inscriptions Passages de grade',['controller'=>'InscriptionPassages', 'action'=>'inscriptions']); ?>
+            <?php 
+          if($date_desactivation < date('Y-m-d')){
+                                
+                             echo '<span class=" red width-90 center">Inscriptions Passages de grade fermées</span>';
+                            
+                            } else{ 
+        echo $this->Html->link('Modifier les inscriptions Passages de grade',['controller'=>'InscriptionPassages', 'action'=>'inscriptions',$article['passage']['id']]); } ?>
         </p>
     </div>
 
     <p class="clear padding-3">&nbsp;</p>
 
     <?php 
-    
+                 
 } ?>
 </div>
