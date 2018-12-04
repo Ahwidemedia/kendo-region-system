@@ -25,12 +25,12 @@
     <p class="padding-3 clear"></p>
 
     <p class="float-left center  width-50">
-        <?php echo $this->Html->image('pdf.jpg',['class'=>'center width-10','url'=>['/files/competitions/'.$article['document']]]); ?><br />
+        <?php echo $this->Html->image('pdf.jpg',['class'=>'center width-10','url'=>'/files/competitions/'.$article['competition']['document']]); ?><br />
         Informations compétition
     </p>
 
     <p class="float-right center width-50">
-        <?php echo $this->Html->image('pdf.jpg',['class'=>'center width-10','url'=>[$article['document']]]); ?><br />
+        <?php echo $this->Html->image('pdf.jpg',['class'=>'center width-10','url'=>'files/passages/'.$article['passage']['document']]); ?><br />
         Informations passage de grade
     </p>
 
