@@ -105,6 +105,7 @@ class InscriptionCompetitionsController extends AppController
             // On récupère son id
             
         $user_id = $this->Auth->User('id');
+        $user_email = $this->Auth->User('email');
          
             
             // On cherche les inscriptions à l'événement qu'il a déjà faite
@@ -660,7 +661,7 @@ class InscriptionCompetitionsController extends AppController
             
              
     $CakeEmail = new Email('default');
-	$CakeEmail->to('jkcf@jkcf.com'); //$result['email']
+	$CakeEmail->to($user_email); 
 	$CakeEmail->subject('Récapitulatif de vos inscriptions à : '.$event['name']);
 	$CakeEmail->viewVars(['recap_compete' => $recap_compete,
 	'recap_admin' => $recap_admin,
