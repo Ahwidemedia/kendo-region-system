@@ -1,108 +1,55 @@
 <?php
-    $here = $this->request->here();
-    $canonical = $this->Url->build($here, true);
+/**
+ * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+ * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ *
+ * Licensed under The MIT License
+ * For full copyright and license information, please see the LICENSE.txt
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link          http://cakephp.org CakePHP(tm) Project
+ * @since         0.10.0
+ * @license       http://www.opensource.org/licenses/mit-license.php MIT License
+ */
+
+$cakeDescription = 'CakePHP: the rapid development php framework';
 ?>
-
-<!doctype html>
-<html lang="fr">
-
+<!DOCTYPE html>
+<html>
 <head>
-
-    <?php $controller = strtolower($this->name); ?>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?= $this->Html->charset() ?>
     <title>
-       Erreur sur la page
+        <?= $cakeDescription ?>:
+        <?= $this->fetch('title') ?>
     </title>
-    <meta property="og:title" content="Erreur sur la page />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="<?php echo $canonical; ?>" />
-    <meta property="og:description" content="Erreur sur la page" />
-    <meta name="description" content="Erreur">
-    <?php
-    echo $this->Html->css('jquery-ui');
-    echo $this->Html->css('jquery-ui.structure');
+    <?= $this->Html->meta('icon') ?>
 
-    echo $this->fetch('css');
-	
-	echo $this->Html->css('main'); 
-	echo $this->Html->meta('favicon.ico', '/favicon.ico', ['type' => 'icon']); ?>
+    <?= $this->Html->css('base.css') ?>
+    <?= $this->Html->css('cake.css') ?>
 
+    <?= $this->fetch('meta') ?>
+    <?= $this->fetch('css') ?>
+    <?= $this->fetch('script') ?>
 </head>
-
-
 <body>
-
-    <header>
-
-        <div class="header-right">
-            <?php if ($conn = $this->request->session()->read('Auth.User')){ 
-    
-
-  echo $conn['nom'].' - '.$conn['prenom'];
-    
-    
-    
- }
- 
- else {
- 
-
-echo $this->Html->link(
-    'Connexion',
-    ['controller' => 'Users', 'action' => 'login']
- );
- 
- }
-    ?>
-
+    <div id="container">
+        <div id="header">
+            <h1><?= $this->Html->link($cakeDescription, 'http://cakephp.org') ?></h1>
         </div>
-    </header>
+        <div id="content">
+            <?= $this->Flash->render() ?>
 
-  <section>
-
-    
-     <?php 
-     	echo $this->Flash->render();
- echo $this->Flash->render('auth');
-     echo $this->fetch('content'); 
-    	?>
-
-
-          
-     </section>
-
-    <footer>
-        <div class="center">
-            <?php echo $this->html->image('logo-footer.png', ['url'=>['controller'=>'Pages','action'=>'index','prefix'=>false],'class'=>'center logo-foot']);?>
-            <p class="center">
-                <?php echo $this->html->link('Connexion', ['controller'=>'Users', 'action'=>'login']); ?>
-            </p>
-
-            <p class="float-left">
-                <?php echo $this->html->link('Mentions légales', ['controller'=>'Pages', 'action'=>'mentions']); ?>
-            </p>
-
-            <p class="float-right">
-                <?php echo $this->html->link('Contact', ['controller'=>'Pages', 'action'=>'contact']); ?>
-            </p>
+            <?= $this->fetch('content') ?>
         </div>
-
-    </footer>
-
-
-    <?php echo $this->Html->script('jquery-2.2.4.min.js');?>
-
-
-    <?php echo $this->Html->script('jquery.easy-confirm-dialog.min.js');?>
-    <?php echo $this->Html->script('jquery-ui.js');?>
-
-    <?php echo $this->Html->script('underscore-min.js');?>
-    <?php echo $this->Html->script('add-element-table.js');?>
-
-    <?php echo $this->fetch('script'); ?>
+        <div id="footer">
+            <?= $this->Html->link(
+                    $this->Html->image('cake.power.gif', ['alt' => $cakeDescription, 'border' => '0']),
+                    'http://www.cakephp.org/',
+                    ['target' => '_blank', 'escape' => false]
+                )
+            ?>
+        </div>
+    </div>
 </body>
-
 </html>
-
