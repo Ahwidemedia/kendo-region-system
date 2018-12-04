@@ -36,15 +36,19 @@
 
             <span class="width-90 padding-3 block center">La création de compte permet de modifier vos inscriptions jusqu'à la date limite.</span>
 
-            <?php echo $this->Form->create($user);?>
-            <?php echo $this->Form->hidden('register');?>
-
-            <?php echo $this->Form->input('username', ['id'=>'username_reg','label'=>'Nom d’utilisateur *']);?>
-            <?php echo $this->Form->input('nom', ['label'=>'Nom']);?>
-            <?php echo $this->Form->input('prenom', ['label'=>'Prénom']);?>
-            <?php echo $this->Form->input('password', ['id'=>'reg_password','label'=>'Mot de passe *', 'value' => '']);?>
-            <?php echo $this->Form->input('passwordconfirm', ['id'=>'reg_password_cf','label'=>'Confirmer le mot de passe *', 'type' => 'password', 'value' => '']);?>
-            <?php echo $this->Form->input('email', ['label'=>'Email *']);?>
+            <?= $this->Form->create($user)?>
+            <?= $this->Form->hidden('register')?>
+            <?= $this->Form->input('username', ['id'=>'username_reg','label'=>'Nom d’utilisateur *'])?>
+            <?= $this->Form->input('nom', ['label'=>'Nom'])?>
+            <?= $this->Form->input('prenom', ['label'=>'Prénom'])?>
+            <?= $this->Form->input('password', ['id'=>'reg_password','label'=>'Mot de passe *', 'value' => ''])?>
+            <?= $this->Form->input('passwordconfirm', ['id'=>'reg_password_cf','label'=>'Confirmer le mot de passe *', 'type' => 'password', 'value' => ''])?>
+            <?= $this->Form->input('email', ['label'=>'Email *'])?>
+            <?= $this->Form->input('club_id', ['label'=>'Club *'], ['options'=> $clubs])?>
+            
+             
+            
+            
             <div class="onnevoitpas">
                 <?php echo $this->Form->input('test',['id'=>'test2','label'=>"What is two plus two?", 'size'=>'4']); ?>
             </div>
