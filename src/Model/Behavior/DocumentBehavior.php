@@ -21,7 +21,7 @@ class DocumentBehavior extends Behavior
 
 	if(!empty($entity['documentf']['tmp_name'])){
 	
-			debug($entity);
+
 			$slug = $entity->slug;
 			$alias = $event->subject()->alias();
 			$alias = strtolower($alias);
