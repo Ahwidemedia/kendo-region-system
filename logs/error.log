@@ -34834,3 +34834,39 @@ Stack Trace:
 #7 {main}
 
 
+2018-12-03 21:23:10 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mail' in 'where clause'
+Request URL: /kendo-region-system/users/forgot
+Referer URL: http://localhost/kendo-region-system/users/forgot
+Stack Trace:
+#0 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(276): Cake\Database\Statement\MysqlStatement->execute()
+#2 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Query.php(189): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#3 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Query.php(955): Cake\Database\Query->execute()
+#4 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(276): Cake\ORM\Query->_execute()
+#5 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Query.php(903): Cake\ORM\Query->_all()
+#6 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(404): Cake\ORM\Query->all()
+#7 D:\workspacePhp\kendo-region-system\src\Controller\UsersController.php(217): Cake\ORM\Query->first()
+#8 [internal function]: App\Controller\UsersController->forgot()
+#9 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#10 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#11 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#12 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 D:\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 {main}
+
+
+2018-12-03 21:33:32 Warning: Headers already sent in D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Error\Debugger.php:753
+2018-12-03 21:33:33 Error: [RuntimeException] Table "Cake\ORM\Table" is not associated with "Clubs"
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Stack Trace:
+#0 D:\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php(84): Cake\ORM\Table->__get('Clubs')
+#1 [internal function]: App\Controller\InscriptionPassagesController->inscriptions('3')
+#2 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#3 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#4 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#5 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 D:\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+

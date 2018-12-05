@@ -158,3 +158,17 @@ Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
 
 
 
+2018-12-03 21:33:32 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php, line 59]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\InscriptionPassagesController::inscriptions() - APP/Controller\InscriptionPassagesController.php, line 59
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+

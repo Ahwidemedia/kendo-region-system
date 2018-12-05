@@ -213,7 +213,7 @@ $this->set('description', 'Connectez vous à votre interface pour écrire de nou
 	$mail = $this->request->data['email'];
 	
 	$user = $this->Users->find('all')
-	->where(['mail' => $mail]);
+	->where(['email' => $mail]);
 	$row = $user->first();
 	
 	if(empty($row)) {
