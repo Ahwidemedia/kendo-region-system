@@ -77,7 +77,7 @@ class InscriptionPassagesController extends AppController
                 $this->loadModel('Licencies');
                 $licencie = $this->Licencies->find()
                                             ->select(['id'])
-                                            ->where(['numero_licence' => strtoupper($data['licence'][$i]), 'nom' => strtoupper($data['nom'][$i]), 'prenom' => $data['prenom'][$i], 'sexe' => $data['sexe'][$i], 'grade_id' => $data['grade'][$i]])
+                                            ->where(['numero_licence' => $data['licence'][$i], 'nom' => $data['nom'][$i], 'prenom' => $data['prenom'][$i], 'sexe' => $data['sexe'][$i], 'grade_id' => $data['grade'][$i]])
                                             ->first();
                 //debug($licencie);die();
                 if($licencie) {
@@ -87,8 +87,8 @@ class InscriptionPassagesController extends AppController
                     $licencieTable = TableRegistry::get('Licencies');
                     $newLicencie = $licencieTable->newEntity();
                     $newLicencie->id = null;
-                    $newLicencie->numero_licence = strtoupper($data['licence'][$i]);
-                    $newLicencie->nom = strtoupper($data['nom'][$i]);
+                    $newLicencie->numero_licence = $data['licence'][$i];
+                    $newLicencie->nom = $data['nom'][$i];
                     $newLicencie->prenom = $data['prenom'][$i];
                     $newLicencie->ddn = Time::createFromFormat('d/m/Y', $data['ddn'][$i])->format('Y');
                     $newLicencie->sexe = $data['sexe'][$i];
