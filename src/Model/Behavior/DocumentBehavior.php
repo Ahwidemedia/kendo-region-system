@@ -21,21 +21,21 @@ class DocumentBehavior extends Behavior
 
 	if(!empty($entity['documentf']['tmp_name'])){
 	
-			
+			debug($entity);
 			$slug = $entity->slug;
 			$alias = $event->subject()->alias();
 			$alias = strtolower($alias);
 		
 			$f = explode('.',$entity['documentf']['name']);
 			$ext = '.'.end($f);
-			$directory ='img/documents/'.$alias.'/';
+			$directory ='files/'.$alias.'/';
           
           if(!file_exists($directory))
         	mkdir($directory, 0777);
-            move_uploaded_file($entity['documentf']['tmp_name'], $directory . DS . $entity['id'].'-'.$slug .$ext);
+            move_uploaded_file($entity['documentf']['tmp_name'], $directory . DS . $entity['id'].'-'.$alias.'-'.$slug .$ext);
              
            
-           $document = $entity['id'].'-'.$slug .$ext;
+           $document = $entity['id'].'-'.$alias.'-'.$slug .$ext;
            $id = $entity['id'];
            
          

@@ -158,7 +158,11 @@ Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
 
 
 
+<<<<<<< HEAD
 2018-12-03 21:33:32 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php, line 59]
+=======
+2018-12-04 10:47:29 Notice: Notice (8): Trying to get property of non-object in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php, line 59]
+>>>>>>> f38f8690171981e39d6c4d14d327d1ed773910d2
 Request URL: /kendo-region-system/inscription-passages/inscriptions/3
 Referer URL: http://localhost/kendo-region-system/
 Trace:
@@ -172,3 +176,1021 @@ Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
 
 
 
+<<<<<<< HEAD
+=======
+2018-12-04 10:57:26 Notice: Notice (8): Trying to get property of non-object in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php, line 52]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\InscriptionPassagesController::inscriptions() - APP/Controller\InscriptionPassagesController.php, line 52
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 11:02:07 Notice: Notice (8): Trying to get property of non-object in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php, line 52]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\InscriptionPassagesController::inscriptions() - APP/Controller\InscriptionPassagesController.php, line 52
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 11:02:45 Notice: Notice (8): Trying to get property of non-object in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php, line 52]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\InscriptionPassagesController::inscriptions() - APP/Controller\InscriptionPassagesController.php, line 52
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 11:02:46 Notice: Notice (8): Undefined variable: regions in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 24]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 24
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 11:02:46 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 128]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 128
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 11:03:42 Notice: Notice (8): Trying to get property of non-object in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php, line 52]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\InscriptionPassagesController::inscriptions() - APP/Controller\InscriptionPassagesController.php, line 52
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 11:03:42 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 128]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 128
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 11:21:35 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 128]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 128
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 12:57:39 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 152]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 152
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 12:58:32 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 151]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 151
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 12:59:02 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 151]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 151
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 12:59:23 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 151]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 151
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:02:11 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 151]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 151
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:07:03 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 153]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 153
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:09:48 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 153]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 153
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:09:51 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 153]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 153
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:11:14 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 153]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 153
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:12:06 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 158]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 158
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:15:06 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 148]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 148
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:16:37 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 149]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 149
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:16:46 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 149]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 149
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:16:50 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 149]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 149
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:17:00 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 149]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 149
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:18:30 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 150]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 150
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:18:34 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 150]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 150
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:19:03 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 150]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 150
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:19:27 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 150]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 150
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:19:53 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 150]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 150
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:19:57 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 150]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 150
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:20:16 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 150]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 150
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:20:26 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 150]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 150
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:20:33 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 150]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 150
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:20:49 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 150]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 150
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:20:58 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 150]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 150
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:21:10 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 150]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 150
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:21:21 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 150]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 150
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:21:46 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 150]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 150
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:21:59 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 150]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 150
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:22:14 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 149]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 149
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:22:21 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 149]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 149
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:22:31 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 148]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 148
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:22:53 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 148]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 148
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:32:51 Notice: Notice (8): Undefined variable: categories in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 158]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 158
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 20:58:00 Notice: Notice (8): Array to string conversion in [D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\View\StringTemplate.php, line 310]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+implode - [internal], line ??
+Cake\View\StringTemplate::_formatAttribute() - CORE\src\View\StringTemplate.php, line 310
+Cake\View\StringTemplate::formatAttributes() - CORE\src\View\StringTemplate.php, line 290
+Cake\View\Widget\BasicWidget::render() - CORE\src\View\Widget\BasicWidget.php, line 79
+Cake\View\Helper\FormHelper::widget() - CORE\src\View\Helper\FormHelper.php, line 2653
+Cake\View\Helper\FormHelper::__call() - CORE\src\View\Helper\FormHelper.php, line 1544
+Cake\View\Helper\FormHelper::_getInput() - CORE\src\View\Helper\FormHelper.php, line 1161
+Cake\View\Helper\FormHelper::input() - CORE\src\View\Helper\FormHelper.php, line 1064
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 50
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 21:12:39 Notice: Notice (8): Undefined variable: grade in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 4]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 4
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 21:13:19 Notice: Notice (8): Undefined variable: grade in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 4]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 4
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 21:13:29 Notice: Notice (8): Undefined variable: grade in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 4]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 4
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 21:14:14 Notice: Notice (8): Undefined variable: grade in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 52]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 52
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 21:15:16 Notice: Notice (8): Undefined variable: grade in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 53]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 53
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 21:15:35 Notice: Notice (8): Undefined variable: gradeSs in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 52]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 52
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 21:58:46 Notice: Notice (8): Undefined variable: ths in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php, line 35]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\InscriptionPassagesController::inscriptions() - APP/Controller\InscriptionPassagesController.php, line 35
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 21:58:46 Notice: Notice (8): Trying to get property of non-object in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php, line 35]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\InscriptionPassagesController::inscriptions() - APP/Controller\InscriptionPassagesController.php, line 35
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 21:59:48 Notice: Notice (8): Undefined property: Cake\ORM\Query::$id in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php, line 81]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\InscriptionPassagesController::inscriptions() - APP/Controller\InscriptionPassagesController.php, line 81
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 21:59:48 Notice: Notice (8): Undefined property: Cake\ORM\Query::$id in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php, line 81]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\InscriptionPassagesController::inscriptions() - APP/Controller\InscriptionPassagesController.php, line 81
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 22:01:53 Notice: Notice (8): Undefined property: Cake\ORM\Query::$id in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php, line 81]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\InscriptionPassagesController::inscriptions() - APP/Controller\InscriptionPassagesController.php, line 81
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 22:01:53 Notice: Notice (8): Undefined property: Cake\ORM\Query::$id in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php, line 81]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\InscriptionPassagesController::inscriptions() - APP/Controller\InscriptionPassagesController.php, line 81
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 22:11:26 Notice: Notice (8): Undefined property: Cake\ORM\Query::$id in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php, line 81]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\InscriptionPassagesController::inscriptions() - APP/Controller\InscriptionPassagesController.php, line 81
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 22:11:26 Notice: Notice (8): Undefined property: Cake\ORM\Query::$id in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php, line 81]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\InscriptionPassagesController::inscriptions() - APP/Controller\InscriptionPassagesController.php, line 81
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 22:22:13 Notice: Notice (8): Undefined property: Cake\ORM\Query::$discipline_id in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php, line 95]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\InscriptionPassagesController::inscriptions() - APP/Controller\InscriptionPassagesController.php, line 95
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 22:23:54 Notice: Notice (8): Undefined property: Cake\ORM\Query::$discipline_id in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php, line 95]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\InscriptionPassagesController::inscriptions() - APP/Controller\InscriptionPassagesController.php, line 95
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 22:24:24 Notice: Notice (8): Undefined property: Cake\ORM\Query::$discipline_id in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php, line 95]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\InscriptionPassagesController::inscriptions() - APP/Controller\InscriptionPassagesController.php, line 95
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 22:31:06 Notice: Notice (8): A non well formed numeric value encountered in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php, line 84]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+date - [internal], line ??
+App\Controller\InscriptionPassagesController::inscriptions() - APP/Controller\InscriptionPassagesController.php, line 84
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+>>>>>>> f38f8690171981e39d6c4d14d327d1ed773910d2

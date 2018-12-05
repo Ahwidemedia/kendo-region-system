@@ -426,36 +426,18 @@ font-size:1em;}
 .tableau-gris td:first-child {font-weight:bold;}
     </STYLE>
 
-<h1><?php echo $event['name'];?></h1>
-<div class="width-100 center">
-
-
-
-	<?php if($category !== null){
-	echo '<h2 class="center">Categorie '.$category_info['name'].'</h2>';
-}
-else {
-
-echo '<h2 class="center">Toutes les catégories</h2>';
-
-}
-	?>
+	<h2>Commissaires et arbitres</h2>
 	
 	
-<table class="tableau-gris" id="addelement-table">
+<table class="tableau-gris">
 	<thead>
-		<tr style="border:solid 1px #ccc">
-			
+		<tr><th></th>
 			<th>Nom</th>
 			<th>Prénom</th>
-			<th>Sexe</th>
-			<th>Grade</th>
-			<th>Année de naissance</th>
-			<?php if($category == null) { ?>
-			<th>Catégorie</th>
-			<?php } ?>
-			<th>Surclassé</th>
-		    <th>Certificat médical</th>
+			<th>Niveau Arbitre</th>
+            <th>Niveau Commissaire</th>
+            <th>Samedi</th>
+            <th>Dimanche</th>
 			<th>Club</th>
 		
 			</tr>
@@ -467,7 +449,7 @@ echo '<h2 class="center">Toutes les catégories</h2>';
 		?>
 
 	<tr>
-		
+		<td></td>
 		
 		<td>
 			<?php echo $article['licency']['nom'];  ?>
@@ -476,51 +458,43 @@ echo '<h2 class="center">Toutes les catégories</h2>';
 		<td>
 			<?php echo $article['licency']['prenom'];  ?>
 		</td>
-
-
 		<td>
-			<?php echo $article['licency']['sexe'];  ?>
-		</td>
-
-		<td>
-			<?php echo $article['licency']['grade']['name'];  ?>
-		</td>
-
-		<td>
-			<?php echo $article['licency']['ddn'];  ?>
-
-				<?php if($category == null) { ?>
-		<td>
-			<?php echo $article['category']['name'];  ?>
-		</td> 
-		<?php } ?>
-		<td>
-			<?php if($article['surclassement_age']== 1 OR $article['surclassement_grade'] == 1) {
-			echo 'Oui';
-			
-		}  else {
-			echo 'Non';
-			
-		} ?>
-		</td>
-			<td>
-			<?php 
-			 echo $article['certificat'];
-			if($article['certificat_qs'] == 1) {
-			
-			echo " / Certificat QS";
-			
-			}
+			<?php if($article['licency']['arbitre'] == 1){
+			 echo 'Bénévole';
+			}elseif($article['licency']['arbitre'] == 2){
+            echo 'Diplômé régional';
+        }
+                elseif($article['licency']['arbitre'] == 3){
+                    echo 'Diplômé national';
+                }
 		   ?>
 		</td>
-
-		<td>
-			<?php 
+        <td>
+        <?php if($article['licency']['commissaire'] == 1){
+			 echo 'Bénévole';
+			}elseif($article['licency']['commissaire'] == 2){
+            echo 'Diplômé régional';
+        }
+                elseif($article['licency']['commissaire'] == 3){
+                    echo 'Diplômé national';
+                }
+		   ?>
+        </td>
+        <td><?php if (strpos($article['presence'], '1') !== false) {
+    echo 'X';
+} ?></td>
+         <td><?php if (strpos($article['presence'], '2') !== false) {
+    echo 'X';
+} ?></td>
+        
+        
+        <td>	<?php 
 			 echo $article['licency']['club']['name'];
 			
 		   ?>
-		</td>
-		
+        
+        </td>
+
 	
 
 	</tr>
@@ -529,7 +503,5 @@ echo '<h2 class="center">Toutes les catégories</h2>';
 		 ?>
 
 	</tbody>
-
 	</table>
-
-</div>
+	

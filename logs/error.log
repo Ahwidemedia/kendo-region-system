@@ -34834,6 +34834,7 @@ Stack Trace:
 #7 {main}
 
 
+<<<<<<< HEAD
 2018-12-03 21:23:10 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mail' in 'where clause'
 Request URL: /kendo-region-system/users/forgot
 Referer URL: http://localhost/kendo-region-system/users/forgot
@@ -34870,3 +34871,1786 @@ Stack Trace:
 #7 {main}
 
 
+=======
+2018-12-04 10:45:16 Warning: Warning (2): include(D:\03-SOURCES\workspacePhp\kendo-region-system/vendor/rrd/rbruteforce/config\routes.php): failed to open stream: No such file or directory in [D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Core\Plugin.php, line 399]
+Request URL: /kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - CORE\src\Core\Plugin.php, line 399
+Cake\Core\Plugin::_includeFile() - CORE\src\Core\Plugin.php, line 399
+Cake\Core\Plugin::routes() - CORE\src\Core\Plugin.php, line 348
+Cake\Core\Plugin::routes() - CORE\src\Core\Plugin.php, line 336
+include - ROOT\config\routes.php, line 95
+Cake\Routing\Router::_loadRoutes() - CORE\src\Routing\Router.php, line 996
+Cake\Routing\Router::parse() - CORE\src\Routing\Router.php, line 343
+Cake\Routing\Filter\RoutingFilter::beforeDispatch() - CORE\src\Routing\Filter\RoutingFilter.php, line 57
+Cake\Routing\DispatcherFilter::handle() - CORE\src\Routing\DispatcherFilter.php, line 144
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 426
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 391
+Cake\Http\ActionDispatcher::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 81
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 10:45:16 Warning: Warning (2): include() [<a href='http://php.net/function.include'>function.include</a>]: Failed opening 'D:\03-SOURCES\workspacePhp\kendo-region-system/vendor/rrd/rbruteforce/config\routes.php' for inclusion (include_path='.;D:/01-APPLI/laragon/etc/php/pear') in [D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Core\Plugin.php, line 399]
+Request URL: /kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - CORE\src\Core\Plugin.php, line 399
+Cake\Core\Plugin::_includeFile() - CORE\src\Core\Plugin.php, line 399
+Cake\Core\Plugin::routes() - CORE\src\Core\Plugin.php, line 348
+Cake\Core\Plugin::routes() - CORE\src\Core\Plugin.php, line 336
+include - ROOT\config\routes.php, line 95
+Cake\Routing\Router::_loadRoutes() - CORE\src\Routing\Router.php, line 996
+Cake\Routing\Router::parse() - CORE\src\Routing\Router.php, line 343
+Cake\Routing\Filter\RoutingFilter::beforeDispatch() - CORE\src\Routing\Filter\RoutingFilter.php, line 57
+Cake\Routing\DispatcherFilter::handle() - CORE\src\Routing\DispatcherFilter.php, line 144
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 426
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 391
+Cake\Http\ActionDispatcher::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 81
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 10:45:16 Warning: Headers already sent in D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Error\Debugger.php:753
+2018-12-04 10:45:19 Warning: Warning (2): include(D:\03-SOURCES\workspacePhp\kendo-region-system/vendor/rrd/rbruteforce/config\routes.php): failed to open stream: No such file or directory in [D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Core\Plugin.php, line 399]
+Request URL: /kendo-region-system/
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - CORE\src\Core\Plugin.php, line 399
+Cake\Core\Plugin::_includeFile() - CORE\src\Core\Plugin.php, line 399
+Cake\Core\Plugin::routes() - CORE\src\Core\Plugin.php, line 348
+Cake\Core\Plugin::routes() - CORE\src\Core\Plugin.php, line 336
+include - ROOT\config\routes.php, line 95
+Cake\Routing\Router::_loadRoutes() - CORE\src\Routing\Router.php, line 996
+Cake\Routing\Router::parse() - CORE\src\Routing\Router.php, line 343
+Cake\Routing\Filter\RoutingFilter::beforeDispatch() - CORE\src\Routing\Filter\RoutingFilter.php, line 57
+Cake\Routing\DispatcherFilter::handle() - CORE\src\Routing\DispatcherFilter.php, line 144
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 426
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 391
+Cake\Http\ActionDispatcher::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 81
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 10:45:19 Warning: Warning (2): include() [<a href='http://php.net/function.include'>function.include</a>]: Failed opening 'D:\03-SOURCES\workspacePhp\kendo-region-system/vendor/rrd/rbruteforce/config\routes.php' for inclusion (include_path='.;D:/01-APPLI/laragon/etc/php/pear') in [D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Core\Plugin.php, line 399]
+Request URL: /kendo-region-system/
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - CORE\src\Core\Plugin.php, line 399
+Cake\Core\Plugin::_includeFile() - CORE\src\Core\Plugin.php, line 399
+Cake\Core\Plugin::routes() - CORE\src\Core\Plugin.php, line 348
+Cake\Core\Plugin::routes() - CORE\src\Core\Plugin.php, line 336
+include - ROOT\config\routes.php, line 95
+Cake\Routing\Router::_loadRoutes() - CORE\src\Routing\Router.php, line 996
+Cake\Routing\Router::parse() - CORE\src\Routing\Router.php, line 343
+Cake\Routing\Filter\RoutingFilter::beforeDispatch() - CORE\src\Routing\Filter\RoutingFilter.php, line 57
+Cake\Routing\DispatcherFilter::handle() - CORE\src\Routing\DispatcherFilter.php, line 144
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 426
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 391
+Cake\Http\ActionDispatcher::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 81
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 10:45:20 Warning: Headers already sent in D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Error\Debugger.php:753
+2018-12-04 10:47:29 Warning: Headers already sent in D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Error\Debugger.php:753
+2018-12-04 10:47:29 Error: [RuntimeException] Table "Cake\ORM\Table" is not associated with "Clubs"
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php(84): Cake\ORM\Table->__get('Clubs')
+#1 [internal function]: App\Controller\InscriptionPassagesController->inscriptions('3')
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2018-12-04 10:57:26 Warning: Headers already sent in D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Error\Debugger.php:753
+2018-12-04 10:57:26 Error: [RuntimeException] Table "App\Model\Table\InscriptionPassagesTable" is not associated with "Regions"
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php(79): Cake\ORM\Table->__get('Regions')
+#1 [internal function]: App\Controller\InscriptionPassagesController->inscriptions('3')
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2018-12-04 11:02:08 Warning: Headers already sent in D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Error\Debugger.php:753
+2018-12-04 11:02:08 Error: [RuntimeException] Table "App\Model\Table\InscriptionPassagesTable" is not associated with "Grades"
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php(80): Cake\ORM\Table->__get('Grades')
+#1 [internal function]: App\Controller\InscriptionPassagesController->inscriptions('3')
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2018-12-04 11:02:46 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 128]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 128
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 11:02:46 Warning: Headers already sent in D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Error\Debugger.php:753
+2018-12-04 11:03:42 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 128]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 128
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 11:03:42 Warning: Headers already sent in D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Error\Debugger.php:753
+2018-12-04 11:21:35 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 128]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 128
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 12:22:45 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /kendo-region-system/js/underscore-min.map
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(63): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(49): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\DispatcherFilter.php(144): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(426): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(81): Cake\Http\ActionDispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2018-12-04 12:23:02 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /kendo-region-system/js/underscore-min.map
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(63): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(49): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\DispatcherFilter.php(144): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(426): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(81): Cake\Http\ActionDispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2018-12-04 12:23:06 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /kendo-region-system/js/underscore-min.map
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(63): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(49): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\DispatcherFilter.php(144): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(426): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(81): Cake\Http\ActionDispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2018-12-04 12:57:38 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /kendo-region-system/js/underscore-min.map
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(63): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(49): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\DispatcherFilter.php(144): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(426): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(81): Cake\Http\ActionDispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2018-12-04 12:57:39 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 152]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 152
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 12:57:39 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /kendo-region-system/js/underscore-min.map
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(63): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(49): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\DispatcherFilter.php(144): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(426): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(81): Cake\Http\ActionDispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2018-12-04 12:58:17 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /kendo-region-system/js/underscore-min.map
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(63): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(49): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\DispatcherFilter.php(144): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(426): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(81): Cake\Http\ActionDispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2018-12-04 12:58:19 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /kendo-region-system/js/underscore-min.map
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(63): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(49): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\DispatcherFilter.php(144): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(426): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(81): Cake\Http\ActionDispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2018-12-04 12:58:32 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 151]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 151
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 12:59:02 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 151]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 151
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 12:59:23 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 151]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 151
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:02:11 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 151]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 151
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:07:03 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 153]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 153
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:09:48 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 153]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 153
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:09:51 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 153]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 153
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:11:14 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 153]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 153
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:12:06 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 158]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 158
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:15:06 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 148]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 148
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:16:37 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 149]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 149
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:16:46 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 149]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 149
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:16:50 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 149]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 149
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:17:00 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 149]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 149
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:18:30 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 150]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 150
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:18:34 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 150]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 150
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:19:03 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 150]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 150
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:19:27 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 150]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 150
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:19:53 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 150]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 150
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:19:57 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 150]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 150
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:20:16 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 150]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 150
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:20:26 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 150]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 150
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:20:33 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 150]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 150
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:20:49 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 150]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 150
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:20:58 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 150]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 150
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:21:10 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 150]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 150
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:21:21 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 150]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 150
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:21:46 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 150]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 150
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:21:59 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 150]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 150
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:22:14 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 149]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 149
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:22:21 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 149]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 149
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:22:31 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 148]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 148
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:22:53 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 148]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 148
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:32:51 Warning: Warning (2): Invalid argument supplied for foreach() in [D:\03-SOURCES\workspacePhp\kendo-region-system\src\Template\InscriptionPassages\inscriptions.ctp, line 158]
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\InscriptionPassages\inscriptions.ctp, line 158
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-04 13:40:08 Error: [Cake\Controller\Exception\AuthSecurityException] Unexpected field 'inscription_passages.0.id' in POST data, Unexpected field 'inscription_passages.0.licencie.id' in POST data, Unexpected field 'inscription_passages.0.licencie.nom' in POST data, Unexpected field 'inscription_passages.0.licencie.numero_licence' in POST data, Unexpected field 'inscription_passages.0.licencie.prenom' in POST data, Unexpected field 'inscription_passages.1.id' in POST data, Unexpected field 'inscription_passages.1.licencie.id' in POST data, Unexpected field 'inscription_passages.1.licencie.nom' in POST data, Unexpected field 'inscription_passages.1.licencie.numero_licence' in POST data, Unexpected field 'inscription_passages.1.licencie.prenom' in POST data, Missing field 'inscription_passages.<%= key %>.id, inscription_passages.<%= key %>.licencie.id, inscription_passages.<%= key %>.licencie.numero_licence, inscription_passages.<%= key %>.licencie.nom, inscription_passages.<%= key %>.licencie.prenom' in POST data
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/3
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Component\SecurityComponent.php(130): Cake\Controller\Component\SecurityComponent->_validatePost(Object(App\Controller\InscriptionPassagesController))
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(422): Cake\Controller\Component\SecurityComponent->startup(Object(Cake\Event\Event))
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(501): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(117): Cake\Controller\Controller->startupProcess()
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 {main}
+
+
+2018-12-04 13:46:37 Error: [Cake\Controller\Exception\AuthSecurityException] Unexpected field 'inscription_passages.0.id' in POST data, Unexpected field 'inscription_passages.0.licencie.id' in POST data, Unexpected field 'inscription_passages.0.licencie.nom' in POST data, Unexpected field 'inscription_passages.0.licencie.numero_licence' in POST data, Unexpected field 'inscription_passages.0.licencie.prenom' in POST data, Missing field 'inscription_passages.<%= key %>.id, inscription_passages.<%= key %>.licencie.id, inscription_passages.<%= key %>.licencie.numero_licence, inscription_passages.<%= key %>.licencie.nom, inscription_passages.<%= key %>.licencie.prenom' in POST data
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/3
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Component\SecurityComponent.php(130): Cake\Controller\Component\SecurityComponent->_validatePost(Object(App\Controller\InscriptionPassagesController))
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(422): Cake\Controller\Component\SecurityComponent->startup(Object(Cake\Event\Event))
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(501): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(117): Cake\Controller\Controller->startupProcess()
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 {main}
+
+
+2018-12-04 13:50:41 Error: [Cake\Controller\Exception\AuthSecurityException] Missing field 'inscription_passages.<%= key %>.id, inscription_passages.<%= key %>.licencie.id, inscription_passages.<%= key %>.licencie.numero_licence, inscription_passages.<%= key %>.licencie.nom, inscription_passages.<%= key %>.licencie.prenom, inscription_passages.{$key}.licencie.grade_id' in POST data
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/3
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Component\SecurityComponent.php(130): Cake\Controller\Component\SecurityComponent->_validatePost(Object(App\Controller\InscriptionPassagesController))
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(422): Cake\Controller\Component\SecurityComponent->startup(Object(Cake\Event\Event))
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(501): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(117): Cake\Controller\Controller->startupProcess()
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 {main}
+
+
+2018-12-04 13:53:21 Error: [Cake\Controller\Exception\AuthSecurityException] Unexpected field 'inscription_passages.0.id' in POST data, Unexpected field 'inscription_passages.0.licencie.grade_id' in POST data, Unexpected field 'inscription_passages.0.licencie.id' in POST data, Unexpected field 'inscription_passages.0.licencie.nom' in POST data, Unexpected field 'inscription_passages.0.licencie.numero_licence' in POST data, Unexpected field 'inscription_passages.0.licencie.prenom' in POST data, Missing field 'inscription_passages.<%= key %>.id, inscription_passages.<%= key %>.licencie.id, inscription_passages.<%= key %>.licencie.numero_licence, inscription_passages.<%= key %>.licencie.nom, inscription_passages.<%= key %>.licencie.prenom, inscription_passages.<%= key %>.licencie.grade_id' in POST data
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/3
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Component\SecurityComponent.php(130): Cake\Controller\Component\SecurityComponent->_validatePost(Object(App\Controller\InscriptionPassagesController))
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(422): Cake\Controller\Component\SecurityComponent->startup(Object(Cake\Event\Event))
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(501): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(117): Cake\Controller\Controller->startupProcess()
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 {main}
+
+
+2018-12-04 13:57:40 Error: [Cake\Controller\Exception\AuthSecurityException] Missing field 'inscription_passages.<%= key %>.id, inscription_passages.<%= key %>.licencie.id, inscription_passages.<%= key %>.licencie.numero_licence, inscription_passages.<%= key %>.licencie.nom, inscription_passages.<%= key %>.licencie.prenom, inscription_passages.<%= key %>.licencie.grade_id' in POST data
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/3
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Component\SecurityComponent.php(130): Cake\Controller\Component\SecurityComponent->_validatePost(Object(App\Controller\InscriptionPassagesController))
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(422): Cake\Controller\Component\SecurityComponent->startup(Object(Cake\Event\Event))
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(501): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(117): Cake\Controller\Controller->startupProcess()
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 {main}
+
+
+2018-12-04 13:57:51 Error: [Cake\Controller\Exception\AuthSecurityException] Missing field 'inscription_passages.<%= key %>.id, inscription_passages.<%= key %>.licencie.id, inscription_passages.<%= key %>.licencie.numero_licence, inscription_passages.<%= key %>.licencie.nom, inscription_passages.<%= key %>.licencie.prenom, inscription_passages.<%= key %>.licencie.grade_id' in POST data
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/3
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Component\SecurityComponent.php(130): Cake\Controller\Component\SecurityComponent->_validatePost(Object(App\Controller\InscriptionPassagesController))
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(422): Cake\Controller\Component\SecurityComponent->startup(Object(Cake\Event\Event))
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(501): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(117): Cake\Controller\Controller->startupProcess()
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 {main}
+
+
+2018-12-04 13:59:05 Error: [Cake\Controller\Exception\AuthSecurityException] Missing field 'inscription_passages.<%= key %>.id, inscription_passages.<%= key %>.licencie.id, inscription_passages.<%= key %>.licencie.numero_licence, inscription_passages.<%= key %>.licencie.nom, inscription_passages.<%= key %>.licencie.prenom, inscription_passages.<%= key %>.licencie.grade_id' in POST data
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/3
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Component\SecurityComponent.php(130): Cake\Controller\Component\SecurityComponent->_validatePost(Object(App\Controller\InscriptionPassagesController))
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(422): Cake\Controller\Component\SecurityComponent->startup(Object(Cake\Event\Event))
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(501): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(117): Cake\Controller\Controller->startupProcess()
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 {main}
+
+
+2018-12-04 14:01:07 Error: [Cake\Controller\Exception\AuthSecurityException] Missing field 'inscription_passages.<%= key %>.id, inscription_passages.<%= key %>.licencie.id, inscription_passages.<%= key %>.licencie.numero_licence, inscription_passages.<%= key %>.licencie.nom, inscription_passages.<%= key %>.licencie.prenom, inscription_passages.<%= key %>.licencie.grade_id' in POST data
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/3
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Component\SecurityComponent.php(130): Cake\Controller\Component\SecurityComponent->_validatePost(Object(App\Controller\InscriptionPassagesController))
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(422): Cake\Controller\Component\SecurityComponent->startup(Object(Cake\Event\Event))
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(501): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(117): Cake\Controller\Controller->startupProcess()
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 {main}
+
+
+2018-12-04 14:06:32 Error: [Cake\Controller\Exception\AuthSecurityException] Unexpected field 'txtLink' in POST data, Unexpected field 'txtTitle' in POST data
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/3
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Component\SecurityComponent.php(130): Cake\Controller\Component\SecurityComponent->_validatePost(Object(App\Controller\InscriptionPassagesController))
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(422): Cake\Controller\Component\SecurityComponent->startup(Object(Cake\Event\Event))
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(501): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(117): Cake\Controller\Controller->startupProcess()
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 {main}
+
+
+2018-12-04 14:07:54 Error: [Cake\Controller\Exception\AuthSecurityException] Unexpected field 'txtLink' in POST data, Unexpected field 'txtTitle' in POST data
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/3
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Component\SecurityComponent.php(130): Cake\Controller\Component\SecurityComponent->_validatePost(Object(App\Controller\InscriptionPassagesController))
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(422): Cake\Controller\Component\SecurityComponent->startup(Object(Cake\Event\Event))
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(501): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(117): Cake\Controller\Controller->startupProcess()
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 {main}
+
+
+2018-12-04 14:10:37 Error: [Cake\Controller\Exception\AuthSecurityException] Unexpected field 'txtLink' in POST data, Unexpected field 'txtTitle' in POST data
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/3
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Component\SecurityComponent.php(130): Cake\Controller\Component\SecurityComponent->_validatePost(Object(App\Controller\InscriptionPassagesController))
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(422): Cake\Controller\Component\SecurityComponent->startup(Object(Cake\Event\Event))
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(501): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(117): Cake\Controller\Controller->startupProcess()
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 {main}
+
+
+2018-12-04 14:11:24 Error: [Cake\Controller\Exception\AuthSecurityException] Unexpected field 'txtLink' in POST data, Unexpected field 'txtTitle' in POST data
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/3
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Component\SecurityComponent.php(130): Cake\Controller\Component\SecurityComponent->_validatePost(Object(App\Controller\InscriptionPassagesController))
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(422): Cake\Controller\Component\SecurityComponent->startup(Object(Cake\Event\Event))
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(501): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(117): Cake\Controller\Controller->startupProcess()
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 {main}
+
+
+2018-12-04 14:17:12 Error: [Cake\Controller\Exception\AuthSecurityException] '_Token' was not found in request data.
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/3
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Component\SecurityComponent.php(327): Cake\Controller\Component\SecurityComponent->_validToken(Object(App\Controller\InscriptionPassagesController))
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Component\SecurityComponent.php(130): Cake\Controller\Component\SecurityComponent->_validatePost(Object(App\Controller\InscriptionPassagesController))
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(422): Cake\Controller\Component\SecurityComponent->startup(Object(Cake\Event\Event))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(501): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(117): Cake\Controller\Controller->startupProcess()
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2018-12-04 14:24:03 Error: [Cake\Controller\Exception\AuthSecurityException] Unexpected field 'txtLink' in POST data, Unexpected field 'txtLink1' in POST data, Unexpected field 'txtTitle' in POST data, Unexpected field 'txtTitle1' in POST data
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/3
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Component\SecurityComponent.php(130): Cake\Controller\Component\SecurityComponent->_validatePost(Object(App\Controller\InscriptionPassagesController))
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(422): Cake\Controller\Component\SecurityComponent->startup(Object(Cake\Event\Event))
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(501): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(117): Cake\Controller\Controller->startupProcess()
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 {main}
+
+
+2018-12-04 14:27:29 Error: [Cake\Controller\Exception\AuthSecurityException] Unexpected field 'txtLink' in POST data, Unexpected field 'txtLink1' in POST data, Unexpected field 'txtTitle' in POST data, Unexpected field 'txtTitle1' in POST data
+Request URL: /kendo-region-system/inscription-passages/inscriptions/3
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/3
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Component\SecurityComponent.php(130): Cake\Controller\Component\SecurityComponent->_validatePost(Object(App\Controller\InscriptionPassagesController))
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(422): Cake\Controller\Component\SecurityComponent->startup(Object(Cake\Event\Event))
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(501): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(117): Cake\Controller\Controller->startupProcess()
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 {main}
+
+
+2018-12-04 15:37:16 Error: [Cake\Controller\Exception\AuthSecurityException] Unexpected field 'designation' in POST data, Unexpected field 'emailid' in POST data, Unexpected field 'fullname' in POST data, Unexpected field 'mobileno' in POST data
+Request URL: /kendo-region-system/inscription-passages/inscriptions/href='javascript:void(0);'
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/href='javascript:void(0);'
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Component\SecurityComponent.php(130): Cake\Controller\Component\SecurityComponent->_validatePost(Object(App\Controller\InscriptionPassagesController))
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(422): Cake\Controller\Component\SecurityComponent->startup(Object(Cake\Event\Event))
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(501): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(117): Cake\Controller\Controller->startupProcess()
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 {main}
+
+
+2018-12-04 15:39:57 Error: [Cake\Controller\Exception\AuthSecurityException] Unexpected field 'designation' in POST data, Unexpected field 'emailid' in POST data, Unexpected field 'fullname' in POST data, Unexpected field 'mobileno' in POST data
+Request URL: /kendo-region-system/inscription-passages/inscriptions/href='javascript:void(0);'
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/href='javascript:void(0);'
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Component\SecurityComponent.php(130): Cake\Controller\Component\SecurityComponent->_validatePost(Object(App\Controller\InscriptionPassagesController))
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(422): Cake\Controller\Component\SecurityComponent->startup(Object(Cake\Event\Event))
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(501): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(117): Cake\Controller\Controller->startupProcess()
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 {main}
+
+
+2018-12-04 21:58:46 Warning: Headers already sent in D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Error\Debugger.php:753
+2018-12-04 21:58:46 Error: [Error] Call to a member function find() on null
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 [internal function]: App\Controller\InscriptionPassagesController->inscriptions('1')
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2018-12-04 21:59:48 Warning: Headers already sent in D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Error\Debugger.php:753
+2018-12-04 22:01:53 Warning: Headers already sent in D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Error\Debugger.php:753
+2018-12-04 22:11:26 Warning: Headers already sent in D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Error\Debugger.php:753
+2018-12-04 22:13:03 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'licence 'licence1' AND nom = 'nom1' AND prenom = 'prenom1' AND sexe = 'F' AND gr' at line 1
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(276): Cake\Database\Statement\MysqlStatement->execute()
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Query.php(189): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Query.php(815): Cake\Database\Query->execute()
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Query.php(765): Cake\ORM\Query->_performCount()
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php(80): Cake\ORM\Query->count()
+#6 [internal function]: App\Controller\InscriptionPassagesController->inscriptions('1')
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#9 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#10 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#11 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2018-12-04 22:14:30 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'licence 'licence1' AND nom = 'nom1' AND prenom = 'prenom1' AND sexe = 'F' AND gr' at line 1
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(276): Cake\Database\Statement\MysqlStatement->execute()
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Query.php(189): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Query.php(955): Cake\Database\Query->execute()
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(276): Cake\ORM\Query->_execute()
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Query.php(903): Cake\ORM\Query->_all()
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(404): Cake\ORM\Query->all()
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php(80): Cake\ORM\Query->first()
+#8 [internal function]: App\Controller\InscriptionPassagesController->inscriptions('1')
+#9 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#10 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#11 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#12 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 {main}
+
+
+2018-12-04 22:20:39 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'licence 'licence1' LIMIT 1' at line 1
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(276): Cake\Database\Statement\MysqlStatement->execute()
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Query.php(189): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Query.php(955): Cake\Database\Query->execute()
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(276): Cake\ORM\Query->_execute()
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Query.php(903): Cake\ORM\Query->_all()
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(404): Cake\ORM\Query->all()
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php(80): Cake\ORM\Query->first()
+#8 [internal function]: App\Controller\InscriptionPassagesController->inscriptions('1')
+#9 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#10 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#11 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#12 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 {main}
+
+
+2018-12-04 22:21:29 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'grade' in 'where clause'
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(276): Cake\Database\Statement\MysqlStatement->execute()
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Query.php(189): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Query.php(955): Cake\Database\Query->execute()
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(276): Cake\ORM\Query->_execute()
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Query.php(903): Cake\ORM\Query->_all()
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(404): Cake\ORM\Query->all()
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php(80): Cake\ORM\Query->first()
+#8 [internal function]: App\Controller\InscriptionPassagesController->inscriptions('1')
+#9 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#10 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#11 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#12 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 {main}
+
+
+2018-12-04 22:22:13 Warning: Headers already sent in D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Error\Debugger.php:753
+2018-12-04 22:22:13 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'jkcf.grade_presentes' doesn't exist
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'grade_presentes', Array, Object(Cake\Database\Schema\Table))
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('grade_presentes', Array)
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(440): Cake\Database\Schema\CachedCollection->describe('grade_presentes')
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(518): Cake\ORM\Table->schema()
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Association.php(363): Cake\ORM\Table->primaryKey()
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Rule\ExistsIn.php(95): Cake\ORM\Association->bindingKey()
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RuleInvoker.php(115): Cake\ORM\Rule\ExistsIn->__invoke(Object(App\Model\Entity\InscriptionPassage), Array)
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(298): Cake\Datasource\RuleInvoker->__invoke(Object(App\Model\Entity\InscriptionPassage), Array)
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(255): Cake\Datasource\RulesChecker->_checkRules(Object(App\Model\Entity\InscriptionPassage), Array, Array)
+#9 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(231): Cake\Datasource\RulesChecker->checkCreate(Object(App\Model\Entity\InscriptionPassage), Array)
+#10 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesAwareTrait.php(66): Cake\Datasource\RulesChecker->check(Object(App\Model\Entity\InscriptionPassage), 'create', Array)
+#11 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1537): Cake\ORM\Table->checkRules(Object(App\Model\Entity\InscriptionPassage), 'create', Object(ArrayObject))
+#12 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1492): Cake\ORM\Table->_processSave(Object(App\Model\Entity\InscriptionPassage), Object(ArrayObject))
+#13 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(570): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#14 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1493): Cake\Database\Connection->transactional(Object(Closure))
+#15 D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php(96): Cake\ORM\Table->save(Object(App\Model\Entity\InscriptionPassage))
+#16 [internal function]: App\Controller\InscriptionPassagesController->inscriptions('1')
+#17 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#18 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#19 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#20 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#21 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#22 {main}
+
+
+2018-12-04 22:23:54 Warning: Headers already sent in D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Error\Debugger.php:753
+2018-12-04 22:23:54 Error: [PDOException] SQLSTATE[01000]: Warning: 1265 Data truncated for column 'ddn' at row 1
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(276): Cake\Database\Statement\MysqlStatement->execute()
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Query.php(189): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1669): Cake\Database\Query->execute()
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1563): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1492): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(570): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1493): Cake\Database\Connection->transactional(Object(Closure))
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php(96): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#9 [internal function]: App\Controller\InscriptionPassagesController->inscriptions('1')
+#10 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#11 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#12 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#13 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2018-12-04 22:24:24 Warning: Headers already sent in D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Error\Debugger.php:753
+2018-12-04 22:24:24 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'discipline_id' cannot be null
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(276): Cake\Database\Statement\MysqlStatement->execute()
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Query.php(189): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1669): Cake\Database\Query->execute()
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1563): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1492): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(570): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1493): Cake\Database\Connection->transactional(Object(Closure))
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php(96): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#9 [internal function]: App\Controller\InscriptionPassagesController->inscriptions('1')
+#10 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#11 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#12 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#13 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2018-12-04 22:25:54 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'ddn' doesn't have a default value
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(276): Cake\Database\Statement\MysqlStatement->execute()
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Query.php(189): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1669): Cake\Database\Query->execute()
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1563): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1492): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(570): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1493): Cake\Database\Connection->transactional(Object(Closure))
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php(95): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#9 [internal function]: App\Controller\InscriptionPassagesController->inscriptions('1')
+#10 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#11 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#12 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#13 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2018-12-04 22:43:19 Error: [PDOException] SQLSTATE[01000]: Warning: 1265 Data truncated for column 'ddn' at row 1
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(276): Cake\Database\Statement\MysqlStatement->execute()
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Query.php(189): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1669): Cake\Database\Query->execute()
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1563): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1492): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(570): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1493): Cake\Database\Connection->transactional(Object(Closure))
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php(97): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#9 [internal function]: App\Controller\InscriptionPassagesController->inscriptions('1')
+#10 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#11 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#12 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#13 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2018-12-04 22:45:38 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'jkcf.grade_presentes' doesn't exist
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'grade_presentes', Array, Object(Cake\Database\Schema\Table))
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('grade_presentes', Array)
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(440): Cake\Database\Schema\CachedCollection->describe('grade_presentes')
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(518): Cake\ORM\Table->schema()
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Association.php(363): Cake\ORM\Table->primaryKey()
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Rule\ExistsIn.php(95): Cake\ORM\Association->bindingKey()
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RuleInvoker.php(115): Cake\ORM\Rule\ExistsIn->__invoke(Object(App\Model\Entity\InscriptionPassage), Array)
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(298): Cake\Datasource\RuleInvoker->__invoke(Object(App\Model\Entity\InscriptionPassage), Array)
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(255): Cake\Datasource\RulesChecker->_checkRules(Object(App\Model\Entity\InscriptionPassage), Array, Array)
+#9 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(231): Cake\Datasource\RulesChecker->checkCreate(Object(App\Model\Entity\InscriptionPassage), Array)
+#10 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesAwareTrait.php(66): Cake\Datasource\RulesChecker->check(Object(App\Model\Entity\InscriptionPassage), 'create', Array)
+#11 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1537): Cake\ORM\Table->checkRules(Object(App\Model\Entity\InscriptionPassage), 'create', Object(ArrayObject))
+#12 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1492): Cake\ORM\Table->_processSave(Object(App\Model\Entity\InscriptionPassage), Object(ArrayObject))
+#13 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(570): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#14 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1493): Cake\Database\Connection->transactional(Object(Closure))
+#15 D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php(111): Cake\ORM\Table->save(Object(App\Model\Entity\InscriptionPassage))
+#16 [internal function]: App\Controller\InscriptionPassagesController->inscriptions('1')
+#17 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#18 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#19 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#20 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#21 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#22 {main}
+
+
+2018-12-04 22:47:26 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'jkcf.grade_presentes' doesn't exist
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'grade_presentes', Array, Object(Cake\Database\Schema\Table))
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('grade_presentes', Array)
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(440): Cake\Database\Schema\CachedCollection->describe('grade_presentes')
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(518): Cake\ORM\Table->schema()
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Association.php(363): Cake\ORM\Table->primaryKey()
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Rule\ExistsIn.php(95): Cake\ORM\Association->bindingKey()
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RuleInvoker.php(115): Cake\ORM\Rule\ExistsIn->__invoke(Object(App\Model\Entity\InscriptionPassage), Array)
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(298): Cake\Datasource\RuleInvoker->__invoke(Object(App\Model\Entity\InscriptionPassage), Array)
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(255): Cake\Datasource\RulesChecker->_checkRules(Object(App\Model\Entity\InscriptionPassage), Array, Array)
+#9 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(231): Cake\Datasource\RulesChecker->checkCreate(Object(App\Model\Entity\InscriptionPassage), Array)
+#10 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesAwareTrait.php(66): Cake\Datasource\RulesChecker->check(Object(App\Model\Entity\InscriptionPassage), 'create', Array)
+#11 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1537): Cake\ORM\Table->checkRules(Object(App\Model\Entity\InscriptionPassage), 'create', Object(ArrayObject))
+#12 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1492): Cake\ORM\Table->_processSave(Object(App\Model\Entity\InscriptionPassage), Object(ArrayObject))
+#13 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(570): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#14 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1493): Cake\Database\Connection->transactional(Object(Closure))
+#15 D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php(111): Cake\ORM\Table->save(Object(App\Model\Entity\InscriptionPassage))
+#16 [internal function]: App\Controller\InscriptionPassagesController->inscriptions('1')
+#17 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#18 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#19 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#20 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#21 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#22 {main}
+
+
+2018-12-04 22:51:07 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'jkcf.grade_presentes' doesn't exist
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'grade_presentes', Array, Object(Cake\Database\Schema\Table))
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('grade_presentes', Array)
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(440): Cake\Database\Schema\CachedCollection->describe('grade_presentes')
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(518): Cake\ORM\Table->schema()
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Association.php(363): Cake\ORM\Table->primaryKey()
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Rule\ExistsIn.php(95): Cake\ORM\Association->bindingKey()
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RuleInvoker.php(115): Cake\ORM\Rule\ExistsIn->__invoke(Object(App\Model\Entity\InscriptionPassage), Array)
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(298): Cake\Datasource\RuleInvoker->__invoke(Object(App\Model\Entity\InscriptionPassage), Array)
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(255): Cake\Datasource\RulesChecker->_checkRules(Object(App\Model\Entity\InscriptionPassage), Array, Array)
+#9 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(231): Cake\Datasource\RulesChecker->checkCreate(Object(App\Model\Entity\InscriptionPassage), Array)
+#10 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesAwareTrait.php(66): Cake\Datasource\RulesChecker->check(Object(App\Model\Entity\InscriptionPassage), 'create', Array)
+#11 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1537): Cake\ORM\Table->checkRules(Object(App\Model\Entity\InscriptionPassage), 'create', Object(ArrayObject))
+#12 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1492): Cake\ORM\Table->_processSave(Object(App\Model\Entity\InscriptionPassage), Object(ArrayObject))
+#13 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(570): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#14 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1493): Cake\Database\Connection->transactional(Object(Closure))
+#15 D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php(112): Cake\ORM\Table->save(Object(App\Model\Entity\InscriptionPassage))
+#16 [internal function]: App\Controller\InscriptionPassagesController->inscriptions('1')
+#17 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#18 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#19 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#20 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#21 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#22 {main}
+
+
+2018-12-04 22:52:01 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'jkcf.grade_presentes' doesn't exist
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'grade_presentes', Array, Object(Cake\Database\Schema\Table))
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('grade_presentes', Array)
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(440): Cake\Database\Schema\CachedCollection->describe('grade_presentes')
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(518): Cake\ORM\Table->schema()
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Association.php(363): Cake\ORM\Table->primaryKey()
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Rule\ExistsIn.php(95): Cake\ORM\Association->bindingKey()
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RuleInvoker.php(115): Cake\ORM\Rule\ExistsIn->__invoke(Object(App\Model\Entity\InscriptionPassage), Array)
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(298): Cake\Datasource\RuleInvoker->__invoke(Object(App\Model\Entity\InscriptionPassage), Array)
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(255): Cake\Datasource\RulesChecker->_checkRules(Object(App\Model\Entity\InscriptionPassage), Array, Array)
+#9 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(231): Cake\Datasource\RulesChecker->checkCreate(Object(App\Model\Entity\InscriptionPassage), Array)
+#10 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesAwareTrait.php(66): Cake\Datasource\RulesChecker->check(Object(App\Model\Entity\InscriptionPassage), 'create', Array)
+#11 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1537): Cake\ORM\Table->checkRules(Object(App\Model\Entity\InscriptionPassage), 'create', Object(ArrayObject))
+#12 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1492): Cake\ORM\Table->_processSave(Object(App\Model\Entity\InscriptionPassage), Object(ArrayObject))
+#13 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(570): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#14 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1493): Cake\Database\Connection->transactional(Object(Closure))
+#15 D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php(112): Cake\ORM\Table->save(Object(App\Model\Entity\InscriptionPassage))
+#16 [internal function]: App\Controller\InscriptionPassagesController->inscriptions('1')
+#17 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#18 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#19 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#20 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#21 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#22 {main}
+
+
+2018-12-04 22:52:44 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'jkcf.grade_presentes' doesn't exist
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'grade_presentes', Array, Object(Cake\Database\Schema\Table))
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('grade_presentes', Array)
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(440): Cake\Database\Schema\CachedCollection->describe('grade_presentes')
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(518): Cake\ORM\Table->schema()
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Association.php(363): Cake\ORM\Table->primaryKey()
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Rule\ExistsIn.php(95): Cake\ORM\Association->bindingKey()
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RuleInvoker.php(115): Cake\ORM\Rule\ExistsIn->__invoke(Object(App\Model\Entity\InscriptionPassage), Array)
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(298): Cake\Datasource\RuleInvoker->__invoke(Object(App\Model\Entity\InscriptionPassage), Array)
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(255): Cake\Datasource\RulesChecker->_checkRules(Object(App\Model\Entity\InscriptionPassage), Array, Array)
+#9 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(231): Cake\Datasource\RulesChecker->checkCreate(Object(App\Model\Entity\InscriptionPassage), Array)
+#10 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesAwareTrait.php(66): Cake\Datasource\RulesChecker->check(Object(App\Model\Entity\InscriptionPassage), 'create', Array)
+#11 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1537): Cake\ORM\Table->checkRules(Object(App\Model\Entity\InscriptionPassage), 'create', Object(ArrayObject))
+#12 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1492): Cake\ORM\Table->_processSave(Object(App\Model\Entity\InscriptionPassage), Object(ArrayObject))
+#13 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(570): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#14 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1493): Cake\Database\Connection->transactional(Object(Closure))
+#15 D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php(112): Cake\ORM\Table->save(Object(App\Model\Entity\InscriptionPassage))
+#16 [internal function]: App\Controller\InscriptionPassagesController->inscriptions('1')
+#17 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#18 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#19 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#20 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#21 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#22 {main}
+
+
+2018-12-04 22:59:15 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'jkcf.grade_presentes' doesn't exist
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'grade_presentes', Array, Object(Cake\Database\Schema\Table))
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('grade_presentes', Array)
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(440): Cake\Database\Schema\CachedCollection->describe('grade_presentes')
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(518): Cake\ORM\Table->schema()
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Association.php(363): Cake\ORM\Table->primaryKey()
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Rule\ExistsIn.php(95): Cake\ORM\Association->bindingKey()
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RuleInvoker.php(115): Cake\ORM\Rule\ExistsIn->__invoke(Object(App\Model\Entity\InscriptionPassage), Array)
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(298): Cake\Datasource\RuleInvoker->__invoke(Object(App\Model\Entity\InscriptionPassage), Array)
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(255): Cake\Datasource\RulesChecker->_checkRules(Object(App\Model\Entity\InscriptionPassage), Array, Array)
+#9 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(231): Cake\Datasource\RulesChecker->checkCreate(Object(App\Model\Entity\InscriptionPassage), Array)
+#10 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesAwareTrait.php(66): Cake\Datasource\RulesChecker->check(Object(App\Model\Entity\InscriptionPassage), 'create', Array)
+#11 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1537): Cake\ORM\Table->checkRules(Object(App\Model\Entity\InscriptionPassage), 'create', Object(ArrayObject))
+#12 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1492): Cake\ORM\Table->_processSave(Object(App\Model\Entity\InscriptionPassage), Object(ArrayObject))
+#13 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(570): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#14 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1493): Cake\Database\Connection->transactional(Object(Closure))
+#15 D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php(111): Cake\ORM\Table->save(Object(App\Model\Entity\InscriptionPassage))
+#16 [internal function]: App\Controller\InscriptionPassagesController->inscriptions('1')
+#17 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#18 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#19 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#20 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#21 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#22 {main}
+
+
+2018-12-04 23:03:11 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'NOM1-prenom1-2000-M' for key 'licencie_uk'
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(276): Cake\Database\Statement\MysqlStatement->execute()
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Query.php(189): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1669): Cake\Database\Query->execute()
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1563): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1492): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(570): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1493): Cake\Database\Connection->transactional(Object(Closure))
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php(97): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#9 [internal function]: App\Controller\InscriptionPassagesController->inscriptions('1')
+#10 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#11 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#12 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#13 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2018-12-04 23:03:32 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'jkcf.grade_presentes' doesn't exist
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'grade_presentes', Array, Object(Cake\Database\Schema\Table))
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('grade_presentes', Array)
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(440): Cake\Database\Schema\CachedCollection->describe('grade_presentes')
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(518): Cake\ORM\Table->schema()
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Association.php(363): Cake\ORM\Table->primaryKey()
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Rule\ExistsIn.php(95): Cake\ORM\Association->bindingKey()
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RuleInvoker.php(115): Cake\ORM\Rule\ExistsIn->__invoke(Object(App\Model\Entity\InscriptionPassage), Array)
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(298): Cake\Datasource\RuleInvoker->__invoke(Object(App\Model\Entity\InscriptionPassage), Array)
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(255): Cake\Datasource\RulesChecker->_checkRules(Object(App\Model\Entity\InscriptionPassage), Array, Array)
+#9 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(231): Cake\Datasource\RulesChecker->checkCreate(Object(App\Model\Entity\InscriptionPassage), Array)
+#10 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesAwareTrait.php(66): Cake\Datasource\RulesChecker->check(Object(App\Model\Entity\InscriptionPassage), 'create', Array)
+#11 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1537): Cake\ORM\Table->checkRules(Object(App\Model\Entity\InscriptionPassage), 'create', Object(ArrayObject))
+#12 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1492): Cake\ORM\Table->_processSave(Object(App\Model\Entity\InscriptionPassage), Object(ArrayObject))
+#13 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(570): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#14 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1493): Cake\Database\Connection->transactional(Object(Closure))
+#15 D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php(111): Cake\ORM\Table->save(Object(App\Model\Entity\InscriptionPassage))
+#16 [internal function]: App\Controller\InscriptionPassagesController->inscriptions('1')
+#17 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#18 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#19 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#20 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#21 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#22 {main}
+
+
+2018-12-04 23:07:39 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'NOM1-prenom1-2000-M' for key 'licencie_uk'
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(276): Cake\Database\Statement\MysqlStatement->execute()
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Query.php(189): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1669): Cake\Database\Query->execute()
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1563): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1492): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(570): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1493): Cake\Database\Connection->transactional(Object(Closure))
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php(97): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#9 [internal function]: App\Controller\InscriptionPassagesController->inscriptions('1')
+#10 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#11 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#12 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#13 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2018-12-04 23:08:06 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'jkcf.grade_presentes' doesn't exist
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'grade_presentes', Array, Object(Cake\Database\Schema\Table))
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('grade_presentes', Array)
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(440): Cake\Database\Schema\CachedCollection->describe('grade_presentes')
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(518): Cake\ORM\Table->schema()
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Association.php(363): Cake\ORM\Table->primaryKey()
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Rule\ExistsIn.php(95): Cake\ORM\Association->bindingKey()
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RuleInvoker.php(115): Cake\ORM\Rule\ExistsIn->__invoke(Object(App\Model\Entity\InscriptionPassage), Array)
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(298): Cake\Datasource\RuleInvoker->__invoke(Object(App\Model\Entity\InscriptionPassage), Array)
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(255): Cake\Datasource\RulesChecker->_checkRules(Object(App\Model\Entity\InscriptionPassage), Array, Array)
+#9 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(231): Cake\Datasource\RulesChecker->checkCreate(Object(App\Model\Entity\InscriptionPassage), Array)
+#10 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesAwareTrait.php(66): Cake\Datasource\RulesChecker->check(Object(App\Model\Entity\InscriptionPassage), 'create', Array)
+#11 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1537): Cake\ORM\Table->checkRules(Object(App\Model\Entity\InscriptionPassage), 'create', Object(ArrayObject))
+#12 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1492): Cake\ORM\Table->_processSave(Object(App\Model\Entity\InscriptionPassage), Object(ArrayObject))
+#13 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(570): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#14 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1493): Cake\Database\Connection->transactional(Object(Closure))
+#15 D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php(111): Cake\ORM\Table->save(Object(App\Model\Entity\InscriptionPassage))
+#16 [internal function]: App\Controller\InscriptionPassagesController->inscriptions('1')
+#17 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#18 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#19 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#20 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#21 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#22 {main}
+
+
+2018-12-04 23:09:19 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'jkcf.grade_presentes' doesn't exist
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'grade_presentes', Array, Object(Cake\Database\Schema\Table))
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('grade_presentes', Array)
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(440): Cake\Database\Schema\CachedCollection->describe('grade_presentes')
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(518): Cake\ORM\Table->schema()
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Association.php(363): Cake\ORM\Table->primaryKey()
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Rule\ExistsIn.php(95): Cake\ORM\Association->bindingKey()
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RuleInvoker.php(115): Cake\ORM\Rule\ExistsIn->__invoke(Object(App\Model\Entity\InscriptionPassage), Array)
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(298): Cake\Datasource\RuleInvoker->__invoke(Object(App\Model\Entity\InscriptionPassage), Array)
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(255): Cake\Datasource\RulesChecker->_checkRules(Object(App\Model\Entity\InscriptionPassage), Array, Array)
+#9 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(231): Cake\Datasource\RulesChecker->checkCreate(Object(App\Model\Entity\InscriptionPassage), Array)
+#10 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesAwareTrait.php(66): Cake\Datasource\RulesChecker->check(Object(App\Model\Entity\InscriptionPassage), 'create', Array)
+#11 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1537): Cake\ORM\Table->checkRules(Object(App\Model\Entity\InscriptionPassage), 'create', Object(ArrayObject))
+#12 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1492): Cake\ORM\Table->_processSave(Object(App\Model\Entity\InscriptionPassage), Object(ArrayObject))
+#13 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(570): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#14 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1493): Cake\Database\Connection->transactional(Object(Closure))
+#15 D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php(111): Cake\ORM\Table->save(Object(App\Model\Entity\InscriptionPassage))
+#16 [internal function]: App\Controller\InscriptionPassagesController->inscriptions('1')
+#17 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#18 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#19 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#20 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#21 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#22 {main}
+
+
+2018-12-04 23:19:15 Error: [RuntimeException] ExistsIn rule for 'grade_presente_id' is invalid. 'Grades' is not associated with 'App\Model\Table\InscriptionPassagesTable'.
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RuleInvoker.php(115): Cake\ORM\Rule\ExistsIn->__invoke(Object(App\Model\Entity\InscriptionPassage), Array)
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(298): Cake\Datasource\RuleInvoker->__invoke(Object(App\Model\Entity\InscriptionPassage), Array)
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(255): Cake\Datasource\RulesChecker->_checkRules(Object(App\Model\Entity\InscriptionPassage), Array, Array)
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(231): Cake\Datasource\RulesChecker->checkCreate(Object(App\Model\Entity\InscriptionPassage), Array)
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Datasource\RulesAwareTrait.php(66): Cake\Datasource\RulesChecker->check(Object(App\Model\Entity\InscriptionPassage), 'create', Array)
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1537): Cake\ORM\Table->checkRules(Object(App\Model\Entity\InscriptionPassage), 'create', Object(ArrayObject))
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1492): Cake\ORM\Table->_processSave(Object(App\Model\Entity\InscriptionPassage), Object(ArrayObject))
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(570): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1493): Cake\Database\Connection->transactional(Object(Closure))
+#9 D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php(111): Cake\ORM\Table->save(Object(App\Model\Entity\InscriptionPassage))
+#10 [internal function]: App\Controller\InscriptionPassagesController->inscriptions('1')
+#11 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#12 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#13 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#14 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2018-12-04 23:20:10 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id' cannot be null
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(276): Cake\Database\Statement\MysqlStatement->execute()
+#2 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Query.php(189): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#3 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1669): Cake\Database\Query->execute()
+#4 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1563): Cake\ORM\Table->_insert(Object(App\Model\Entity\InscriptionPassage), Array)
+#5 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1492): Cake\ORM\Table->_processSave(Object(App\Model\Entity\InscriptionPassage), Object(ArrayObject))
+#6 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(570): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#7 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1493): Cake\Database\Connection->transactional(Object(Closure))
+#8 D:\03-SOURCES\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php(111): Cake\ORM\Table->save(Object(App\Model\Entity\InscriptionPassage))
+#9 [internal function]: App\Controller\InscriptionPassagesController->inscriptions('1')
+#10 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#11 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#12 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#13 D:\03-SOURCES\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 D:\03-SOURCES\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+>>>>>>> f38f8690171981e39d6c4d14d327d1ed773910d2

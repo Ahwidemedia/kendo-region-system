@@ -13,9 +13,13 @@
 }?>
 	
 
-		<?php echo $this->Html->link("EQUIPES", ['controller'=>'InscriptionCompetitions','action'=>'equipes',$id],[ 'class'=>'']);?>
-
-	</div>
+		<?php echo $this->Html->link("EQUIPES", ['controller'=>'InscriptionCompetitions','action'=>'equipes',$id]);?>
+         
+    
+        <?php echo $this->Html->link("ADMINISTRATIFS", ['controller'=>'InscriptionAdministratifs','action'=>'organisateur',$id]);?>
+	
+    
+    </div>
 	<p class="padding-3">&nbsp;</p>
     
     <h2 style="text-align:center; font-size:1.3em; margin-top:50px;">Inscriptions par equipe</h2>
@@ -81,7 +85,7 @@
     
     <p class="center padding-3">
 	<?php echo $this->Html->link("Exporter la catégorie en excel", ['action'=>'exportequipe',$id, '_ext' => 'csv'],[ 'class'=>'center normalButton margin-3']);?>
-	<?php echo $this->Html->link("Exporter la catégorie en pdf", ['action'=>'viewequipe',$id, '_ext' => 'pdf'],[ 'class'=>'center normalButton margin-3']);?>
+	<?php echo $this->Html->link("Exporter la catégorie en pdf", ['action'=>'viewequipes',$id, '_ext' => 'pdf'],[ 'class'=>'center normalButton margin-3']);?>
 </p>
 	
 </div>

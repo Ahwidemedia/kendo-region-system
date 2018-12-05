@@ -90,7 +90,7 @@ echo $this->Html->link(
             </p>
 
             <p class="float-left">
-                <?php echo $this->html->link('Mentions légales', ['controller'=>'Pages', 'action'=>'mentions']); ?>
+                <?php echo $this->html->link('Mentions légales', 'http://www.jkcf.com/?page_id=74'); ?>
             </p>
 
             <p class="float-right">

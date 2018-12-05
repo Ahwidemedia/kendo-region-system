@@ -206,6 +206,7 @@ CREATE TABLE `inscription_passages` (
   `licencie_id` int(11) NOT NULL,
   `grade_presente_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `created` datetime DEFAULT NULL,
   `modified` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -252,7 +253,7 @@ CREATE TABLE `parametres` (
 CREATE TABLE `passages` (
   `id` int(11) NOT NULL,
   `name` varchar(800) COLLATE utf8_bin NOT NULL,
-  `date_competition` date NOT NULL,
+  `date_passage` date NOT NULL,
   `lieux` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `description` text COLLATE utf8_bin,
   `archive` int(1) NOT NULL DEFAULT '1',
@@ -397,6 +398,7 @@ ALTER TABLE `inscription_passages`
   ADD KEY `passage_inscripyion_fk_idx` (`passage_id`),
   ADD KEY `licencie_inscription_fk_idx` (`licencie_id`),
   ADD KEY `grade_inscription_fk_idx` (`grade_presente_id`),
+  ADD KEY `club_inscription_fk_idx` (`club_id`),
   ADD KEY `user_inscription_fk_idx` (`user_id`);
 
 --
@@ -507,6 +509,13 @@ ALTER TABLE `clubs`
 --
 ALTER TABLE `historiques`
   ADD CONSTRAINT `user_historique_fk` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+ALTER TABLE `licencies` 
+ADD UNIQUE INDEX `licencie_uk` (`nom` ASC, `prenom` ASC, `ddn` ASC, `sexe` ASC);
+
+ALTER TABLE `jkcf`.`inscription_passages` 
+CHANGE COLUMN `id` `id` INT(11) NOT NULL AUTO_INCREMENT ;
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

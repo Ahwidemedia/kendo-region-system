@@ -1,4 +1,4 @@
-<?php echo $this->Html->css('http://ah-widemedia.com/jkcf/css/pdf.css'); ?>
+  <?php echo $this->Html->css('http://ah-widemedia.com/jkcf/css/pdf.css'); ?>
 <STYLE type=text/css>
 html {  
   height: 100%;
@@ -424,112 +424,66 @@ border:1px solid #bfbfbf;
 font-size:1em;}
 
 .tableau-gris td:first-child {font-weight:bold;}
-    </STYLE>
-
-<h1><?php echo $event['name'];?></h1>
-<div class="width-100 center">
-
-
-
-	<?php if($category !== null){
-	echo '<h2 class="center">Categorie '.$category_info['name'].'</h2>';
-}
-else {
-
-echo '<h2 class="center">Toutes les catégories</h2>';
-
-}
-	?>
-	
-	
-<table class="tableau-gris" id="addelement-table">
-	<thead>
-		<tr style="border:solid 1px #ccc">
-			
-			<th>Nom</th>
-			<th>Prénom</th>
-			<th>Sexe</th>
-			<th>Grade</th>
-			<th>Année de naissance</th>
-			<?php if($category == null) { ?>
-			<th>Catégorie</th>
-			<?php } ?>
-			<th>Surclassé</th>
-		    <th>Certificat médical</th>
-			<th>Club</th>
-		
-			</tr>
-	</thead>
-
-	<tbody>
-		<?php foreach($articles as $article){
-		
-		?>
-
-	<tr>
-		
-		
-		<td>
-			<?php echo $article['licency']['nom'];  ?>
-		</td>
-
-		<td>
-			<?php echo $article['licency']['prenom'];  ?>
-		</td>
-
-
-		<td>
-			<?php echo $article['licency']['sexe'];  ?>
-		</td>
-
-		<td>
-			<?php echo $article['licency']['grade']['name'];  ?>
-		</td>
-
-		<td>
-			<?php echo $article['licency']['ddn'];  ?>
-
-				<?php if($category == null) { ?>
-		<td>
-			<?php echo $article['category']['name'];  ?>
-		</td> 
-		<?php } ?>
-		<td>
-			<?php if($article['surclassement_age']== 1 OR $article['surclassement_grade'] == 1) {
-			echo 'Oui';
-			
-		}  else {
-			echo 'Non';
-			
-		} ?>
-		</td>
-			<td>
-			<?php 
-			 echo $article['certificat'];
-			if($article['certificat_qs'] == 1) {
-			
-			echo " / Certificat QS";
-			
-			}
-		   ?>
-		</td>
-
-		<td>
-			<?php 
-			 echo $article['licency']['club']['name'];
-			
-		   ?>
-		</td>
-		
-	
-
-	</tr>
-
-	<?php	}
-		 ?>
-
-	</tbody>
-
-	</table>
-
-</div>
+    </STYLE> 
+    
+    <h1 style="text-align:center; font-size:1.3em; margin-top:50px;">Inscriptions par equipe</h2>
+<table class="tableau-gris">
+    <tr style="background-color:#ccc">
+       <th >N° licence</th>
+                    <th >Nom</th>
+                    <th >Prénom</th>
+                    <th >Sexe</th>
+                    <th >Grade</th>
+                    <th >Année de naissance</th>
+                    <th >Surclassé</th>
+                    <th >Certificat médical</th>
+                    <th >Club</th>
+                  
+    </tr>
+  
+    <?php 
+    
+    $row = null;
+      
+        foreach($articles as $results){
+            
+    if($results['participation_equipe'] == 1) {
+        
+        if($row !== $results['equipe_id']){
+            
+       echo '<tr><td colspan="9" style="padding:5px; font-weight:bold; border: solid 1px grey; text-align:center;">Equipe : '.$results['equipe']['name'].'</td></tr>';}
+        
+    ?>  
+    <tr>
+        <td ><?php echo $results['licency']['numero_licence'];?></td>
+        <td ><?php echo $results['licency']['nom'];?></td>
+        <td ><?php echo $results['licency']['prenom'];?></td>
+        <td ><?php echo $results['licency']['sexe'];?></td>
+        <td ><?php echo $results['licency']['grade']['name'];?></td>
+        <td ><?php echo $results['licency']['ddn'];?></td>
+      <td>
+        <?php 
+         if($results['surclassement_age'] == 1){echo 'Surclassé';}
+       
+            ?>
+          
+            
+        </td>
+        <td ><?php echo $results['certificat'];?><br/>
+        <?php if($results['certificat_qs'] == 1){echo 'Certificat QS';}
+    ?>
+        </td>
+        <td><?php echo $results['licency']['club']['name'];?> </td>
+    </tr>
+    
+    <?php
+            } 
+       
+    
+           $row = $results['equipe_id'];
+          
+    }
+    ?>
+   
+    </table>
+  

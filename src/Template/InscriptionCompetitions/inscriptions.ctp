@@ -28,7 +28,7 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
         'options' => $regions]]);?>
     </div>
 
-    <div class="center width-70">
+    <div class="center width-90">
 
 
 
@@ -43,8 +43,8 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
             <thead>
                 <tr>
                     <th>N° licence</th>
-                    <th>Nom</th>
-                    <th>Prénom</th>
+                    <th style="min-width:100px">Nom</th>
+                    <th style="min-width:100px">Prénom</th>
                     <th>Sexe</th>
                     <th>Grade</th>
                     <th>Année de naissance</th>
@@ -95,7 +95,7 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                  <td>
                      <?php
      
-     echo $this->Form->input("inscription_competitions.$articli->id.licencie.ddn", ['value'=>$articli['licency']['ddn'],'class'=>'age-input ddn-ind', 'onchange'=>"categorie(this)",'type'=>'year','minYear' => date('Y') - 60,
+     echo $this->Form->input("inscription_competitions.$articli->id.licencie.ddn", ['value'=>$articli['licency']['ddn'],'class'=>'age-input ddn-ind', 'onchange'=>"categorie(this)",'type'=>'year','minYear' => date('Y') - 75,
     'maxYear' => date('Y') - 9,'label'=>false]); ?>
     </td>
                
@@ -209,7 +209,7 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
     <td class="age">
      <?php
      
-     echo $this->Form->input("inscription_competitions.{$key}.licencie.ddn", ['class'=>'age-input ddn-ind', 'onchange'=>"categorie(this)",'type'=>'year','minYear' => date('Y') - 60,
+     echo $this->Form->input("inscription_competitions.{$key}.licencie.ddn", ['class'=>'age-input ddn-ind', 'onchange'=>"categorie(this)",'type'=>'year','minYear' => date('Y') - 75,
     'maxYear' => date('Y') - 9,'label'=>false]); ?>
     </td>
     
@@ -268,7 +268,7 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
             Inscriptions par équipes
         </h2>
 
-    
+    <p class="padding-1 center italic">Cochez les cases équipe pour rentrer les noms des compétiteurs.</p>
             
               
                 <?php 
@@ -332,8 +332,9 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                 <?php echo $this->Form->hidden("equipes.$a.equipe.id", ['value'=>$names[0]['equipe_id'],'label'=>false]); ?>
                 <?php echo $this->Form->input("equipes.$a.equipe.name", ['class'=>'nom-equipe','value'=>$names[0]['nom_equipe'],'label'=>false]); ?>
             </p>
-
-           <table class="tableau-gris margin-top-3" id="addelement-table">
+<p class="center italic  margin-top-3">Note : en recopiant le numéro de licence de vos inscrits en individuel, la ligne se remplit automatiquement.</p>
+    
+           <table class="tableau-gris" id="addelement-table">
 
                 <tr>
                     <th>Numéro de licence</th>
@@ -382,7 +383,7 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                         ['value'=>$name['sexe'],'empty' => ' ', 'class'=>'sexe next-sexe','label'=>false,'onchange'=>"categorie(this)"]); ?>
                     </td>
                     <td>
-                        <?php echo $this->Form->input("equipes.$a.licencie.$b.ddn", ['value'=>$name['ddn'],'class'=>'age-input next-ddn', 'onchange'=>"categorie(this)",'type'=>'year','minYear' => date('Y') - 60,
+                        <?php echo $this->Form->input("equipes.$a.licencie.$b.ddn", ['value'=>$name['ddn'],'class'=>'age-input next-ddn', 'onchange'=>"categorie(this)",'type'=>'year','minYear' => date('Y') - 75,
                         'maxYear' => date('Y') - 9,'label'=>false]); ?>
                     </td>
                      <td class="grade">
@@ -447,7 +448,7 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                         ['empty' => ' ', 'class'=>'sexe next-sexe','label'=>false,'onchange'=>"categorie(this)"]); ?>
                     </td>
                     <td>
-                        <?php echo $this->Form->input("equipes.$a.licencie.$i.ddn", ['class'=>'age-input next-ddn', 'onchange'=>"categorie(this)",'type'=>'year','minYear' => date('Y') - 60,
+                        <?php echo $this->Form->input("equipes.$a.licencie.$i.ddn", ['class'=>'age-input next-ddn', 'onchange'=>"categorie(this)",'type'=>'year','minYear' => date('Y') - 75,
                         'maxYear' => date('Y') - 9,'label'=>false]); ?>
                     </td>
                      <td class="grade">
@@ -545,7 +546,7 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                         ['empty' => ' ', 'class'=>'sexe next-sexe','label'=>false,'onchange'=>"categorie(this)"]); ?>
                     </td>
                     <td>
-                        <?php echo $this->Form->input("equipes.$a.licencie.$i.ddn", ['class'=>'age-input next-ddn', 'onchange'=>"categorie(this)",'type'=>'year','minYear' => date('Y') - 60,
+                        <?php echo $this->Form->input("equipes.$a.licencie.$i.ddn", ['class'=>'age-input next-ddn', 'onchange'=>"categorie(this)",'type'=>'year','minYear' => date('Y') - 75,
                         'maxYear' => date('Y') - 9,'label'=>false]); ?>
                     </td>
                      <td class="grade">
@@ -562,6 +563,7 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
     'maxYear' => date('Y'),'label'=>false]); ?>
                         <span class="certif display-none"><br />Certificat QS sur l'honneur
    <?php echo $this->Form->checkbox("equipes.$a.licencie.$i.certificat_qs", ['class'=>'next-certifqs']); ?>
+                            
     </span>
                     <td>
                         <?php echo $this->Form->checkbox("equipes.$a.licencie.$i.surclassement", ['class'=>'next-surage','label'=>false]); ?>
@@ -645,18 +647,21 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                         <?php echo $this->Form->input("administratif.$count1.licencie.prenom", ['value'=>$admin['licency']['prenom'],'class'=>'next-prenom','label'=>false]); ?>
                     </td>
                     <td>
-                 <?php 
+            
                     
-                     if($admin['arbitre'] == 1) {$checkarb = 'checked';} else {$checkarb = '';}
-                    
-                    echo $this->Form->checkbox("administratif.$count1.arbitre", ['checked'=>$checkarb, 'label'=>false]); ?>
-                        </td>
+                     <?php echo $this->Form->select("administratif.$count1.licencie.arbitre", 
+                        ['1'=>'Bénévole', '2'=>'Diplômé régional','3'=>'Diplômé national'],
+                        ['default'=>$admin['licency']['arbitre'],'empty' => ' ']); ?>
+                 
+                 
+                 </td>
                <td>
-                 <?php 
-                     if($admin['commissaire'] == 1) {$checkcomm = 'checked';} else {$checkcomm = '';}
-                    
-                    echo $this->Form->checkbox("administratif.$count1.commissaire", ['checked'=>$checkcomm, 'label'=>false]); ?>
-                      
+                  <?php 
+                  
+                    echo $this->Form->select("administratif.$count1.licencie.commissaire", 
+                        ['1'=>'Bénévole', '2'=>'Diplômé régional','3'=>'Diplômé national'],
+                    ['default'=>$admin['licency']['commissaire'],'empty' => ' ']); ?>
+                   
             </td>
                     <td>
                     <?php echo $this->Form->checkbox("administratif.$count1.samedi",['checked'=>$checked1]); ?>
@@ -713,13 +718,19 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                     <td>
                         <?php echo $this->Form->input("administratif.$o.licencie.prenom", ['class'=>'next-prenom','label'=>false]); ?>
                     </td>
-                    
                     <td>
-                 <?php echo $this->Form->checkbox("administratif.$o.arbitre", ['label'=>false]); ?>
-                        </td>
+                  
+                     <?php echo $this->Form->select("administratif.$o.licencie.arbitre", 
+                        ['1'=>'Bénévole', '2'=>'Diplômé régional','3'=>'Diplômé national'],
+                        ['empty' => ' ']); ?>
+                 
+                 
+                 </td>
                <td>
-                 <?php echo $this->Form->checkbox("administratif.$o.commissaire", ['label'=>false]); ?>
-                      
+                  <?php echo $this->Form->select("administratif.$o.licencie.commissaire", 
+                        ['1'=>'Bénévole', '2'=>'Diplômé régional','3'=>'Diplômé national'],
+                    ['empty' => ' ']); ?>
+                   
             </td>
               
                     <td>
@@ -750,10 +761,23 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
             <?php echo $this->Form->input("commentaire", ['type'=>'textarea','class'=>'width-80 center','label'=>false]); ?>
 
         </p>
-              <p class="margin-top-3 center width-50">  
+              
+               <p class="margin-top-3 center width-60 border-red padding-1 notif-qs red">  
+                  Les combattants souhaitant se présenter avec un <?php echo $this->Html->link('certificat QS','/files/certificat-qs.pdf', ['style'=>'color:blue; text-decoration:underline']);  ?> doivent obligatoirement fournir l'attestation sur 
+                   l'honneur ci-dessous, sans quoi leur participation se verra refusée :
+                    <br />
+                   <?php echo $this->Html->image('pdf.jpg',[ 'class'=>'center width-5 margin-top-3','url'=>'/files/attestation-certificat-qs.pdf']); ?><br />
+                  <span style="color:grey; font-size:0.9em;">Attestation sur l'honneur</span> <br />
+                   <br />
+                   Pour les autres, le certificat médical est toujours obligatoire.
+                <br /><br />
+                   Pour les mineurs surclassés, la présentation d'un <span style="text-decoration:underline">certificat médical de surclassement</span> est obligatoire.
+               </p>
+               
+               <p class="margin-top-3 center width-50">  
                 <?php echo $this->Form->checkbox("consent", ['class'=>'consent','label'=>false]); ?>
                   En soumettant ce formulaire, j'accepte que les informations saisies soient exploitées dans
-                  le cadre de l'orgaisation de la compétition.
+                  le cadre de l'organisation de la compétition.
                </p>
                
                
@@ -841,22 +865,23 @@ if((age >= <?php echo $category['annee_debut']; ?> && age <= <?php echo $categor
     $(row).find('.categorie').text("<?php echo $category['name'] ;?> ");
                                          
 <?php // On affiche ou pas les possibilités de surclassement, autorisations parentales selon les categories ?>
+           
                                                              
- <?php  
-        if($category['mineur'] == 1) {  ?>
+  if(age >= <?php echo $fromDate = date("Y", strtotime("-17 years"));?> )
+               {  
         
         $(row).find(".autorisation").addClass('display-block');
         $(row).find(".autorisation").removeClass('display-none');
     
                                                              
-      <?php  
-    }    else { ?>
+     
+    }    else {
         $(row).find(".autorisation").removeClass('display-block');
         $(row).find(".autorisation").addClass('display-none');
         
- <?php   }                                                   
+ }                                                   
                                          
-                                         
+     <?php                                    
                                          
         if($category['name'] == "JUNIORS" || $category['name'] == "ESPOIRS") {  ?>
         
@@ -871,7 +896,7 @@ if((age >= <?php echo $category['annee_debut']; ?> && age <= <?php echo $categor
         
  <?php   }   ?>                            
                  
-   <?php   if($category['name'] == "JUNIORS" OR $category['name'] == "HONNEURS") {  ?>                                                           
+   <?php   if($category['name'] == "HONNEURS") {  ?>                                                           
                                                              
         $(row).find(".surclassement-grade").addClass('display-block');
         $(row).find(".surclassement-grade").removeClass('display-none');
@@ -997,9 +1022,15 @@ nextsurage.prop('checked', true);
         $('.surage-ind:checkbox:checked').parent().show();
         $('.surgrade-ind:checkbox:checked').parent().show();
         $('.autorisation-ind:checkbox:checked').parent().show();       
-               
-               } );
+        $('.checkequipe:checkbox:checked').parent().next().show();    
+         $('.admin-check:checkbox:checked').next().show();                                          
+             
+                       
+                                    } );
         
+                                               
+                 $('.admin-check').click(function() {
+         $(this).next().toggle(this.checked);});                                
         
           $('.checkequipe').click(function() {
          $(this).parent().next().toggle(this.checked);

@@ -142,9 +142,9 @@
     
 
     <tr>
-    <td style="border: solid 1px grey; text-align:center;"><?php echo $results['licency']['numero_licence'];?></td>
-        <td style="border: solid 1px grey; text-align:center;"><?php echo $results['licency']['nom'];?></td>
-        <td style="border: solid 1px grey; text-align:center;"><?php echo $results['licency']['prenom'];?></td>
+    <td style="border: solid 1px grey; text-align:center;"><?php echo $resultat['licency']['numero_licence'];?></td>
+        <td style="border: solid 1px grey; text-align:center;"><?php echo $resultat['licency']['nom'];?></td>
+        <td style="border: solid 1px grey; text-align:center;"><?php echo $resultat['licency']['prenom'];?></td>
         <td style="border: solid 1px grey; text-align:center;"><?php if($resultat['arbitre'] == 1){ echo 'X'; }?></td>
         <td style="border: solid 1px grey; text-align:center;"><?php if($resultat['commissaire'] == 1){ echo 'X'; }?></td>
         

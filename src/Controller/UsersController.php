@@ -38,143 +38,109 @@ class UsersController extends AppController {
    		    
         }
 
-	public function login() {
+    public function login() {
 	
-      $user = $this->Users->newEntity();
-     
+        $user = $this->Users->newEntity();
         $this->set('user', $user);
-
-$this->set('title', 'Interface de connexion');
-$this->set('description', 'Connectez vous à votre interface pour écrire de nouveaux articles, etc.');
+                   
+        $this->set('title', 'Interface de connexion');
+        $this->set('description', 'Connectez vous à votre interface pour écrire de nouveaux articles, etc.');
 	
-	if($this->request->is('post')){
-	
-        
- 			 $data = $this->request->data;
-		
-        
-		if(isset($data['register'])){
-            
-            
-	$entity = $this->Users->patchEntity($user, $data);
-            
-	
-	$username = $data['username'];
-	$email = $data['email'];
-	$entity->active = 1;
+        if($this->request->is('post')) {
+ 		    $data = $this->request->data;
+            //debug($data);die();
+		    if( isset($data['register'] ) ){
+                           
+                $entity = $this->Users->patchEntity($user, $data);
+            	$username = $data['username'];
+            	$email = $data['email'];
+            	$entity->active = 0;
+            	$entity->token = md5(time('-' .uniqid()));
+            	$entity->profil_id = 3;
          
-		if($result = $this->Users->save($entity))
-	{
+		        if( $result = $this->Users->save($entity)) {
 
-	$user = $this->Users->find('all')
-	->where(['email' => $email]);
-	$row = $user->first();
+                	$user = $this->Users->find('all')->where(['email' => $email]);
+                	$row = $user->first();	
+                	$id = $row->id;
+                	$token = $row->token;
 	
-	$id = $row->id;
-	$token = $row->token;
-	
-	$CakeEmail = new Email('default');
-	$CakeEmail->to($email);
-	$CakeEmail->subject('Inscription sur le site des Inscriptions aux compétitions');
-	$CakeEmail->viewVars([	'username' => $username]);
-	$CakeEmail->emailFormat('html');
-	$CakeEmail->template('inscription');
-	$CakeEmail->send();
-	
-	$this->Flash->success('L\'email pour l\'activation du compte a été envoyé avec succès.');
-	return $this->redirect(['action' => 'instructions']);
-				
-            
-        }
-            
-            
-        }	
-        else {
-            
-         
-			// Anti bruteforce - partie 1
-			     $existence_ft = '';
+                	$CakeEmail = new Email('default');
+                	$CakeEmail->to($email);
+                	$CakeEmail->subject('Inscription sur le site des Inscriptions aux compétitions');
+                	$CakeEmail->viewVars([ 'id' => $id, 'token' => $token, 'username' => $username]);
+                	$CakeEmail->emailFormat('html');
+                	$CakeEmail->template('inscription');
+                	$CakeEmail->send();
+                	
+                	$this->Flash->success('L\'email pour l\'activation du compte a été envoyé avec succès.');
+                	return $this->redirect(['action' => 'instructions']);
+                }
+            } else {
+                
+                // Anti bruteforce - partie 1
+			    $existence_ft = '';
 			     
-    if(file_exists('antibrute/'.$data['username'].'.tmp'))
-    {
-        $fichier_tentatives = fopen('antibrute/'.$data['username'].'.tmp', 'r+');
-
-        $contenu_tentatives = fgets($fichier_tentatives);
-        $infos_tentatives = explode(';', $contenu_tentatives);
-        if($infos_tentatives[0] == date('d/m/Y'))
-        {    $tentatives = $infos_tentatives[1]; }
-            else
-        { $existence_ft = 2;  $tentatives = 0;  } }
+                if(file_exists('antibrute/'.$data['username'].'.tmp')) {
+                    $fichier_tentatives = fopen('antibrute/'.$data['username'].'.tmp', 'r+');            
+                    $contenu_tentatives = fgets($fichier_tentatives);
+                    $infos_tentatives = explode(';', $contenu_tentatives);
+                    if($infos_tentatives[0] == date('d/m/Y')) {    
+                        $tentatives = $infos_tentatives[1]; 
+                    } else { 
+                        $existence_ft = 2;  $tentatives = 0;  
+                    } 
+                } else { 
+                    $existence_ft = 1; $tentatives = 0;
+                }
+                
+                if($tentatives < 15) {  
     
-    else
-    { $existence_ft = 1; $tentatives = 0;}
-
-    if($tentatives < 15)
-    {  
-    
-    //tentative d'authenfication
-    
-     		$user = $this->Auth->identify();
+                    //tentative d'authenfication
+                    $user = $this->Auth->identify();
 			  
-	   //Verification du statut actif de l'utilisateur		  
-			  if ($user['active'] == '0') { 		
-			  $this->redirect(['action' =>'resend']);
-			  $this->Flash->error(__("Vous devez activer votre compte pour pouvoir accéder à votre espace personnel."));  
-			  }
-			  
-			  else {
-		
-		//Si Authentification réussie
-			 if($user) {
-			 
-			 //Ouverture sessions et redirection
-            $this->Auth->setUser($user);
-          return $this->redirect($this->Auth->redirectUrl());
-    
-			
-			}
-			
-			//Si mdp faux
-   			else { 
-   	 
-   	 // Bruteforce partie 2
-   	    if($existence_ft == 1)
-               {
-                   $creation_fichier = fopen('antibrute/'.$data['username'].'.tmp', 'a+'); 
-                   fputs($creation_fichier, date('d/m/Y').';1'); 
-                   fclose($creation_fichier);
-               }
-              
-               elseif($existence_ft == 2)
-               {
-                   fseek($fichier_tentatives, 0); 
-                   fputs($fichier_tentatives, date('d/m/Y').';1'); 
-               }
-               else
-               {
-                   fseek($fichier_tentatives, 11); 
-                   fputs($fichier_tentatives, $tentatives + 1);
-               }
-   	 // Message d'erreur
-   	 //	$this->RBruteForce->check();
-   	 	$this->Flash->error(__("Nom d'utilisateur ou mot de passe incorrect, essayez à nouveau.")); }
-   	 	}
-   	 	}
-            else
-           	  {
-           	  $this->Flash->error(__("Trop de tentatives d'authentification aujourd'hui (plus de 15). Reessayez demain ou 
-           	  contactez un administrateur"));
-        }
+	               //Verification du statut actif de l'utilisateur		  
+			       if ($user['active'] == '0') { 		
+        			  $this->redirect(['action' =>'resend']);
+        			  $this->Flash->error(__("Vous devez activer votre compte pour pouvoir accéder à votre espace personnel."));  
+        			} else {
+		              //Si Authentification réussie
+			          if($user) {
+			              //Ouverture sessions et redirection
+                          $this->Auth->setUser($user);
+                          return $this->redirect($this->Auth->redirectUrl());
+                        } else { //Si mdp faux
+       	                    // Bruteforce partie 2
+       	                    if($existence_ft == 1)  {
+                                $creation_fichier = fopen('antibrute/'.$data['username'].'.tmp', 'a+'); 
+                                fputs($creation_fichier, date('d/m/Y').';1'); 
+                                fclose($creation_fichier);
+                            }  else if($existence_ft == 2)  {
+                                fseek($fichier_tentatives, 0); 
+                                fputs($fichier_tentatives, date('d/m/Y').';1'); 
+                            } else {
+                               fseek($fichier_tentatives, 11); 
+                               fputs($fichier_tentatives, $tentatives + 1);
+                            }
+                            // Message d'erreur
+                            //	$this->RBruteForce->check();
+                            $this->Flash->error(__("Nom d'utilisateur ou mot de passe incorrect, essayez à nouveau.")); 
+                        }
+                    }
+                } else {
+                    $this->Flash->error(__("Trop de tentatives d'authentification aujourd'hui (plus de 15). Reessayez demain ou contactez un administrateur"));
+                }
+                
+                if($existence_ft != 1) {
+                    fclose($fichier_tentatives);
+                }
+            } 
+        }   
+        $this->loadModel("Clubs");
+        $clubs = $this->Clubs->find('list')->order(['name'=>'ASC']);
+        $this->set('clubs', $clubs);
         
-    if($existence_ft != 1)
-    {
-    fclose($fichier_tentatives);
-			   
-        }
-		} 
     }
-    
-}
 	
 	public function logout() {
 	$id = $this->request->session()->read('Auth.User.id');
@@ -224,7 +190,13 @@ $this->set('description', 'Connectez vous à votre interface pour écrire de nou
 	
 	$id = $row->id;
 	$token = md5(time('-' .uniqid()));
-	
+// 	if(strlen($token) === 0 ) {
+// 	    $chn = "";
+// 	    for ($i=1;$i<=10;$i++) $chn .= chr(floor(rand(0, 25)+97));
+// 	    $token = $chn;
+// 	}
+	    
+ 	
 	$usersTable = TableRegistry::get('Users');
 	$user = $usersTable->get($id);
 
@@ -269,8 +241,8 @@ $this->set('description', 'Confirmez votre mot de passe');
 
 	
 	$user = $this->Users->find('all')
-	->where(['id' => $user_id,
-	'token' => $token]);
+	->where(['id' => $user_id, 'token' => $token]);
+	
 	$row = $user->first();
 	 
 	
@@ -386,9 +358,7 @@ $email = $this->request->data['email'];
 	$CakeEmail = new Email('default');
 	$CakeEmail->to($email);
 	$CakeEmail->subject('Inscription sur Inscriptions Kendo');
-	$CakeEmail->viewVars(['token' => $token,
-	'id' => $id,
-	'username' => $username]);
+	$CakeEmail->viewVars(['token' => $token, 'id' => $id, 'username' => $username]);
 	$CakeEmail->emailFormat('html');
 	$CakeEmail->template('inscription');
 	

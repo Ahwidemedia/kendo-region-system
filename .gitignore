@@ -6,3 +6,5 @@ config/
 webroot/files/
 .project
 composer.lock
+/logs/*
+/tmp/*
