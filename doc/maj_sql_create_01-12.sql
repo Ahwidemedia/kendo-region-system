@@ -516,6 +516,9 @@ ADD UNIQUE INDEX `licencie_uk` (`nom` ASC, `prenom` ASC, `ddn` ASC, `sexe` ASC);
 ALTER TABLE `jkcf`.`inscription_passages` 
 CHANGE COLUMN `id` `id` INT(11) NOT NULL AUTO_INCREMENT ;
 
+ALTER TABLE `inscription_passages` 
+ADD UNIQUE INDEX `inscription_passage_unique` (`passage_id` ASC, `licencie_id` ASC);
+;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

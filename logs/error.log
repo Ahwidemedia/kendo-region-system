@@ -36654,3 +36654,191 @@ Stack Trace:
 
 
 >>>>>>> f38f8690171981e39d6c4d14d327d1ed773910d2
+2018-12-05 21:42:51 Error: [Error] Call to a member function find() on boolean
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 [internal function]: App\Controller\InscriptionPassagesController->inscriptions('1')
+#1 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#2 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#3 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#4 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 D:\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2018-12-05 21:44:07 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'NOM2-prenom2-1990-M' for key 'licencie_uk'
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(276): Cake\Database\Statement\MysqlStatement->execute()
+#2 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Query.php(189): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#3 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1669): Cake\Database\Query->execute()
+#4 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1563): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#5 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1492): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#6 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(570): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#7 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1493): Cake\Database\Connection->transactional(Object(Closure))
+#8 D:\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php(98): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#9 [internal function]: App\Controller\InscriptionPassagesController->inscriptions('1')
+#10 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#11 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#12 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#13 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 D:\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2018-12-05 21:44:38 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'NOM2-prenom2-1990-M' for key 'licencie_uk'
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(276): Cake\Database\Statement\MysqlStatement->execute()
+#2 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Query.php(189): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#3 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1669): Cake\Database\Query->execute()
+#4 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1563): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#5 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1492): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#6 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(570): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#7 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1493): Cake\Database\Connection->transactional(Object(Closure))
+#8 D:\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php(98): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#9 [internal function]: App\Controller\InscriptionPassagesController->inscriptions('1')
+#10 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#11 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#12 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#13 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 D:\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2018-12-05 21:44:56 Error: [Error] Call to a member function find() on boolean
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 [internal function]: App\Controller\InscriptionPassagesController->inscriptions('1')
+#1 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#2 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#3 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#4 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 D:\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2018-12-05 21:58:08 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-8' for key 'inscription_passage_unique'
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(276): Cake\Database\Statement\MysqlStatement->execute()
+#2 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Query.php(189): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#3 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1669): Cake\Database\Query->execute()
+#4 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1563): Cake\ORM\Table->_insert(Object(App\Model\Entity\InscriptionPassage), Array)
+#5 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1492): Cake\ORM\Table->_processSave(Object(App\Model\Entity\InscriptionPassage), Object(ArrayObject))
+#6 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(570): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#7 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1493): Cake\Database\Connection->transactional(Object(Closure))
+#8 D:\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php(112): Cake\ORM\Table->save(Object(App\Model\Entity\InscriptionPassage))
+#9 [internal function]: App\Controller\InscriptionPassagesController->inscriptions('1')
+#10 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#11 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#12 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#13 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 D:\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2018-12-05 22:00:02 Error: [Cake\Controller\Exception\MissingActionException] Action InscriptionPassagesController::retour() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'InscriptionPassagesController',
+  'action' => 'retour',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /kendo-region-system/inscription-passages/retour/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#1 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#2 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 D:\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#4 {main}
+
+
+2018-12-05 22:10:15 Error: [Cake\Controller\Exception\MissingActionException] Action InscriptionPassagesController::1() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'InscriptionPassagesController',
+  'action' => '1',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /kendo-region-system/inscription-passages/1
+Stack Trace:
+#0 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#1 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#2 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 D:\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#4 {main}
+
+
+2018-12-05 22:10:22 Error: [Cake\Controller\Exception\MissingActionException] Action InscriptionPassagesController::index() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'InscriptionPassagesController',
+  'action' => 'index',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /kendo-region-system/inscription-passages/
+Stack Trace:
+#0 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#1 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#2 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 D:\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#4 {main}
+
+
+2018-12-05 22:36:52 Error: [Cake\Controller\Exception\MissingActionException] Action InscriptionPassagesController::deleteInscription() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'InscriptionPassagesController',
+  'action' => 'deleteInscription',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /kendo-region-system/inscription-passages/delete-inscription/8/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#1 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#2 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 D:\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#4 {main}
+
+
+2018-12-05 22:37:13 Error: [Cake\Network\Exception\MethodNotAllowedException] Method Not Allowed
+Request URL: /kendo-region-system/inscription-passages/delete/8/1
+Stack Trace:
+#0 D:\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php(161): Cake\Network\Request->allowMethod(Array)
+#1 [internal function]: App\Controller\InscriptionPassagesController->delete('8', '1')
+#2 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#3 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#4 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#5 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 D:\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2018-12-05 22:39:51 Error: [Cake\Controller\Exception\MissingActionException] Action InscriptionPassagesController::inscription() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'InscriptionPassagesController',
+  'action' => 'inscription',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /kendo-region-system/inscription-passages/inscription/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#1 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#2 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 D:\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#4 {main}
+
+

@@ -1,6 +1,7 @@
 <?php 
 $conn = $this->request->session()->read('Auth.User');
 echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'],[ 'class'=>'absolute top-right']);
+//debug($inscriptions->toArray());die;
 ?>
 
 
@@ -39,7 +40,19 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
             <tbody>
             <?php if(isset($inscriptions)) {              
                      foreach($inscriptions as $inscription) { ?>
-               		     
+              	<tr>
+               		<td><?= $inscription->licency->numero_licence ?></td>
+               		<td><?= $inscription->licency->nom ?></td>
+               		<td><?= $inscription->licency->prenom ?></td>
+               		<td><?= $inscription->licency->sexe ?></td>
+               		<td><?= $inscription->licency->ddn ?></td>
+               		<td><?= $inscription->licency->grade->name ?></td>
+               		<td><?= $inscription->grade->name ?></td>
+               		<td><?= $this->Form->postLink(' - ',  ['action' => 'delete', $inscription->id, $id],  [ 'class'=>'font-2 delete', 'block' => true]);  ?></td>
+               		
+               		
+               		</td>
+               	</tr>   
           	<?php    }          	     
                   } ?>       
 				<tr>

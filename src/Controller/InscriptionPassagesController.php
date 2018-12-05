@@ -4,6 +4,7 @@ namespace App\Controller;
 use Cake\Event\Event;
 use Cake\ORM\TableRegistry;
 use Cake\I18n\Time;
+use Cake\Mailer\Email;
 
 class InscriptionPassagesController extends AppController
 {
@@ -17,7 +18,7 @@ class InscriptionPassagesController extends AppController
     public function beforeFilter(Event $event)
     {
         $this->Security->config('unlockedFields', ['licencies','inscription_competitions']);
-        $this->Auth->allow([ 'inscriptions']);
+        //$this->Auth->allow([ 'inscriptions']);
     }
     
     function inscriptions($id) {
@@ -43,16 +44,16 @@ class InscriptionPassagesController extends AppController
         // Si l'utilisateur est connecté
         if($this->Auth->User('id') !== null){
         
-            // On récupère son id          
-            $user_id = $this->Auth->User('id');
-            
+            // On récupère son id et email
+            $userId = $this->Auth->User('id');            
+            $userEmail = $this->Auth->User('email');
             // On cherche les inscriptions à l'événement qu'il a déjà faite            
             $inscriptions = $this->InscriptionPassages->find()
-                                                      ->contain(['Licencies'])
-                                                      ->where(['user_id' => $user_id,'passage_id' => $idPassage]);
+                                                      ->contain(['Licencies' => ['Grades'],'Grades'])
+                                                      ->where(['user_id' => $userId,'passage_id' => $idPassage]);
         } else {        
             // Sinon, on met un user_id par défaut pour pas faire bugger la sauvegarde ????? A REPRENDRE
-            $user_id = 1;
+            $userId = 1;
         }
        
         if($this->request->is(['patch','post','put'])){
@@ -76,11 +77,11 @@ class InscriptionPassagesController extends AppController
                 $this->loadModel('Licencies');
                 $licencie = $this->Licencies->find()
                                             ->select(['id'])
-                                            ->where(['numero_licence' => $data['licence'][$i], 'nom' => $data['nom'][$i], 'prenom' => $data['prenom'][$i], 'sexe' => $data['sexe'][$i], 'grade_id' => $data['grade'][$i]])
+                                            ->where(['numero_licence' => strtoupper($data['licence'][$i]), 'nom' => strtoupper($data['nom'][$i]), 'prenom' => $data['prenom'][$i], 'sexe' => $data['sexe'][$i], 'grade_id' => $data['grade'][$i]])
                                             ->first();
                 //debug($licencie);die();
                 if($licencie) {
-                    $licencie_id = $licencie->id;
+                    $licencieId = $licencie->id;
                 } else {
 
                     $licencieTable = TableRegistry::get('Licencies');
@@ -95,7 +96,7 @@ class InscriptionPassagesController extends AppController
                     $newLicencie->club_id = $data['club_id'];
                     $newLicencie->discipline_id = $passage->discipline_id;                    
                     $licencieTable->save($newLicencie);
-                    $licencie_id = $newLicencie->id;;
+                    $licencieId = $newLicencie->id;;
                 }
              
                 $inscriptionTable = TableRegistry::get('InscriptionPassages');
@@ -103,13 +104,31 @@ class InscriptionPassagesController extends AppController
                 $inscription->id = null;
                 $inscription->club_id = $data['club_id'];
                 $inscription->passage_id = $idPassage;
-                $inscription->user_id = $user_id;
+                $inscription->user_id = $userId;
                 $inscription->grade_presente_id = $data['grade_presente'][$i];
                 $inscription->commentaire = $data['commentaire'];
-                $inscription->licencie_id = $licencie_id;
+                $inscription->licencie_id = $licencieId;
                 //debug($inscription);
                 $inscriptionTable->save($inscription);
-            }	       
+            }
+            
+            
+            
+                
+            $recapPassage = $this->InscriptionPassages->find()
+                                                      ->contain(['Passages' => ['Disciplines'], 'Grades', 'Licencies'=> ['Clubs','Grades']])
+                                                      ->where(['user_id'=>$userId, 'passage_id'=> $idPassage]);
+            $CakeEmail = new Email('default');
+            $CakeEmail->to($userEmail);
+            $CakeEmail->subject('Récapitulatif de vos inscriptions à : '.$event['name']);
+            $CakeEmail->viewVars(['recapPassage' => $recapPassage,'event'=>$event ]);
+            $CakeEmail->emailFormat('html');
+            $CakeEmail->template('confirmpassage');
+            $CakeEmail->send();
+                    
+            $this->Flash->success('Les inscriptions ont bien été enregistrées. Vous devriez recevoir un mail récapitulatif dans les minutes à venir');
+            return $this->redirect(['action'=>'retour',$id]);
+                        
 		}   
 		
 		// On envoie les variables pour les listes déroulantes et les catégories pour le jQuery
@@ -121,6 +140,32 @@ class InscriptionPassagesController extends AppController
 		$this->set(compact(['passage', 'title', 'description', 'headimg', 'event', 'article', 'inscriptions','clubs','regions','grades']));
 		
     }	
-	
+    
+    public function retour($id) {
+        
+        
+        // On prend les données de l'événement        
+        $this->loadModel('Evenements');        
+        $event = $this->Evenements->find()->contain(['Passages'])->first();
+        
+        $this->set('id',$id);
+        $title = $event['name'];
+        $description = $event['name'];
+        if(!empty($event['image'])) { $headimg = 'headers/evenements/g-'.$event['image']; }else { $headimg =  'header_main.png';}
+        
+        $this->set(compact(['title','description','headimg','event']));
+        
+    }
+    public function delete($id, $event) {
+    
+        $this->request->allowMethod(['post', 'delete']);
+        $element = $this->InscriptionPassages->get($id);
+        if ($this->InscriptionPassages->delete($element)) {
+            $this->Flash->success(__('L\'isnscription a bien été supprimé.'));
+        } else {
+            $this->Flash->error(__('Erreur dans la suppression de l\'isnscription.'));
+        }
+        return $this->redirect(['action' => 'inscriptions', $event]);
+    }
 }
 ?>
