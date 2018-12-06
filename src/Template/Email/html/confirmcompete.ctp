@@ -68,7 +68,6 @@
                     <th style="border: solid 1px grey; text-align:center;">Sexe</th>
                     <th style="border: solid 1px grey; text-align:center;">Grade</th>
                     <th style="border: solid 1px grey; text-align:center;">Année de naissance</th>
-                    <th style="border: solid 1px grey; text-align:center;">Catégorie</th>
                     <th style="border: solid 1px grey; text-align:center;">Certificat médical</th>
                   
     </tr>
@@ -93,8 +92,7 @@
         <td style="border: solid 1px grey; text-align:center;"><?php echo $results['licency']['sexe'];?></td>
         <td style="border: solid 1px grey; text-align:center;"><?php echo $results['licency']['grade']['name'];?></td>
         <td style="border: solid 1px grey; text-align:center;"><?php echo $results['licency']['ddn'];?></td>
-        <td style="border: solid 1px grey; text-align:center;"><?php echo $results['category']['name'];?>
-        <?php 
+         <?php 
          if($results['surclassement_age'] == 1){echo 'Surclassé en âge';}
         if($results['surclassement_grade'] == 1){echo 'Surclassé en grade';}
             ?>
