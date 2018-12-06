@@ -12,8 +12,8 @@
 
 <h1 style="text-align:center;  color:darkred; font-size:1.5em;">Vos inscriptions à la compétition 
 </h1>
-    
-    <h2 style="text-align:center; font-size:1.3em; margin-top:50px;">Inscriptions individuelles</h2>
+    <p style="text-align:center; font-weight:bold; margin-top:30px;font-size:1.2em ">Club : <?php echo $club['name']; ?></p>
+    <h2 style="text-align:center; font-size:1.3em; margin-top:30px;">Inscriptions individuelles</h2>
 <table style="width:80%; border-collapse: collapse; margin-left:auto; margin-right:auto">
     <tr style="background-color:#ccc">
        <th style="border: solid 1px grey; text-align:center;">N° licence</th>
@@ -145,8 +145,16 @@
     <td style="border: solid 1px grey; text-align:center;"><?php echo $resultat['licency']['numero_licence'];?></td>
         <td style="border: solid 1px grey; text-align:center;"><?php echo $resultat['licency']['nom'];?></td>
         <td style="border: solid 1px grey; text-align:center;"><?php echo $resultat['licency']['prenom'];?></td>
-        <td style="border: solid 1px grey; text-align:center;"><?php if($resultat['arbitre'] == 1){ echo 'X'; }?></td>
-        <td style="border: solid 1px grey; text-align:center;"><?php if($resultat['commissaire'] == 1){ echo 'X'; }?></td>
+        <td style="border: solid 1px grey; text-align:center;"><?php if($resultat['licency']['arbitre'] == 1){ echo 'Stagiaire'; } 
+                                                                        elseif ($resultat['licency']['arbitre'] == 2){echo 'Diplômé Régional';}
+                                                                        elseif ($resultat['licency']['arbitre'] == 3){echo 'Diplômé National';}
+            
+            
+            ?></td>
+        <td style="border: solid 1px grey; text-align:center;"><?php if($resultat['licency']['commissaire'] == 1){ echo 'Stagiaire'; } 
+                                                                        elseif ($resultat['licency']['commissaire'] == 2){echo 'Diplômé Régional';}
+                                                                        elseif ($resultat['licency']['commissaire'] == 3){echo 'Diplômé National';}
+            ?></td>
         
         <td style="border: solid 1px grey; text-align:center;"><?php if (strpos($resultat['presence'], '1') !== false) { echo 'X'; }?></td>
          <td style="border: solid 1px grey; text-align:center;"><?php if (strpos($resultat['presence'], '2') !== false) { echo 'X'; }?></td>
