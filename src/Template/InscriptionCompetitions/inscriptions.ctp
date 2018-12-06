@@ -37,7 +37,7 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
             Inscriptions individuelles
         </h2>
 
-        <p class="center italic margin-top-3 ">Cliquer sur le "+" pour ajouter une personne</p>
+        <p class="center italic margin-top-3 ">Cliquer sur le " <span style="font-size:1.2em; text-align:center; width:10px; height:10px; color:darkorange; padding: 1px 5px; border:solid darkorange 2px; border-radius:50%">+</span> " pour ajouter une personne</p>
 
         <table class="tableau-gris" style="margin-top:5px" id="addelement-table">
             <thead>
@@ -359,14 +359,10 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
             // Je compte le nombre de lignes pour pouvoir compléter par des lignes vides
               $b++
                ?>
-                <tr class="line">
-                    <td>
-
-                    
+                <tr class="line lines2">
+                    <td>                    
                  <?php   echo $this->Form->hidden("equipes.$a.$b.id", ['value'=>$name['id']]); ?>
-                        
-                        
-                                 
+          
                  <?php   echo $this->Form->hidden("equipes.$a.licencie.$b.id", ['value'=>$name['licencie_id'], 'class'=>'licencie-equipe','label'=>false]); ?>
                  <?php   echo $this->Form->input("equipes.$a.licencie.$b.numero_licence", ['value'=>$name['numero_licence'], 'class'=>'licencie-equipe','label'=>false]); ?>
                     </td>
@@ -780,6 +776,8 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                   le cadre de l'organisation de la compétition.
                </p>
                
+               <div id="doublon" class="center width-70 padding-3"></div>
+               
                
         <div class="margin-top-3 center ">
             <?php echo '<p class="center">'.$this->Form->button('Envoyer', ['disabled'=>'disabled', 'type' => 'submit', 'name'=>'envoyer', 'class' => 'soumettre normalButton']);?>
@@ -1046,7 +1044,7 @@ nextsurage.prop('checked', true);
                 $('.consent').click(function() {
     
          if (this.checked) {
-        $(this).parent().next().children().eq(0).children().eq(0).prop('disabled', false);
+        $(this).parent().next().next().children().eq(0).children().eq(0).prop('disabled', false);
        
         } else {
         
@@ -1055,10 +1053,98 @@ nextsurage.prop('checked', true);
         }
         });
         
+ 
+    
+        $('.consent').click(function() {
+   var tableindiv = [];
+   var tableequipe = [];
+                            
+                                             
+   $(".lines").each(function() {
+        // get row
+        var row = $(this);
+                                               
+                                      
+        var licence = row.children().eq(0).children().eq(2).val();
+        var name = row.children().eq(1).children().eq(0).val();
+        var prenom = row.children().eq(2).children().eq(0).val();
+        var sexe = row.children().eq(3).children().eq(0).find(':selected').text();
+        var grade = row.children().eq(4).children().eq(0).find(':selected').text();                                       
+        var ddn = row.children().eq(5).children().eq(0).find(':selected').text();
+        var certificat = row.children().eq(7).children().eq(0).find(':selected').text();
+                                          
+                                              
+                                                
+        var test = { licence: licence, name : name, prenom : prenom, sexe : sexe,  grade : grade, ddn : ddn }    
+           
+                                           
+           tableindiv.push(test);                                     
+                                         
+   });
+        
+                                               
+      $(".lines2").each(function() {
+         console.log('lala');
+        var row = $(this);
+                                            
+                                    
+        var licence = row.children().eq(0).children().eq(2).children().eq(0).val();    
+        var name = row.children().eq(1).children().eq(0).children().eq(0).val();                                          
+        var prenom = row.children().eq(2).children().eq(0).children().eq(0).val(); 
+         var sexe = row.children().eq(3).eq(0).children().find(':selected').text();    
+         var ddn = row.children().eq(4).children().eq(0).children().eq(0).find(':selected').text();                                   
+         var grade = row.children().eq(5).children().eq(0).children().eq(0).find(':selected').text();
+        var certificat = row.children().eq(7).children().eq(0).children().eq(0).val();
         
     
-        
-        
+    var test2 = { licence: licence, name : name, prenom : prenom, sexe : sexe, ddn : ddn, grade : grade}    
+           
+                                        
+           tableequipe.push(test2);                                     
+                                         
+   });                                            
+                      
+                                               
+                                               
+      var result = [];
+                                                
+
+          for (var i = 0; i < tableindiv.length; i++) {
+  for (var j = 0; j < tableequipe.length; j++) {
+    if (tableindiv[i].licence == tableequipe[j].licence &&
+    (tableindiv[i].name !== tableequipe[j].name || 
+    tableindiv[i].prenom !== tableequipe[j].prenom ||                                   
+    tableindiv[i].sexe !== tableequipe[j].sexe || 
+    tableindiv[i].ddn !== tableequipe[j].ddn ||                                      
+    tableindiv[i].grade !== tableequipe[j].grade ||                                      
+     tableindiv[i].certificat !== tableequipe[j].certificat                                    )) {
+      result.push(tableindiv[i]);
+                                       
+      break;
+    }
+                                         
+                                            
+  }
+}     
+           
+  if (result.length !== 0) {
+       var newHTML = [];
+for (var i = 0; i < result.length; i++) {
+    newHTML.push('<p class="padding-1 red center">Le combattant ' + result[i].name + ' est enregistré en individuel et en équipe avec des informations différentes. </span>');
+}
+               
+          
+$("#doublon").html(newHTML.join(""));
+                                         
+                                         
+}                                    
+                        
+                                          
+                                               
+                                               
+                                               });
+                                               
+     
        <?php $this->Html->scriptEnd(); ?>
         
       
