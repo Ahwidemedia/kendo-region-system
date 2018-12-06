@@ -8,7 +8,7 @@
 
 <p>Vous recevez cet e-mail car une demande de nouveau mot de passe a été faite pour votre e-mail.</p>
 
-<p style="text-align:center; color:white; margin-top:20px; background-color:#0066db; border-radius: 6px; padding:15px; font-weight:bold;"><?php echo $this->Html->link("Lien", ['controller'=>'users', 'action' => 'password', '_full' => true, $id, $token]);?></p>
+<p style="text-align:center; color:white !important; margin-top:20px; border:solid red 1px; border-radius: 6px; padding:10px; font-weight:bold;"><?php echo $this->Html->link("Lien", ['controller'=>'Users', 'action' => 'password', '_full' => true, $id, $token]);?></p>
 
 <p>Si vous n'avez pas demandé de mot de passe, merci d'ignorer ce message.</p>
 
