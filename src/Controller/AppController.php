@@ -50,7 +50,7 @@ class AppController extends Controller
                 'action' => 'login',
                 'prefix' => false,
             ],
-            'authError' => 'Vous devez être identifié pour pouvoir accéder à cette section.',
+            'authError' => 'Vous devez être identifié pour pouvoir procéder aux inscriptions.',
         ]);
    
    
