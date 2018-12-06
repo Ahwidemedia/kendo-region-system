@@ -380,7 +380,7 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                     </td>
                     <td>
                         <?php echo $this->Form->input("equipes.$a.licencie.$b.ddn", ['value'=>$name['ddn'],'class'=>'age-input next-ddn', 'onchange'=>"categorie(this)",'type'=>'year','minYear' => date('Y') - 75,
-                        'maxYear' => date('Y') - 9,'label'=>false]); ?>
+                        'maxYear' => date('Y') - 17,'label'=>false]); ?>
                     </td>
                      <td class="grade">
        <?php echo $this->Form->input("equipes.$a.licencie.$b.grade_id", ['value'=>$name['grade_id'],'onchange'=>"categorie(this)",'class'=>'next-grade grade-input','label'=>false,  [
@@ -424,7 +424,7 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                 
                 
                 for($i=$b+1;$i <= $nbr_equipe; $i++) { ?>
-                <tr class="line">
+                <tr class="line lines2">
                     <td>
                         
                         <?php    echo $this->Form->hidden("equipes.$a.$i.id"); ?>
@@ -445,7 +445,7 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                     </td>
                     <td>
                         <?php echo $this->Form->input("equipes.$a.licencie.$i.ddn", ['class'=>'age-input next-ddn', 'onchange'=>"categorie(this)",'type'=>'year','minYear' => date('Y') - 75,
-                        'maxYear' => date('Y') - 9,'label'=>false]); ?>
+                        'maxYear' => date('Y') - 17,'label'=>false]); ?>
                     </td>
                      <td class="grade">
        <?php echo $this->Form->input("equipes.$a.licencie.$i.grade_id", ['onchange'=>"categorie(this)",'class'=>'next-grade grade-input','label'=>false,  [
@@ -522,7 +522,7 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                
             
             <?php for($i=1;$i <= $nbr_equipe; $i++) { ?>
-            <tr class="line">
+            <tr class="line lines2">
                     <td>
                         
                         <?php    echo $this->Form->hidden("equipes.$a.$i.id"); ?>
@@ -543,7 +543,7 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                     </td>
                     <td>
                         <?php echo $this->Form->input("equipes.$a.licencie.$i.ddn", ['class'=>'age-input next-ddn', 'onchange'=>"categorie(this)",'type'=>'year','minYear' => date('Y') - 75,
-                        'maxYear' => date('Y') - 9,'label'=>false]); ?>
+                        'maxYear' => date('Y') - 17,'label'=>false]); ?>
                     </td>
                      <td class="grade">
        <?php echo $this->Form->input("equipes.$a.licencie.$i.grade_id", ['onchange'=>"categorie(this)",'class'=>'next-grade grade-input','label'=>false,  [
@@ -1081,7 +1081,7 @@ nextsurage.prop('checked', true);
         var certificat = row.children().eq(7).children().eq(0).find(':selected').text();
          
      
-                                              
+                    
                                                 
         var test = { licence: licence, name : name, prenom : prenom, sexe : sexe,  grade : grade, ddn : ddn }    
            
@@ -1104,19 +1104,10 @@ nextsurage.prop('checked', true);
          var ddn = row.children().eq(4).children().eq(0).children().eq(0).find(':selected').text();                                   
          var grade = row.children().eq(5).children().eq(0).children().eq(0).find(':selected').text();
         var certificat = row.children().eq(7).children().eq(0).children().eq(0).val();
-        
-       if(licence !== '' || 
-            name !== '' || 
-            prenom !== '' || 
-            sexe !== '' || 
-            ddn !== '' ||
-            certificat !== ''){
+          
                                                
-                row.find("td input:text,td select").each(function() {
-            $(this).prop('required', true);
-            
-        });                       
-                                               }
+    
+                                               
                                                
                                                
     var test2 = { licence: licence, name : name, prenom : prenom, sexe : sexe, ddn : ddn, grade : grade}    
@@ -1163,7 +1154,34 @@ $("#doublon > span").html(newHTML.join(""));
    $("#doublon").html("<span></span>");}                               
      });
                
+          
                
+               
+    
+    $(".lines2 :input").blur(function() {                                       
+        
+             var row = $(this).closest('.lines2');      
+               
+                 var licence = row.children().eq(0).children().eq(2).children().eq(0).val();    
+        var name = row.children().eq(1).children().eq(0).children().eq(0).val();                                          
+        var prenom = row.children().eq(2).children().eq(0).children().eq(0).val(); 
+         var sexe = row.children().eq(3).eq(0).children().find(':selected').text();    
+         var ddn = row.children().eq(4).children().eq(0).children().eq(0).find(':selected').text();                                   
+         var grade = row.children().eq(5).children().eq(0).children().eq(0).find(':selected').text();
+        var certificat = row.children().eq(7).children().eq(0).children().eq(0).val();
+          
+          if(licence.length !== 0   || 
+            name.length !== 0  || 
+            prenom.length !== 0  || 
+            sexe.length !== 0  || 
+            ddn.length !== 0  ||
+            certificat.length !== 0 ){
+               
+               row.find("td input:text,td select").prop('required', true);
+               
+                         }
+            
+        });                               
                
                                                
      
