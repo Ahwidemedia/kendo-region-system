@@ -4,7 +4,6 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
 //debug($inscriptions->toArray());die;
 ?>
 
-
 <div class="width-100 center">
 	<h1 class="center">Inscriptions au passage de grade</h1>
 	<?= $this->Form->create(null) ?>
@@ -48,9 +47,8 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                		<td><?= $inscription->licency->ddn ?></td>
                		<td><?= $inscription->licency->grade->name ?></td>
                		<td><?= $inscription->grade->name ?></td>
-               		<td><?= $this->Form->postLink(' - ',  ['action' => 'delete', $inscription->id, $id],  [ 'class'=>'font-2 delete', 'block' => true]);  ?></td>
-               		
-               		
+               		<td><?= $this->Form->postLink('Supprimer',  ['action' => 'delete', $inscription->id, $id],  [ 'class'=>'btn btn-sm btn-success', 'block' => true]) ?>
+         		
                		</td>
                	</tr>   
           	<?php    }          	     
@@ -82,7 +80,7 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                
                
         <div class="margin-top-3 center ">
-            <?php echo '<p class="center">'.$this->Form->button('Envoyer', ['disabled'=>'disabled', 'type' => 'submit', 'name'=>'envoyer', 'class' => 'soumettre normalButton']);?>
+            <?= '<p class="center">'.$this->Form->button('Envoyer', ['disabled'=>'disabled', 'type' => 'submit', 'name'=>'envoyer', 'class' => 'soumettre normalButton']) ?>
 
         </div>
         
@@ -93,6 +91,7 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
      
      </div>
 </div>
+
 
 <?php  $this->Html->scriptStart(['block' => true]); ?>
 $(function(){

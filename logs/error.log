@@ -36864,3 +36864,191 @@ Stack Trace:
 #15 {main}
 
 
+2018-12-06 19:48:30 Error: [PDOException] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+Request URL: /kendo-region-system/
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php(47): PDO->__construct('mysql:host=loca...', 'root', 'root', Array)
+#1 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(104): Cake\Database\Driver\Mysql->_connect('mysql:host=loca...', Array)
+#2 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(42): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Database\Connection.php(322): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(439): Cake\Database\Connection->schemaCollection()
+#8 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Query.php(212): Cake\ORM\Table->schema()
+#9 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\EvenementsTable))
+#10 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(1336): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\EvenementsTable))
+#11 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\ORM\Table.php(964): Cake\ORM\Table->query()
+#12 D:\workspacePhp\kendo-region-system\src\Controller\PagesController.php(64): Cake\ORM\Table->find('all')
+#13 [internal function]: App\Controller\PagesController->index()
+#14 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#15 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#16 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#17 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#18 D:\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#19 {main}
+
+
+2018-12-06 19:51:22 Error: [InvalidArgumentException] Data missing
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php(93): Cake\Chronos\MutableDateTime::createFromFormat('d/m/Y', '')
+#1 [internal function]: App\Controller\InscriptionPassagesController->inscriptions('1')
+#2 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#3 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#4 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#5 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 D:\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2018-12-06 19:54:27 Error: [InvalidArgumentException] Data missing
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php(96): Cake\Chronos\MutableDateTime::createFromFormat('d/m/Y', '')
+#1 [internal function]: App\Controller\InscriptionPassagesController->inscriptions('1')
+#2 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(435): call_user_func_array(Array, Array)
+#3 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#4 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#5 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 D:\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2018-12-06 21:18:36 Error: [Cake\Controller\Exception\AuthSecurityException] URL mismatch in POST data (expected '/kendo-region-system/articles/edit/1' but found '/kendo-region-system/inscription-passages/inscriptions/1'), Unexpected field 'club_id' in POST data, Unexpected field 'club_name' in POST data, Unexpected field 'grade_id' in POST data, Unexpected field 'id' in POST data, Unexpected field 'new_club' in POST data, Unexpected field 'region_id' in POST data
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Component\SecurityComponent.php(130): Cake\Controller\Component\SecurityComponent->_validatePost(Object(App\Controller\InscriptionPassagesController))
+#1 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(422): Cake\Controller\Component\SecurityComponent->startup(Object(Cake\Event\Event))
+#2 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#3 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#4 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(501): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#5 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(117): Cake\Controller\Controller->startupProcess()
+#6 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#7 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 D:\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 {main}
+
+
+2018-12-06 21:19:19 Error: [Cake\Controller\Exception\AuthSecurityException] URL mismatch in POST data (expected '/kendo-region-system/articles/edit/1' but found '/kendo-region-system/inscription-passages/inscriptions/1'), Unexpected field 'club_id' in POST data, Unexpected field 'club_name' in POST data, Unexpected field 'grade_id' in POST data, Unexpected field 'id' in POST data, Unexpected field 'new_club' in POST data, Unexpected field 'region_id' in POST data
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Component\SecurityComponent.php(130): Cake\Controller\Component\SecurityComponent->_validatePost(Object(App\Controller\InscriptionPassagesController))
+#1 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(422): Cake\Controller\Component\SecurityComponent->startup(Object(Cake\Event\Event))
+#2 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#3 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#4 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(501): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#5 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(117): Cake\Controller\Controller->startupProcess()
+#6 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#7 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 D:\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 {main}
+
+
+2018-12-06 21:19:59 Error: [Cake\Controller\Exception\AuthSecurityException] URL mismatch in POST data (expected '/kendo-region-system/inscription-passages/edit/1' but found '/kendo-region-system/inscription-passages/inscriptions/1'), Unexpected field 'club_id' in POST data, Unexpected field 'club_name' in POST data, Unexpected field 'grade_id' in POST data, Unexpected field 'id' in POST data, Unexpected field 'new_club' in POST data, Unexpected field 'region_id' in POST data
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Component\SecurityComponent.php(130): Cake\Controller\Component\SecurityComponent->_validatePost(Object(App\Controller\InscriptionPassagesController))
+#1 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(422): Cake\Controller\Component\SecurityComponent->startup(Object(Cake\Event\Event))
+#2 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#3 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#4 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(501): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#5 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(117): Cake\Controller\Controller->startupProcess()
+#6 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#7 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 D:\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 {main}
+
+
+2018-12-06 21:29:56 Error: [Cake\Controller\Exception\AuthSecurityException] URL mismatch in POST data (expected '/kendo-region-system/inscription-passages/edit/1' but found '/kendo-region-system/inscription-passages/inscriptions/1'), Unexpected field 'club_id' in POST data, Unexpected field 'club_name' in POST data, Unexpected field 'grade_id' in POST data, Unexpected field 'id' in POST data, Unexpected field 'new_club' in POST data, Unexpected field 'region_id' in POST data
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Component\SecurityComponent.php(130): Cake\Controller\Component\SecurityComponent->_validatePost(Object(App\Controller\InscriptionPassagesController))
+#1 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(422): Cake\Controller\Component\SecurityComponent->startup(Object(Cake\Event\Event))
+#2 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#3 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#4 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(501): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#5 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(117): Cake\Controller\Controller->startupProcess()
+#6 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#7 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 D:\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 {main}
+
+
+2018-12-06 21:30:26 Error: [ParseError] syntax error, unexpected '$inscription' (T_VARIABLE)
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\workspacePhp\kendo-region-system\vendor\composer\ClassLoader.php(301): Composer\Autoload\includeFile('D:\\workspacePhp...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controller\\...')
+#2 [internal function]: spl_autoload_call('App\\Controller\\...')
+#3 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Core\App.php(152): class_exists('App\\Controller\\...')
+#4 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Core\App.php(64): Cake\Core\App::_classExistsInBase('\\Controller\\Ins...', 'App')
+#5 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(70): Cake\Core\App::className('InscriptionPass...', 'Controller', 'Controller')
+#6 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(63): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(49): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\DispatcherFilter.php(144): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#9 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(426): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#11 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#12 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(81): Cake\Http\ActionDispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#13 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 D:\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2018-12-06 21:30:36 Error: [Cake\Controller\Exception\AuthSecurityException] URL mismatch in POST data (expected '/kendo-region-system/inscription-passages/edit/1' but found '/kendo-region-system/inscription-passages/inscriptions/1'), Unexpected field 'club_id' in POST data, Unexpected field 'club_name' in POST data, Unexpected field 'grade_id' in POST data, Unexpected field 'id' in POST data, Unexpected field 'new_club' in POST data, Unexpected field 'region_id' in POST data
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Component\SecurityComponent.php(130): Cake\Controller\Component\SecurityComponent->_validatePost(Object(App\Controller\InscriptionPassagesController))
+#1 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(422): Cake\Controller\Component\SecurityComponent->startup(Object(Cake\Event\Event))
+#2 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#3 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#4 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(501): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#5 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(117): Cake\Controller\Controller->startupProcess()
+#6 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#7 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 D:\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 {main}
+
+
+2018-12-06 21:33:55 Error: [Cake\Controller\Exception\AuthSecurityException] URL mismatch in POST data (expected '/kendo-region-system/inscription-passages/edit/1' but found '/kendo-region-system/inscription-passages/inscriptions/1'), Unexpected field 'club_id' in POST data, Unexpected field 'club_name' in POST data, Unexpected field 'grade_id' in POST data, Unexpected field 'id' in POST data, Unexpected field 'new_club' in POST data, Unexpected field 'region_id' in POST data
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Component\SecurityComponent.php(130): Cake\Controller\Component\SecurityComponent->_validatePost(Object(App\Controller\InscriptionPassagesController))
+#1 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(422): Cake\Controller\Component\SecurityComponent->startup(Object(Cake\Event\Event))
+#2 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#3 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#4 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(501): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#5 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(117): Cake\Controller\Controller->startupProcess()
+#6 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#7 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 D:\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 {main}
+
+
+2018-12-06 21:37:55 Error: [Cake\Controller\Exception\AuthSecurityException] URL mismatch in POST data (expected '/kendo-region-system/inscription-passages/edit/1' but found '/kendo-region-system/inscription-passages/inscriptions/1'), Unexpected field 'club_id' in POST data, Unexpected field 'club_name' in POST data, Unexpected field 'grade_id' in POST data, Unexpected field 'id' in POST data, Unexpected field 'new_club' in POST data, Unexpected field 'region_id' in POST data
+Request URL: /kendo-region-system/inscription-passages/inscriptions/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/inscriptions/1
+Stack Trace:
+#0 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Component\SecurityComponent.php(130): Cake\Controller\Component\SecurityComponent->_validatePost(Object(App\Controller\InscriptionPassagesController))
+#1 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(422): Cake\Controller\Component\SecurityComponent->startup(Object(Cake\Event\Event))
+#2 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#3 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#4 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Controller\Controller.php(501): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#5 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(117): Cake\Controller\Controller->startupProcess()
+#6 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InscriptionPassagesController))
+#7 D:\workspacePhp\kendo-region-system\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(60): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 D:\workspacePhp\kendo-region-system\webroot\index.php(36): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 {main}
+
+

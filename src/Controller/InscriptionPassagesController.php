@@ -58,6 +58,9 @@ class InscriptionPassagesController extends AppController
        
         if($this->request->is(['patch','post','put'])){
             $data = $this->request->data;	     
+            //debug($data['nom']);die;
+            if(count($data['nom']) < 2  ) return $this->redirect(['action'=>'inscriptions',$id]);
+            
             //debug($data);die();
             // Si c'est un nouveau club, on le rentre dans la base
             if($data['new_club'] == 1) {
@@ -77,7 +80,7 @@ class InscriptionPassagesController extends AppController
                 $this->loadModel('Licencies');
                 $licencie = $this->Licencies->find()
                                             ->select(['id'])
-                                            ->where(['numero_licence' => $data['licence'][$i], 'nom' => $data['nom'][$i], 'prenom' => $data['prenom'][$i], 'sexe' => $data['sexe'][$i], 'grade_id' => $data['grade'][$i]])
+                                            ->where(['numero_licence' => $data['licence'][$i], 'nom' => strtoupper($data['nom'][$i]), 'prenom' => strtoupper($data['prenom'][$i]), 'sexe' => $data['sexe'][$i], 'grade_id' => $data['grade'][$i]])
                                             ->first();
                 //debug($licencie);die();
                 if($licencie) {
@@ -88,8 +91,8 @@ class InscriptionPassagesController extends AppController
                     $newLicencie = $licencieTable->newEntity();
                     $newLicencie->id = null;
                     $newLicencie->numero_licence = $data['licence'][$i];
-                    $newLicencie->nom = $data['nom'][$i];
-                    $newLicencie->prenom = $data['prenom'][$i];
+                    $newLicencie->nom = strtoupper($data['nom'][$i]);
+                    $newLicencie->prenom = strtoupper($data['prenom'][$i]);
                     $newLicencie->ddn = Time::createFromFormat('d/m/Y', $data['ddn'][$i])->format('Y');
                     $newLicencie->sexe = $data['sexe'][$i];
                     $newLicencie->grade_id = $data['grade'][$i];
@@ -156,6 +159,25 @@ class InscriptionPassagesController extends AppController
         $this->set(compact(['title','description','headimg','event']));
         
     }
+    
+    public function edit($id) {
+        
+        $inscription = $this->InscriptionPassages->get($id);
+        if ($this->request->is(['patch', 'post', 'put'])) {
+            debug($this->request->data);die();
+            $inscription = $this->InscriptionPassages->patchEntity($inscription, $this->request->data);
+            if ($this->InscriptionPassages->save($inscription)) {
+                
+                $this->Flash->success(__('Le club a été sauvegardé.'));
+            } else {
+                $this->Flash->error(__('Le club n\'a pas été sauvegardé.'));
+            }
+        }     
+        
+        return $this->redirect(['action'=>'inscriptions',$id]);
+        
+    }
+    
     public function delete($id, $event) {
     
         $this->request->allowMethod(['post', 'delete']);

@@ -23,7 +23,7 @@
     <?php
     echo $this->Html->css('jquery-ui');
     echo $this->Html->css('jquery-ui.structure');
-
+    echo $this->Html->css('bootstrap');
     echo $this->fetch('css');
 	
 	echo $this->Html->css('main'); 
@@ -109,6 +109,7 @@ echo $this->Html->link(
 
     <?php echo $this->Html->script('underscore-min.js');?>
     <?php echo $this->Html->script('add-element-table.js');?>
+    <?php echo $this->Html->script('bootstrap'); ?>
 
     <?php echo $this->fetch('script'); ?>
 </body>
