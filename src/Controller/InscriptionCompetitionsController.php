@@ -106,6 +106,7 @@ class InscriptionCompetitionsController extends AppController
             
         $user_id = $this->Auth->User('id');
         $user_email = $this->Auth->User('email');
+        $user_club = $this->Auth->User('club_id');    
          
             
             // On cherche les inscriptions à l'événement qu'il a déjà faite
@@ -204,7 +205,11 @@ class InscriptionCompetitionsController extends AppController
 		$data['certificat'] = $data['certificat']['year'];
 		$data['licencie']['ddn'] = $data['licencie']['ddn']['year'];
 		$data['licencie']['discipline_id'] = $event['discipline_id'];
-     
+        
+        // Je mets nom et prénom en majuscules
+                  
+             $data['licencie']['nom'] =  strtoupper($data['licencie']['nom']);
+             $data['licencie']['prenom'] =  strtoupper($data['licencie']['prenom']);      
 		
 		
 		// Si ce n'est pas un nouveau club, on prend l'id de la liste de selection
@@ -298,10 +303,11 @@ class InscriptionCompetitionsController extends AppController
       
         else {
             
-            // Sinon, je vérifie qu'il existe pas dans la base à partir du numéro de licence
+            // Sinon, je vérifie qu'il existe pas dans la base à partir du numéro de licence ou du nom /prenom
             
              $licencie = $this->InscriptionCompetitions->Licencies->find('all')
            ->Where(['numero_licence'=>$data['licencie']['numero_licence']])
+           ->orWhere(['nom'=>$data['licencie']['nom'], 'prenom'=>$data['licencie']['prenom']])
            ->first();
             
             if($licencie !== null) {
@@ -429,11 +435,19 @@ class InscriptionCompetitionsController extends AppController
                         
                          } else {
                         
-                          // Sinon je vérifie s'il n'existe pas à partir de la licence
+                            
+                          // Sinon je vérifie s'il n'existe pas à partir de la licence ou du nom / prenom
+                             
+                               // Je mets nom et prénom en majuscules
+                  
+             $datao['nom'] =  strtoupper($datao['nom']);
+             $datao['prenom'] =  strtoupper($datao['prenom']);      
+		
                              
                              
                       $licencio = $this->InscriptionCompetitions->Licencies->find('all')
                         ->Where(['numero_licence'=>$datao['numero_licence']])
+                        ->orWhere(['nom'=>$datao['nom'], 'prenom'=>$datao['prenom']])  
                         ->first();
                              
                           
@@ -545,10 +559,16 @@ class InscriptionCompetitionsController extends AppController
             if(!empty($dataa['licencie']['nom'])){
                
            
-              
+                // Je mets nom et prénom en majuscules
+                  
+             $dataa['licencie']['nom'] =  strtoupper($dataa['licencie']['nom']);
+             $dataa['licencie']['prenom'] =  strtoupper($dataa['licencie']['prenom']);      
+		
+                
                  // Je vérifie s'il existe ou pas
                         $licencio = $this->InscriptionCompetitions->Licencies->find('all')
                         ->where(['numero_licence'=>$dataa['licencie']['numero_licence']])
+                        ->orWhere(['nom'=>$dataa['licencie']['nom'], 'prenom'=>$dataa['licencie']['prenom']])    
                         ->first();
                         
                         $result_inscro = $licencio;
@@ -658,6 +678,9 @@ class InscriptionCompetitionsController extends AppController
                  ->where(['user_id'=>$user_id, 'InscriptionAdministratifs.competition_id'=>$id])
                  ->contain('Licencies');
              
+             $club = $this->InscriptionCompetitions->Clubs->find('all')
+                 ->where(['id'=>$user_club])
+                 ->first();
             
              
     $CakeEmail = new Email('default');
@@ -665,7 +688,8 @@ class InscriptionCompetitionsController extends AppController
 	$CakeEmail->subject('Récapitulatif de vos inscriptions à : '.$event['name']);
 	$CakeEmail->viewVars(['recap_compete' => $recap_compete,
 	'recap_admin' => $recap_admin,
-    'event'=>$event
+    'event'=>$event,
+    'club'=>$club                      
 	]);
 	
 	$CakeEmail->emailFormat('html');
@@ -747,7 +771,10 @@ class InscriptionCompetitionsController extends AppController
 			$query->update()
    			 ->set(['participation_indiv' => 0])
    		 	->where(['id' => $id])
-    		->execute();        
+    		->execute();      
+            
+              $this->Flash->success('L\'inscription a été supprimée');
+              return $this->redirect(['action'=>'inscriptions',$compete]);
         }
         
         // Sinon, on supprime totalement l'inscription
@@ -789,7 +816,9 @@ class InscriptionCompetitionsController extends AppController
 			$query->update()
    			 ->set(['participation_equipe' => 0])
    		 	->where(['id' => $id])
-    		->execute();        
+    		->execute();     
+            $this->Flash->success('L\'inscription a été supprimée');
+              return $this->redirect(['action'=>'inscriptions',$compete]);
         }
         
         // Sinon, on supprime totalement l'inscription
@@ -863,6 +892,19 @@ class InscriptionCompetitionsController extends AppController
         $this->set('id',$id);
       
         $user_id =  $this->Auth->User('id');
+        
+        
+        // anti-hack, seul le créateur de l'événement peut voir les inscriptions
+        if($user_id !== $event['user_id'])
+            
+        {
+            
+            $this->Flash->error('Vous n\'êtes pas autorisé à accéder à cette section.');
+
+            $this->redirect($this->referer());
+            
+        }
+        
         
          $title = $event['name'];
          $description = $event['name'];
