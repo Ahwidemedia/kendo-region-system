@@ -124,7 +124,7 @@ $data['competition'] = array();
          $this->set('article',$article);
          
          if(!empty($article['image'])) {
-             $headimg = 'headers/evenements/g-'.$article['image'];
+             $headimg = 'headers/evenements/l-'.$article['image'];
              
          }else {
              

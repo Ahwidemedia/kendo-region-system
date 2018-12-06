@@ -88,7 +88,7 @@ class InscriptionCompetitionsController extends AppController
         
         // Envoie de l'image, dépend de si y en a une uploadée ou pas
         
-         if(!empty($event['image'])) { $headimg = 'headers/evenements/g-'.$event['image']; }else { $headimg =  'header_main.png';}
+         if(!empty($event['image'])) { $headimg = 'headers/evenements/l-'.$event['image']; }else { $headimg =  'header_main.png';}
          
          
           $this->set('headimg',$headimg);
@@ -742,7 +742,7 @@ class InscriptionCompetitionsController extends AppController
         $this->set('description', $description);
          
          
-          if(!empty($event['image'])) { $headimg = 'headers/evenements/g-'.$event['image']; }else { $headimg =  'header_main.png';}
+          if(!empty($event['image'])) { $headimg = 'headers/evenements/l-'.$event['image']; }else { $headimg =  'header_main.png';}
          
          
           $this->set('headimg',$headimg);
@@ -915,7 +915,7 @@ class InscriptionCompetitionsController extends AppController
         $this->set('description', $description);
         
           
-         if(!empty($event['image'])) { $headimg = 'headers/evenements/g-'.$event['image']; }else { $headimg =  'header_main.png';}
+         if(!empty($event['image'])) { $headimg = 'headers/evenements/l-'.$event['image']; }else { $headimg =  'header_main.png';}
          
          
           $this->set('headimg',$headimg);
@@ -1225,7 +1225,7 @@ class InscriptionCompetitionsController extends AppController
         $this->set('description', $description);
         
           
-         if(!empty($event['image'])) { $headimg = 'headers/evenements/g-'.$event['image']; }else { $headimg =  'header_main.png';}
+         if(!empty($event['image'])) { $headimg = 'headers/evenements/l-'.$event['image']; }else { $headimg =  'header_main.png';}
          
          
           $this->set('headimg',$headimg);
@@ -1354,7 +1354,7 @@ class InscriptionCompetitionsController extends AppController
         $this->set('description', $description);
         
           
-         if(!empty($event['image'])) { $headimg = 'headers/evenements/g-'.$event['image']; }else { $headimg =  'header_main.png';}
+         if(!empty($event['image'])) { $headimg = 'headers/evenements/l-'.$event['image']; }else { $headimg =  'header_main.png';}
          
          
           $this->set('headimg',$headimg);
@@ -1514,7 +1514,7 @@ class InscriptionCompetitionsController extends AppController
         $this->set('description', $description);
         
           
-         if(!empty($event['image'])) { $headimg = 'headers/evenements/g-'.$event['image']; }else { $headimg =  'header_main.png';}
+         if(!empty($event['image'])) { $headimg = 'headers/evenements/l-'.$event['image']; }else { $headimg =  'header_main.png';}
          
          
           $this->set('headimg',$headimg);

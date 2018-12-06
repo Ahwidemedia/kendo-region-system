@@ -81,7 +81,7 @@ class InscriptionAdministratifsController extends AppController
         $this->set('description', $description);
         
           
-         if(!empty($event['image'])) { $headimg = 'headers/evenements/g-'.$event['image']; }else { $headimg =  'header_main.png';}
+         if(!empty($event['image'])) { $headimg = 'headers/evenements/l-'.$event['image']; }else { $headimg =  'header_main.png';}
          
          
           $this->set('headimg',$headimg);
@@ -194,7 +194,7 @@ class InscriptionAdministratifsController extends AppController
         $this->set('description', $description);
         
           
-         if(!empty($event['image'])) { $headimg = 'headers/evenements/g-'.$event['image']; }else { $headimg =  'header_main.png';}
+         if(!empty($event['image'])) { $headimg = 'headers/evenements/l-'.$event['image']; }else { $headimg =  'header_main.png';}
          
          
           $this->set('headimg',$headimg);
