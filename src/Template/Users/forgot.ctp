@@ -1,11 +1,10 @@
-<div class="padding-50"></div>
-
-<h1>Rappel du mot de passe</h1>
+<h1 class="center">Rappel du mot de passe</h1>
 
 
-<div class="login-panel">
+<div class="center width-70 font-2">
 <?php echo $this->Form->create($user);?>
-<?php echo $this->Form->input('email', ['label'=>'Email']);
-echo $this->Form->button('Renvoyer', ['type' => 'submit', 'class'=>'bouton-gris']);
+    <p class="center padding-1">Entrer votre email</p>
+<?php echo $this->Form->input('email', ['label'=>false, 'class="width-30 center padding-1 margin-1']);
+echo $this->Form->button('Renvoyer', ['type' => 'submit', 'class'=>'normalButton padding-1 margin-1']);
 echo $this->Form->end(); ?>
 </div>
