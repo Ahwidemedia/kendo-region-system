@@ -1,7 +1,7 @@
 <h1>Identification</h1>
 
-<p class="font-1 center width-80 padding-3">Afin d'éviter les doublons , UN responsable par club doit procéder aux inscriptions pour son club. <br /><br />Vous devez pour cela vous enregistrer, vous pourrez ainsi
-consulter et modifier vos inscriptions jusqu'à la date limite de réception établie par l'organisateur de la compétition.
+<p class="font-1 center width-80 padding-3">
+En vous enregistrant, vous pourrez  consulter et modifier vos inscriptions jusqu'à la date limite de réception établie par l'organisateur de la compétition.
 <br /><br />Une fois cette date de passée, les inscriptions sont définitivement fermées.</p>
 
 <div class="float-left margin-top-3 width-50 center normal-form">
