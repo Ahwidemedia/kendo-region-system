@@ -37,7 +37,7 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
             Inscriptions individuelles
         </h2>
 
-        <p class="center italic margin-top-3 ">Cliquer sur le " <span style="font-size:1.2em; text-align:center; width:10px; height:10px; color:darkorange; padding: 1px 5px; border:solid darkorange 2px; border-radius:50%">+</span> " pour ajouter une personne</p>
+        <p class="center italic margin-top-3 ">Cliquer sur le " <span style="font-size:1.2em; display:inline-block; text-align:center; width:20px; height:20px; padding-top:2px;padding-right:1px; color:#ff5b0f; border:solid #ff5b0f 2px; border-radius:50%">+</span> " pour ajouter une personne</p>
 
         <table class="tableau-gris" style="margin-top:5px" id="addelement-table">
             <thead>
@@ -646,7 +646,7 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
             
                     
                      <?php echo $this->Form->select("administratif.$count1.licencie.arbitre", 
-                        ['1'=>'Bénévole', '2'=>'Diplômé régional','3'=>'Diplômé national'],
+                        ['1'=>'Stagiaire', '2'=>'Diplômé régional','3'=>'Diplômé national'],
                         ['default'=>$admin['licency']['arbitre'],'empty' => ' ']); ?>
                  
                  
@@ -655,7 +655,7 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                   <?php 
                   
                     echo $this->Form->select("administratif.$count1.licencie.commissaire", 
-                        ['1'=>'Bénévole', '2'=>'Diplômé régional','3'=>'Diplômé national'],
+                        ['1'=>'Stagiaire', '2'=>'Diplômé régional','3'=>'Diplômé national'],
                     ['default'=>$admin['licency']['commissaire'],'empty' => ' ']); ?>
                    
             </td>
@@ -767,7 +767,9 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                    <br />
                    Pour les autres, le certificat médical est toujours obligatoire.
                 <br /><br />
-                   Pour les mineurs surclassés, la présentation d'un <span style="text-decoration:underline">certificat médical de surclassement</span> est obligatoire.
+                   Pour les juniors et espoirs surclassés, la présentation d'un <span style="text-decoration:underline">certificat médical de surclassement</span> est obligatoire.
+                     <br /><br />
+                   Pour les mineurs, <?php echo $this->Html->link('une autorisation parentale','/files/autorisation-parentale.pdf', ['style'=>'color:blue; text-decoration:underline']);  ?> doit être présentée.
                </p>
                
                <p class="margin-top-3 center width-50">  
@@ -776,7 +778,9 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
                   le cadre de l'organisation de la compétition.
                </p>
                
-               <div id="doublon" class="center width-70 padding-3"></div>
+               <div id="doublon" class="center width-70 padding-3" style="display:none"><span>
+                   </span>
+              <p class="padding-1 red center" style="font-size:0.9em"> Les modifications prises en compte sont sur les inscriptions en équipe</p></div>
                
                
         <div class="margin-top-3 center ">
@@ -1064,7 +1068,10 @@ nextsurage.prop('checked', true);
         // get row
         var row = $(this);
                                                
-                                      
+     
+                                               
+                                               
+                                               
         var licence = row.children().eq(0).children().eq(2).val();
         var name = row.children().eq(1).children().eq(0).val();
         var prenom = row.children().eq(2).children().eq(0).val();
@@ -1072,7 +1079,8 @@ nextsurage.prop('checked', true);
         var grade = row.children().eq(4).children().eq(0).find(':selected').text();                                       
         var ddn = row.children().eq(5).children().eq(0).find(':selected').text();
         var certificat = row.children().eq(7).children().eq(0).find(':selected').text();
-                                          
+         
+     
                                               
                                                 
         var test = { licence: licence, name : name, prenom : prenom, sexe : sexe,  grade : grade, ddn : ddn }    
@@ -1084,9 +1092,10 @@ nextsurage.prop('checked', true);
         
                                                
       $(".lines2").each(function() {
-         console.log('lala');
+
         var row = $(this);
-                                            
+                     
+                                               
                                     
         var licence = row.children().eq(0).children().eq(2).children().eq(0).val();    
         var name = row.children().eq(1).children().eq(0).children().eq(0).val();                                          
@@ -1096,11 +1105,23 @@ nextsurage.prop('checked', true);
          var grade = row.children().eq(5).children().eq(0).children().eq(0).find(':selected').text();
         var certificat = row.children().eq(7).children().eq(0).children().eq(0).val();
         
-    
+       if(licence !== '' || 
+            name !== '' || 
+            prenom !== '' || 
+            sexe !== '' || 
+            ddn !== '' ||
+            certificat !== ''){
+                                               
+                row.find("td input:text,td select").each(function() {
+            $(this).prop('required', true);
+            
+        });                       
+                                               }
+                                               
+                                               
     var test2 = { licence: licence, name : name, prenom : prenom, sexe : sexe, ddn : ddn, grade : grade}    
-           
-                                        
-           tableequipe.push(test2);                                     
+
+                                               tableequipe.push(test2);                                     
                                          
    });                                            
                       
@@ -1117,38 +1138,44 @@ nextsurage.prop('checked', true);
     tableindiv[i].sexe !== tableequipe[j].sexe || 
     tableindiv[i].ddn !== tableequipe[j].ddn ||                                      
     tableindiv[i].grade !== tableequipe[j].grade ||                                      
-     tableindiv[i].certificat !== tableequipe[j].certificat                                    )) {
+     tableindiv[i].certificat !== tableequipe[j].certificat  )) {
       result.push(tableindiv[i]);
                                        
       break;
     }
                                          
-                                            
+                                        
   }
 }     
            
   if (result.length !== 0) {
        var newHTML = [];
 for (var i = 0; i < result.length; i++) {
-    newHTML.push('<p class="padding-1 red center">Le combattant ' + result[i].name + ' est enregistré en individuel et en équipe avec des informations différentes. </span>');
+    newHTML.push('<p class="padding-1 red center" style="font-size:0.9em">Le combattant ' + result[i].name + ' est enregistré en individuel et en équipe avec des informations différentes. </p>');
 }
+   $("#doublon").show();            
+             
+$("#doublon > span").html(newHTML.join(""));
+                                         
+                                         
+}     else {
+   $("#doublon").hide(); 
+   $("#doublon").html("<span></span>");}                               
+     });
                
-          
-$("#doublon").html(newHTML.join(""));
-                                         
-                                         
-}                                    
-                        
-                                          
-                                               
-                                               
-                                               });
+               
+               
                                                
      
        <?php $this->Html->scriptEnd(); ?>
-        
-      
+     
+     <?php echo $this->Html->scriptStart(['block' => true]);?>
+     
+               
+               
+     <?php $this->Html->scriptEnd(); ?>           
 
+               
  <?php echo $this->Html->scriptStart(['block' => true]);?>
 
                $(document).ready(function() {
