@@ -1,14 +1,10 @@
 <?php
-
 namespace App\Controller;
 use Cake\ORM\Table;
 use Cake\ORM\TableRegistry;
 use Cake\Event\Event;
 use Cake\Mailer\Email;
-
 class UsersController extends AppController {
-
-
   // public $components = ['RBruteForce.RBruteForce'];
   
   
@@ -28,7 +24,6 @@ class UsersController extends AppController {
         					'active',
         					'forgotsuccess',
                     ]);
-
     }
   
   
@@ -37,7 +32,6 @@ class UsersController extends AppController {
          parent::initialize();
    		    
         }
-
     public function login() {
 	
         $user = $this->Users->newEntity();
@@ -50,16 +44,33 @@ class UsersController extends AppController {
  		    $data = $this->request->data;
             //debug($data);die();
 		    if( isset($data['register'] ) ){
+                
+                  // Si c'est un nouveau club, on le rentre dans la base
+        if(isset($data['new_club'])){
+            
+                if($data['new_club'] == 1) {
+	
+            $this->loadModel('Clubs');
+            
+	$club = $this->Clubs->newEntity();
+	$club->name = strtoupper($data['club_name']);
+    $club->region_id = $data['region_id'];
+	$result_club = $this->Clubs->save($club);
+	
+   
+	$data['club_id'] = $result_club['id'];
+	} 
+            }
                            
                 $entity = $this->Users->patchEntity($user, $data);
             	$username = $data['username'];
             	$email = $data['email'];
-            	$entity->active = 0;
+            	$entity->active = 1;
             	$entity->token = md5(time('-' .uniqid()));
             	$entity->profil_id = 3;
          
 		        if( $result = $this->Users->save($entity)) {
-
+                    /*
                 	$user = $this->Users->find('all')->where(['email' => $email]);
                 	$row = $user->first();	
                 	$id = $row->id;
@@ -71,9 +82,9 @@ class UsersController extends AppController {
                 	$CakeEmail->viewVars([ 'id' => $id, 'token' => $token, 'username' => $username]);
                 	$CakeEmail->emailFormat('html');
                 	$CakeEmail->template('inscription');
-                	$CakeEmail->send();
+                	$CakeEmail->send(); */
                 	
-                	$this->Flash->success('L\'email pour l\'activation du compte a été envoyé avec succès.');
+                	$this->Flash->success('Enregistrement réussi');
                 	return $this->redirect(['action' => 'instructions']);
                 }
             } else {
@@ -140,6 +151,10 @@ class UsersController extends AppController {
         $clubs = $this->Clubs->find('list')->order(['name'=>'ASC']);
         $this->set('clubs', $clubs);
         
+        $this->loadModel("Regions");
+          $this->set('regions', $this->Regions->find('list')->order(['name'=>'ASC']));
+  
+        
     }
 	
 	public function logout() {
@@ -169,7 +184,6 @@ class UsersController extends AppController {
 	
 		$this->set('title', 'Regénérer mon mot de passe');
 		$this->set('description', 'Retrouvez votre mot de passe par mail');
-
 	$user = $this->Users->newEntity();	
 	 $this->set('user', $user);
 		
@@ -199,14 +213,9 @@ class UsersController extends AppController {
  	
 	$usersTable = TableRegistry::get('Users');
 	$user = $usersTable->get($id);
-
 	$user->token = $token;
 	$username = $user->username;
-
-
 if ($usersTable->save($user)) {
-
-
 	
 	$CakeEmail = new Email('default');
 	$CakeEmail->to($mail);
@@ -217,7 +226,6 @@ if ($usersTable->save($user)) {
 	$CakeEmail->send();
 	
 	$this->Flash->success('Un mail a été envoyé avec les instructions');
-
 	return $this->redirect(['action' => 'forgotsuccess']);
 				}
 	
@@ -230,7 +238,6 @@ if ($usersTable->save($user)) {
 		
 		$this->set('title', 'Les instructions ont bien été envoyées');
 $this->set('description', 'Vérifier votre boîte mail pour les instructions d\'un nouveau mot de passe');
-
 		
 		}
 	
@@ -238,7 +245,6 @@ $this->set('description', 'Vérifier votre boîte mail pour les instructions d\'
 	
 	$this->set('title', 'Confirmation du mot de passe');
 $this->set('description', 'Confirmez votre mot de passe');
-
 	
 	$user = $this->Users->find('all')
 	->where(['id' => $user_id, 'token' => $token]);
@@ -262,10 +268,8 @@ $this->set('description', 'Confirmez votre mot de passe');
 	
 	else{
 	
-
 	$usersTable = TableRegistry::get('Users');
 	$user = $usersTable->get($user_id);
-
 	$user->token = '';
 	$user->password = $poste['password'];
 	
@@ -273,7 +277,6 @@ $this->set('description', 'Confirmez votre mot de passe');
 	$usersTable->save($user);
 	
 	
-
 	
 	$this->Flash->success("Votre mot de passe a bien été réinitialisé");
 	
@@ -283,19 +286,14 @@ $this->set('description', 'Confirmez votre mot de passe');
 			}
 		}
 			
-
-
 	public function instructions() {
 	$this->set('title', 'Les instructions ont été envoyées');
-
 	$this->set('description', 'Les instructions pour l\'activation de votre compte ont été envoyées');
 }
-
 	public function activate($user_id, $token) {
 	
 	$this->set('title', 'Inscriptions Kendo - Activation du compte');
 $this->set('description', 'Activez votre compte Inscriptions Kendo dès maintenant');
-
 	
 	$user = $this->Users->find('all')
 	->where(['id' => $user_id,
@@ -312,17 +310,13 @@ $this->set('description', 'Activez votre compte Inscriptions Kendo dès maintena
 	
 	$data = $this->request->data();
 	
-
 	$usersTable = TableRegistry::get('Users');
 	$user = $usersTable->get($user_id);
-
 	$user->token = '';
 	$user->active = '1';
 	
-
 	
 	if ($usersTable->save($user)) {
-
 	$this->Flash->success("Votre compte a bien été activé");
 	return $this->redirect(['action' => 'active']);
 	
@@ -339,16 +333,13 @@ $this->set('description', 'Votre compte est maintenant activé');
 	
 	$this->set('title', 'Renvoi du mail');
 $this->set('description', 'Renvoi du mail pour votre activation de compte');
-
 if($this->request->is(['post'])) {
-
 $email = $this->request->data['email'];
  
  $user = $this->Users->find('all')
 	->where(['mail' => $email])
 	->first();
 	
-
 	if(!empty($user)){
 	
 	$id = $user->id;
@@ -365,7 +356,6 @@ $email = $this->request->data['email'];
 	if($CakeEmail->send()) {
 	
 	$this->Flash->success('Un mail a été envoyé avec les instructions pour l\'activation du compte');
-
 				}
 			}
 		
@@ -379,11 +369,8 @@ $email = $this->request->data['email'];
 	
 	 $this->set('title', 'Changer mon mot de passe');
 $this->set('description', 'Changer votre mot de passe');
-
 $id = $this->request->session()->read('Auth.User.id');
 	
-
-
 	 	$user = $this->Users->find('all')
 	->where(['id' => $id])
 	->first();
@@ -409,8 +396,6 @@ $id = $this->request->session()->read('Auth.User.id');
 	 if ($user->errors()) {
 	 
              $this->Flash->error(__('Une erreur est survenue.'));
-
-
          } else {
          
          if($this->Users->save($user)) {
