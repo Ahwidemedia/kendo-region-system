@@ -1164,6 +1164,7 @@ input[type=password] {
     background: #fafafa;
     border-radius: 4px;
     cursor: pointer;
+    margin-bottom:30px;
 }
 
 .success p {
@@ -1187,6 +1188,7 @@ input[type=password] {
     border-radius: 5px;
     margin: 0px 0px 15px 0;
     padding: 10px;
+    color:red;
 }
 
 .error {
@@ -1322,7 +1324,7 @@ section .modal-height a {
     margin-top: 30px;
     width: 100%;
     margin-bottom: 30px;
-
+    font-size:0.9em;
     border: 3px solid #bfbfbf;
     width: 95%;
     margin-left: auto;
