@@ -73,7 +73,7 @@ class InscriptionPassagesController extends AppController
             $this->loadModel('Licencies');
             $licencie = $this->Licencies->find()
             ->select(['id'])
-            ->where(['nom' => strtoupper($data['nom']), 'prenom' => strtoupper($data['prenom']), 'sexe' => $data['sexe'][0], 'grade_id' => $data['grade_actuel_id']])
+            ->where(['nom' => strtoupper($data['nom']), 'prenom' => strtoupper($data['prenom']), 'sexe' => $data['sexe'][0], 'grade_id' => $data['grade_id']])
             ->first();
             if($licencie) {
                 $licencie->nationalite = $data['nationalite'];
@@ -110,23 +110,41 @@ class InscriptionPassagesController extends AppController
                 //debug($newLicencie);die();
             }
             
-            $inscriptionTable = TableRegistry::get('InscriptionPassages');
-            $inscription = $inscriptionTable->newEntity();
-            $inscription->id = null;
-            $inscription->club_id = $data['club_id'];
-            $inscription->passage_id = $idPassage;
-            $inscription->user_id = $userId;
-            $inscription->grade_presente_id = $data['grade_presente_id'];
-            $inscription->commentaire = $data['commentaire'];
-            $inscription->accord_rgpd = $data['consent'];
-            $inscription->licencie_id = $licencieId;
-            //debug($inscription);
-            $inscriptionTable->save($inscription);
+            //On retrouve le licencié si existant
+            $this->loadModel('InscriptionPassages');
+            $inscription = $this->InscriptionPassages->find()->select(['id'])->where(['passage_id'=>$idPassage, 'licencie_id'=>$licencieId])->first();
             
+            if($inscription) {
+                $inscription->club_id = $data['club_id'];
+                $inscription->passage_id = $idPassage;
+                $inscription->user_id = $userId;
+                $inscription->grade_presente_id = $data['grade_presente_id'];
+                $inscription->commentaire = $data['commentaire'];
+                $inscription->accord_rgpd = $data['consent'];
+                $inscription->licencie_id = $licencieId;
+                //debug($inscription);
+                $this->InscriptionPassages->save($inscription);
+                $inscriptionId = $inscription->id;
+            } else {               
+                $inscriptionTable = TableRegistry::get('InscriptionPassages');
+                $inscription = $inscriptionTable->newEntity();
+                $inscription->id = null;
+                $inscription->club_id = $data['club_id'];
+                $inscription->passage_id = $idPassage;
+                $inscription->user_id = $userId;
+                $inscription->grade_presente_id = $data['grade_presente_id'];
+                $inscription->commentaire = $data['commentaire'];
+                $inscription->accord_rgpd = $data['consent'];
+                $inscription->licencie_id = $licencieId;
+                //debug($inscription);
+                $inscriptionTable->save($inscription);
+                $inscriptionId = $inscription->id;
+            }
             
             $recapPassage = $this->InscriptionPassages->find()
                                                       ->contain(['Passages' => ['Disciplines'], 'Grades', 'Licencies'=> ['Clubs','Grades']])
-                                                      ->where(['user_id'=>$userId, 'passage_id'=> $idPassage])->first();
+                                                      ->where(['InscriptionPassages.id' => $inscriptionId])->first();
+            //Envoie du mail recap
             $CakeEmail = new Email('default');
             $CakeEmail->to($userEmail);
             $CakeEmail->bcc('admin@kendo-region-system.fr');

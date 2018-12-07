@@ -545,6 +545,11 @@ CHANGE COLUMN `date_naissance` `date_naissance` DATE NOT NULL;
 
 ALTER TABLE `inscription_passages` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT; 
 
+ALTER TABLE `inscription_passages` 
+ADD UNIQUE INDEX `inscription_passage_uk` (`passage_id` ASC, `licencie_id` ASC);
+;
+
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

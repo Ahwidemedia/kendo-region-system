@@ -36,7 +36,11 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
             </tr>
             <tr>
                 <td>Sexe</td>
-                <td><?= $this->Form->select("sexe", ['M'=>'M', 'F'=>'F'], ['empty' => ' ', 'name' => 'sexe','label' => false, 'class'=>'sexe-ind', 'required' => true, ($inscription) ? 'value="'.$inscription->licency->sexe.'"' : '']) ?></td>
+                <td><?= $this->Form->input('sexe', ['label' => false,'id'=>'sexe',
+														   	'div' => false,
+															'class' => 'sex-ind', 
+                    										'options'=>[''=>'','F'=>'F','H'=>'H'],
+                    ($inscription) ? 'value="'.$inscription->licency->prenom.'"' : '']); ?></td>
             <tr>
             <tr style="border-top:solid 3px black; ">
                 <td>Nationalité</td>
