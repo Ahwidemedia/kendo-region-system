@@ -27,14 +27,8 @@ class LicenciesTableTest extends TestCase
         'app.licencies',
         'app.clubs',
         'app.regions',
-        'app.inscription_competitions',
-        'app.grades',
-        'app.equipes',
-        'app.categories',
-        'app.competitions',
-        'app.categories_competitions',
-        'app.disciplines',
-        'app.users'
+        'app.grade_actuels',
+        'app.disciplines'
     ];
 
     /**
@@ -67,6 +61,26 @@ class LicenciesTableTest extends TestCase
      * @return void
      */
     public function testInitialize()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test validationDefault method
+     *
+     * @return void
+     */
+    public function testValidationDefault()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test buildRules method
+     *
+     * @return void
+     */
+    public function testBuildRules()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }
