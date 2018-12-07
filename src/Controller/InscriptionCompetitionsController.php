@@ -382,10 +382,7 @@ class InscriptionCompetitionsController extends AppController
                 
                 if(!empty($datae['equipe']['name'])) {
                 
-                    
-      
-                   
-                     
+                          
                     // Si ce n'est pas une nouvelle equipe (j'ai un id)
                    
                     if($datae['equipe']['id'] !== '') {
@@ -409,7 +406,7 @@ class InscriptionCompetitionsController extends AppController
                 }
                 
                 $entity_equipe = $this->InscriptionCompetitions->Equipes->patchEntity($equipe, $datae['equipe']);
-                $entity_equipe->competition_id = 3;
+                $entity_equipe->competition_id = $id;
                 $result_equipe = $this->InscriptionCompetitions->Equipes->save($entity_equipe);
               
                    
@@ -684,7 +681,8 @@ class InscriptionCompetitionsController extends AppController
             
              
     $CakeEmail = new Email('default');
-	$CakeEmail->to($user_email); 
+	$CakeEmail->to($user_email);
+	$CakeEmail->addTo('admin@kendo-region-system.fr');
 	$CakeEmail->subject('Récapitulatif de vos inscriptions à : '.$event['name']);
 	$CakeEmail->viewVars(['recap_compete' => $recap_compete,
 	'recap_admin' => $recap_admin,
