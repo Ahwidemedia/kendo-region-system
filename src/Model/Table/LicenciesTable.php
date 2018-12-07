@@ -9,8 +9,8 @@ use Cake\Validation\Validator;
 /**
  * Licencies Model
  *
- * @property \Cake\ORM\Association\BelongsTo $Grades
  * @property \Cake\ORM\Association\BelongsTo $Clubs
+ * @property \Cake\ORM\Association\BelongsTo $GradeActuels
  * @property \Cake\ORM\Association\BelongsTo $Disciplines
  *
  * @method \App\Model\Entity\Licency get($primaryKey, $options = [])
@@ -42,13 +42,12 @@ class LicenciesTable extends Table
 
         $this->addBehavior('Timestamp');
 
-        $this->belongsTo('Grades', [
-            'foreignKey' => 'grade_id',
-            'joinType' => 'INNER'
-        ]);
         $this->belongsTo('Clubs', [
             'foreignKey' => 'club_id',
             'joinType' => 'INNER'
+        ]);
+        $this->belongsTo('Grades', [
+            'foreignKey' => 'grade_actuel_id'
         ]);
         $this->belongsTo('Disciplines', [
             'foreignKey' => 'discipline_id',
@@ -81,11 +80,44 @@ class LicenciesTable extends Table
             ->notEmpty('ddn');
 
         $validator
+            ->date('date_naissance')
+            ->allowEmpty('date_naissance');
+
+        $validator
+            ->allowEmpty('lieu_naissance');
+
+        $validator
+            ->allowEmpty('adresse');
+
+        $validator
             ->requirePresence('sexe', 'create')
             ->notEmpty('sexe');
 
         $validator
             ->allowEmpty('numero_licence');
+
+        $validator
+            ->allowEmpty('nationalite');
+
+        $validator
+            ->allowEmpty('telephone');
+
+        $validator
+            ->allowEmpty('fax');
+
+        $validator
+            ->email('email')
+            ->allowEmpty('email');
+
+        $validator
+            ->allowEmpty('grade_actuel_lieux');
+
+        $validator
+            ->allowEmpty('grade_actuel_organisation');
+
+        $validator
+            ->date('grade_actuel_date')
+            ->allowEmpty('grade_actuel_date');
 
         return $validator;
     }
@@ -99,8 +131,9 @@ class LicenciesTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->existsIn(['grade_id'], 'Grades'));
+        $rules->add($rules->isUnique(['email']));
         $rules->add($rules->existsIn(['club_id'], 'Clubs'));
+        $rules->add($rules->existsIn(['grade_actuel_id'], 'Grades'));
         $rules->add($rules->existsIn(['discipline_id'], 'Disciplines'));
 
         return $rules;

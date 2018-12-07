@@ -78,7 +78,7 @@ foreach ($articles as $article) { ?>
                             
                             } else{ 
             
-           echo $this->Html->link('Inscriptions passages de grades',['controller'=>'InscriptionPassages','action'=>'inscriptions',$article['passage']['id']]); } ?>
+           echo $this->Html->link('Inscriptions passages de grades',['controller'=>'InscriptionPassages','action'=>'index',$article['passage']['id']]); } ?>
             
             
             <?php if($conn['id'] == $article['user_id']) { ?>

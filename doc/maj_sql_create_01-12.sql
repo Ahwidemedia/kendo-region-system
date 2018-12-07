@@ -521,6 +521,29 @@ CHANGE COLUMN `id` `id` INT(11) NOT NULL AUTO_INCREMENT ;
 ALTER TABLE `inscription_passages` 
 ADD UNIQUE INDEX `inscription_passage_unique` (`passage_id` ASC, `licencie_id` ASC);
 
+ALTER TABLE `licencies` 
+ADD COLUMN `date_naissance` DATE NULL AFTER `ddn`,
+ADD COLUMN `lieu_naissance` VARCHAR(100) NULL AFTER `date_naissance`,
+ADD COLUMN `adresse` VARCHAR(800) NULL AFTER `lieu_naissance`;
+ADD COLUMN `nationalite` VARCHAR(100) NULL AFTER `numero_licence`,
+ADD COLUMN `telephone` VARCHAR(45) NULL AFTER `nationalite`,
+ADD COLUMN `fax` VARCHAR(45) NULL AFTER `telephone`,
+ADD COLUMN `email` VARCHAR(45) NULL AFTER `fax`,
+ADD COLUMN `grade_actuel_lieu` VARCHAR(100) NULL AFTER `grade_actuel_id`,
+ADD COLUMN `grade_actuel_organisation` VARCHAR(100) NULL AFTER `grade_actuel_lieu`,
+ADD COLUMN `grade_actuel_date` DATE NULL AFTER `grade_actuel_organisation`,
+CHANGE COLUMN `grade_id` `grade_actuel_id` INT(11) NOT NULL ;
+
+ALTER TABLE `licencies` 
+CHANGE COLUMN `date_naissance` `date_naissance` DATE NOT NULL ,
+CHANGE COLUMN `numero_licence` `numero_licence` VARCHAR(45) NULL ,
+CHANGE COLUMN `email` `email` VARCHAR(45) NOT NULL ,
+CHANGE COLUMN `grade_id` `grade_actuel_id` INT(11) NOT NULL ;
+
+ALTER TABLE `licencies` 
+CHANGE COLUMN `date_naissance` `date_naissance` DATE NOT NULL;
+
+ALTER TABLE `inscription_passages` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT; 
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
