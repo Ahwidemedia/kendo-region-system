@@ -173,8 +173,8 @@ INSERT INTO `profils` (`id`, `name`) VALUES
 
 INSERT INTO `users` (`id`, `username`, `password`, `nom`, `prenom`, `email`, `fonction`, `active`, `token`, `lastlogin`, `profil_id`, `club_id`, `created`, `modified`) VALUES
 (1, 'Unknown', '$2y$10$Vo2TkM5JWIrIvJ3OQVMGDeB6ywTbqYacvz7HqPQe6amU1kDx79C9G', 'Unknown', 'Unknown', 'Unknown@Unknown.fr', 'Unknown', 1, '', '2018-11-29 00:00:00', 1, 1, '2018-11-29 00:00:00', '2018-11-29 00:00:00'),
-(2, 'AmandineHilt', '$2y$10$Vo2TkM5JWIrIvJ3OQVMGDeB6ywTbqYacvz7HqPQe6amU1kDx79C9G', 'Hilt', 'Amandine', 'amandine.hilt@hotmail.fr', 'Bénévole', 1, '', NULL, 0, 1, '2018-11-30 20:39:40', '2018-11-30 20:39:40');
-
+(2, 'AmandineHilt', '$2y$10$Vo2TkM5JWIrIvJ3OQVMGDeB6ywTbqYacvz7HqPQe6amU1kDx79C9G', 'Hilt', 'Amandine', 'amandine.hilt@hotmail.fr', 'Bénévole', 1, '', NULL, 0, 1, '2018-11-30 20:39:40', '2018-11-30 20:39:40'),
+('3', 'acoue', '$2y$10$PPvZAj1AbXeDKUaNRLieP.O6MVnmpdHKrH7oJSxY4NjADMuQtDi6y', 'COUE', 'Anthony', 'anthony.coue@gmail.com', 'NA', '1', '', NULL, '0', '1', '2018-12-01 15:41:30', '2018-12-03 21:32:33');
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
