@@ -1839,3 +1839,829 @@ Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
 
 
 
+2018-12-08 14:04:45 Notice: Notice (8): Uninitialized string offset: 0 in [D:\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php, line 76]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 76
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:04:45 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 61]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 155
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:06:01 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 61]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 14]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 14
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 14]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 14
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 14]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 14
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 18]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 18
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 18]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 18
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 22]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 22
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 22]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 22
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 25]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 25
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 25]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 25
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 29]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 29
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 29]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 29
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 33]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 33
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 33]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 33
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 37]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 37
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 37]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 37
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 41]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 41
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 41]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 41
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 45]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 45
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 45]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 45
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 49]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 49
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 49]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 49
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 53]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 53
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 53]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 53
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 57]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 57
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 57]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 57
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 61]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 61]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 61]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 65]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 65
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 69]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 69
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 69]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 69
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 73]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 73
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 73]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 73
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 77]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 77
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 14:23:35 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 77]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 77
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 15:01:41 Notice: Notice (8): Trying to get property of non-object in [D:\workspacePhp\kendo-region-system\src\Template\Email\html\confirmpassage.ctp, line 61]
+Request URL: /kendo-region-system/inscription-passages/index/1
+Referer URL: http://localhost/kendo-region-system/inscription-passages/index/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Email\html\confirmpassage.ctp, line 61
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Mailer\Email::_renderTemplates() - CORE\src\Mailer\Email.php, line 1916
+Cake\Mailer\Email::_render() - CORE\src\Mailer\Email.php, line 1782
+Cake\Mailer\Email::send() - CORE\src\Mailer\Email.php, line 1336
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+
+2018-12-08 15:06:14 Notice: Notice (8): Undefined variable: id in [D:\workspacePhp\kendo-region-system\src\Controller\InscriptionPassagesController.php, line 28]
+Request URL: /kendo-region-system/inscription-passages/index
+Referer URL: http://localhost/kendo-region-system/evenements/show/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+App\Controller\InscriptionPassagesController::index() - APP/Controller\InscriptionPassagesController.php, line 28
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 60
+[main] - ROOT\webroot\index.php, line 36
+
+
+

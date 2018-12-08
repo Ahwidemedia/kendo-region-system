@@ -33,8 +33,6 @@ class InscriptionPassagesController extends AppController
         //on retrouve les infos du passage
         $this->loadModel('Passages');
         $passage = $this->Passages->find()->where(['id'=> $idPassage])->first();
-        // On envoie article pour que le Form soit lié à la table InscriptionPassages
-        //$passage = $this->InscriptionPassages->newEntity();
             
         // Envoie de l'image, dépend de si y en a une uploadée ou pas
         if(!empty($event['image'])) $headimg = 'headers/evenements/g-'.$event['image'];
@@ -73,8 +71,9 @@ class InscriptionPassagesController extends AppController
             $this->loadModel('Licencies');
             $licencie = $this->Licencies->find()
             ->select(['id'])
-            ->where(['nom' => strtoupper($data['nom']), 'prenom' => strtoupper($data['prenom']), 'sexe' => $data['sexe'][0], 'grade_id' => $data['grade_id']])
+            ->where(['nom' => strtoupper($data['nom']), 'prenom' => strtoupper($data['prenom']), 'sexe' => $data['sexe'], 'grade_id' => $data['grade_id']])
             ->first();
+            
             if($licencie) {
                 $licencie->nationalite = $data['nationalite'];
                 $licencie->adresse = $data['adresse'];

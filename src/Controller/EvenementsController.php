@@ -115,9 +115,8 @@ $data['competition'] = array();
     
      function show($id) {
     
-         $article = $this->Evenements->find('all')
-             ->contain(['Competitions'=> function($q) {return $q
-                            ->contain('Disciplines');}])
+         $article = $this->Evenements->find()
+             ->contain(['Competitions' => ['Disciplines'], 'Passages' => ['Disciplines']])
              ->where(['Evenements.id'=>$id])
              ->first();
          

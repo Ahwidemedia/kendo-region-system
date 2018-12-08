@@ -1,7 +1,7 @@
 <?php 
 $conn = $this->request->session()->read('Auth.User');
 echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'],[ 'class'=>'absolute top-right']);
-//debug($inscription);die;
+$value="";
 ?>
 
 <div class="width-100 center">
@@ -22,73 +22,89 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
 
     <div class="center width-70">
         <h2 class="center black margin-top-50-px ">Inscriptions</h2>
-        <table class="tableau-gris" style="margin-top:5px; border:solid 3px black" id="tabInscription">
+<table class="tableau-gris" style="margin-top:5px; border:solid 3px black" id="tabInscription">
             <tr>
                 <td>Numero de licence</td>
-                <td><?= $this->Form->text("numero_licence",['numero_licence' => 'numero_licence','label' => false, 'class'=>'nom-ind','style'=>'width:80%; height:2em', 'required' => true, ($inscription) ? 'value="'.$inscription->licency->numero_licence.'"' : '']) ?></td>
+                <?php ($inscription) ? $value = $inscription->licency->numero_licence : $value = "" ?>
+                <td><?= $this->Form->text("numero_licence",['numero_licence' => 'numero_licence','label' => false, 'class'=>'nom-ind','style'=>'width:80%; height:2em', 'required' => true, 'value' => $value]) ?></td>
             </tr>
             <tr>
                 <td>Nom</td>
-                <td><?= $this->Form->text("nom",['name' => 'nom','label' => false, 'class'=>'nom-ind','style'=>'width:80%; height:2em', 'required' => true, ($inscription) ? 'value="'.$inscription->licency->nom.'"' : '']) ?></td>
+                <?php ($inscription) ? $value = $inscription->licency->nom : $value = "" ?>
+                <td><?= $this->Form->text("nom",['name' => 'nom','label' => false, 'class'=>'nom-ind','style'=>'width:80%; height:2em', 'required' => true, 'value' => $value]) ?></td>
             <tr>
                 <td>Prénom</td>
-                <td><?= $this->Form->text("prenom",['name' => 'prenom','label' => false, 'class'=>'prenom-ind','style'=>'width:80%; height:2em', 'required' => true, ($inscription) ? 'value="'.$inscription->licency->prenom.'"' : '']) ?></td>
+                <?php ($inscription) ? $value = $inscription->licency->prenom : $value = "" ?>
+                <td><?= $this->Form->text("prenom",['name' => 'prenom','label' => false, 'class'=>'prenom-ind','style'=>'width:80%; height:2em', 'required' => true, 'value' => $value]) ?></td>
             </tr>
             <tr>
                 <td>Sexe</td>
+                <?php ($inscription) ? $value = $inscription->licency->sexe : $value = "" ?>
                 <td><?= $this->Form->input('sexe', ['label' => false,'id'=>'sexe',
 														   	'div' => false,
 															'class' => 'sex-ind', 
-                    										'options'=>[''=>'','F'=>'F','H'=>'H'],
-                    ($inscription) ? 'value="'.$inscription->licency->prenom.'"' : '']); ?></td>
+                    										'options'=>[''=>'Sélectionner','F'=>'F','M'=>'M'],
+                                                            'value' => $value]); ?></td>
             <tr>
             <tr style="border-top:solid 3px black; ">
                 <td>Nationalité</td>
-                <td><?= $this->Form->text("nationalite", ['name' => 'nationalite','label' => false, 'class'=>'nationalite-ind','style'=>'width:80%; height:2em', ($inscription) ? 'value="'.$inscription->licency->nationalite.'"' : '']) ?></td>
+                <?php ($inscription) ? $value = $inscription->licency->nationalite : $value = "" ?>
+                <td><?= $this->Form->text("nationalite", ['name' => 'nationalite','label' => false, 'class'=>'nationalite-ind','style'=>'width:80%; height:2em', 'value' => $value]) ?></td>
             </tr>
             <tr>
                 <td>Adresse</td>
-                <td><?= $this->Form->text("adresse",[ 'name' => 'adresse','label' => false,'style'=>'width:80%; height:2em', 'class'=>'adresse-ind', ($inscription) ? 'value="'.$inscription->licency->adresse.'"' : '']) ?></td>
+                <?php ($inscription) ? $value = $inscription->licency->adresse : $value = "" ?>
+                <td><?= $this->Form->text("adresse",[ 'name' => 'adresse','label' => false,'style'=>'width:80%; height:2em', 'class'=>'adresse-ind', 'value' => $value]) ?></td>
             </tr>
             <tr>
                 <td>Téléphone</td>
-                <td><?= $this->Form->text("telephone", ['name' => 'telephone','label' => false, 'class'=>'telephone-ind','style'=>'width:80%; height:2em', ($inscription) ? 'value="'.$inscription->licency->telephone.'"' : '']) ?></td>
+                <?php ($inscription) ? $value = $inscription->licency->telephone : $value = "" ?>
+                <td><?= $this->Form->text("telephone", ['name' => 'telephone','label' => false, 'class'=>'telephone-ind','style'=>'width:80%; height:2em', 'value' => $value]) ?></td>
             </tr>
             <tr>
                 <td>Fax</td>
-                <td><?= $this->Form->input("fax", ['name' => 'fax','label' => false, 'class'=>'fax-ind', 'style'=>'width:80%; height:2em', ($inscription) ? 'value="'.$inscription->licency->fax.'"' : '']) ?></td>
+                <?php ($inscription) ? $value = $inscription->licency->fax : $value = "" ?>
+                <td><?= $this->Form->input("fax", ['name' => 'fax','label' => false, 'class'=>'fax-ind', 'style'=>'width:80%; height:2em', 'value' => $value]) ?></td>
             </tr>
             <tr>
                 <td>Email</td>
-                <td><?= $this->Form->input("email", ['name' => 'email','label' => false, 'class'=>'email-ind', 'style'=>'width:80%; height:2em', ($inscription) ? 'value="'.$inscription->licency->email.'"' : '']) ?></td>
+                <?php ($inscription) ? $value = $inscription->licency->email : $value = "" ?>
+                <td><?= $this->Form->input("email", ['name' => 'email','label' => false, 'class'=>'email-ind', 'style'=>'width:80%; height:2em', 'value' => $value]) ?></td>
             </tr>
             <tr style="border-top:solid 3px black; ">
-                <td>Date de naissance</td>
-                <td><?= $this->Form->input("date_naissance", ['name' => 'date_naissance','label' => false, 'class'=>'ddn-ind', 'style'=>'width:80%; height:2em', 'required' => true, ($inscription) ? 'value="'.$inscription->licency->date_naissance.'"' : '']) ?></td>
+                <td>Date de naissance</td>                
+                <?php ($inscription) ? $value = $inscription->licency->date_naissance : $value = "" ?>
+                <td><?= $this->Form->input("date_naissance", ['id' => 'date_naissance','name' => 'date_naissance','label' => false, 'class'=>'ddn-ind', 'style'=>'width:80%; height:2em', 'required' => true, 'value' => $value]) ?></td>
             </tr>
             <tr>
                 <td>Lieu de naissance</td>
-                <td><?= $this->Form->input("lieu_naissance", ['name' => 'lieu_naissance','label' => false, 'class'=>'ldn-ind', 'style'=>'width:80%; height:2em', ($inscription) ? 'value="'.$inscription->licency->lieu_naissance.'"' : '']) ?></td>
+                <?php ($inscription) ? $value = $inscription->licency->lieu_naissance : $value = "" ?>
+                <td><?= $this->Form->input("lieu_naissance", ['name' => 'lieu_naissance','label' => false, 'class'=>'ldn-ind', 'style'=>'width:80%; height:2em', 'value' => $value]) ?></td>
             </tr>
             <tr style="border-top:solid 3px black; ">
                 <td>Grade précédent</td>
-                <td><?= $this->Form->input("grade_id", ['name' => 'grade_id','label' => false, 'class'=>'grade-ind', 'style'=>'width:80%; height:2em', 'required' => true, ($inscription) ? 'value="'.$inscription->licency->grade_id.'"' : '',  ['options' => $grades]]) ?></td>
+                <?php ($inscription) ? $value = $inscription->licency->grade_id : $value = "" ?>
+                <td><?= $this->Form->input("grade_id", ['name' => 'grade_id','label' => false, 'class'=>'grade-ind', 'style'=>'width:80%; height:2em', 'required' => true,'value' => $value]) ?></td>
             </tr>
             <tr>
                 <td>Obtenu le</td>
-                <td><?= $this->Form->input("grade_actuel_date", ['name' => 'grade_actuel_date','label' => false, 'class'=>'obteny-ind', 'style'=>'width:80%; height:2em', 'required' => true, ($inscription) ? 'value="'.$inscription->licency->grade_actuel_date.'"' : '']) ?></td>
+                <?php ($inscription) ? $value = $inscription->licency->grade_actuel_date : $value = "" ?>
+                <td><?= $this->Form->input("grade_actuel_date", ['id' => 'grade_actuel_date','name' => 'grade_actuel_date','label' => false, 'class'=>'obteny-ind', 'style'=>'width:80%; height:2em', 'required' => true, 'value' => $value]) ?></td>
             </tr>
             <tr>
                 <td>Lieu d'obtention</td>
-                <td><?= $this->Form->input("grade_actuel_lieu", ['name' => 'grade_actuel_lieu','label' => false, 'class'=>'lieu-obtention-ind', 'style'=>'width:80%; height:2em', 'required' => true, ($inscription) ? 'value="'.$inscription->licency->grade_actuel_lieu.'"' : '']) ?></td>
+                <?php ($inscription) ? $value = $inscription->licency->grade_actuel_lieu : $value = "" ?>
+                <td><?= $this->Form->input("grade_actuel_lieu", ['name' => 'grade_actuel_lieu','label' => false, 'class'=>'lieu-obtention-ind', 'style'=>'width:80%; height:2em', 'required' => true, 'value' => $value]) ?></td>
             </tr>
             <tr>
                 <td>Organisation</td>
-                <td><?= $this->Form->input("grade_actuel_organisation", ['name' => 'grade_actuel_organisation','label' => false, 'class'=>'organisation-ind', 'style'=>'width:80%; height:2em', 'required' => true, ($inscription) ? 'value="'.$inscription->licency->grade_actuel_organisation.'"' : '']) ?></td>
+                <?php ($inscription) ? $value = $inscription->licency->grade_actuel_organisation : $value = "" ?>
+                <td><?= $this->Form->input("grade_actuel_organisation", ['name' => 'grade_actuel_organisation','label' => false, 'class'=>'organisation-ind', 'style'=>'width:80%; height:2em', 'required' => true, 'value' => $value]) ?></td>
             </tr>
             <tr style="border-top:solid 3px black; ">
                 <td>Grade présenté</td>
-                <td><?= $this->Form->input("grade_id", ['name' => 'grade_presente_id','label' => false, 'class'=>'grade-ind', 'style'=>'width:80%; height:2em', 'required' => true, ($inscription) ? 'value="'.$inscription->grade_presente_id.'"' : '',  ['options' => $grades]]) ?></td>
+                <?php ($inscription) ? $value = $inscription->grade_presente_id : $value = "" ?>
+                <td><?= $this->Form->input("grade_id", ['name' => 'grade_presente_id','label' => false, 'class'=>'grade-ind', 'style'=>'width:80%; height:2em', 'required' => true,'value' => $value]) ?></td>
             </tr>            
         </table>
         <div class="center padding-3">
@@ -145,9 +161,11 @@ echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'
 	</div>
 </div>
 
-
 <?php  $this->Html->scriptStart(['block' => true]); ?>
-
+$( function() {
+    $( "#date_naissance" ).datepicker();
+    $( "#grade_actuel_date" ).datepicker();
+} );
 
 function newclub(x) { if($(x).is(':checked')) { $(".newclub").addClass("display-block"); } } 
       

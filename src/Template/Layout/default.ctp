@@ -84,34 +84,32 @@ echo $this->Html->link(
 
     <footer>
         <div class="center">
-            <?php echo $this->html->image('logo-footer.png', ['url'=>['controller'=>'Pages','action'=>'index','prefix'=>false],'class'=>'center logo-foot']);?>
+            <?= $this->html->image('logo-footer.png', ['url'=>['controller'=>'Pages','action'=>'index','prefix'=>false],'class'=>'center logo-foot']) ?>
             <p class="center">
-                <?php echo $this->html->link('Connexion', ['controller'=>'Users', 'action'=>'login']); ?>
+                <?= $this->html->link('Connexion', ['controller'=>'Users', 'action'=>'login']) ?>
             </p>
 
             <p class="float-left">
-                <?php echo $this->html->link('Mentions légales', 'http://www.jkcf.com/?page_id=74'); ?>
+                <?= $this->html->link('Mentions légales', 'http://www.jkcf.com/?page_id=74') ?>
             </p>
 
             <p class="float-right">
-                <?php echo $this->html->link('Contact', ['controller'=>'Pages', 'action'=>'contact']); ?>
+                <?= $this->html->link('Contact', ['controller'=>'Pages', 'action'=>'contact']) ?>
             </p>
         </div>
 
     </footer>
 
 
-    <?php echo $this->Html->script('jquery-2.2.4.min.js');?>
+    <?= $this->Html->script('jquery-2.2.4.min.js')?>
+    <?= $this->Html->script('jquery.easy-confirm-dialog.min.js')?>
+    <?= $this->Html->script('jquery-ui.js')?>
+    <?= $this->Html->script('underscore-min.js')?>
+    <?= $this->Html->script('add-element-table.js')?>
+    <?= $this->Html->script('bootstrap') ?>
+    <?= $this->Html->script('userScript.js') ?>
 
-
-    <?php echo $this->Html->script('jquery.easy-confirm-dialog.min.js');?>
-    <?php echo $this->Html->script('jquery-ui.js');?>
-
-    <?php echo $this->Html->script('underscore-min.js');?>
-    <?php echo $this->Html->script('add-element-table.js');?>
-    <?php echo $this->Html->script('bootstrap'); ?>
-
-    <?php echo $this->fetch('script'); ?>
+    <?= $this->fetch('script') ?>
 </body>
 
 </html>

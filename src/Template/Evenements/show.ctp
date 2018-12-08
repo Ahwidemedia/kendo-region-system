@@ -85,7 +85,7 @@
                              echo '<span class=" red width-90 center">Inscriptions Passages de grade fermées</span>';
                             
                             } else{ 
-        echo $this->Html->link('Modifier les inscriptions Passages de grade',['controller'=>'InscriptionPassages', 'action'=>'inscriptions',$article['passage']['id']]); } ?>
+        echo $this->Html->link('Modifier les inscriptions Passages de grade',['controller'=>'InscriptionPassages', 'action'=>'index',$article['passage']['id']]); } ?>
         </p>
     </div>
 
