@@ -56,7 +56,7 @@ foreach ($articles as $article) { ?>
                 echo $this->Html->link('Inscriptions Shiais',['controller'=>'InscriptionCompetitions','action'=>'inscriptions',$article['competition']['id']]);
                                  }
          
-            if($conn['id'] == $article['user_id']) { ?>
+                if($conn['id'] == $article['user_id'] || $conn['profil_id']==1) { ?>
             <p class="red">Vous avez actuellement
                 <?php echo $number_compete;?> inscrits</p>
             <?php }
@@ -64,10 +64,8 @@ foreach ($articles as $article) { ?>
                                
             ?>
         </div>
-
-        <?php 
-                                                  
-                                                 } 
+        <?php                                   
+        } 
         if(!empty($article['passage'])){ ?>
 
         <div class="button">
@@ -81,7 +79,7 @@ foreach ($articles as $article) { ?>
            echo $this->Html->link('Inscriptions passages de grades',['controller'=>'InscriptionPassages','action'=>'index',$article['passage']['id']]); } ?>
             
             
-            <?php if($conn['id'] == $article['user_id']) { ?>
+            <?php if($conn['id'] == $article['user_id'] || $conn['profil_id']==1) { ?>
             <p class="red">Vous avez actuellement
                 <?php echo $number_passage;?> inscrits</p>
             <?php } ?>
@@ -91,10 +89,14 @@ foreach ($articles as $article) { ?>
 
         <?php
                             
-                 if($conn['id'] == $article['user_id']) { ?>
+        if($conn['id'] == $article['user_id'] || $conn['profil_id']==1) { ?>
         <div class="admin-button">
 
             <?php echo $this->Html->link('Administration',['controller'=>'InscriptionCompetitions','action'=>'organisateur',$article['competition']['id']]); ?>
+        	<br /><br />
+        	<?= $this->Html->link('Adminstration Passages',['controller'=>'InscriptionPassages','action'=>'resume',$article['passage']['id']]) ?>
+          
+        
         </div>
         <?php } ?>
 

@@ -890,28 +890,20 @@ class InscriptionCompetitionsController extends AppController
         $this->set('id',$id);
       
         $user_id =  $this->Auth->User('id');
-        
+        $profil_id = $this->Auth->User('profil_id');
         
         // anti-hack, seul le créateur de l'événement peut voir les inscriptions
-        if($user_id !== $event['user_id'])
-            
-        {
-            
+        if($user_id !== $event['user_id'] && $profil_id != 1)            
+        {            
             $this->Flash->error('Vous n\'êtes pas autorisé à accéder à cette section.');
-
-            $this->redirect($this->referer());
-            
+            $this->redirect($this->referer());            
         }
-        
-        
-         $title = $event['name'];
-         $description = $event['name'];
-        
-     
-        
+                
+        $title = $event['name'];
+        $description = $event['name'];
+             
         $this->set('title', $title);
-        $this->set('description', $description);
-        
+        $this->set('description', $description);        
           
          if(!empty($event['image'])) { $headimg = 'headers/evenements/l-'.$event['image']; }else { $headimg =  'header_main.png';}
          

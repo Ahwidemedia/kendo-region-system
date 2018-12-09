@@ -408,6 +408,14 @@ $id = $this->request->session()->read('Auth.User.id');
 	}
  }	
  
-	
+     public function permission() {
+         // On prend les données de l'événement
+         $this->loadModel('Evenements');
+         $event = $this->Evenements->find()->first();         
+         $title = $event['name'];
+         $description = $event['name'];
+         $this->set(compact(['id','title','description']));
+     }
+    	
 }
 ?>

@@ -7,74 +7,74 @@
 
     	
     	
-        <table class="tableau-gris" style="margin-top:5px; border:solid 3px black" id="tabInscription">
+        <table style="margin-top:5px;width:80%; margin-left:auto; margin-right:auto; border:solid 3px black" id="tabInscription">
         <caption>Informations transmises</caption>
         	<tr>        	
-                <td>Discipline</td>
-                <td><?= $recapPassage->passage->discipline->name ?></td>
+                <td style="border:solid 1px grey; padding:5px">Discipline</td>
+                <td style="border:solid 1px grey; padding:5px"><?= $recapPassage->passage->discipline->name ?></td>
         	</tr>
             <tr>
-                <td>Numero de licence</td>
-                <td><?= $recapPassage->licency->numero_licence ?></td>
+                <td style="border:solid 1px grey; padding:5px">Numero de licence</td>
+                <td style="border:solid 1px grey; padding:5px"><?= $recapPassage->licency->numero_licence ?></td>
             </tr>
             <tr>
-                <td>Nom</td>
-                <td><?= $recapPassage->licency->nom?></td>
+                <td style="border:solid 1px grey; padding:5px">Nom</td>
+                <td style="border:solid 1px grey; padding:5px"><?= $recapPassage->licency->nom?></td>
             <tr>
-                <td>Prénom</td>
-                <td><?= $recapPassage->licency->prenom ?></td>
+                <td style="border:solid 1px grey; padding:5px">Prénom</td>
+                <td style="border:solid 1px grey; padding:5px"><?= $recapPassage->licency->prenom ?></td>
             </tr>
             <tr>
-                <td>Sexe</td>
-                <td><?= $recapPassage->licency->sexe ?></td>
+                <td style="border:solid 1px grey; padding:5px">Sexe</td>
+                <td style="border:solid 1px grey; padding:5px"><?= $recapPassage->licency->sexe ?></td>
             <tr>
             <tr style="border-top:solid 3px black; ">
-                <td>Nationalité</td>
-                <td><?= $recapPassage->licency->nationalite ?></td>
+                <td style="border:solid 1px grey; padding:5px">Nationalité</td>
+                <td style="border:solid 1px grey; padding:5px"><?= $recapPassage->licency->nationalite ?></td>
             </tr>
             <tr>
-                <td>Adresse</td>
-                <td><?= $recapPassage->licency->adresse ?></td>
+                <td style="border:solid 1px grey; padding:5px">Adresse</td>
+                <td style="border:solid 1px grey; padding:5px"><?= $recapPassage->licency->adresse ?></td>
             </tr>
             <tr>
-                <td>Téléphone</td>
-                <td><?= $recapPassage->licency->telephone ?></td>
+                <td style="border:solid 1px grey; padding:5px">Téléphone</td>
+                <td style="border:solid 1px grey; padding:5px"><?= $recapPassage->licency->telephone ?></td>
             </tr>
             <tr>
-                <td>Fax</td>
-                <td><?= $recapPassage->licency->fax ?></td>
+                <td style="border:solid 1px grey; padding:5px">Fax</td>
+                <td style="border:solid 1px grey; padding:5px"><?= $recapPassage->licency->fax ?></td>
             </tr>
             <tr>
-                <td>Email</td>
-                <td><?= $recapPassage->licency->email ?></td>
+                <td style="border:solid 1px grey; padding:5px">Email</td>
+                <td style="border:solid 1px grey; padding:5px"><?= $recapPassage->licency->email ?></td>
             </tr>
             <tr style="border-top:solid 3px black; ">
-                <td>Date de naissance</td>
-                <td><?= $recapPassage->licency->date_naissance ?></td>
+                <td style="border:solid 1px grey; padding:5px">Date de naissance</td>
+                <td style="border:solid 1px grey; padding:5px"><?= $recapPassage->licency->date_naissance ?></td>
             </tr>
             <tr>
-                <td>Lieu de naissance</td>
-                <td><?= $recapPassage->licency->lieu_naissance ?></td>
+                <td style="border:solid 1px grey; padding:5px">Lieu de naissance</td>
+                <td style="border:solid 1px grey; padding:5px"><?= $recapPassage->licency->lieu_naissance ?></td>
             </tr>
             <tr style="border-top:solid 3px black; ">
-                <td>Grade précédent</td>
-                <td><?= $recapPassage->licency->grade->name ?></td>
+                <td style="border:solid 1px grey; padding:5px">Grade précédent</td>
+                <td style="border:solid 1px grey; padding:5px"><?= $recapPassage->licency->grade->name ?></td>
             </tr>
             <tr>
-                <td>Obtenu le</td>
-                <td><?= $recapPassage->grade_actuel_date ?></td>
+                <td style="border:solid 1px grey; padding:5px">Obtenu le</td>
+                <td style="border:solid 1px grey; padding:5px"><?= $recapPassage->licency->grade_actuel_date ?></td>
             </tr>
             <tr>
-                <td>Lieu d'obtention</td>
-                <td><?= $recapPassage->licency->grade_actuel_lieu ?></td>
+                <td style="border:solid 1px grey; padding:5px">Lieu d'obtention</td>
+                <td style="border:solid 1px grey; padding:5px"><?= $recapPassage->licency->grade_actuel_lieu ?></td>
             </tr>
             <tr>
-                <td>Organisation</td>
-                <td><?= $recapPassage->licency->grade_actuel_organisation ?></td>
+                <td style="border:solid 1px grey; padding:5px">Organisation</td>
+                <td style="border:solid 1px grey; padding:5px"><?= $recapPassage->licency->grade_actuel_organisation ?></td>
             </tr>
             <tr style="border-top:solid 3px black; ">
-                <td>Grade présenté</td>
-                <td><?= $recapPassage->grade->name ?></td>
+                <td style="border:solid 1px grey; padding:5px">Grade présenté</td>
+                <td style="border:solid 1px grey; padding:5px"><?= $recapPassage->grade->name ?></td>
             </tr>
         </table>
     </body>

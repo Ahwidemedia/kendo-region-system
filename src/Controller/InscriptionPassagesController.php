@@ -22,6 +22,10 @@ class InscriptionPassagesController extends AppController
     }
     
     public function index($id) {
+        
+        $nomUserConnected = $this->Auth->User('nom');
+        $prenomUserConnected = $this->Auth->User('prenom');
+        
         // On prend les données de l'événement
         $this->loadModel('Evenements');
         $event = $this->Evenements->find()->contain(['Passages'])->first();
@@ -164,7 +168,60 @@ class InscriptionPassagesController extends AppController
         $regions = $this->Regions->find('list')->order(['name'=>'ASC']);
         $this->loadModel("Grades");
         $grades = $this->Grades->find('list', ['keyField' => 'id', 'valueField' => 'name'])->order(['id'=>'ASC']);
-        $this->set(compact(['passage', 'title', 'description', 'headimg', 'event', 'article', 'inscription','clubs','regions','grades']));
+        $this->set(compact(['passage', 'title', 'description', 'headimg', 'event', 'article', 'inscription','clubs','regions','grades','prenomUserConnected','nomUserConnected']));
+    }
+    
+    public function resume($id) {
+        
+        
+        //Verification que user est admin
+        if($this->Auth->User('profil_id') != 1) return $this->redirect(['controller' => 'Users', 'action' => 'permission']);
+        
+        // On prend les données de l'événement
+        $this->loadModel('Evenements');
+        $event = $this->Evenements->find()->contain(['Passages'])->first();
+        $this->set('id',$id);
+        $title = $event['name'];
+        $description = $event['name'];
+        //Envoie de l'image, dépend de si y en a une uploadée ou pas
+        if(!empty($event['image'])) $headimg = 'headers/evenements/g-'.$event['image'];
+        else $headimg =  'header_main.png';
+        $idPassage = $event->passage->id;
+        //on retrouve les infos du passage
+        $this->loadModel('Passages');
+        $passage = $this->Passages->find()->where(['id'=> $idPassage])->first();
+
+
+
+        // On cherche les inscriptions à l'événement qu'il a déjà faite
+        $inscriptions = $this->InscriptionPassages->find()
+                                                  ->contain(['Licencies' => ['Grades', 'Clubs'],'Grades'])
+                                                  ->where(['passage_id' => $idPassage]);
+                                        
+ 		$this->set(compact(['passage', 'title', 'description', 'headimg', 'event', 'passage', 'inscriptions']));
+                                                      
+                                                      
+    }
+    
+    public function view($id) {
+        
+        //Verification que user est admin
+        if($this->Auth->User('profil_id') != 1) return $this->redirect(['controller' => 'Users', 'action' => 'permission']);
+        
+        // On prend les données de l'événement
+        $this->loadModel('Evenements');
+        $event = $this->Evenements->find()->contain(['Passages'])->first();
+        $this->set('id',$id);
+        $title = $event['name'];
+        $description = $event['name'];
+        //Envoie de l'image, dépend de si y en a une uploadée ou pas
+        if(!empty($event['image'])) $headimg = 'headers/evenements/g-'.$event['image'];
+        else $headimg =  'header_main.png';
+        $inscription = $this->InscriptionPassages->find()
+                                                 ->contain(['Licencies' => ['Grades', 'Clubs'],'Grades'])
+                                                 ->where(['InscriptionPassages.id' => $id])->first();
+        $this->set(compact(['passage', 'title', 'description', 'headimg', 'event', 'inscription']));
+                                                         
     }
     
 //     public function inscriptions($id) {

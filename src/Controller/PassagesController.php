@@ -18,6 +18,9 @@ class PassagesController extends AppController
      */
     public function index()
     {
+        //Verification que user est admin
+        if($this->Auth->User('profil_id') != 1) return $this->redirect(['controller' => 'Users', 'action' => 'permission']);
+        
         $this->paginate = [
             'contain' => ['Disciplines', 'Evenements']
         ];

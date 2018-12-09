@@ -24,6 +24,9 @@
 		dayNamesMin: ['D','L','M','M','J','V','S'],
 		weekHeader: 'Sem.',
 		dateFormat: 'dd/mm/yy',
+        gotoCurrent: true, // True if today link goes back to current selection instead
+        changeMonth: true, // True if month can be selected directly, false if only prev/next
+        changeYear: true, // True if year can be selected directly, false if only prev/next
 		firstDay: 1,
 		isRTL: false,
 		showMonthAfterYear: false,

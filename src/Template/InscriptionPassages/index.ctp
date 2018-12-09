@@ -2,6 +2,8 @@
 $conn = $this->request->session()->read('Auth.User');
 echo $this->Html->link("Retour", ['controller'=>'inscriptions','action'=>'index'],[ 'class'=>'absolute top-right']);
 $value="";
+
+
 ?>
 
 <div class="width-100 center">
@@ -30,11 +32,11 @@ $value="";
             </tr>
             <tr>
                 <td>Nom</td>
-                <?php ($inscription) ? $value = $inscription->licency->nom : $value = "" ?>
+                <?php ($inscription) ? $value = $inscription->licency->nom : $value = $nomUserConnected ?>
                 <td><?= $this->Form->text("nom",['name' => 'nom','label' => false, 'class'=>'nom-ind','style'=>'width:80%; height:2em', 'required' => true, 'value' => $value]) ?></td>
             <tr>
                 <td>Prénom</td>
-                <?php ($inscription) ? $value = $inscription->licency->prenom : $value = "" ?>
+                <?php ($inscription) ? $value = $inscription->licency->prenom : $value = $prenomUserConnected ?>
                 <td><?= $this->Form->text("prenom",['name' => 'prenom','label' => false, 'class'=>'prenom-ind','style'=>'width:80%; height:2em', 'required' => true, 'value' => $value]) ?></td>
             </tr>
             <tr>
@@ -46,7 +48,7 @@ $value="";
                     										'options'=>[''=>'Sélectionner','F'=>'F','M'=>'M'],
                                                             'value' => $value]); ?></td>
             <tr>
-            <tr style="border-top:solid 3px black; ">
+            <tr>
                 <td>Nationalité</td>
                 <?php ($inscription) ? $value = $inscription->licency->nationalite : $value = "" ?>
                 <td><?= $this->Form->text("nationalite", ['name' => 'nationalite','label' => false, 'class'=>'nationalite-ind','style'=>'width:80%; height:2em', 'value' => $value]) ?></td>
@@ -81,7 +83,7 @@ $value="";
                 <?php ($inscription) ? $value = $inscription->licency->lieu_naissance : $value = "" ?>
                 <td><?= $this->Form->input("lieu_naissance", ['name' => 'lieu_naissance','label' => false, 'class'=>'ldn-ind', 'style'=>'width:80%; height:2em', 'value' => $value]) ?></td>
             </tr>
-            <tr style="border-top:solid 3px black; ">
+            <tr>
                 <td>Grade précédent</td>
                 <?php ($inscription) ? $value = $inscription->licency->grade_id : $value = "" ?>
                 <td><?= $this->Form->input("grade_id", ['name' => 'grade_id','label' => false, 'class'=>'grade-ind', 'style'=>'width:80%; height:2em', 'required' => true,'value' => $value]) ?></td>

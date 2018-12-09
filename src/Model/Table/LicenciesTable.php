@@ -47,7 +47,7 @@ class LicenciesTable extends Table
             'joinType' => 'INNER'
         ]);
         $this->belongsTo('Grades', [
-            'foreignKey' => 'grade_actuel_id'
+            'foreignKey' => 'grade_id'
         ]);
         $this->belongsTo('Disciplines', [
             'foreignKey' => 'discipline_id',
