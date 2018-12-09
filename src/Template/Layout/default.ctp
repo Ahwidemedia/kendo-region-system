@@ -39,9 +39,8 @@
         <div class="header-right">
             <?php if ($conn = $this->request->session()->read('Auth.User')){ 
    
-    
   
-  echo $conn['nom'].' - '.$conn['prenom'].' - '.$user['club']['name'];
+  echo $conn['nom'].' '.$conn['prenom'].' - '.$user['club']['name'];
   echo $this->Html->image('logout.png',['url'=>['controller'=>'Users','action'=>'logout']]);
  
     echo '</div>';

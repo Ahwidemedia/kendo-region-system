@@ -6,6 +6,10 @@
         <h2 class="center black margin-top-50-px ">Inscriptions</h2>
 		<table class="tableau-gris" style="margin-top:5px; border:solid 3px black" id="tabInscription">
             <tr>
+                <td>Discipline</td>
+                <td><?= $inscription->passage->discipline->name ?>
+            </tr>
+            <tr>
                 <td>Numero de licence</td>
                 <td><?= $inscription->licency->numero_licence ?>
             </tr>
@@ -50,7 +54,7 @@
             </tr>
             <tr>
                 <td>Grade précédent</td>
-                <td><?= $inscription->licency->grade_id ?>
+                <td><?= $inscription->licency->grade->name ?>
             </tr>
             <tr>
                 <td>Obtenu le</td>
@@ -64,9 +68,9 @@
                 <td>Organisation</td>
                 <td><?= $inscription->licency->grade_actuel_organisation ?>
             </tr>
-            <tr style="border-top:solid 3px black; ">
+            <tr>
                 <td>Grade présenté</td>
-                <td><?= $inscription->grade_presente_id ?>
+                <td><?= $inscription->grade->name ?>
             </tr>            
         </table>
 	</div>

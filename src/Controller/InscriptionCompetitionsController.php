@@ -23,14 +23,8 @@ class InscriptionCompetitionsController extends AppController
 
     public function initialize()
     {
-        parent::initialize();
-      
-        
+        parent::initialize();  
     }
-     
-     
-     
-     
      
     public function beforeFilter(Event $event)
     {
@@ -50,8 +44,6 @@ class InscriptionCompetitionsController extends AppController
     }
     
  
-
-
     function inscriptions($id) {
 	
         

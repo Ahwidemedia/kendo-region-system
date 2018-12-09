@@ -17,7 +17,7 @@ class InscriptionPassagesController extends AppController
      
     public function beforeFilter(Event $event)
     {
-        $this->Security->config('unlockedFields', ['licencies','inscription_competitions']);
+        $this->Security->config('unlockedFields', ['licencies']);
         //$this->Auth->allow([ 'inscriptions']);
     }
     
@@ -193,9 +193,9 @@ class InscriptionPassagesController extends AppController
 
 
 
-        // On cherche les inscriptions à l'événement qu'il a déjà faite
+        // On cherche les inscriptions au passages
         $inscriptions = $this->InscriptionPassages->find()
-                                                  ->contain(['Licencies' => ['Grades', 'Clubs'],'Grades'])
+                                                  ->contain(['Passages' => ['Disciplines'],'Licencies' => ['Grades', 'Clubs'],'Grades'])
                                                   ->where(['passage_id' => $idPassage]);
                                         
  		$this->set(compact(['passage', 'title', 'description', 'headimg', 'event', 'passage', 'inscriptions']));
@@ -218,7 +218,7 @@ class InscriptionPassagesController extends AppController
         if(!empty($event['image'])) $headimg = 'headers/evenements/g-'.$event['image'];
         else $headimg =  'header_main.png';
         $inscription = $this->InscriptionPassages->find()
-                                                 ->contain(['Licencies' => ['Grades', 'Clubs'],'Grades'])
+                                                 ->contain(['Passages'=>['Disciplines'],'Licencies' => ['Grades', 'Clubs'],'Grades'])
                                                  ->where(['InscriptionPassages.id' => $id])->first();
         $this->set(compact(['passage', 'title', 'description', 'headimg', 'event', 'inscription']));
                                                          
@@ -391,6 +391,85 @@ class InscriptionPassagesController extends AppController
             $this->Flash->error(__('Erreur dans la suppression de l\'isnscription.'));
         }
         return $this->redirect(['action' => 'inscriptions', $event]);
+    }
+
+    // Fonction csv à partir du plug in
+    public function exportCsv($id) {
+        
+        //Verification que user est admin
+        if($this->Auth->User('profil_id') != 1) return $this->redirect(['controller' => 'Users', 'action' => 'permission']);
+        
+        $user_id =  $this->Auth->User('id');        
+        $this->response->download('export.csv');
+            
+        $name = date('Ymd')."_ExportInscriptionPassage";
+        
+        // On cherche les inscriptions à l'événement qu'il a déjà faite
+        $inscriptions = $this->InscriptionPassages->find()
+                                        ->contain(['Grades','Passages' =>['Disciplines'],'Licencies' => ['Grades', 'Clubs']])
+                                        ->where(['passage_id' => $id]);
+                
+        foreach($inscriptions as $datas){
+            //debug($datas->grade->name);die;
+            $datas['discipline'] = $datas->passage->discipline->name;
+            $datas['grade_presente'] =  $datas->grade->name;
+            $datas['numero_licence'] = $datas->licency->numero_licence;
+            $datas['nom'] = $datas->licency->nom;
+            $datas['prenom'] = $datas->licency->prenom;
+            $datas['sexe'] = $datas->licency->sexe;
+            $datas['nationalite'] = $datas->licency->nationalite;
+            $datas['adresse'] = $datas->licency->adresse;
+            $datas['telephone'] =  $datas->licency->telephone;
+            $datas['fax'] =  $datas->licency->fax;
+            $datas['email'] =  $datas->licency->email;
+            $datas['date_naissance'] =  $datas->licency->date_naissance;
+            $datas['lieu_naissance'] =  $datas->licency->lieu_naissance;
+            $datas['grade'] =  $datas->licency->grade->name;
+            $datas['grade_actuel_date'] =  $datas->licency->grade_actuel_date;
+            $datas['grade_actuel_lieu'] =  $datas->licency->grade_actuel_lieu;
+            $datas['grade_actuel_organisation'] =  $datas->licency->grade_actuel_organisation;
+            
+        }
+       
+        // Données à envoyer au plugin
+        $_serialize = 'inscriptions';        
+        // Choix du délimitant du csv pour lecture correcte en excel
+        $_delimiter = ';';        
+        // colonnes sélectionnées
+        $_extract = ['discipline','numero_licence','nom','prenom','sexe','nationalite','adresse','telephone','fax','email','date_naissance','lieu_naissance','grade','grade_actuel_date','grade_actuel_lieu','grade_actuel_organisation','grade_presente'];
+        
+        // Nom des colonnes
+        $_header = ["Discipline","Numero de licence","Nom","Prénom","Sexe","Nationalité","Adresse","Téléphone","Fax","Email","Date de naissance","Lieu de naissance","Grade actuel","Obtenu le","Lieu d'obtention","Organisation","Grade présenté"];
+        
+        $this->set(compact('inscriptions', '_serialize', '_extract', '_delimiter','_header'));
+        $this->viewBuilder()->className('CsvView.Csv');
+        
+        $this->response->download($name.'.csv');
+    }
+
+    public function exportPdf($id) {
+        
+        //Verification que user est admin
+        if($this->Auth->User('profil_id') != 1) return $this->redirect(['controller' => 'Users', 'action' => 'permission']);
+        
+        $this->loadModel('Evenements');
+            
+        $event = $this->Evenements->find()->contain(['Competitions'])->first();            
+        $title = $event['name'];
+        $description = $event['name'];        
+        
+        if(!empty($event['image'])) { $headimg = 'headers/evenements/l-'.$event['image']; }else { $headimg =  'header_main.png';}
+
+        $this->set(compact(['id','title','description','event','headimg']));
+             
+        // On cherche les inscriptions à l'événement qu'il a déjà faite
+        $inscriptions = $this->InscriptionPassages->find()
+                                                ->contain(['Licencies' => ['Grades', 'Clubs'],'Grades','Passages' =>['Disciplines']])
+                                                ->where(['passage_id' => $id]);
+        
+       $name = date('Ymd')."_ExportInscriptionPassage";
+       $this->set('inscriptions',$inscriptions);
+       $this->set('filename',$name);
     }
 }
 ?>

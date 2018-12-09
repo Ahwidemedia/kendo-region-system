@@ -14,6 +14,7 @@ echo $this->Html->link("Modifier les données de l'évenement", ['controller'=>'
 		<table class="tableau-gris" id="addelement-table">
             <thead>
                 <tr>
+                	<th>Discipline</th>
                     <th>N° licence</th>
                     <th style="min-width:100px">Nom</th>
                     <th style="min-width:100px">Prénom</th>
@@ -29,6 +30,7 @@ echo $this->Html->link("Modifier les données de l'évenement", ['controller'=>'
             <tbody>
             <?php foreach ($inscriptions as $value) {?>
             	<tr>
+            		<td><?= $value->passage->discipline->name ?></td>
             		<td><?= $value->licency->numero_licence ?></td>
             		<td><?= $value->licency->nom ?></td>
             		<td><?= $value->licency->prenom ?></td>
@@ -46,8 +48,8 @@ echo $this->Html->link("Modifier les données de l'évenement", ['controller'=>'
             </tbody>
         </table>
         <p class="center padding-3">
-	<?= $this->Html->link("Exporter en excel", ['action'=>'export',$id, '_ext' => 'csv'],[ 'class'=>'center normalButton margin-3']);?>
-	<?= $this->Html->link("Exporter en pdf", ['action'=>'view',$id, '_ext' => 'pdf'],[ 'class'=>'center normalButton margin-3']);?>
+	<?= $this->Html->link("Exporter en excel", ['action'=>'exportCsv',$passage->id, '_ext' => 'csv'],[ 'class'=>'center normalButton margin-3']);?>
+	<?= $this->Html->link("Exporter en pdf", ['action'=>'exportPdf',$passage->id, '_ext' => 'pdf'],[ 'class'=>'center normalButton margin-3']);?>
 </p>
 	</div>
 </div>
