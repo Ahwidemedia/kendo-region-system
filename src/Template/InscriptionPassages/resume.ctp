@@ -48,8 +48,11 @@ echo $this->Html->link("Modifier les données de l'évenement", ['controller'=>'
             </tbody>
         </table>
         <p class="center padding-3">
-	<?= $this->Html->link("Exporter en excel", ['action'=>'exportCsv',$passage->id, '_ext' => 'csv'],[ 'class'=>'center normalButton margin-3']);?>
-	<?= $this->Html->link("Exporter en pdf", ['action'=>'exportPdf',$passage->id, '_ext' => 'pdf'],[ 'class'=>'center normalButton margin-3']);?>
+	<?= $this->Html->link("Exporter la liste en excel", ['action'=>'exportCsv',$passage->id, '_ext' => 'csv'],[ 'class'=>'center normalButton margin-3']);?>
+	<?= $this->Html->link("Exporter la liste en pdf", ['action'=>'exportPdf',$passage->id, '_ext' => 'pdf'],[ 'class'=>'center normalButton margin-3']);?>
+	</p>
+	 <p class="center">
+	<?= $this->Html->link("Exporter toutes les fiches individuelles", ['action'=>'createindivs',$passage->id],[ 'class'=>'center normalButton margin-3']);?>
 </p>
 	</div>
 </div>

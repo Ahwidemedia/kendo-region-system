@@ -74,5 +74,8 @@
             </tr>            
         </table>
 	</div>
+	
+	<?= $this->Html->link("Exporter en pdf", ['action'=>'fiche',$id,'vertical', '_ext' => 'pdf'],[ 'class'=>'center normalButton margin-3']);?>
+
 </div>
         
