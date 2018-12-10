@@ -5,6 +5,9 @@ use Cake\Event\Event;
 use Cake\ORM\TableRegistry;
 use Cake\I18n\Time;
 use Cake\Mailer\Email;
+use \ZipArchive;
+use Cake\Filesystem\Folder;
+use Cake\Filesystem\File;
 
 class InscriptionPassagesController extends AppController
 {
@@ -467,9 +470,213 @@ class InscriptionPassagesController extends AppController
                                                 ->contain(['Licencies' => ['Grades', 'Clubs'],'Grades','Passages' =>['Disciplines']])
                                                 ->where(['passage_id' => $id]);
         
-       $name = date('Ymd')."_ExportInscriptionPassage";
-       $this->set('inscriptions',$inscriptions);
-       $this->set('filename',$name);
+        $name = date('Ymd')."_ExportInscriptionPassage";
+        $this->set('inscriptions',$inscriptions);
+        $this->set('filename',$name);
     }
-}
+
+
+
+    public function fiche($id, $vertical, $zip = null) {
+      
+        //Verification que user est admin
+        if ($this->Auth->User('profil_id') != 1) return $this->redirect(['controller' => 'Users', 'action' => 'permission']);
+        
+        // On prend les données de l'événement
+        $this->loadModel('Evenements');
+        $event = $this->Evenements->find()->contain(['Passages'])->first();
+        $this->set('id', $id);
+        $title = $event['name'];
+        $description = $event['name'];
+       
+       
+       
+        $inscription = $this->InscriptionPassages->find()
+                                                 ->contain(['Passages'=>['Disciplines'],'Licencies' => ['Grades', 'Clubs'],'Grades'])
+                                                 ->where(['InscriptionPassages.id' => $id])->first();
+        
+        $this->set(compact(['passage', 'title', 'description', 'headimg', 'event', 'inscription']));
+                                                         
+        $this->set('inscription',$inscription);
+       
+        $this->set('vertical',$vertical);
+        $this->set('zip',$zip);
+        
+    
+        
+        
+        if (isset($zip)) {
+       
+             $path = WWW_ROOT.'files/fiches-passages/'.$inscription['passage_id'];
+             $folder = new Folder($path);
+
+             if (is_null($folder->path)) {
+   			     $folder = new Folder($path, true, 0755);
+		}
+
+
+       
+        $name = 'files/fiches-passages/'.$inscription['passage']['id'].'/Fiche-'.$inscription['licency']['nom'].'-'.$inscription['licency']['prenom'];
+     
+        $this->set('filename',$name);
+     
+        echo '<script>window.location.replace("../../../createindivs/'.$inscription['passage']['id'].'");</script>';
+
+     
+        } else {
+      
+            $name = 'Fiche-'.$inscription['licency']['nom'].'-'.$inscription['licency']['prenom'];
+            $this->set('filename',$name);
+        }
+    
+      
+      
+        
+        }
+
+
+
+
+// Création automatique des fiches individuelles qui n'ont jamais été créées
+	function createindivs($id) {
+	
+	  if($this->Auth->User('profil_id') != 1) return $this->redirect(['controller' => 'Users', 'action' => 'permission']);
+        
+        $this->loadModel('Evenements');
+            
+        $event = $this->Evenements->find()->contain(['Competitions'])->first();            
+        $title = $event['name'];
+        $description = $event['name'];        
+        
+       
+        $this->set(compact(['id','title','description','event','headimg']));
+             
+        // On cherche les inscriptions à l'événement qu'il a déjà faite
+        $inscriptions = $this->InscriptionPassages->find()
+                                                ->contain(['Licencies' => ['Grades', 'Clubs'],'Grades','Passages' =>['Disciplines']])
+                                                ->where(['passage_id' => $id]);
+        
+
+	
+// S'il n'y en a pas, on le signale
+
+if ($inscriptions->isEmpty()) { 
+
+$this->Flash->error('Il n\'y a pas encore d\'inscriptions pour ce passage de grade');
+
+return $this->redirect(['action'=>'resume',$id]);
+
+} else {
+		
+		
+		// On commencer par supprimer toutes les inscriptions pour n'avoir que des inscriptions à jour
+		
+		
+		// On va aller chercher toutes les inscriptions individuelles
+		
+    foreach ($inscriptions as $inscription) {
+		
+	
+			
+			$filepath =  WWW_ROOT.'files/fiches-passages/'.$id.'/Fiche-'.$inscription['licency']['nom'].'-'.$inscription['licency']['prenom'].'.pdf';
+
+
+			// Si on a un fichier
+        if (file_exists($filepath)) {
+			
+			// on continue la boucle
+			$restante = true;
+			continue;
+			
+		} else {
+		
+			
+			// Sinon on l'arrête pour créer l'inscription
+   			    $restante = false;
+			    break;
+            }
+
+		}
+			
+			// Si on a des inscriptions individuelles en pdf qui n'ont pas été créé, on recommence la boucle,
+		if ($restante == false) {
+			
+			
+			// On envoie pour ça le pdf en mode spécial pour qu'il créé l'export puis qu'il recommence en repassant par ici
+	
+            return $this->redirect(['action'=>'fiche',$inscription['id'],'vertical','zip', '_ext'=>'pdf']);
+		
+			
+			// Si $restante est à true, donc toutes les fiches sont créées, on va zipper le tout 
+        } else {
+
+			    return $this->redirect(['action'=>'zip',$id]);
+
+            }
+        }
+	}
+	
+
+
+    public function zip($id) {
+
+
+            // On prend les données de l'événement        
+             $this->loadModel('Evenements');        
+             $event = $this->Evenements->find()->contain(['Passages'])->first();
+        
+             $this->set('id',$id);
+             $title = $event['name'];
+             $description = $event['name'];
+             
+        if (!empty($event['image'])) { $headimg = 'headers/evenements/g-'.$event['image']; }else { $headimg =  'header_main.png'; }
+        
+             $this->set(compact(['title','description','headimg','event']));
+
+
+	
+	           // On prend le dossier à zipper
+             $rootPath = new Folder('files/fiches-passages/'.$id.'/');
+	
+
+
+                // On ouvre le fichier zip
+             $zip = new \ZipArchive();
+          // Qu'on enregistre dans le fichier adequat
+             $zip->open('zip/fiches-passages/'.$id.'.zip', ZipArchive::CREATE | ZipArchive::OVERWRITE);
+
+          // On trouve tous les fichiers pdf.
+             $files = $rootPath->findRecursive('.*\.pdf');
+
+          // On les met dans le fichier zip
+        foreach ($files as $name => $file)
+        {
+        // En configurant les chemins absolus et relatifs
+            $filePath = $file;
+      	    $rootPath = WWW_ROOT.'files/fiches-passages/'.$id.'/';
+            $relativePath = substr($filePath, strlen($rootPath) );
+
+        // Qu'on ajoute à l'archive
+       
+            $zip->addFile($filePath, $relativePath);
+   	
+   		
+        }
+        //    On ferme le zip
+              $zip->close();
+
+              $zipname = 'zip/fiches-passages/'.$id.'.zip';
+
+
+
+        if ($this->request->is(['post','put'])){
+
+          // Le response permet de forcer le download
+             $filePathZip = WWW_ROOT . $zipname;
+             $this->response->file($filePathZip ,
+             ['download'=> true, 'name'=> $id.'.zip']);
+	
+             }	
+	    }
+    }
 ?>
