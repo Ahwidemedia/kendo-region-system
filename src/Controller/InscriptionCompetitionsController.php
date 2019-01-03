@@ -541,12 +541,12 @@ class InscriptionCompetitionsController extends AppController
        
         
         foreach($datai['administratif'] as $dataa) {
-         
+       
             
             // Si on a le nom de rempli
             
             if(!empty($dataa['licencie']['nom'])){
-               
+                
            
                 // Je mets nom et prénom en majuscules
                   
@@ -580,8 +580,8 @@ class InscriptionCompetitionsController extends AppController
                             
                         }       
                         
-                         $entity_inscro = $this->InscriptionCompetitions->Licencies->patchEntity($inscri,$dataa['licencie']);
-                        
+                         $entity_inscro = $this->InscriptionCompetitions->Licencies->patchEntity($inscri,$dataa['licencie'],['validate' => false]);
+                       
                             $entity_inscro->discipline_id = $event['competition']['discipline_id'];
                             $entity_inscro->club_id = $datai['club_id'];
                             
