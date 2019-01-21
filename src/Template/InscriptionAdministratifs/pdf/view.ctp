@@ -166,7 +166,7 @@ tr td {
 p, ul, td {  
 font-size:1em;
   font-family: arial,cambria, times, 'times new roman';
-  color: #999;
+  color: black;
 }
 
 
@@ -381,12 +381,6 @@ filter: grayscale(1);
 
 .border-black {border:solid black 1px}
 
-.flou {
-   color: transparent;
-   text-shadow: 0 0 5px rgba(0,0,0,0.5);
-}
-
-.icon-add {height:25px; width:25px;}
 
 .top-right {top:15px; right:15px;}
 
@@ -426,12 +420,12 @@ font-size:1em;}
 .tableau-gris td:first-child {font-weight:bold;}
     </STYLE>
 
-	<h2>Commissaires et arbitres</h2>
+	<h2>Liste des Commissaires</h2>
 	
 	
 <table class="tableau-gris">
 	<thead>
-		<tr><th></th>
+		<tr style="border:3px solid #bfbfbf;"><th></th>
 			<th>Nom</th>
 			<th>Prénom</th>
 			<th>Niveau Arbitre</th>
@@ -444,12 +438,14 @@ font-size:1em;}
 	</thead>
 
 	<tbody>
-		<?php foreach($articles as $article){
-		
+		<?php 
+        $b = 0;
+        foreach($articles_commissaires as $article){
+		$b++;
 		?>
 
 	<tr>
-		<td></td>
+		<td><?php echo $b;?></td>
 		
 		<td>
 			<?php echo $article['licency']['nom'];  ?>
@@ -460,7 +456,7 @@ font-size:1em;}
 		</td>
 		<td>
 			<?php if($article['licency']['arbitre'] == 1){
-			 echo 'Bénévole';
+			 echo 'Stagiaire';
 			}elseif($article['licency']['arbitre'] == 2){
             echo 'Diplômé régional';
         }
@@ -471,7 +467,7 @@ font-size:1em;}
 		</td>
         <td>
         <?php if($article['licency']['commissaire'] == 1){
-			 echo 'Bénévole';
+			 echo 'Stagiaire';
 			}elseif($article['licency']['commissaire'] == 2){
             echo 'Diplômé régional';
         }
@@ -481,11 +477,146 @@ font-size:1em;}
 		   ?>
         </td>
         <td><?php if (strpos($article['presence'], '1') !== false) {
-    echo 'X';
-} ?></td>
+              
+               foreach($competition as $competitions) {
+                   if($competitions['licencie_id'] == $article['licencie_id'] && $competitions['participation_indiv'] == '1') {
+                       
+                       echo '<span style="color:red">X</span>';
+                   }
+                   
+                   elseif($competitions['licencie_id'] == $article['licencie_id'] && $competitions['participation_indiv'] == '0') {
+                  
+                        echo 'X';
+                   
+               }
+   
+            }
+        } ?>
+        </td>
          <td><?php if (strpos($article['presence'], '2') !== false) {
-    echo 'X';
-} ?></td>
+                foreach($competition as $competitions) {
+                   if($competitions['licencie_id'] == $article['licencie_id'] && $competitions['participation_equipe'] == '1') {
+                       
+                       echo '<span style="color:red">X</span>';
+                   }
+                   
+                   elseif($competitions['licencie_id'] == $article['licencie_id'] && $competitions['participation_equipe'] == '0') {
+                  
+                        echo 'X';
+                   
+               }
+   
+            }
+        } ?></td>
+        
+        
+        <td>	<?php 
+			 echo $article['licency']['club']['name'];
+			
+		   ?>
+        
+        </td>
+
+	
+
+	</tr>
+
+	<?php	}
+		 ?>
+
+	</tbody>
+	</table>
+
+<page_break>
+
+
+	<h2>Liste des Arbitres</h2>
+	
+	
+<table class="tableau-gris">
+	<thead>
+		<tr style="border:3px solid #bfbfbf;"><th></th>
+			<th>Nom</th>
+			<th>Prénom</th>
+			<th>Niveau Arbitre</th>
+            <th>Niveau Commissaire</th>
+            <th>Samedi</th>
+            <th>Dimanche</th>
+			<th>Club</th>
+		
+			</tr>
+	</thead>
+
+	<tbody>
+		<?php 
+        $a = 0;
+        foreach($articles_arbitres as $article){
+		$a++;
+		?>
+
+	<tr>
+		<td><?php echo $a;?></td>
+		
+		<td>
+			<?php echo $article['licency']['nom'];  ?>
+		</td>
+
+		<td>
+			<?php echo $article['licency']['prenom'];  ?>
+		</td>
+		<td>
+			<?php if($article['licency']['arbitre'] == 1){
+			 echo 'Stagiaire';
+			}elseif($article['licency']['arbitre'] == 2){
+            echo 'Diplômé régional';
+        }
+                elseif($article['licency']['arbitre'] == 3){
+                    echo 'Diplômé national';
+                }
+		   ?>
+		</td>
+        <td>
+        <?php if($article['licency']['commissaire'] == 1){
+			 echo 'Stagiaire';
+			}elseif($article['licency']['commissaire'] == 2){
+            echo 'Diplômé régional';
+        }
+                elseif($article['licency']['commissaire'] == 3){
+                    echo 'Diplômé national';
+                }
+		   ?>
+        </td>
+        <td><?php if (strpos($article['presence'], '1') !== false) {
+               
+                foreach($competition as $competitions) {
+                   if($competitions['licencie_id'] == $article['licencie_id'] && $competitions['participation_indiv'] == '1') {
+                       
+                       echo '<span style="color:red">X</span>';
+                   }
+                   
+                   elseif($competitions['licencie_id'] == $article['licencie_id'] && $competitions['participation_indiv'] == '0') {
+                  
+                        echo 'X';
+                   
+               }
+   
+            }
+        } ?></td>
+         <td><?php if (strpos($article['presence'], '2') !== false) {
+     foreach($competition as $competitions) {
+                   if($competitions['licencie_id'] == $article['licencie_id'] && $competitions['participation_equipe'] == '1') {
+                       
+                       echo '<span style="color:red">X</span>';
+                   }
+                   
+                   elseif($competitions['licencie_id'] == $article['licencie_id'] && $competitions['participation_equipe'] == '0') {
+                  
+                        echo 'X';
+                   
+               }
+   
+            }
+        } ?></td>
         
         
         <td>	<?php 
