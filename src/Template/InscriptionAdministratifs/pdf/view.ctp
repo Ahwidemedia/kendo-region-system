@@ -422,7 +422,22 @@ font-size:1em;}
 
 	<h2>Liste des Commissaires</h2>
 	
-	
+	<?php    foreach($competition as $competitions){
+        $array_comp[] = $competitions['licencie_id'];}
+        
+        foreach($articles_commissaires as $article){
+        $array_comm[] = $article['licencie_id'];}
+
+        foreach($articles_arbitres as $article){
+        $array_arb[] = $article['licencie_id'];}
+        
+      
+
+$result = array_diff($array_comm, $array_comp);
+$result_arb = array_diff($array_arb, $array_comp);
+
+?>
+
 <table class="tableau-gris">
 	<thead>
 		<tr style="border:3px solid #bfbfbf;"><th></th>
@@ -440,6 +455,9 @@ font-size:1em;}
 	<tbody>
 		<?php 
         $b = 0;
+        
+     
+        
         foreach($articles_commissaires as $article){
 		$b++;
 		?>
@@ -477,9 +495,16 @@ font-size:1em;}
 		   ?>
         </td>
         <td><?php if (strpos($article['presence'], '1') !== false) {
+          
+               // Pour les gens inscrits seulement en commissaire 
+               if(in_array($article['licencie_id'],$result)) {echo 'X';}
               
                foreach($competition as $competitions) {
+                   
+                   
                    if($competitions['licencie_id'] == $article['licencie_id'] && $competitions['participation_indiv'] == '1') {
+                       
+                     
                        
                        echo '<span style="color:red">X</span>';
                    }
@@ -494,6 +519,10 @@ font-size:1em;}
         } ?>
         </td>
          <td><?php if (strpos($article['presence'], '2') !== false) {
+               
+               // Pour les gens inscrits seulement en commissaire 
+                if(in_array($article['licencie_id'],$result)) {echo 'X';}
+               
                 foreach($competition as $competitions) {
                    if($competitions['licencie_id'] == $article['licencie_id'] && $competitions['participation_equipe'] == '1') {
                        
@@ -507,6 +536,8 @@ font-size:1em;}
                }
    
             }
+             
+               
         } ?></td>
         
         
@@ -588,6 +619,9 @@ font-size:1em;}
         </td>
         <td><?php if (strpos($article['presence'], '1') !== false) {
                
+               // Pour les gens inscrits seulement en arbitre
+                if(in_array($article['licencie_id'],$result_arb)) {echo 'X';}
+               
                 foreach($competition as $competitions) {
                    if($competitions['licencie_id'] == $article['licencie_id'] && $competitions['participation_indiv'] == '1') {
                        
@@ -603,6 +637,11 @@ font-size:1em;}
             }
         } ?></td>
          <td><?php if (strpos($article['presence'], '2') !== false) {
+               
+               // Pour les gens inscrits seulement en arbitre
+                if(in_array($article['licencie_id'],$result_arb)) {echo 'X';}
+               
+               
      foreach($competition as $competitions) {
                    if($competitions['licencie_id'] == $article['licencie_id'] && $competitions['participation_equipe'] == '1') {
                        
