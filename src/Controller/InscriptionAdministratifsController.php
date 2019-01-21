@@ -117,6 +117,7 @@ class InscriptionAdministratifsController extends AppController
 		
             $data = $this->InscriptionAdministratifs->find('all')
          ->where(['competition_id'=>$id])
+            ->order(['arbitre'=>'ASC'])    
 			->contain(['Licencies'=> function($q) {
         return $q->contain(['Clubs','Grades']);
     }]);
@@ -203,15 +204,23 @@ class InscriptionAdministratifsController extends AppController
         
 		
 	
-            $articles = $this->InscriptionAdministratifs->find('all')
-         ->where(['competition_id'=>$event['competition']['id']])
+            $articles_commissaires = $this->InscriptionAdministratifs->find('all')
+         ->where(['competition_id'=>$event['competition']['id'], 'Licencies.commissaire >'=>'0'])
 			->contain(['Licencies'=> function($q) {
         return $q->contain(['Clubs','Grades']);
     }]);
+          
+          $articles_arbitres = $this->InscriptionAdministratifs->find('all')
+         ->where(['competition_id'=>$event['competition']['id'],'Licencies.arbitre >'=>'0'])
+			->contain(['Licencies'=> function($q) {
+        return $q->contain(['Clubs','Grades']);
+    }]);
+          $this->loadModel('InscriptionCompetitions');
+          $competition = $this->InscriptionCompetitions->find('all');
 		
-        
-		
-			$this->set('articles',$articles);   
+          $this->set('competition',$competition);
+          $this->set('articles_commissaires',$articles_commissaires);
+          $this->set('articles_arbitres',$articles_arbitres);  
 	
         $this->set('filename','Commissaires-arbitres');
         
