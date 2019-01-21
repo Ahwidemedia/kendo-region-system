@@ -51,7 +51,7 @@
 		</td>
 		<td>
 			<?php if($article['licency']['arbitre'] == 1){
-			 echo 'Bénévole';
+			 echo 'Stagiaire';
 			}elseif($article['licency']['arbitre'] == 2){
             echo 'Diplômé régional';
         }
@@ -62,7 +62,7 @@
 		</td>
         <td>
         <?php if($article['licency']['commissaire'] == 1){
-			 echo 'Bénévole';
+			 echo 'Stagiaire';
 			}elseif($article['licency']['commissaire'] == 2){
             echo 'Diplômé régional';
         }
