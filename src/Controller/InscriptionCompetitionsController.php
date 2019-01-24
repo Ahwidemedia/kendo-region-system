@@ -1129,17 +1129,23 @@ class InscriptionCompetitionsController extends AppController
        }
 		
         
+		  $accents = array(    'Š'=>'S', 'š'=>'s', 'Ž'=>'Z', 'ž'=>'z', 'À'=>'A', 'Á'=>'A', 'Â'=>'A', 'Ã'=>'A', 'Ä'=>'A', 'Å'=>'A', 'Æ'=>'A', 'Ç'=>'C', 'È'=>'E', 'É'=>'E',
+                            'Ê'=>'E', 'Ë'=>'E', 'Ì'=>'I', 'Í'=>'I', 'Î'=>'I', 'Ï'=>'I', 'Ñ'=>'N', 'Ò'=>'O', 'Ó'=>'O', 'Ô'=>'O', 'Õ'=>'O', 'Ö'=>'O', 'Ø'=>'O', 'Ù'=>'U',
+                            'Ú'=>'U', 'Û'=>'U', 'Ü'=>'U', 'Ý'=>'Y', 'Þ'=>'B', 'ß'=>'Ss', 'à'=>'a', 'á'=>'a', 'â'=>'a', 'ã'=>'a', 'ä'=>'a', 'å'=>'a', 'æ'=>'a', 'ç'=>'c',
+                            'è'=>'e', 'é'=>'e', 'ê'=>'e', 'ë'=>'e', 'ì'=>'i', 'í'=>'i', 'î'=>'i', 'ï'=>'i', 'ð'=>'o', 'ñ'=>'n', 'ò'=>'o', 'ó'=>'o', 'ô'=>'o', 'õ'=>'o',
+                            'ö'=>'o', 'ø'=>'o', 'ù'=>'u', 'ú'=>'u', 'û'=>'u', 'ý'=>'y', 'þ'=>'b', 'ÿ'=>'y' );
+        
 		foreach($data as $datas){
             
          
            
-            $datas['nom'] = $datas['licency']['nom'];
-            $datas['prenom'] = $datas['licency']['prenom'];
+             $datas['nom'] = strtoupper(strtr($datas['licency']['nom'], $accents));
+            $datas['prenom'] = strtoupper(strtr($datas['licency']['prenom'], $accents));
             $datas['sexe'] = $datas['licency']['sexe'];
             $datas['ddn'] = $datas['licency']['ddn'];
-            $datas['category'] = $datas['category']['name'];
             $datas['grade'] = str_replace('è','e',$datas['licency']['grade']['name']);
-            $datas['club'] = $datas['licency']['club']['name'];
+             $datas['club'] = strtoupper(strtr($datas['licency']['club']['name'], $accents));
+            $datas['equipe'] = strtoupper($datas['equipe']['name']);
             
             if($datas['surclassement_grade']== 1 OR $datas['surclassement_age'] == 1) {
                 
@@ -1173,6 +1179,159 @@ class InscriptionCompetitionsController extends AppController
 		$this->response->download($name.'.csv');
 	}
 
+    
+    
+    
+    
+    
+    	// Fonction csv tirage à partir du plug in
+	public function exporttirage($id,$category=null) {
+		
+         $user_id =  $this->Auth->User('id');
+        
+		$this->response->download('export.csv');
+	
+		
+ 	// Si on n'a pas de catégorie spécifiée, on prend tout
+		if($category == null) {
+		
+            $data = $this->InscriptionCompetitions->find('all')
+         ->where(['competition_id'=>$id,'participation_indiv'=>'1'])
+                ->order(['club_id'=>'ASC'])
+			->contain(['Categories','Licencies'=> function($q) {
+        return $q->contain(['Clubs','Grades']);
+    }]);
+		
+            
+            
+            $name = 'Tous';
+            
+		
+       // Sinon, on prend que les inscros de la caté qui nous intéresse
+        
+        }
+        
+       else {
+           
+           // Pour avoir le nom de la catégorie
+           
+          $cate = $this->InscriptionCompetitions->Categories->find('all')
+               ->where(['id'=>$category])
+               ->first();
+           
+           $name = $cate['name'];
+           
+           
+                //Si on est dans les excellences femmes
+		if($category == 7) {
+			
+            // On prend les espoirs (id = 3) en plus des femmes excellence(id =7)
+             
+              $data = $this->InscriptionCompetitions->find('all')
+        ->where(['category_id'=>$category, 'competition_id'=>$id,'participation_indiv'=>'1'])
+        ->orWhere(['competition_id'=>$id,'category_id'=>'3','surclassement_age'=>'1','participation_indiv'=>'1'])
+        ->contain(['Categories','Licencies'=> function($q) {
+        return $q->contain(['Clubs','Grades']);
+			 }]);
+            
+      
+			
+        }
+		
+
+           
+           //Si on est dans les honneurs hommes
+		elseif($category == 10) {
+			
+            // On prend les juniors non surclassés en grade (id=5) et les honneurs hommes (id = 10)
+            
+			  
+              $data = $this->InscriptionCompetitions->find('all')
+         ->where(['category_id'=>$category, 'surclassement_grade'=>'0','competition_id'=>$id,'participation_indiv'=>'1'])
+        ->orWhere(['category_id'=>'5','surclassement_age'=>'1','surclassement_grade'=>'0','participation_indiv'=>1])
+        ->contain(['Categories','Licencies'=> function($q) {
+        return $q->contain(['Clubs','Grades']);
+			 }]);
+            
+           
+            
+		}
+           
+        
+		
+		// Si on est dans les excellences hommes
+		elseif($category == 11) {
+			
+             
+            // On prend les juniors surclassés en grade et age (id=5), les honneurs hommes surclassés (id=10) et les excellences hommes (id=11)
+    
+            	  
+              $data = $this->InscriptionCompetitions->find('all')
+         ->where(['category_id'=>$category, 'competition_id'=>$id,'participation_indiv'=>'1'])
+        ->orWhere([ 'competition_id'=>$id,'surclassement_grade'=>'1','participation_indiv'=>'1'])
+        ->contain(['Categories','Licencies'=> function($q) {
+        return $q->contain(['Clubs','Grades']);
+			 }]);
+          
+            
+		}
+           
+           // Si c'est une caté sans surclassement possible
+
+           else {
+           
+           
+		    $data = $this->InscriptionCompetitions->find('all')
+         ->where(['category_id'=>$category, 'competition_id'=>$id,'participation_indiv'=>'1'])
+			->contain(['Categories','Licencies'=> function($q) {
+        return $q->contain(['Clubs','Grades']);
+			 }]);
+				
+               }
+                     
+       }
+        
+        $accents = array(    'Š'=>'S', 'š'=>'s', 'Ž'=>'Z', 'ž'=>'z', 'À'=>'A', 'Á'=>'A', 'Â'=>'A', 'Ã'=>'A', 'Ä'=>'A', 'Å'=>'A', 'Æ'=>'A', 'Ç'=>'C', 'È'=>'E', 'É'=>'E',
+                            'Ê'=>'E', 'Ë'=>'E', 'Ì'=>'I', 'Í'=>'I', 'Î'=>'I', 'Ï'=>'I', 'Ñ'=>'N', 'Ò'=>'O', 'Ó'=>'O', 'Ô'=>'O', 'Õ'=>'O', 'Ö'=>'O', 'Ø'=>'O', 'Ù'=>'U',
+                            'Ú'=>'U', 'Û'=>'U', 'Ü'=>'U', 'Ý'=>'Y', 'Þ'=>'B', 'ß'=>'Ss', 'à'=>'a', 'á'=>'a', 'â'=>'a', 'ã'=>'a', 'ä'=>'a', 'å'=>'a', 'æ'=>'a', 'ç'=>'c',
+                            'è'=>'e', 'é'=>'e', 'ê'=>'e', 'ë'=>'e', 'ì'=>'i', 'í'=>'i', 'î'=>'i', 'ï'=>'i', 'ð'=>'o', 'ñ'=>'n', 'ò'=>'o', 'ó'=>'o', 'ô'=>'o', 'õ'=>'o',
+                            'ö'=>'o', 'ø'=>'o', 'ù'=>'u', 'ú'=>'u', 'û'=>'u', 'ý'=>'y', 'þ'=>'b', 'ÿ'=>'y' );
+		
+        
+		foreach($data as $datas){
+            
+         
+			
+           
+            $datas['nom'] = $datas['licency']['nom'].' '.$datas['licency']['prenom'];
+            
+            $datas['nom'] =  strtoupper(strtr($datas['nom'], $accents));
+
+            $datas['club'] = strtoupper(strtr($datas['licency']['club']['name'], $accents));
+            
+           
+        }
+        
+       
+
+		
+		// Données à envoyer au plugin
+		 $_serialize = 'data';
+		 
+		 // Choix du délimitant du csv pour lecture correcte en excel
+    	 $_delimiter = ';'; 
+    	 
+    	 // colonnes sélectionnées
+    	 $_extract = array( 'nom','club');
+		
+		// Nom des colonnes
+		 $_header = [ 'nom_particip', 'club'];
+		
+		$this->set(compact('data', '_serialize', '_extract', '_delimiter','_header'));		
+		$this->viewBuilder()->className('CsvView.Csv');
+		
+		$this->response->download('Tirage-'.$name.'.csv');
+	}
 	
 	
 	
@@ -1251,18 +1410,22 @@ class InscriptionCompetitionsController extends AppController
         return $q->contain(['Clubs','Grades']);
     }]);
 		
-		
+		  $accents = array(    'Š'=>'S', 'š'=>'s', 'Ž'=>'Z', 'ž'=>'z', 'À'=>'A', 'Á'=>'A', 'Â'=>'A', 'Ã'=>'A', 'Ä'=>'A', 'Å'=>'A', 'Æ'=>'A', 'Ç'=>'C', 'È'=>'E', 'É'=>'E',
+                            'Ê'=>'E', 'Ë'=>'E', 'Ì'=>'I', 'Í'=>'I', 'Î'=>'I', 'Ï'=>'I', 'Ñ'=>'N', 'Ò'=>'O', 'Ó'=>'O', 'Ô'=>'O', 'Õ'=>'O', 'Ö'=>'O', 'Ø'=>'O', 'Ù'=>'U',
+                            'Ú'=>'U', 'Û'=>'U', 'Ü'=>'U', 'Ý'=>'Y', 'Þ'=>'B', 'ß'=>'Ss', 'à'=>'a', 'á'=>'a', 'â'=>'a', 'ã'=>'a', 'ä'=>'a', 'å'=>'a', 'æ'=>'a', 'ç'=>'c',
+                            'è'=>'e', 'é'=>'e', 'ê'=>'e', 'ë'=>'e', 'ì'=>'i', 'í'=>'i', 'î'=>'i', 'ï'=>'i', 'ð'=>'o', 'ñ'=>'n', 'ò'=>'o', 'ó'=>'o', 'ô'=>'o', 'õ'=>'o',
+                            'ö'=>'o', 'ø'=>'o', 'ù'=>'u', 'ú'=>'u', 'û'=>'u', 'ý'=>'y', 'þ'=>'b', 'ÿ'=>'y' );
         
 		foreach($data as $datas){
             
          
            
-            $datas['nom'] = $datas['licency']['nom'];
-            $datas['prenom'] = $datas['licency']['prenom'];
+             $datas['nom'] = strtoupper(strtr($datas['licency']['nom'], $accents));
+            $datas['prenom'] = strtoupper(strtr($datas['licency']['prenom'], $accents));
             $datas['sexe'] = $datas['licency']['sexe'];
             $datas['ddn'] = $datas['licency']['ddn'];
             $datas['grade'] = str_replace('è','e',$datas['licency']['grade']['name']);
-            $datas['club'] = $datas['licency']['club']['name'];
+             $datas['club'] = strtoupper(strtr($datas['licency']['club']['name'], $accents));
             $datas['equipe'] = strtoupper($datas['equipe']['name']);
             
             if($datas['surclassement_grade']== 1 OR $datas['surclassement_age'] == 1) {
@@ -1273,6 +1436,7 @@ class InscriptionCompetitionsController extends AppController
             
            
         }
+    
         
        
         
@@ -1296,7 +1460,67 @@ class InscriptionCompetitionsController extends AppController
 		
 		$this->response->download($name.'.csv');
 	}
+    
+    
+    
+      
+    	// Fonction csv à partir du plug in
+	public function tirageexportequipe($id) {
+		
+         $user_id =  $this->Auth->User('id');
+        
+		$this->response->download('export.csv');
+	
+        $name = 'Equipes';
+		
+ 	  $data = $this->InscriptionCompetitions->find('all')
+         ->where(['InscriptionCompetitions.competition_id'=>$id,'participation_equipe'=>'1'])
+                ->order(['equipe_id'=>'ASC'])
+			->contain(['Equipes','Licencies'=> function($q) {
+        return $q->contain(['Clubs','Grades']);
+    }]);
+		
+		  $accents = array(    'Š'=>'S', 'š'=>'s', 'Ž'=>'Z', 'ž'=>'z', 'À'=>'A', 'Á'=>'A', 'Â'=>'A', 'Ã'=>'A', 'Ä'=>'A', 'Å'=>'A', 'Æ'=>'A', 'Ç'=>'C', 'È'=>'E', 'É'=>'E',
+                            'Ê'=>'E', 'Ë'=>'E', 'Ì'=>'I', 'Í'=>'I', 'Î'=>'I', 'Ï'=>'I', 'Ñ'=>'N', 'Ò'=>'O', 'Ó'=>'O', 'Ô'=>'O', 'Õ'=>'O', 'Ö'=>'O', 'Ø'=>'O', 'Ù'=>'U',
+                            'Ú'=>'U', 'Û'=>'U', 'Ü'=>'U', 'Ý'=>'Y', 'Þ'=>'B', 'ß'=>'Ss', 'à'=>'a', 'á'=>'a', 'â'=>'a', 'ã'=>'a', 'ä'=>'a', 'å'=>'a', 'æ'=>'a', 'ç'=>'c',
+                            'è'=>'e', 'é'=>'e', 'ê'=>'e', 'ë'=>'e', 'ì'=>'i', 'í'=>'i', 'î'=>'i', 'ï'=>'i', 'ð'=>'o', 'ñ'=>'n', 'ò'=>'o', 'ó'=>'o', 'ô'=>'o', 'õ'=>'o',
+                            'ö'=>'o', 'ø'=>'o', 'ù'=>'u', 'ú'=>'u', 'û'=>'u', 'ý'=>'y', 'þ'=>'b', 'ÿ'=>'y' );
+        
+		foreach($data as $datas){
+            
+         
+           
+            $datas['club'] = strtoupper(strtr($datas['licency']['club']['name'], $accents));
+            $datas['equipe'] =  strtoupper(strtr($datas['equipe']['name'], $accents));
+       
+        
+       
+        
+		
+		// Données à envoyer au plugin
+		 $_serialize = 'data';
+		 
+		 // Choix du délimitant du csv pour lecture correcte en excel
+    	 $_delimiter = ';'; 
+    	 
+    	 // colonnes sélectionnées
+    	 $_extract = array( 'equipe','club');
+		
+		// Nom des colonnes
+		 $_header = [ 'nom_particip','club'];
+		
+		$this->set(compact('data', '_serialize', '_extract', '_delimiter','_header'));		
+		$this->viewBuilder()->className('CsvView.Csv');
+		
+		$this->response->download('Tirage-'.$name.'.csv');
+	}
 
+	
+	
+	
+    
+	
+    }
 	
 	
 	
