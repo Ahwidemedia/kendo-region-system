@@ -5922,12 +5922,12 @@ class otl
 
 	function read_short()
 	{
-		$a = (ord($this->ttfOTLdata[$this->_pos]) << 8) + ord($this->ttfOTLdata[$this->_pos + 1]);
-		if ($a & (1 << 15)) {
-			$a = ($a - (1 << 16));
-		}
-		$this->_pos += 2;
-		return $a;
+		//$a = (ord($this->ttfOTLdata[$this->_pos]) << 8) + ord($this->ttfOTLdata[$this->_pos + 1]);
+		//if ($a & (1 << 15)) {
+		//	$a = ($a - (1 << 16));
+	//	}
+	//	$this->_pos += 2;
+	//	return $a;
 	}
 
 	function read_ushort()
