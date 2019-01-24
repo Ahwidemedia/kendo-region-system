@@ -2,8 +2,6 @@
 // inclusion de la librairie TCPDF
     require_once ROOT . DS . 'vendor' . DS . 'mpdf' . DS . 'mpdf' . DS . 'mpdf.php'; 
 
-debug($vertical);
-debug(zip);
 	mb_internal_encoding('UTF-8');
 
 	if(isset($vertical)){
