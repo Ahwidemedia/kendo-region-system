@@ -84,6 +84,7 @@
     </table>
     
     <p class="center padding-3">
+        <?php echo $this->Html->link("Exporter la catégorie pour le tirage", ['action'=>'tirageexportequipe',$id, '_ext' => 'csv'],[ 'class'=>'center normalButton margin-3']);?>
 	<?php echo $this->Html->link("Exporter la catégorie en excel", ['action'=>'exportequipe',$id, '_ext' => 'csv'],[ 'class'=>'center normalButton margin-3']);?>
 	<?php echo $this->Html->link("Exporter la catégorie en pdf", ['action'=>'viewequipes',$id, '_ext' => 'pdf'],[ 'class'=>'center normalButton margin-3']);?>
 </p>

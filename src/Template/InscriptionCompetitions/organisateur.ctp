@@ -118,6 +118,7 @@ $category_info = null;
 	</tbody>
 	</table>
 	<p class="center padding-3">
+        <?php echo $this->Html->link("Exporter la catégorie pour le tirage", ['action'=>'exporttirage',$id,$category_info['id'], '_ext' => 'csv'],[ 'class'=>'center normalButton margin-3']);?>
 	<?php echo $this->Html->link("Exporter la catégorie en excel", ['action'=>'export',$id,$category_info['id'], '_ext' => 'csv'],[ 'class'=>'center normalButton margin-3']);?>
 	<?php echo $this->Html->link("Exporter la catégorie en pdf", ['action'=>'view',$id,$category_info['id'], '_ext' => 'pdf'],[ 'class'=>'center normalButton margin-3']);?>
 </p>
